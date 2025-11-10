@@ -29,10 +29,6 @@ class CourseDetailPage(BasePage):
         try:
             locator = (By.LINK_TEXT, lesson_name)
 
-            # 捲動到元素位置
-            self.scroll_to_element(locator)
-            print(f'[INFO] Scrolled to lesson: {lesson_name}')
-
             # 等待一段時間
             time.sleep(delay)
 
@@ -54,9 +50,6 @@ class CourseDetailPage(BasePage):
         """
         try:
             locator = (By.PARTIAL_LINK_TEXT, partial_name)
-
-            self.scroll_to_element(locator)
-            print(f'[INFO] Scrolled to lesson containing: {partial_name}')
 
             time.sleep(delay)
 

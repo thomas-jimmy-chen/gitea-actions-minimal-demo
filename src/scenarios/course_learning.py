@@ -86,10 +86,18 @@ class CourseLearningScenario:
             # 標記為成功
             success = True
 
-            # 4. 保持瀏覽器開啟（僅在成功時）
+            # 4. 完成所有課程
             print('\n[Step 4] All courses processed successfully!')
-            print('Keeping browser open... Press Ctrl+C to exit')
-            self._wait_for_manual_close()
+            print('Waiting 10 seconds before closing browser...')
+
+            # 最後一個課程執行完成後，暫停10秒
+            import time
+            for remaining in range(10, 0, -1):
+                print(f'  Closing in {remaining} seconds...', end='\r')
+                time.sleep(1)
+            print('\n')  # 換行
+
+            print('Closing browser and cleaning up...')
 
             print('\n' + '=' * 60)
             print('Course Learning Scenario Completed')
@@ -109,9 +117,9 @@ class CourseLearningScenario:
             else:
                 print('\n[INFO] Closing browser due to error...')
         finally:
+            print('[INFO] Closing browser...')
             self.driver_manager.quit()
-            if not success:
-                print('[INFO] Browser closed')
+            print('[INFO] Browser closed')
 
     def _process_course(self, course: Dict[str, any]):
         """

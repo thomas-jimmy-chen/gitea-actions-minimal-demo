@@ -1,6 +1,8 @@
-# Eebot - Elearn Automation Bot v2.0
+# Eebot - Elearn Automation Bot v2.0.1
 
 自動化學習機器人，採用 POM (Page Object Model) + API 模組化設計
+
+> **最新版本 v2.0.1** - 新增互動式選單與排程管理系統 (2025/11/10)
 
 ## 專案架構
 
@@ -25,13 +27,16 @@ eebot/
 │   └── utils/                    # 工具模組
 │       └── stealth_extractor.py  # Stealth JS 提取器
 ├── data/                         # 資料檔案
-│   └── courses.json              # 課程資料配置
+│   ├── courses.json              # 課程資料庫
+│   └── schedule.json             # 課程排程 (v2.0.1 新增)
 ├── config/                       # 配置檔案
 │   └── eebot.cfg                 # 主配置檔
 ├── resource/                     # 資源檔案
 │   ├── cookies/                  # Cookie 儲存目錄
 │   └── plugins/                  # Stealth JS 插件
+├── menu.py                       # 互動式選單 (v2.0.1 新增)
 ├── main.py                       # 程式入口
+├── CHANGELOG.md                  # 更新日誌 (v2.0.1 新增)
 └── eebot_legacy.py               # 原始版本備份
 ```
 
@@ -77,11 +82,27 @@ listen_port=8080
 }
 ```
 
-### 4. 執行程式
+### 4. 使用互動式選單建立排程 (v2.0.1 新功能)
+
+```bash
+python menu.py
+```
+
+操作說明：
+- 輸入數字 (1-9) 選擇課程加入排程
+- 輸入 `v` 查看目前排程
+- 輸入 `c` 清除排程
+- 輸入 `s` 儲存排程
+- 輸入 `r` 直接執行排程
+- 輸入 `q` 離開選單
+
+### 5. 執行排程
 
 ```bash
 python main.py
 ```
+
+程式會自動執行已排程的課程，最後一個課程完成後會倒數 10 秒自動關閉。
 
 ## 架構優勢
 
@@ -234,7 +255,13 @@ class NewInterceptor:
 
 ## 版本歷史
 
-- v2.0.0 (2025/01/08) - 重構為 POM + API 模組化架構
+- v2.0.1 (2025/11/10) - 新增互動式選單與排程管理系統 (by wizard03)
+  - 新增 menu.py 互動式選單
+  - 新增課程排程功能
+  - 移除自動下拉功能，提升執行速度
+  - 最後課程完成後自動倒數 10 秒關閉
+  - 改善使用者體驗
+- v2.0.0 (2025/01/08) - 重構為 POM + API 模組化架構 (by Guy Fawkes)
 - v1.0.0 (2025/07/22) - 初始版本
 
 ## 已知問題
@@ -248,7 +275,8 @@ class NewInterceptor:
 
 ## 作者
 
-Guy Fawkes
+- Guy Fawkes (v2.0.0 原始架構設計)
+- wizard03 (v2.0.1 互動式選單與排程系統)
 
 ## 技術支援
 

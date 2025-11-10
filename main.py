@@ -5,9 +5,10 @@
 Eebot - Elearn Automation Bot (Refactored Version)
 採用 POM (Page Object Model) + API 模組化設計
 
-Author: Guy Fawkes
-Date: 2025/1/1
-Version: 2.0.0
+Original Author: Guy Fawkes (v2.0.0)
+Modified by: wizard03 (v2.0.1)
+Date: 2025/11/10
+Version: 2.0.1
 """
 
 import json
@@ -28,8 +29,9 @@ def main():
     """主程式入口"""
     print("""
 ╔══════════════════════════════════════════════════════════╗
-║          Eebot - Elearn Automation Bot v2.0              ║
+║        Eebot - Elearn Automation Bot v2.0.1              ║
 ║          POM + API Modular Architecture                  ║
+║              Modified by wizard03                        ║
 ╚══════════════════════════════════════════════════════════╝
     """)
 
@@ -61,21 +63,30 @@ def main():
     else:
         print('\n[Step 3/6] Proxy disabled (modify_visits=n)')
 
-    # 4. 載入課程資料
-    print('\n[Step 4/6] Loading course data...')
-    courses_file = 'data/courses.json'
+    # 4. 載入排程資料
+    print('\n[Step 4/6] Loading scheduled courses...')
+    schedule_file = 'data/schedule.json'
     try:
-        with open(courses_file, 'r', encoding='utf-8') as f:
-            course_data = json.load(f)
-        courses = course_data.get('courses', [])
-        print(f'  ✓ Loaded {len(courses)} courses from {courses_file}')
+        with open(schedule_file, 'r', encoding='utf-8') as f:
+            schedule_data = json.load(f)
+        courses = schedule_data.get('courses', [])
+
+        if not courses:
+            print(f'  ✗ Schedule is empty!')
+            print(f'  → Please run "python menu.py" to schedule courses first')
+            if proxy:
+                proxy.stop()
+            return
+
+        print(f'  ✓ Loaded {len(courses)} scheduled courses from {schedule_file}')
     except FileNotFoundError:
-        print(f'  ✗ Course data file not found: {courses_file}')
+        print(f'  ✗ Schedule file not found: {schedule_file}')
+        print(f'  → Please run "python menu.py" to create and schedule courses first')
         if proxy:
             proxy.stop()
         return
     except json.JSONDecodeError as e:
-        print(f'  ✗ Invalid JSON in {courses_file}: {e}')
+        print(f'  ✗ Invalid JSON in {schedule_file}: {e}')
         if proxy:
             proxy.stop()
         return
