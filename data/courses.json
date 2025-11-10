@@ -1,0 +1,69 @@
+{
+  "description": "課程資料配置檔 - 定義需要自動學習的課程列表",
+  "version": "1.0",
+  "courses": [
+    {
+      "program_name": "預防執行職務遭受不法侵害(員工)(114年度)",
+      "lesson_name": "預防執行職務遭受不法侵害(員工)(上)",
+      "course_id": 369,
+      "delay": 7.0,
+      "description": "預防職場不法侵害課程"
+    },
+    {
+      "program_name": "資通安全學程課程(114年度)",
+      "lesson_name": "個資保護認知宣導與案例分享教育訓練",
+      "course_id": 365,
+      "delay": 7.0,
+      "description": "資通安全與個資保護課程"
+    },
+    {
+      "program_name": "環境教育學程課程(綠色金融)(114年度)",
+      "lesson_name": "永續金融與環境教育",
+      "course_id": 367,
+      "delay": 7.0,
+      "description": "環境教育與綠色金融課程"
+    },
+    {
+      "program_name": "高齡客戶投保權益保障(114年度)",
+      "lesson_name": "高齡客戶投保權益保障",
+      "course_id": 452,
+      "delay": 7.0,
+      "description": "高齡客戶權益保障課程"
+    },
+    {
+      "program_name": "性別平等工作法、性騷擾防治法及相關子法修法重點與實務案例(114年度)",
+      "lesson_name": "性別平等工作法及相關子法修法重點與實務案例",
+      "course_id": 465,
+      "delay": 7.0,
+      "description": "性別平等與性騷擾防治課程"
+    },
+    {
+      "program_name": "壽險業務員在職訓練學程課程及測驗(114年度)",
+      "lesson_name": "一、壽險商品介紹",
+      "course_id": 454,
+      "delay": 7.0,
+      "description": "壽險業務員在職訓練"
+    },
+    {
+      "program_name": "金融服務業公平待客原則＆洗錢防制及打擊資恐教育訓練(114年度)",
+      "lesson_name": "防制洗錢及打擊資助恐怖主義",
+      "course_id": 450,
+      "delay": 7.0,
+      "description": "公平待客與洗錢防制課程"
+    },
+    {
+      "program_name": "性騷擾勿擾：談機關防治責任與案件處理實務(114年度)",
+      "lesson_name": "性騷擾勿擾：談機關防治責任與案件處理實務",
+      "course_id": 466,
+      "delay": 7.0,
+      "description": "性騷擾防治實務課程"
+    },
+    {
+      "program_name": "預防執行職務遭受不法侵害(主管)(114年度)",
+      "lesson_name": "預防執行職務遭受不法侵害(主管)(上)",
+      "course_id": 368,
+      "delay": 7.0,
+      "description": "預防職場不法侵害課程（主管版）"
+    }
+  ]
+}
