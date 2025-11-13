@@ -84,9 +84,19 @@ class CourseScheduler:
         print('\n可用課程列表：\n')
 
         for i, course in enumerate(self.all_courses, 1):
+            # 判斷是考試還是課程
+            course_type = course.get('course_type', 'course')
+
             print(f'  [{i}] {course["program_name"]}')
-            print(f'      └─ {course["lesson_name"]}')
-            print(f'         (課程ID: {course["course_id"]}, 延遲: {course["delay"]}秒)')
+
+            if course_type == 'exam':
+                # 考試類型
+                print(f'      └─ {course["exam_name"]} [考試]')
+                print(f'         (類型: 考試, 延遲: {course["delay"]}秒)')
+            else:
+                # 課程類型
+                print(f'      └─ {course["lesson_name"]}')
+                print(f'         (課程ID: {course["course_id"]}, 延遲: {course["delay"]}秒)')
             print()
 
         print('-' * 70)
@@ -109,8 +119,16 @@ class CourseScheduler:
             print('  (排程為空)')
         else:
             for i, course in enumerate(self.scheduled_courses, 1):
+                course_type = course.get('course_type', 'course')
+
                 print(f'  [{i}] {course["program_name"]}')
-                print(f'      └─ {course["lesson_name"]}')
+
+                if course_type == 'exam':
+                    # 考試類型
+                    print(f'      └─ {course["exam_name"]} [考試]')
+                else:
+                    # 課程類型
+                    print(f'      └─ {course["lesson_name"]}')
                 print()
 
         print(f'總計: {len(self.scheduled_courses)} 個課程')
@@ -121,7 +139,13 @@ class CourseScheduler:
         if 1 <= course_index <= len(self.all_courses):
             course = self.all_courses[course_index - 1]
             self.scheduled_courses.append(course)
-            print(f'\n✓ 已加入排程: {course["program_name"]} - {course["lesson_name"]}')
+
+            # 根據類型顯示不同訊息
+            course_type = course.get('course_type', 'course')
+            if course_type == 'exam':
+                print(f'\n✓ 已加入排程: {course["program_name"]} - {course["exam_name"]} [考試]')
+            else:
+                print(f'\n✓ 已加入排程: {course["program_name"]} - {course["lesson_name"]}')
             return True
         else:
             print(f'\n✗ 無效的課程編號: {course_index}')

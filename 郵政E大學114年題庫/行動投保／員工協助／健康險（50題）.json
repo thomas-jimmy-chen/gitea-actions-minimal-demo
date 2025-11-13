@@ -1,0 +1,2042 @@
+﻿[
+  {
+    "end": 10,
+    "page": 1,
+    "page_size": 10,
+    "pages": 5,
+    "start": 1,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」中途不得申請增加日額，須先終止原附約，再重新按新日額加保。</p>",
+        "difficulty_level": "easy",
+        "id": 391,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1274,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1275,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 29,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>如果主契約有遭拒保、緩保之情事或距離滿期日不滿一年，均不得中途加保「郵政簡易人壽日額型住院醫療費用保險附約」。</p>",
+        "difficulty_level": "medium",
+        "id": 390,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1272,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1273,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 28,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>保單批註是指針對不屬於原保單中的條款約定事項，雙方另外進行約定。必須由保險公司與要保人雙方表示同意才生效，並附在保單成為保險契約的一部分。</p>",
+        "difficulty_level": "medium",
+        "id": 389,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1270,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1271,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 27,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>投保主約為快樂寶貝兒童保險及安心小額終身壽險不得附加「郵政簡易人壽日額型住院醫療費用保險附約」。</p>",
+        "difficulty_level": "medium",
+        "id": 388,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1268,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1269,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 26,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」可附加於定期壽險，另所有定期壽險之日額附約累積投保金額不得超過1000元。</p>",
+        "difficulty_level": "medium",
+        "id": 387,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1266,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1267,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 25,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」為附約形式，需附加於主約之下。</p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>客戶可單獨投保「郵政簡易人壽日額型住院醫療費用保險附約」，不需附加於其他主約之下。</p>",
+        "difficulty_level": "medium",
+        "id": 386,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1264,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1265,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 24,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」被保險人同一保單年度同一次住院最高日數以90日為限。</p>",
+        "difficulty_level": "easy",
+        "id": 385,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1262,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1263,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 23,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>終身型的醫療保險保費較高，但民眾對於「終身概念」的醫療保障，普遍更有安心感，因此在市場上依舊熱賣。</p>",
+        "difficulty_level": "easy",
+        "id": 384,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1260,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1261,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 22,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>保單條款附著之要保書、批註及其他約定書，均為保險契約的構成部分。</p>",
+        "difficulty_level": "medium",
+        "id": 383,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1258,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1259,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 21,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p>被保險人因美容手術、外科整型而住院診療者，本公司不負給付保險金責任。但為重建其基本功能所作之必要整形，不在此限。</p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>被保險人因重建基本功能所作之必要整型手術，保險公司不負給付責任。</p>",
+        "difficulty_level": "medium",
+        "id": 382,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1256,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1257,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 20,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 50
+  },
+  {
+    "end": 20,
+    "page": 2,
+    "page_size": 10,
+    "pages": 5,
+    "start": 11,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>被保險人之住院診療或手術需求如果是因為犯罪行為，如偷竊、搶劫，保險公司不負給付責任。</p>",
+        "difficulty_level": "easy",
+        "id": 381,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1254,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1255,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 19,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p>投保年齡為15歲至65歲</p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」投保年齡為16歲至65歲。</p>",
+        "difficulty_level": "medium",
+        "id": 380,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1252,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1253,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 18,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」繳費方式為與主契約合併於主契約轉帳帳戶扣繳保險費。</p>",
+        "difficulty_level": "easy",
+        "id": 379,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1250,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1251,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 17,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p>須考量負擔保費的經濟能力、個人健康條件，以及保障的內容與範圍，無須考量投資報酬率。</p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>個人投保商業健康保險時，須考量投資報酬率</p>",
+        "difficulty_level": "easy",
+        "id": 378,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1248,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1249,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 16,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」，簡稱為「日額型醫療保險」，保險種類代號填「H01」。</p>",
+        "difficulty_level": "easy",
+        "id": 377,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1246,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1247,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 15,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」所生的權利自得為請求之日起，經過5年不行使而消滅。</p>",
+        "difficulty_level": "medium",
+        "id": 376,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1244,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1245,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 14,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」被保險人續保之投保年齡最高為70歲。</p>",
+        "difficulty_level": "easy",
+        "id": 375,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1242,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1243,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 13,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」保險期間為1年，保險期間屆滿時，要保人得交付續保保險費，以逐年使本附約繼續有效，本公司不得拒絕續保。</p>",
+        "difficulty_level": "easy",
+        "id": 374,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1240,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1241,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 12,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」住院醫療日額分為1,000元、2,000元及3,000元三種。</p>",
+        "difficulty_level": "easy",
+        "id": 373,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1238,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1239,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 11,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>住院醫療費用保險所稱同一事故，係指因同一疾病或傷害，或因此引起之併發症於出院後14日內於同一醫院再次住院。</p>",
+        "difficulty_level": "easy",
+        "id": 372,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1236,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1237,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 10,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 50
+  },
+  {
+    "end": 30,
+    "page": 3,
+    "page_size": 10,
+    "pages": 5,
+    "start": 21,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>保險事故雖已發生，但保險人可藉以免責的事由有二種，一為除外原因，一為除外事故。</p>",
+        "difficulty_level": "easy",
+        "id": 371,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1234,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1235,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 9,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p>如有疑義時，以做有利被保險人的解釋為原則。</p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>契約的解釋，應探求當事人真義，不得拘泥所用的文字，如有疑義時，以做有利於保險人的解釋為原則。</p>",
+        "difficulty_level": "easy",
+        "id": 370,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1232,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1233,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 8,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p>本附約續保時，是逐年依據被保險人年齡重新計算保險費。</p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」續保時，保費以投保時為準。</p>",
+        "difficulty_level": "easy",
+        "id": 369,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1230,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1231,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 7,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p>不可以申請撤保</p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>中途加保之「郵政簡易人壽日額型住院醫療費用保險附約」評估後如不需要，可以申請撤保。</p>",
+        "difficulty_level": "easy",
+        "id": 368,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1228,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1229,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 6,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>依傷害示範條款及住院示範條款：「以要保人所住地方法院為管轄法院，要保人居住國外時，條款宜訂定ΟΟ地方法院。」</p>",
+        "difficulty_level": "medium",
+        "id": 367,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1226,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1227,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 5,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p>經過2年不行使而消滅</p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>依傷害示範條款及住院示範條款：「由本契約所生的權利，自得為請求之日起，經過5年不行使而消滅。」</p>",
+        "difficulty_level": "medium",
+        "id": 366,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1224,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1225,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 4,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p>本附約無保單價值準備金，辦理終止時，僅按日數比例退還未到期保險費，本款項由要保人領取。</p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」辦理終止時，可領回應得之保單價值準備金。</p>",
+        "difficulty_level": "medium",
+        "id": 365,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1222,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1223,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 3,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>健康險契約成立時，如被保險人已患疾病或在妊娠情況中，保險公司對該項疾病或分娩的醫療費用，不予給付。</p>",
+        "difficulty_level": "easy",
+        "id": 364,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1220,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1221,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 2,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」繳費期別同主契約。主契約繳費期滿後或變更為減額繳清保險本附約仍屬有效時，本附約繳費期別一律改為年繳。</p>",
+        "difficulty_level": "hard",
+        "id": 363,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1218,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1219,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 1,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」復效時，應收取本附約按日數比例計算之當期未滿期保險費與停效前寬限期間的欠繳保費。</p>",
+        "difficulty_level": "hard",
+        "id": 362,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1216,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1217,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 0,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 50
+  },
+  {
+    "end": 40,
+    "page": 4,
+    "page_size": 10,
+    "pages": 5,
+    "start": 31,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>由外部網路登入行動投保APP時，應先連結web ATM。</p>",
+        "difficulty_level": "medium",
+        "id": 351,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1174,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1175,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 14,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>行動保全程序完成後系統要發送Email或簡訊通知，所以客戶輸入市話就一定要留電子信箱；留手機則電子信箱可留可不留。如果客人堅持都不留也不能勉強，只好請客人留地址寄紙本通知。</p>",
+        "difficulty_level": "medium",
+        "id": 350,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1172,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1173,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 13,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>本公司現行的保全業務有生存金給付、終止契約及委託/終止滿期金給付。</p>",
+        "difficulty_level": "medium",
+        "id": 349,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1170,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1171,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 12,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>投保目的選擇其他項目時，如只填寫儲蓄或存款字樣，系統會出現\"不得僅以存款或儲蓄為主要訴求”之提醒訊息，所以要請客戶詳細填寫。</p>",
+        "difficulty_level": "medium",
+        "id": 348,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1168,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1169,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 11,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>身故受益人限設定2人，且須為配偶或直系血親(限父母及子女)以及法定繼承人，其餘身分別應改用紙本入機；若是設定2位以上或需設定順序及比例者應請客戶填寫紙本的新契約內容更正申請書，再由業務員帶回請壽險處補登。</p>",
+        "difficulty_level": "medium",
+        "id": 347,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1166,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1167,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 10,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>使用行動投保前須先請保戶填寫何項文件？</p>",
+        "difficulty_level": "medium",
+        "id": 346,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>轉帳/信用卡授權書</p>",
+            "id": 1162,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>郵政壽險行動投保聲明暨確認同意書。</p>",
+            "id": 1163,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>傳統型個人人壽保險契約審閱期間確認聲明書。</p>",
+            "id": 1164,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 1165,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 9,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>登入行動投保APP的密碼應與何者相同？</p>",
+        "difficulty_level": "medium",
+        "id": 345,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>金融卡密碼。</p>",
+            "id": 1158,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>內部資訊網登入密碼。</p>",
+            "id": 1159,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>由經理設定</p>",
+            "id": 1160,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>安控密碼</p>",
+            "id": 1161,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 8,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>客戶個人資料如因連線問題無法即時回傳系統時，將暫存於行動裝置至何時，逾時將自動刪除或封鎖，並不得以任何方式轉出，以確保資訊安全？</p>",
+        "difficulty_level": "medium",
+        "id": 344,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>隔天晚上12點</p>",
+            "id": 1154,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>當天凌晨12點</p>",
+            "id": 1155,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>第六天0時</p>",
+            "id": 1156,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>馬上刪除</p>",
+            "id": 1157,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 7,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>每位業務員設定行動裝置：</p>",
+        "difficulty_level": "medium",
+        "id": 343,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>僅能1台</p>",
+            "id": 1150,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>2台</p>",
+            "id": 1151,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>5台</p>",
+            "id": 1152,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>沒有限制</p>",
+            "id": 1153,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 6,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>以下何者不得使用行動投保作業，應改以紙本臨櫃作業？</p>",
+        "difficulty_level": "medium",
+        "id": 342,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>領有身心障礙手冊者</p>",
+            "id": 1146,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>懷孕婦女</p>",
+            "id": 1147,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>健康告知有勾選者</p>",
+            "id": 1148,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 1149,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 5,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 50
+  },
+  {
+    "end": 50,
+    "page": 5,
+    "page_size": 10,
+    "pages": 5,
+    "start": 41,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關行動投保，下列何者為是？</p>",
+        "difficulty_level": "medium",
+        "id": 341,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>契約成立日期應以實際扣款日為基準，成立日不得小於系統輸入日期，且與系統輸入日期相差不得大於4日</p>",
+            "id": 1142,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>輸入日期不是支局有營業的日期也沒關係，做業餘案件入機即可</p>",
+            "id": 1143,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>有些資料會由系統自動帶出，如果發現有錯誤，當下馬上於該頁面修改即可，不必回到上一步</p>",
+            "id": 1144,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>投保內容資料輸入一定要按照順序逐一輸入，簽名處也是會按照畫面順序請要/被保險人及業務員輪流簽名</p>",
+            "id": 1145,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 4,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>a.下載並設定vpn   b.設定企業信任憑證  c.關閉阻擋彈跳視窗功能 d.下載並安裝行動投保APP  e.確認網路連線，以上正確的環境設定順序為何?</p>",
+        "difficulty_level": "medium",
+        "id": 340,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p> e→c→d→b→a</p>",
+            "id": 1138,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>e→c→a→d→b</p>",
+            "id": 1139,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>c→e→b→a→d</p>",
+            "id": 1140,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>c→d→a→b→e</p>",
+            "id": 1141,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 3,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>行動投保作業以下說明何者為是？</p>",
+        "difficulty_level": "medium",
+        "id": 339,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>登打投保資料得隨時儲存，上傳後仍可以隨時修改或重新簽名</p>",
+            "id": 1134,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>申請資料最多保存五日，第六日0時未上傳系統就會自動刪除，但可以先將存檔的部分下載到個人電腦暫存，等全部處理完再上傳檔案就可以</p>",
+            "id": 1135,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>業務員登入密碼應定期更換，應至少6個月更新一次，且不得與前三次密碼重複</p>",
+            "id": 1136,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>符合行動服務權限之業務員不用進行設備綁定，只要是有效的帳號密碼就可以使用已完成設定的行動裝置登入作業</p>",
+            "id": 1137,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 2,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>執行行動服務應遵守的法令規定，以下何者為是？</p>",
+        "difficulty_level": "medium",
+        "id": 338,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>行動服務自律規範</p>",
+            "id": 1130,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>個人資料保護法</p>",
+            "id": 1131,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>保險業招攬及核保理賠辦法</p>",
+            "id": 1132,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 1133,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 1,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>行動投保APP應在何處下載安裝？</p>",
+        "difficulty_level": "medium",
+        "id": 337,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>中華郵政全球資訊網 </p>",
+            "id": 1126,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>APP Store</p>",
+            "id": 1127,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>壽險行銷管理整合系統</p>",
+            "id": 1128,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>行動投保後端管理系統</p>",
+            "id": 1129,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 0,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>心情溫度計(簡式健康量表)，可以幫助個人自我測量情緒困擾的程度。</p>",
+        "difficulty_level": "medium",
+        "id": 134,
+        "last_updated_at": "2024-01-17T10:34:58Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 423,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 424,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 4,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>本公司員工協助方案相關資訊，置放於郵政人資全員作業系統/員工協助方案專區項下，供同仁參考運用。</p>",
+        "difficulty_level": "medium",
+        "id": 133,
+        "last_updated_at": "2024-01-17T10:34:58Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 421,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 422,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 3,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>本公司員工協助方案專業諮詢服務，提供同仁(含眷屬)一年 3 小時與專業人員諮詢、討論，費用由公司負擔。</p>",
+        "difficulty_level": "medium",
+        "id": 132,
+        "last_updated_at": "2024-01-17T10:34:58Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 419,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 420,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 2,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>本公司員工協助方案專業諮詢服務提供免付費心情諮詢專線，電話號碼為0800-555-590。</p>",
+        "difficulty_level": "medium",
+        "id": 131,
+        "last_updated_at": "2024-01-17T10:34:58Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 417,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 418,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 1,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>本公司員工協助方案專業諮詢服務提供心理、法律\n、健康(醫療)、財務(理財)及管理類等諮詢服務。</p>",
+        "difficulty_level": "medium",
+        "id": 130,
+        "last_updated_at": "2024-01-17T10:34:58Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 415,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 416,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 0,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 50
+  }
+]

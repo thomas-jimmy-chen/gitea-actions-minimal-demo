@@ -1,0 +1,717 @@
+﻿[
+  {
+    "end": 10,
+    "page": 1,
+    "page_size": 10,
+    "pages": 2,
+    "start": 1,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>由外部網路登入行動投保APP時，應先連結web ATM。</p>",
+        "difficulty_level": "medium",
+        "id": 351,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1174,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1175,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 14,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>行動保全程序完成後系統要發送Email或簡訊通知，所以客戶輸入市話就一定要留電子信箱；留手機則電子信箱可留可不留。如果客人堅持都不留也不能勉強，只好請客人留地址寄紙本通知。</p>",
+        "difficulty_level": "medium",
+        "id": 350,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1172,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1173,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 13,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>本公司現行的保全業務有生存金給付、終止契約及委託/終止滿期金給付。</p>",
+        "difficulty_level": "medium",
+        "id": 349,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1170,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1171,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 12,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>投保目的選擇其他項目時，如只填寫儲蓄或存款字樣，系統會出現\"不得僅以存款或儲蓄為主要訴求”之提醒訊息，所以要請客戶詳細填寫。</p>",
+        "difficulty_level": "medium",
+        "id": 348,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1168,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1169,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 11,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>身故受益人限設定2人，且須為配偶或直系血親(限父母及子女)以及法定繼承人，其餘身分別應改用紙本入機；若是設定2位以上或需設定順序及比例者應請客戶填寫紙本的新契約內容更正申請書，再由業務員帶回請壽險處補登。</p>",
+        "difficulty_level": "medium",
+        "id": 347,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1166,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1167,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 10,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>使用行動投保前須先請保戶填寫何項文件？</p>",
+        "difficulty_level": "medium",
+        "id": 346,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>轉帳/信用卡授權書</p>",
+            "id": 1162,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>郵政壽險行動投保聲明暨確認同意書。</p>",
+            "id": 1163,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>傳統型個人人壽保險契約審閱期間確認聲明書。</p>",
+            "id": 1164,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 1165,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 9,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>登入行動投保APP的密碼應與何者相同？</p>",
+        "difficulty_level": "medium",
+        "id": 345,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>金融卡密碼。</p>",
+            "id": 1158,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>內部資訊網登入密碼。</p>",
+            "id": 1159,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>由經理設定</p>",
+            "id": 1160,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>安控密碼</p>",
+            "id": 1161,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 8,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>客戶個人資料如因連線問題無法即時回傳系統時，將暫存於行動裝置至何時，逾時將自動刪除或封鎖，並不得以任何方式轉出，以確保資訊安全？</p>",
+        "difficulty_level": "medium",
+        "id": 344,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>隔天晚上12點</p>",
+            "id": 1154,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>當天凌晨12點</p>",
+            "id": 1155,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>第六天0時</p>",
+            "id": 1156,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>馬上刪除</p>",
+            "id": 1157,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 7,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>每位業務員設定行動裝置：</p>",
+        "difficulty_level": "medium",
+        "id": 343,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>僅能1台</p>",
+            "id": 1150,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>2台</p>",
+            "id": 1151,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>5台</p>",
+            "id": 1152,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>沒有限制</p>",
+            "id": 1153,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 6,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>以下何者不得使用行動投保作業，應改以紙本臨櫃作業？</p>",
+        "difficulty_level": "medium",
+        "id": 342,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>領有身心障礙手冊者</p>",
+            "id": 1146,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>懷孕婦女</p>",
+            "id": 1147,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>健康告知有勾選者</p>",
+            "id": 1148,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 1149,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 5,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 15
+  },
+  {
+    "end": 15,
+    "page": 2,
+    "page_size": 10,
+    "pages": 2,
+    "start": 11,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關行動投保，下列何者為是？</p>",
+        "difficulty_level": "medium",
+        "id": 341,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>契約成立日期應以實際扣款日為基準，成立日不得小於系統輸入日期，且與系統輸入日期相差不得大於4日</p>",
+            "id": 1142,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>輸入日期不是支局有營業的日期也沒關係，做業餘案件入機即可</p>",
+            "id": 1143,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>有些資料會由系統自動帶出，如果發現有錯誤，當下馬上於該頁面修改即可，不必回到上一步</p>",
+            "id": 1144,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>投保內容資料輸入一定要按照順序逐一輸入，簽名處也是會按照畫面順序請要/被保險人及業務員輪流簽名</p>",
+            "id": 1145,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 4,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>a.下載並設定vpn   b.設定企業信任憑證  c.關閉阻擋彈跳視窗功能 d.下載並安裝行動投保APP  e.確認網路連線，以上正確的環境設定順序為何?</p>",
+        "difficulty_level": "medium",
+        "id": 340,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p> e→c→d→b→a</p>",
+            "id": 1138,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>e→c→a→d→b</p>",
+            "id": 1139,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>c→e→b→a→d</p>",
+            "id": 1140,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>c→d→a→b→e</p>",
+            "id": 1141,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 3,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>行動投保作業以下說明何者為是？</p>",
+        "difficulty_level": "medium",
+        "id": 339,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>登打投保資料得隨時儲存，上傳後仍可以隨時修改或重新簽名</p>",
+            "id": 1134,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>申請資料最多保存五日，第六日0時未上傳系統就會自動刪除，但可以先將存檔的部分下載到個人電腦暫存，等全部處理完再上傳檔案就可以</p>",
+            "id": 1135,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>業務員登入密碼應定期更換，應至少6個月更新一次，且不得與前三次密碼重複</p>",
+            "id": 1136,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>符合行動服務權限之業務員不用進行設備綁定，只要是有效的帳號密碼就可以使用已完成設定的行動裝置登入作業</p>",
+            "id": 1137,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 2,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>執行行動服務應遵守的法令規定，以下何者為是？</p>",
+        "difficulty_level": "medium",
+        "id": 338,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>行動服務自律規範</p>",
+            "id": 1130,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>個人資料保護法</p>",
+            "id": 1131,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>保險業招攬及核保理賠辦法</p>",
+            "id": 1132,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 1133,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 1,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>行動投保APP應在何處下載安裝？</p>",
+        "difficulty_level": "medium",
+        "id": 337,
+        "last_updated_at": "2024-03-25T10:11:44Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>中華郵政全球資訊網 </p>",
+            "id": 1126,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>APP Store</p>",
+            "id": 1127,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>壽險行銷管理整合系統</p>",
+            "id": 1128,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>行動投保後端管理系統</p>",
+            "id": 1129,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 0,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 15
+  }
+]

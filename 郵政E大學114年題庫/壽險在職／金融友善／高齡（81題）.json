@@ -1,0 +1,4015 @@
+﻿[
+  {
+    "end": 10,
+    "page": 1,
+    "page_size": 10,
+    "pages": 9,
+    "start": 1,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者不是安養信託常見類型?</p>",
+        "difficulty_level": "medium",
+        "id": 2955,
+        "last_updated_at": "2025-02-17T13:44:52Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>自益信託</p>",
+            "id": 10457,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>他益信託</p>",
+            "id": 10458,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>公益信託</p>",
+            "id": 10459,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>部分自益信託</p>",
+            "id": 10460,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 19,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列有關信託的敘述，何者正確?</p>",
+        "difficulty_level": "medium",
+        "id": 2954,
+        "last_updated_at": "2025-02-17T13:44:52Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>依照不同受託人、信託產品、信託類型和信託管理內容，所設定的信託資金門檻皆相同</p>",
+            "id": 10453,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>辦理信託不需簽約費或管理費</p>",
+            "id": 10454,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>資產成立信託後，資產還是可以隨意運用</p>",
+            "id": 10455,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>信託財產不會成為受託人的債權人求償之標的</p>",
+            "id": 10456,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 18,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者不是長期照顧服務給付項目?</p>",
+        "difficulty_level": "medium",
+        "id": 2953,
+        "last_updated_at": "2025-02-17T13:44:52Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>照顧及專業服務</p>",
+            "id": 10449,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>交通接送</p>",
+            "id": 10450,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>輔具及居家無障礙環境改善</p>",
+            "id": 10451,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>醫療服務</p>",
+            "id": 10452,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 17,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者不是老人福利法提及逐步規劃實施的經濟安全保障項目?</p>",
+        "difficulty_level": "medium",
+        "id": 2952,
+        "last_updated_at": "2025-02-17T13:44:52Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>生活津貼</p>",
+            "id": 10445,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>特別照顧津貼</p>",
+            "id": 10446,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>年金保險制度</p>",
+            "id": 10447,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>社會救助</p>",
+            "id": 10448,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 16,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者是長期照顧服務申請專線電話號碼?</p>",
+        "difficulty_level": "medium",
+        "id": 2951,
+        "last_updated_at": "2025-02-17T13:44:52Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>113</p>",
+            "id": 10441,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>1922</p>",
+            "id": 10442,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>1966</p>",
+            "id": 10443,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>1999</p>",
+            "id": 10444,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 15,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關保險業對六十五歲以上之客戶之關懷措施，下列何者錯誤？</p>",
+        "difficulty_level": "medium",
+        "id": 2950,
+        "last_updated_at": "2025-02-17T13:44:52Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>應確認是否能理解保險契約內容</p>",
+            "id": 10437,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>需針對六十五歲以上之客戶規劃適切回覆詢問的流程或管道</p>",
+            "id": 10438,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>六十五歲以上之客戶可自行為意思表示，但無法簽署相關文件時，即不能承保</p>",
+            "id": 10439,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>應建立對六十五歲以上之客戶風險監控機制，如電訪或派員親訪</p>",
+            "id": 10440,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 14,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關國民健康署參考世界衛生組織(WHO)長者整合性照護指引(Integrated care for older people，ICOPE) ，下列何者非評估項目？</p>",
+        "difficulty_level": "medium",
+        "id": 2949,
+        "last_updated_at": "2025-02-17T13:44:52Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>社區活動能力</p>",
+            "id": 10433,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>認知功能</p>",
+            "id": 10434,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>營養不良</p>",
+            "id": 10435,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>憂鬱</p>",
+            "id": 10436,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 13,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者不是老化症候群的症狀？</p>",
+        "difficulty_level": "medium",
+        "id": 2948,
+        "last_updated_at": "2025-02-17T13:44:52Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>衰弱無力</p>",
+            "id": 10429,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>口腔功能退化</p>",
+            "id": 10430,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>營養不良</p>",
+            "id": 10431,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>糖尿病</p>",
+            "id": 10432,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 12,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關失智症的描述，下列何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 2947,
+        "last_updated_at": "2025-02-17T13:44:52Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>失智症的人數逐年減少中</p>",
+            "id": 10425,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>失智症是正常老化的一種</p>",
+            "id": 10426,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>失智是無差別發生</p>",
+            "id": 10427,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>失智症最嚴重也不會影響其人際關係與工作能力</p>",
+            "id": 10428,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 11,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關失智症的描述，下列何者錯誤？</p>",
+        "difficulty_level": "medium",
+        "id": 2946,
+        "last_updated_at": "2025-02-17T13:44:52Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>年齡越大，盛行率越高</p>",
+            "id": 10421,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>症狀不單純只有記憶力的減退</p>",
+            "id": 10422,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>會影響到其他認知功能，包括語言能力、空間感、計算力…等</p>",
+            "id": 10423,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>干擾行為、個性改變、妄想或幻覺等症狀同時只會出現一種</p>",
+            "id": 10424,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 10,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 81
+  },
+  {
+    "end": 20,
+    "page": 2,
+    "page_size": 10,
+    "pages": 9,
+    "start": 11,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者非屬保險契約常見的活用機制？</p>",
+        "difficulty_level": "medium",
+        "id": 2945,
+        "last_updated_at": "2025-02-17T13:44:52Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>調整保額</p>",
+            "id": 10417,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>同類型契約轉換或功能性轉換</p>",
+            "id": 10418,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>增加新要保人</p>",
+            "id": 10419,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>保險單借款</p>",
+            "id": 10420,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 9,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者非屬高齡者在基本保障需求下建議選擇的保險商品？</p>",
+        "difficulty_level": "medium",
+        "id": 2944,
+        "last_updated_at": "2025-02-17T13:44:52Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>投資型壽險</p>",
+            "id": 10413,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>小額終老保險</p>",
+            "id": 10414,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>傷害保險</p>",
+            "id": 10415,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>住院醫療費用保險</p>",
+            "id": 10416,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 8,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>3.\t下列何者非屬高齡者可能面臨的風險？</p>",
+        "difficulty_level": "medium",
+        "id": 2943,
+        "last_updated_at": "2025-02-17T13:44:52Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>長壽風險</p>",
+            "id": 10409,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>無法就學風險</p>",
+            "id": 10410,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>長期照顧風險</p>",
+            "id": 10411,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>金融剝削風險</p>",
+            "id": 10412,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 7,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者非屬潛在的弱勢金融消費者？</p>",
+        "difficulty_level": "medium",
+        "id": 2942,
+        "last_updated_at": "2025-02-17T13:44:52Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>高齡者</p>",
+            "id": 10405,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>身心障礙者</p>",
+            "id": 10406,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>中低收入者</p>",
+            "id": 10407,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>具金融投資專業的從業人員</p>",
+            "id": 10408,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 6,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>一般而言，所謂超高齡社會是指65歲以上人口佔總人口數的百分之幾以上？</p>",
+        "difficulty_level": "medium",
+        "id": 2941,
+        "last_updated_at": "2025-02-17T13:44:52Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>10</p>",
+            "id": 10401,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>15</p>",
+            "id": 10402,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>20</p>",
+            "id": 10403,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>25</p>",
+            "id": 10404,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 5,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何種保險商品不適合銷售給一般高齡者：</p>",
+        "difficulty_level": "medium",
+        "id": 2940,
+        "last_updated_at": "2025-02-17T13:44:52Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>傳統型年金保險</p>",
+            "id": 10397,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>長期看護保險</p>",
+            "id": 10398,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>小額終老保險</p>",
+            "id": 10399,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>投資型保險</p>",
+            "id": 10400,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 4,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>保險公司評估客戶繳交保險費之資金來源是否為解約、貸款或保險單借款之作業程序，應包括檢核客戶投保前多久時間內是否向同一保險業或其他同業辦理終止契約、同一保險業辦理貸款或保險單借款：</p>",
+        "difficulty_level": "medium",
+        "id": 2939,
+        "last_updated_at": "2025-02-17T13:44:52Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>一個月內</p>",
+            "id": 10393,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>三個月內</p>",
+            "id": 10394,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>六個月內</p>",
+            "id": 10395,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>九個月內</p>",
+            "id": 10396,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 3,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>依據保險業招攬及核保作業控管自律規範第13條規定，對於六十五歲（含）以上高齡之客戶投保下列何種商品無須保留錄音、錄影等資料以供查核：</p>",
+        "difficulty_level": "medium",
+        "id": 2938,
+        "last_updated_at": "2025-02-17T13:44:52Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>有生存保險金之房貸壽險商品</p>",
+            "id": 10389,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>小額終老保險</p>",
+            "id": 10390,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>投資型保險商品</p>",
+            "id": 10391,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>健康保險商品</p>",
+            "id": 10392,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 2,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者非為金融消費者保護法制定之目的：</p>",
+        "difficulty_level": "medium",
+        "id": 2937,
+        "last_updated_at": "2025-02-17T13:44:52Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>本法係針對金融服務領域提供明確與專業的保護</p>",
+            "id": 10385,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>本法明訂金融機構義務，強調透明度、公平銷售及消費者申訴處理機制的建立</p>",
+            "id": 10386,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>本法規定之評議機制為調解建議之性質，無強制力可言</p>",
+            "id": 10387,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>本法著重弱勢金融消費者的保護，確保其能做出明智與妥適之金融決策</p>",
+            "id": 10388,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 1,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列對普惠金融目標之敘述，何者錯誤：</p>",
+        "difficulty_level": "medium",
+        "id": 2936,
+        "last_updated_at": "2025-02-17T13:44:52Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>普惠金融應確保金融服務對所有人均可負擔</p>",
+            "id": 10381,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>普惠金融應確保金融服務對所有人均有可及性</p>",
+            "id": 10382,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>金融服務不可因服務對象的身份有所區別</p>",
+            "id": 10383,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>金融服務業應將目標客戶設定為具相當資產之擁有者</p>",
+            "id": 10384,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 0,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 81
+  },
+  {
+    "end": 30,
+    "page": 3,
+    "page_size": 10,
+    "pages": 9,
+    "start": 21,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>高齡客戶投保下列何種保險商品、保險公司應指派非銷售通路之人員、於銷售保險契約後且同意承保前，進行電話訪問、視訊或遠距訪問?</p>",
+        "difficulty_level": "medium",
+        "id": 225,
+        "last_updated_at": "2024-02-01T08:49:53Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>小額終老保險</p>",
+            "id": 740,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>團體年金保險</p>",
+            "id": 741,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>投資型保險</p>",
+            "id": 742,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>保險期間在三年以下之傷害保險</p>",
+            "id": 743,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 9,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>對高齡客戶招攬保險契約時，應注意下列何者?</p>",
+        "difficulty_level": "medium",
+        "id": 224,
+        "last_updated_at": "2024-02-01T08:49:53Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>自我建立金融道德觀念，杜絕不實招攬與不當話術</p>",
+            "id": 736,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>招攬過程及要保過程邀請高齡客戶的家人參與</p>",
+            "id": 737,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>重視保單週年，定期檢視並為高齡者重新說明保障權利</p>",
+            "id": 738,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 739,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 8,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>在進行保險商品招攬過程中，應針對65歲以上的哪一種高齡者填寫「高齡投保評估量表」，判斷其是否有辨識不利其投保權益情形之能力?</p>",
+        "difficulty_level": "medium",
+        "id": 223,
+        "last_updated_at": "2024-02-01T08:49:53Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>要保人</p>",
+            "id": 732,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>被保險人</p>",
+            "id": 733,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>繳費人</p>",
+            "id": 734,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 735,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 7,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>金管會鼓勵壽險業者開發設計及推廣小額終老保險商品，目前保障包括傳統型終身人壽保險及一年期傷害保險附約，其保額分別為?</p>",
+        "difficulty_level": "medium",
+        "id": 222,
+        "last_updated_at": "2024-02-21T02:28:16Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>30萬/ 5萬</p>",
+            "id": 728,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>50萬/ 8萬</p>",
+            "id": 729,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>90萬/ 10萬</p>",
+            "id": 730,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>100萬/ 15萬</p>",
+            "id": 731,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 6,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>適合高齡者的保險商品應具備下列何種特性?</p>",
+        "difficulty_level": "medium",
+        "id": 221,
+        "last_updated_at": "2024-02-01T08:49:53Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>較高的投資效益</p>",
+            "id": 724,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>保護資產並能明確移轉長壽的財務風險</p>",
+            "id": 725,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>自負盈虧、不保證投資收益</p>",
+            "id": 726,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>連結高收益金融商品</p>",
+            "id": 727,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 5,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>保險業銷售各種有解約金之保險商品予65歲以上之客戶，應經客戶同意後，將銷售過程以錄音或錄影方式保留紀錄，或以電子設備留存相關作業過程之軌跡，且該紀錄應保存至保險契約期滿後多久?</p>",
+        "difficulty_level": "medium",
+        "id": 220,
+        "last_updated_at": "2024-02-21T07:23:33Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>1年</p>",
+            "id": 720,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>3年</p>",
+            "id": 721,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>5年</p>",
+            "id": 722,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>10年</p>",
+            "id": 723,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 4,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>金管會規畫強化高齡金融消費者保護的措施，下列何者為有關招攬的重點?</p>",
+        "difficulty_level": "medium",
+        "id": 219,
+        "last_updated_at": "2024-02-01T08:49:53Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>落實瞭解客戶及商品適合度</p>",
+            "id": 716,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>銷售過程錄音錄影</p>",
+            "id": 717,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>落實告知投資風險</p>",
+            "id": 718,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 719,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 3,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列哪種行為可能代表客戶有認知低下之疑慮?</p>",
+        "difficulty_level": "medium",
+        "id": 218,
+        "last_updated_at": "2024-02-01T08:49:53Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>無法充分表達及理解投保重要事項</p>",
+            "id": 712,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>頻繁詢問相同的問題</p>",
+            "id": 713,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>對商品內容說明無法瞭解</p>",
+            "id": 714,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 715,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 2,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>以下何者為高齡金融剝削常見的類型?</p>",
+        "difficulty_level": "medium",
+        "id": 217,
+        "last_updated_at": "2024-02-01T08:49:53Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>不當勸誘投資</p>",
+            "id": 708,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>未充分說明</p>",
+            "id": 709,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>違反適合度義務</p>",
+            "id": 710,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 711,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 1,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>高齡客戶投保權益保障的主要對象是指幾歲以上的長者?</p>",
+        "difficulty_level": "medium",
+        "id": 216,
+        "last_updated_at": "2024-02-01T08:49:53Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>60歲</p>",
+            "id": 704,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>65歲</p>",
+            "id": 705,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>70歲</p>",
+            "id": 706,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>80歲</p>",
+            "id": 707,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 0,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 81
+  },
+  {
+    "end": 40,
+    "page": 4,
+    "page_size": 10,
+    "pages": 9,
+    "start": 31,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問針對身心障礙者的描述，下列何者有誤?</p>",
+        "difficulty_level": "medium",
+        "id": 215,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>身心障礙者也是社會中的一份子，因此他們的權利跟義務應和非身心障礙者相同。</p>",
+            "id": 700,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>只要有身體上的損傷，就會面臨到障礙。</p>",
+            "id": 701,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>每一位身心障礙者的需求都有所差異，不知道如何提供服務時，可以直接詢問身心障礙者本人。</p>",
+            "id": 702,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>身心障礙者相對於非身心障礙者而言，更容易處於社會權利不對等的情形中，因此工作者需要常常檢視自己權利行使的適當性。</p>",
+            "id": 703,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 20,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問與精神障礙者溝通時，下列描述何者有誤?</p>",
+        "difficulty_level": "medium",
+        "id": 214,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>非語言及語言一致。</p>",
+            "id": 696,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>運用適當簡單且明確的訊息溝通。</p>",
+            "id": 697,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>不斷問問題或給建議。</p>",
+            "id": 698,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>瞭解他人需求。</p>",
+            "id": 699,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 19,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問與精神障礙者互動何者有誤?</p>",
+        "difficulty_level": "medium",
+        "id": 213,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>不去批評。</p>",
+            "id": 692,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>傾聽需求想法。</p>",
+            "id": 693,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>注意力轉移。</p>",
+            "id": 694,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>説服精障者的幻聽內容，並告知內容是假的，不應該相信。</p>",
+            "id": 695,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 18,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問針對精神復健計畫的定義何者有誤?</p>",
+        "difficulty_level": "medium",
+        "id": 212,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>強化個人能力及技巧，符合居住、就業、社會化以及個人成長所需。</p>",
+            "id": 688,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>以改善精神疾患個案的生活品質為目標。</p>",
+            "id": 689,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>協助他們儘可能在社會中擔負起主動以及獨立生活能力及責任。</p>",
+            "id": 690,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>精神障礙者可完全遵從專業人員的安排，不需練習表達想法與選擇。</p>",
+            "id": 691,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 17,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問針對躁鬱症下列描述何者正確?</p>",
+        "difficulty_level": "medium",
+        "id": 211,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>所有躁鬱症患者的行為都是無法預測的。</p>",
+            "id": 684,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>冬天是躁鬱症易好發季節。</p>",
+            "id": 685,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>躁鬱症患者是危險人物。</p>",
+            "id": 686,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>躁鬱症是一種週期性情緒過度高昂或低落的疾病。</p>",
+            "id": 687,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 16,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問針對憂鬱症下列描述何者正確?</p>",
+        "difficulty_level": "medium",
+        "id": 210,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>憂鬱症患者不需要吃藥，時間過去就會好了。</p>",
+            "id": 680,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>大部分的憂鬱症患者都是食慾不佳，但有部分患者會嗜睡、增加食慾。</p>",
+            "id": 681,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>憂鬱症患者只要想開一點就好了。</p>",
+            "id": 682,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>憂鬱症患者心情的低落是全面性的，但只要做自己有興趣的事情，情緒就可以好轉。</p>",
+            "id": 683,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 15,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問針對思覺失調症下列描述何者有誤?</p>",
+        "difficulty_level": "medium",
+        "id": 209,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>該疾病是腦內神經發展病理加上環境病理因素，促發神經介質或神經賀爾蒙的功能失調。</p>",
+            "id": 676,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>思覺失調症患者大多低病識感。</p>",
+            "id": 677,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>其主要症狀是大腦的思考和感覺功能障礙。</p>",
+            "id": 678,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>思覺失調症患者一定具有暴力攻擊傾向。</p>",
+            "id": 679,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 14,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>為因應聽覺障礙者的個別差異，以下哪一項不是該進行的調整?</p>",
+        "difficulty_level": "medium",
+        "id": 208,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>老師上課時配載調頻系統的發射器。</p>",
+            "id": 672,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>教學環境避免過於吵鬧。</p>",
+            "id": 673,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>説話清晰，讓障礙者能夠看到主講者的臉。</p>",
+            "id": 674,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>開會位置儘量安排在一樓。</p>",
+            "id": 675,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 13,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問國家對待手語的方式，何者是尊重差異?</p>",
+        "difficulty_level": "medium",
+        "id": 207,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>強迫聽障者只能學習口語。</p>",
+            "id": 668,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>將手語視為一種語言，並納入國家語言中。</p>",
+            "id": 669,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>將手語學習視為一種治療。</p>",
+            "id": 670,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>將手語視為口語的補充。</p>",
+            "id": 671,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 12,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問哪一部法明訂「視覺、聽覺、肢體功能障礙者由合格導盲犬、導聾犬、肢體輔助犬陪同或導盲犬、導聾犬、肢體輔助犬專業訓練人員於執行訓練時帶同幼犬，得自由出入公共場所、公共建築物、營業場所、大眾運輸工具及其他公共設施。」?</p>",
+        "difficulty_level": "medium",
+        "id": 206,
+        "last_updated_at": "2024-01-25T00:23:32Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>憲法。</p>",
+            "id": 664,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>身心障礙者權利公約。</p>",
+            "id": 665,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>身心障礙者權益保障法。</p>",
+            "id": 666,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>身心障礙者保護法。</p>",
+            "id": 667,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 11,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 81
+  },
+  {
+    "end": 50,
+    "page": 5,
+    "page_size": 10,
+    "pages": 9,
+    "start": 41,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問看見導盲犬執勤時，我們應遵守哪些事?</p>",
+        "difficulty_level": "medium",
+        "id": 205,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>不餵食。</p>",
+            "id": 660,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>不干擾。</p>",
+            "id": 661,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>主動詢問視障礙者是否需要協助。</p>",
+            "id": 662,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是。</p>",
+            "id": 663,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 10,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請正確排列出協助視覺障礙者之正確順序「1、引2、報3、問4、拍」。</p>",
+        "difficulty_level": "medium",
+        "id": 204,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>1234。</p>",
+            "id": 656,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>3412。</p>",
+            "id": 657,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>4312。</p>",
+            "id": 658,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>3421。</p>",
+            "id": 659,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 9,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問下列何者不是「視覺障礙」者常用輔具?</p>",
+        "difficulty_level": "medium",
+        "id": 203,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>白手杖。</p>",
+            "id": 652,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>登山杖。</p>",
+            "id": 653,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>放大鏡。</p>",
+            "id": 654,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>螢幕報讀軟體。</p>",
+            "id": 655,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 8,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請選出最適合下列描述之訓練「能夠自由的行動，是視障者獨立生活重要的關鍵。透過老師的教導，從居家環境開始，協助您熟悉輔助器材的運用，逐步跨出家門，妥善的運用剩餘視力，感知外在環境的情況，以及安全的行走、搭乘交通工具，找回自己行動的自由。」</p>",
+        "difficulty_level": "medium",
+        "id": 202,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>盲用電腦訓練。</p>",
+            "id": 648,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>點字及文書訓練。</p>",
+            "id": 649,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>獨立生活自理能力訓練。</p>",
+            "id": 650,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>定向行動訓練</p>",
+            "id": 651,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 7,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問下列何種格式不適用於「視覺障礙」者?</p>",
+        "difficulty_level": "medium",
+        "id": 201,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>口述影像版。</p>",
+            "id": 644,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>點字。</p>",
+            "id": 645,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>手語。</p>",
+            "id": 646,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>有聲書。</p>",
+            "id": 647,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 6,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>以下有關視覺障礙者資訊接受與學習的敘述，何者錯誤?</p>",
+        "difficulty_level": "medium",
+        "id": 200,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>擴視機可以將字放大，協助弱勢障礙者閲讀。</p>",
+            "id": 640,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>可提供大字體教科書或錄製有聲圖書協助視覺障礙者學習。</p>",
+            "id": 641,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>國語點字是以不同的點字記號來代表不同的注音符號和字形。</p>",
+            "id": 642,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>製作觸覺地圖來教導視覺障礙者閲讀地圖或圖表。</p>",
+            "id": 643,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 5,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問下列針對視覺障礙者何項描述錯誤?</p>",
+        "difficulty_level": "medium",
+        "id": 199,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>視覺障礙一詞可涵蓋低視能與弱視。</p>",
+            "id": 636,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>視力未達萬國優眼視力測定值0.03者，稱為全盲。</p>",
+            "id": 637,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>低視能不等同弱視。</p>",
+            "id": 638,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>視覺障礙者等於全盲。</p>",
+            "id": 639,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 4,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問針對與自閉症(肯納症)者互動的技巧，下列描述何者正確?</p>",
+        "difficulty_level": "medium",
+        "id": 198,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>給予明確的指令並告知工作流程，可讓自閉症者有規則可依循。</p>",
+            "id": 632,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>互動時應使用簡單、口語化的語言溝通。</p>",
+            "id": 633,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>事先説明清楚環境與工作規範，可譲自閉症者先做好心理準備。</p>",
+            "id": 634,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是。</p>",
+            "id": 635,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 3,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問下列何者非製作易讀版需要注意的事項?</p>",
+        "difficulty_level": "medium",
+        "id": 197,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>產出過程需要邀請心智障礙者共同參與討論。</p>",
+            "id": 628,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>內容應以專家學者的意見為主，不需要考量心智障礙者的需求。</p>",
+            "id": 629,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>使用淺顯易懂的文字，不宜使用稚化的兒語。</p>",
+            "id": 630,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>應使用較高的顏色對比度。</p>",
+            "id": 631,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 2,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問針對智能障礙者的描述，下列何者有誤?</p>",
+        "difficulty_level": "medium",
+        "id": 196,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>心智障礙者的注意力持續時間較非身心障礙者短。</p>",
+            "id": 624,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>智能障礙者沒有辦法表達自己的想法，所以不需要諮詢他們的意見。</p>",
+            "id": 625,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>智能障礙者的抽象思考能力較非身心障礙者弱。</p>",
+            "id": 626,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>透過訓練與協助，智能障礙者也能擁有照顧自己的能力，並進入職場就業。</p>",
+            "id": 627,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 1,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 81
+  },
+  {
+    "end": 60,
+    "page": 6,
+    "page_size": 10,
+    "pages": 9,
+    "start": 51,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列關於《身心障礙者權益保障法》的描述，何者為非?</p>",
+        "difficulty_level": "medium",
+        "id": 195,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>《身心障礙者權益保障法》使用ICF分類，將身心障礙類別分為八大類。</p>",
+            "id": 620,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>《身心障礙者權益保障法》由功能導向替代過去疾病導向系統。</p>",
+            "id": 621,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>《身心障礙者權益保障法》要求所有服務都免費。</p>",
+            "id": 622,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>《身心障礙者權益保障法》將身心障礙者定義為「經專業人員評估，取得身心障礙證明之公民」。</p>",
+            "id": 623,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 0,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>關於我國金融業的檢舉制度，應包含之事項下列何者為非?</p>",
+        "difficulty_level": "medium",
+        "id": 194,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>檢舉人保護制度</p>",
+            "id": 616,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>受理之檢舉案件類型</p>",
+            "id": 617,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>檢舉案件之處理情形不須通知檢舉人</p>",
+            "id": 618,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>設置並公布檢舉之管道</p>",
+            "id": 619,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 29,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>依照保險業務員管理規則第5條規定，關於保險業務員登錄之資格，下列敘述何者錯誤?</p>",
+        "difficulty_level": "medium",
+        "id": 193,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>應為成年人。</p>",
+            "id": 612,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>高中職以上學校畢業或同等學歷。</p>",
+            "id": 613,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>業務員資格測驗合格。</p>",
+            "id": 614,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>國外學歷即使經教育部認可或相關認證者也不承認。</p>",
+            "id": 615,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 28,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>受理身心障礙者投保時，下列敘述何者錯誤</p>",
+        "difficulty_level": "medium",
+        "id": 192,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>業務員不得僅參閱核保手冊，自行判斷被保險人不符合承保條件。</p>",
+            "id": 608,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>應對公司承保條件及核保規則加以說明，並提供有關之諮詢服務。</p>",
+            "id": 609,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>得因被保險人為身心障礙者而有不公平之待遇。</p>",
+            "id": 610,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>對肢體障礙者宜比照一般正常人之核保規則辦理。</p>",
+            "id": 611,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 27,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列敘述何者正確</p>",
+        "difficulty_level": "medium",
+        "id": 191,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>就定義而言，過世的人的資料也算個人資料。</p>",
+            "id": 604,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>直接識別是指僅以該資料不能識別，須與其他資料對照、組合、連結等，始能識別該特定個人。</p>",
+            "id": 605,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>間接識別是指直接透過該資料可識別出當事人者。</p>",
+            "id": 606,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆非。</p>",
+            "id": 607,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 26,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>犯罪者為使執法機關更難追查，會藉由許多複雜金融交易來清洗其不法所得，此種消弭、包裝的程序，即稱為?</p>",
+        "difficulty_level": "medium",
+        "id": 190,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>處置</p>",
+            "id": 600,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>分層化</p>",
+            "id": 601,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>整合</p>",
+            "id": 602,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>Placement</p>",
+            "id": 603,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 25,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列關於帳號被盜用的原因，何者為非?</p>",
+        "difficulty_level": "medium",
+        "id": 189,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>密碼太簡單。</p>",
+            "id": 596,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>缺乏資訊安全意識。</p>",
+            "id": 597,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>密碼走到哪用到哪。</p>",
+            "id": 598,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>密碼時常變更。</p>",
+            "id": 599,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 24,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>洗錢的架構，何者為非?</p>",
+        "difficulty_level": "medium",
+        "id": 188,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>特定犯罪行為。</p>",
+            "id": 592,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>取得不法利益。</p>",
+            "id": 593,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>清洗黑錢。</p>",
+            "id": 594,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是。</p>",
+            "id": 595,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 23,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列敘述何者正確?</p>",
+        "difficulty_level": "medium",
+        "id": 187,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>為了提供更完善的服務，業務員可同時登錄於同種類之公司。(同時登錄於2家產險公司或2家壽險公司)</p>",
+            "id": 588,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>因教育訓練不合格遭撤銷登錄證者，可立即重考，不需滿1年後才能補考。</p>",
+            "id": 589,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>業務員招攬行為所生損失，所屬公司不須負連帶責任。</p>",
+            "id": 590,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>各公司一定要依照懲處參考標準訂立完全一樣的懲處內容。</p>",
+            "id": 591,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 22,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者非當事人可行使之權利?</p>",
+        "difficulty_level": "medium",
+        "id": 186,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>查詢或請求閱覽。</p>",
+            "id": 584,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>請求停止蒐集、處理或利用。</p>",
+            "id": 585,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>請求補充、更正或刪除。</p>",
+            "id": 586,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆為當事人的權利。</p>",
+            "id": 587,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 21,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 81
+  },
+  {
+    "end": 70,
+    "page": 7,
+    "page_size": 10,
+    "pages": 9,
+    "start": 61,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>受理身心障礙者投保，應由何單位決定是否承保</p>",
+        "difficulty_level": "medium",
+        "id": 185,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>各局行銷科</p>",
+            "id": 580,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>業務員自己</p>",
+            "id": 581,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>受理局經理</p>",
+            "id": 582,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>壽險處核保單位</p>",
+            "id": 583,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 20,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>關於資訊存在的形式，下列何者為是?</p>",
+        "difficulty_level": "medium",
+        "id": 184,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>列印或書寫於書本</p>",
+            "id": 576,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>電子形式儲存</p>",
+            "id": 577,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>交談口述</p>",
+            "id": 578,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 579,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 19,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者非三個資訊控管方式?</p>",
+        "difficulty_level": "medium",
+        "id": 183,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>People</p>",
+            "id": 572,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>Processes</p>",
+            "id": 573,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>Protect</p>",
+            "id": 574,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>Technology</p>",
+            "id": 575,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 18,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>業務員登錄證期限為?</p>",
+        "difficulty_level": "medium",
+        "id": 182,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>2年。</p>",
+            "id": 568,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>3年。</p>",
+            "id": 569,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>5年。</p>",
+            "id": 570,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>10年。</p>",
+            "id": 571,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 17,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>根據GDPR的規定，如果個資不小心外洩時，要在多久以內通報?</p>",
+        "difficulty_level": "medium",
+        "id": 181,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>24小時</p>",
+            "id": 564,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>48小時</p>",
+            "id": 565,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>72小時</p>",
+            "id": 566,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>7天</p>",
+            "id": 567,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 16,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>身心障礙者若於投保前已符合傷害險「失能程度與保險金給付表」所列失能等級狀況，下列作法何者為非</p>",
+        "difficulty_level": "medium",
+        "id": 180,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p> 無須特別請客戶填寫告知事項。</p>",
+            "id": 561,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>應請保戶據實填寫體況。</p>",
+            "id": 562,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>投保時應於要保書告知欄，聲明放棄該項失能給付請求權。</p>",
+            "id": 563,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 15,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>評議委員會之評議決定應以爭議處理機構名義作成評議書，送達當事人。前項送達，不適用民事訴訟法有關送達之規定。</p>",
+        "difficulty_level": "medium",
+        "id": 179,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 559,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 560,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 14,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>金融服務業辦理授信業務，應同時審酌借款戶、資金用途、還款來源、債權保障及授信展望等授信原則，得因金融消費者拒絕授權向經營金融機構間信用資料之服務事業查詢信用資料，作為不同意授信之唯一理由</p>",
+        "difficulty_level": "medium",
+        "id": 178,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 557,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 558,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 13,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>手機上的應用程式絕對不會存取個人資訊。</p>",
+        "difficulty_level": "medium",
+        "id": 177,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 555,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 556,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 12,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>吹哨者也就是揭弊者，是反貪腐的重要環節，應該要公開表揚吹哨者，做為大家的楷模，不須特別保護。</p>",
+        "difficulty_level": "medium",
+        "id": 176,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 553,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 554,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 11,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 81
+  },
+  {
+    "end": 80,
+    "page": 8,
+    "page_size": 10,
+    "pages": 9,
+    "start": 71,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>消費者就金融消費爭議事件提出申訴後，金融服務業應於收受之日起30天內為適當之處理，並將處理結果回覆提出申訴之金融消費者。</p>",
+        "difficulty_level": "medium",
+        "id": 175,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 551,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 552,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 10,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>為確保金融消費爭議可以迅速有效解決，《金融消費者保護法》設立評議決定一定額度的機制，120萬元以內只要消費者接受評議內容，金融業者則不得拒絕接受，若是理賠金額過大，且保戶不接受評議內容，則再考慮是否走其他訴訟管道。</p>",
+        "difficulty_level": "medium",
+        "id": 174,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 549,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 550,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 9,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>金融消費者申請評議後，爭議處理機構得試行調處；當事人任一方不同意調處或經調處不成立者，爭議處理機構應續行評議。</p>",
+        "difficulty_level": "medium",
+        "id": 173,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 547,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 548,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 8,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>登錄期間停招累積達2年者，應予以撤銷登錄。</p>",
+        "difficulty_level": "medium",
+        "id": 172,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 545,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 546,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 7,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>同時登錄產、壽險公司經一公司依據第19條規定辦理停招時，另一公司是否應停止登錄?</p>",
+        "difficulty_level": "medium",
+        "id": 171,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 543,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 544,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 6,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>業務員受理身心障礙者投保件，其處理流程是否與一般投保件相同?</p>",
+        "difficulty_level": "medium",
+        "id": 170,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 541,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 542,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 5,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>聯合國身心障礙者權利公約之英文簡寫為CRPD?</p>",
+        "difficulty_level": "medium",
+        "id": 169,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 539,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 540,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 4,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>取得帳號後，破解密碼的難度會變低。</p>",
+        "difficulty_level": "medium",
+        "id": 168,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 537,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 538,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 3,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>蒐集個資時，如果依法律規定免告知，則不需告知當事人。</p>",
+        "difficulty_level": "medium",
+        "id": 167,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 535,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 536,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 2,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>與個資有關的4個活動是指：蒐集、處理、利用、國際傳輸。</p>",
+        "difficulty_level": "medium",
+        "id": 166,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 533,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 534,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 1,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 81
+  },
+  {
+    "end": 81,
+    "page": 9,
+    "page_size": 10,
+    "pages": 9,
+    "start": 81,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>人壽保險公司較易被利用為洗錢之產品為具有保單價值準備金或現金價值之保險商品。</p>",
+        "difficulty_level": "medium",
+        "id": 165,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 531,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 532,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 0,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 81
+  }
+]

@@ -1,0 +1,1962 @@
+﻿[
+  {
+    "end": 10,
+    "page": 1,
+    "page_size": 10,
+    "pages": 4,
+    "start": 1,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列有關社交工程電子郵件攻擊的敘述何者正確?</p>",
+        "difficulty_level": "medium",
+        "id": 361,
+        "last_updated_at": "2024-04-03T10:11:34Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>電子郵件附檔並非是執行檔才有問題。</p>",
+            "id": 1212,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>用別人的電腦看信這樣就不會有被攻擊的問題。</p>",
+            "id": 1213,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>把信轉到其他信箱這樣就不會有被攻擊的問題。</p>",
+            "id": 1214,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>反正收件人不是我，開啟電子郵件沒關係。</p>",
+            "id": 1215,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 9,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下面哪一種電子郵件可以任意開啟?</p>",
+        "difficulty_level": "medium",
+        "id": 360,
+        "last_updated_at": "2024-04-03T10:11:34Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>任何寄件者沒有事先知會之電子郵件。</p>",
+            "id": 1208,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>主旨為公務相關之電子郵件。</p>",
+            "id": 1209,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>有顯示電子簽章標誌之電子郵件。</p>",
+            "id": 1210,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆非。</p>",
+            "id": 1211,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 8,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>收到下列哪個單位的電子郵件應該立即開啟?</p>",
+        "difficulty_level": "medium",
+        "id": 359,
+        "last_updated_at": "2024-04-03T10:11:34Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>業務往來廠商。</p>",
+            "id": 1204,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>上級單位。</p>",
+            "id": 1205,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>郵政工會。</p>",
+            "id": 1206,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆非。</p>",
+            "id": 1207,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 7,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者非預防社交工程攻擊應注意的細節?</p>",
+        "difficulty_level": "medium",
+        "id": 358,
+        "last_updated_at": "2024-04-03T10:11:34Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>點擊網址前，最好再三確認網址是否正確。</p>",
+            "id": 1200,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>寄件人是否是熟識的同事或朋友。</p>",
+            "id": 1201,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>若是與自身財務或權益相關的網址連結，可利用其他安全的方式進行連結</p>",
+            "id": 1202,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>只使用公司信箱收信。</p>",
+            "id": 1203,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 6,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關社交工程的敍述，下列哪一項錯誤？</p>",
+        "difficulty_level": "medium",
+        "id": 357,
+        "last_updated_at": "2024-04-03T10:11:34Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>為避免感染病毒，應關閉電子郵件預覽窗格功能。</p>",
+            "id": 1196,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>駭客會夾帶程式上有弱點的附件檔如.exe檔，藉以啟動安裝木馬程式，但一般來說若是附件檔為.pdf就没有問題，可以放心打開。</p>",
+            "id": 1197,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>電子郵件社交工程的攻擊有假冒寄件者、寄送讓收件者感興趣的主旨與内文。</p>",
+            "id": 1198,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>不開啟陌生人電子郵件是好的資安習慣。 </p>",
+            "id": 1199,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 5,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>關於郵件軟體設定，下列何者為非？</p>",
+        "difficulty_level": "medium",
+        "id": 356,
+        "last_updated_at": "2024-04-03T10:11:34Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>關閉自動圖片下載。</p>",
+            "id": 1192,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>定期排程刪除垃圾信</p>",
+            "id": 1193,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>關閉預覽窗格。</p>",
+            "id": 1194,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>純文字讀取。</p>",
+            "id": 1195,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 4,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>當您收到一封來路不明的郵件時，應該如何處理？</p>",
+        "difficulty_level": "medium",
+        "id": 355,
+        "last_updated_at": "2024-04-03T10:11:34Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>轉寄給朋友。</p>",
+            "id": 1188,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>開啟郵件。</p>",
+            "id": 1189,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>直接刪除。</p>",
+            "id": 1190,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>有空再理會。</p>",
+            "id": 1191,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 3,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>關於社交工程之敘述，何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 354,
+        "last_updated_at": "2024-04-03T10:11:34Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>屬於一種詐騙伎倆。</p>",
+            "id": 1184,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>利用人性的弱點進行攻擊 。</p>",
+            "id": 1185,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>屬於非技術性的攻擊手法。</p>",
+            "id": 1186,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是。</p>",
+            "id": 1187,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 2,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者為常用的電子郵件社交工程攻擊手法？</p>",
+        "difficulty_level": "medium",
+        "id": 353,
+        "last_updated_at": "2024-04-03T10:11:34Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>假冒寄件者。</p>",
+            "id": 1180,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>聳動或令人感興趣的主旨內容。</p>",
+            "id": 1181,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>以美女照片吸引點擊。</p>",
+            "id": 1182,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是。</p>",
+            "id": 1183,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 1,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者為正確使用電子郵件之方式？</p>",
+        "difficulty_level": "medium",
+        "id": 352,
+        "last_updated_at": "2024-04-03T10:11:34Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>開啟廣告信件。</p>",
+            "id": 1176,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>點選來路不明之附件。</p>",
+            "id": 1177,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>不明的郵件立即刪除。</p>",
+            "id": 1178,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>將好康轉寄給朋友。</p>",
+            "id": 1179,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 0,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 40
+  },
+  {
+    "end": 20,
+    "page": 2,
+    "page_size": 10,
+    "pages": 4,
+    "start": 11,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>個資當事人請求查詢閱覽個人資料，企業需在幾日之內給予回覆？</p>",
+        "difficulty_level": "medium",
+        "id": 64,
+        "last_updated_at": "2023-12-26T08:55:46Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>7</p>",
+            "id": 193,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>14</p>",
+            "id": 194,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>15</p>",
+            "id": 195,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>30</p>",
+            "id": 196,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 29,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關個人資料之間接蒐集，什麼情況下可不必告知當事人？</p>",
+        "difficulty_level": "medium",
+        "id": 63,
+        "last_updated_at": "2023-12-26T08:55:56Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>當事人自行公開或其他已合法公開的個人資料</p>",
+            "id": 189,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>大眾傳播業者基於新聞報導公益目的而蒐集個人資料</p>",
+            "id": 190,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>基於公共利益而需要的統計，或是學術研究上有必要，而且資料須經處理過而無從識別出特定的當事人。</p>",
+            "id": 191,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 192,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 28,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關個人資料之蒐集，下列哪些情況下可不必事先告知當事人?</p>",
+        "difficulty_level": "medium",
+        "id": 62,
+        "last_updated_at": "2023-12-26T08:55:57Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>依法律規定得免告知</p>",
+            "id": 185,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>個人資料之蒐集係公務機關執行法定職務或非公務機關履行法定義務所必要</p>",
+            "id": 186,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>告知將妨害公務機關執行法定職務</p>",
+            "id": 187,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 188,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 27,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關個資法規範哪些個人資料的運用行為，下列何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 61,
+        "last_updated_at": "2023-12-26T08:56:10Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>蒐集</p>",
+            "id": 181,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>處理</p>",
+            "id": 182,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>利用</p>",
+            "id": 183,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 184,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 26,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關個人資料刪除原則，下列何者為非？</p>",
+        "difficulty_level": "medium",
+        "id": 60,
+        "last_updated_at": "2023-12-26T08:57:18Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>如紙本中尚有其他需保留資料，可不經銷毀，但需刪除之資料可採用『隱私保護章』之類工具將標的內容進行處理。</p>",
+            "id": 177,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>當個人資料蒐集之特定目的消失、期限屆滿、或當事人要求刪除且符合刪除規定時，應立即進行刪除。</p>",
+            "id": 178,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>由專人清除數位檔案及儲存媒體之個資檔案，確認已無法回復其狀態，保留銷毀紀錄至少三年。</p>",
+            "id": 179,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>如由委外服務廠商進行個資銷毀作業，應派專人押車至銷毀現場，見證銷毀作業直到完成相關銷毀紀錄應留存至少五年。</p>",
+            "id": 180,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 25,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關個人資料保存原則，下列何者為非？</p>",
+        "difficulty_level": "medium",
+        "id": 59,
+        "last_updated_at": "2023-12-26T08:56:22Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>需置於受管制區域，包括上鎖資料櫃、有門禁管制之區域。</p>",
+            "id": 173,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>進出以及存取人員需獲得授權始可存取</p>",
+            "id": 174,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>代表機關之個人資料在無其他法律要求下，最短需保留三年。</p>",
+            "id": 175,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>存放實體環境之安全：例如：溫、濕度管制、遠離火源。</p>",
+            "id": 176,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 24,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關個人資料之保存及安全管理，下列何者為是？。</p>",
+        "difficulty_level": "medium",
+        "id": 58,
+        "last_updated_at": "2023-12-26T08:57:10Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>指定專人保管</p>",
+            "id": 169,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>個資檔案不可攜出於公司或營業辦公場所外，如因執行業務而必須攜出，應善盡保管責任。</p>",
+            "id": 170,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>組織資訊系統之資料庫或內部通用格式之表單，其內容如含有個資檔案者，應保留五年，如政府法規有特別規定者，以二者較長之期限為標準。</p>",
+            "id": 171,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 172,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 23,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關個人資料傳輸時應注意之事項，下列何者為是？</p>",
+        "difficulty_level": "medium",
+        "id": 57,
+        "last_updated_at": "2023-12-26T08:56:16Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>資訊揭露最小化原則</p>",
+            "id": 165,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>確保傳輸過程不會被竊取</p>",
+            "id": 166,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>確認資料能送達收件人手中</p>",
+            "id": 167,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 168,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 22,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者非臺灣個資法中規範當事人可行使之權利？</p>",
+        "difficulty_level": "medium",
+        "id": 56,
+        "last_updated_at": "2025-02-19T02:34:29Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>查詢或請求閱覽</p>",
+            "id": 161,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>請求資料攜出</p>",
+            "id": 162,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>請求製給複製本</p>",
+            "id": 163,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>請求補充或更正</p>",
+            "id": 164,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 21,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關個資保護之原則，下列何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 55,
+        "last_updated_at": "2023-12-26T08:56:48Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>應在特定目的及特定情形下進行蒐集</p>",
+            "id": 157,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>應在特定目的及特定情形下進行處理</p>",
+            "id": 158,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>進行其他活動前，如行銷應確保仍符合原先資料蒐集之特定目的</p>",
+            "id": 159,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 160,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 20,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 40
+  },
+  {
+    "end": 30,
+    "page": 3,
+    "page_size": 10,
+    "pages": 4,
+    "start": 21,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列敘述何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 54,
+        "last_updated_at": "2023-12-26T08:58:02Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>機密性指的是確保經過授權的人員其處理資訊資產方法的準確性和完整性</p>",
+            "id": 153,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>完整性指的是執行人員授權的過程必須要是完整且一致的</p>",
+            "id": 154,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>完整性指的是應該要確保人員在需要時可以存取到完整的資訊資產</p>",
+            "id": 155,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>機密性指的是有經過授權的人員才能存取相關機敏資訊</p>",
+            "id": 156,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 19,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者為資訊安全的主要管控方式？</p>",
+        "difficulty_level": "medium",
+        "id": 53,
+        "last_updated_at": "2023-12-26T08:58:00Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>人員存取限制</p>",
+            "id": 149,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>安全稽核</p>",
+            "id": 150,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>備援管理</p>",
+            "id": 151,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 152,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 18,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者不是資訊傳輸應注意事項？</p>",
+        "difficulty_level": "medium",
+        "id": 52,
+        "last_updated_at": "2023-12-26T08:59:11Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>傳真、影印、列印之文件應立即取走。</p>",
+            "id": 145,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>郵寄機敏文件和一般文件一樣，只要有彌封寄普通平信就可以。</p>",
+            "id": 146,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>以電子郵件傳送機密資料時，應進行加密並以不同封信件或其他方式告知密碼。</p>",
+            "id": 147,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>使用傳真前需確認電話號碼正確性</p>",
+            "id": 148,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 17,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者不是資訊安全的核心議題？</p>",
+        "difficulty_level": "medium",
+        "id": 51,
+        "last_updated_at": "2023-12-26T08:58:54Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>資安工具的導入</p>",
+            "id": 141,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>技術控制佈署與調整</p>",
+            "id": 142,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>特殊角色與例外管理</p>",
+            "id": 143,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>事件偵防與緊急應變</p>",
+            "id": 144,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 16,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者不是資訊安全的特性？</p>",
+        "difficulty_level": "medium",
+        "id": 50,
+        "last_updated_at": "2023-12-26T08:58:06Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>可用性</p>",
+            "id": 137,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>完整性</p>",
+            "id": 138,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>一致性</p>",
+            "id": 139,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>機密性</p>",
+            "id": 140,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 15,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>企業內部蒐集的民眾個人資料，民眾無權要求企業刪除。</p>",
+        "difficulty_level": "medium",
+        "id": 49,
+        "last_updated_at": "2023-12-26T08:58:14Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 135,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 136,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 14,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>含有個資的文件保存期限屆滿，或公務目的需求已不復存在時，經核可後辦理銷毀作業，禁止員工自行銷毀。</p>",
+        "difficulty_level": "medium",
+        "id": 48,
+        "last_updated_at": "2023-12-26T08:58:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 133,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 134,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 13,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>重要的機敏文件(包含個資文件)應放置在可上鎖的櫃子，而數位檔部分應加密並放置有權限控管的資料夾。</p>",
+        "difficulty_level": "medium",
+        "id": 47,
+        "last_updated_at": "2023-12-26T08:58:29Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 131,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 132,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 12,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>個人資料檔案之蒐集、處理、利用與國際傳輸應基於公務目的始得進行，並秉持個人資料檔案最小化運用原則。</p>",
+        "difficulty_level": "medium",
+        "id": 46,
+        "last_updated_at": "2023-12-26T08:58:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 129,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 130,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 11,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>由專人清除數位檔案及儲存媒體之個資檔案，確認已無法回復其狀態，銷毀紀錄應永久保存。</p>",
+        "difficulty_level": "medium",
+        "id": 45,
+        "last_updated_at": "2023-12-26T08:58:41Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 127,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 128,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 10,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 40
+  },
+  {
+    "end": 40,
+    "page": 4,
+    "page_size": 10,
+    "pages": 4,
+    "start": 31,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>醫療、基因、性生活、健康檢查及犯罪前科等個人敏感性資料，是為特種個資，可以隨意蒐集。</p>",
+        "difficulty_level": "medium",
+        "id": 44,
+        "last_updated_at": "2023-12-26T08:59:18Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 125,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 126,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 9,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>為了充分了解客戶情報，蒐集到個人資料內容越多越好，這些個資未來都可以任意運用。</p>",
+        "difficulty_level": "medium",
+        "id": 43,
+        "last_updated_at": "2023-12-26T08:59:57Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 123,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 124,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 8,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>個資的蒐集、處理和利用，如果需要徵求當事人的書面同意時，只能使用紙本形式的書面同意書。</p>",
+        "difficulty_level": "medium",
+        "id": 42,
+        "last_updated_at": "2023-12-26T08:59:50Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 121,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 122,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 7,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>個人資料的蒐集、處理、利用或國際傳輸，除蒐集應符合蒐集要件及告知外，相關活動均需符合特定目的。</p>",
+        "difficulty_level": "medium",
+        "id": 41,
+        "last_updated_at": "2023-12-26T08:59:34Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 119,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 120,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 6,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>個人資料係指自然人之資料，及其他得以直接或間接方式識別該個人之資料。</p>",
+        "difficulty_level": "medium",
+        "id": 40,
+        "last_updated_at": "2023-12-26T08:59:45Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 117,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 118,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 5,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>資訊存在形式有許多種，可以列印或書寫於紙本，可以電子形式儲存，或交談口述等。</p>",
+        "difficulty_level": "medium",
+        "id": 39,
+        "last_updated_at": "2023-12-26T09:00:17Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 115,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 116,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 4,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>資訊安全中的機密性指的是任何人都不可以存取機敏資訊。</p>",
+        "difficulty_level": "medium",
+        "id": 38,
+        "last_updated_at": "2023-12-26T09:00:24Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 113,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 114,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 3,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>開啟電子郵件之前請先仔細看清楚，避免點選不明來源電子郵件內的連結。</p>",
+        "difficulty_level": "medium",
+        "id": 37,
+        "last_updated_at": "2023-12-26T08:59:51Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 111,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 112,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 2,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>為了省錢，最好透過網路論壇下載APP，應避免透過google play或app store下載付費APP。</p>",
+        "difficulty_level": "medium",
+        "id": 36,
+        "last_updated_at": "2023-12-26T08:59:39Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 109,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 110,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 1,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>為了節省手機網路流量，一到公共場所應該立刻開啟wi-fi，尋找免費wi-fi使用。</p>",
+        "difficulty_level": "medium",
+        "id": 35,
+        "last_updated_at": "2024-03-07T00:29:08Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 107,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 108,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 0,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 40
+  }
+]

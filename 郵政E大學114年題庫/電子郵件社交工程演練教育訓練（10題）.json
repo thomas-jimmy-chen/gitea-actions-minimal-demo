@@ -1,0 +1,522 @@
+﻿[
+  {
+    "end": 10,
+    "page": 1,
+    "page_size": 10,
+    "pages": 1,
+    "start": 1,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列有關社交工程電子郵件攻擊的敘述何者正確?</p>",
+        "difficulty_level": "medium",
+        "id": 361,
+        "last_updated_at": "2024-04-03T10:11:34Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>電子郵件附檔並非是執行檔才有問題。</p>",
+            "id": 1212,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>用別人的電腦看信這樣就不會有被攻擊的問題。</p>",
+            "id": 1213,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>把信轉到其他信箱這樣就不會有被攻擊的問題。</p>",
+            "id": 1214,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>反正收件人不是我，開啟電子郵件沒關係。</p>",
+            "id": 1215,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 9,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下面哪一種電子郵件可以任意開啟?</p>",
+        "difficulty_level": "medium",
+        "id": 360,
+        "last_updated_at": "2024-04-03T10:11:34Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>任何寄件者沒有事先知會之電子郵件。</p>",
+            "id": 1208,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>主旨為公務相關之電子郵件。</p>",
+            "id": 1209,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>有顯示電子簽章標誌之電子郵件。</p>",
+            "id": 1210,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆非。</p>",
+            "id": 1211,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 8,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>收到下列哪個單位的電子郵件應該立即開啟?</p>",
+        "difficulty_level": "medium",
+        "id": 359,
+        "last_updated_at": "2024-04-03T10:11:34Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>業務往來廠商。</p>",
+            "id": 1204,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>上級單位。</p>",
+            "id": 1205,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>郵政工會。</p>",
+            "id": 1206,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆非。</p>",
+            "id": 1207,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 7,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者非預防社交工程攻擊應注意的細節?</p>",
+        "difficulty_level": "medium",
+        "id": 358,
+        "last_updated_at": "2024-04-03T10:11:34Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>點擊網址前，最好再三確認網址是否正確。</p>",
+            "id": 1200,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>寄件人是否是熟識的同事或朋友。</p>",
+            "id": 1201,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>若是與自身財務或權益相關的網址連結，可利用其他安全的方式進行連結</p>",
+            "id": 1202,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>只使用公司信箱收信。</p>",
+            "id": 1203,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 6,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關社交工程的敍述，下列哪一項錯誤？</p>",
+        "difficulty_level": "medium",
+        "id": 357,
+        "last_updated_at": "2024-04-03T10:11:34Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>為避免感染病毒，應關閉電子郵件預覽窗格功能。</p>",
+            "id": 1196,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>駭客會夾帶程式上有弱點的附件檔如.exe檔，藉以啟動安裝木馬程式，但一般來說若是附件檔為.pdf就没有問題，可以放心打開。</p>",
+            "id": 1197,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>電子郵件社交工程的攻擊有假冒寄件者、寄送讓收件者感興趣的主旨與内文。</p>",
+            "id": 1198,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>不開啟陌生人電子郵件是好的資安習慣。 </p>",
+            "id": 1199,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 5,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>關於郵件軟體設定，下列何者為非？</p>",
+        "difficulty_level": "medium",
+        "id": 356,
+        "last_updated_at": "2024-04-03T10:11:34Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>關閉自動圖片下載。</p>",
+            "id": 1192,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>定期排程刪除垃圾信</p>",
+            "id": 1193,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>關閉預覽窗格。</p>",
+            "id": 1194,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>純文字讀取。</p>",
+            "id": 1195,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 4,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>當您收到一封來路不明的郵件時，應該如何處理？</p>",
+        "difficulty_level": "medium",
+        "id": 355,
+        "last_updated_at": "2024-04-03T10:11:34Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>轉寄給朋友。</p>",
+            "id": 1188,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>開啟郵件。</p>",
+            "id": 1189,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>直接刪除。</p>",
+            "id": 1190,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>有空再理會。</p>",
+            "id": 1191,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 3,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>關於社交工程之敘述，何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 354,
+        "last_updated_at": "2024-04-03T10:11:34Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>屬於一種詐騙伎倆。</p>",
+            "id": 1184,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>利用人性的弱點進行攻擊 。</p>",
+            "id": 1185,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>屬於非技術性的攻擊手法。</p>",
+            "id": 1186,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是。</p>",
+            "id": 1187,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 2,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者為常用的電子郵件社交工程攻擊手法？</p>",
+        "difficulty_level": "medium",
+        "id": 353,
+        "last_updated_at": "2024-04-03T10:11:34Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>假冒寄件者。</p>",
+            "id": 1180,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>聳動或令人感興趣的主旨內容。</p>",
+            "id": 1181,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>以美女照片吸引點擊。</p>",
+            "id": 1182,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是。</p>",
+            "id": 1183,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 1,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者為正確使用電子郵件之方式？</p>",
+        "difficulty_level": "medium",
+        "id": 352,
+        "last_updated_at": "2024-04-03T10:11:34Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>開啟廣告信件。</p>",
+            "id": 1176,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>點選來路不明之附件。</p>",
+            "id": 1177,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>不明的郵件立即刪除。</p>",
+            "id": 1178,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>將好康轉寄給朋友。</p>",
+            "id": 1179,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 0,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 10
+  }
+]

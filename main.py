@@ -22,6 +22,7 @@ from src.core.config_loader import ConfigLoader
 from src.core.proxy_manager import ProxyManager
 from src.api.interceptors.visit_duration import VisitDurationInterceptor
 from src.scenarios.course_learning import CourseLearningScenario
+from src.scenarios.exam_learning import ExamLearningScenario
 from src.utils.stealth_extractor import StealthExtractor
 
 
@@ -91,17 +92,39 @@ def main():
             proxy.stop()
         return
 
-    # 5. 執行場景
-    print('\n[Step 5/6] Initializing course learning scenario...')
+    # 5. 分離課程和考試
+    print('\n[Step 5/6] Separating courses and exams...')
+    regular_courses = []
+    exams = []
+
+    for item in courses:
+        course_type = item.get('course_type', 'course')
+        if course_type == 'exam':
+            exams.append(item)
+        else:
+            regular_courses.append(item)
+
+    print(f'  ✓ Found {len(regular_courses)} regular courses and {len(exams)} exams')
+
+    # 6. 執行場景
+    print('\n[Step 6/6] Executing scenarios...')
     try:
         # 從配置讀取是否在錯誤時保持瀏覽器開啟（預設為 False）
         keep_browser_on_error = config.get_bool('keep_browser_on_error', False)
 
-        scenario = CourseLearningScenario(config, keep_browser_on_error=keep_browser_on_error)
-        print('  ✓ Scenario initialized')
+        # 執行一般課程
+        if regular_courses:
+            print('\n[6.1] Executing regular courses...')
+            scenario = CourseLearningScenario(config, keep_browser_on_error=keep_browser_on_error)
+            print('  ✓ Course scenario initialized')
+            scenario.execute(regular_courses)
 
-        print('\n[Step 6/6] Executing scenario...')
-        scenario.execute(courses)
+        # 執行考試
+        if exams:
+            print('\n[6.2] Executing exams...')
+            exam_scenario = ExamLearningScenario(config, keep_browser_on_error=keep_browser_on_error)
+            print('  ✓ Exam scenario initialized')
+            exam_scenario.execute(exams)
 
     except KeyboardInterrupt:
         print('\n[INFO] User interrupted')

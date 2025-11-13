@@ -1,0 +1,722 @@
+﻿[
+  {
+    "end": 10,
+    "page": 1,
+    "page_size": 10,
+    "pages": 2,
+    "start": 1,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>刑法第317條之洩露業務上知悉之工商秘密罪，下列何者錯誤？</p>",
+        "difficulty_level": "medium",
+        "id": 3759,
+        "last_updated_at": "2025-05-22T15:11:36Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>犯罪主體為依法令或契約有守因業務知悉或持有工商秘密之義務之人</p>",
+            "id": 13696,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>無正當理由而洩漏</p>",
+            "id": 13697,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>離職員工可不受此條文之規範</p>",
+            "id": 13698,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 13,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>刑法第210條偽造、變造私文書罪，下列敘述何者錯誤？</p>",
+        "difficulty_level": "medium",
+        "id": 3758,
+        "last_updated_at": "2025-05-22T15:11:36Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>稱偽造者，乃無製作權限之人，冒用他人名義，而製作內容不實之文書</p>",
+            "id": 13692,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>變造文書係指不變更原有文書之本質，僅就文書之內容有所更改而言</p>",
+            "id": 13693,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>所偽造之文書，如實際上無製作名義人其人，即製作文書名義人係屬虛構，即不成立刑法第210條偽造私文書罪</p>",
+            "id": 13694,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>刑法第210條之偽造私文書罪，祇須所偽造之私文書足以生損害於公眾或他人為已足，至公眾或他人是否因該私文書之偽造而實受損害，則非所問</p>",
+            "id": 13695,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 12,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>職員某甲藉其職務上之機會，將庫存現金以變易持有為所有之意思予以挪用，應成立刑法上何罪﹖</p>",
+        "difficulty_level": "medium",
+        "id": 3757,
+        "last_updated_at": "2025-05-22T15:11:36Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>公共危險罪</p>",
+            "id": 13688,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>竊盜罪</p>",
+            "id": 13689,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>侵占罪(業務侵占罪)</p>",
+            "id": 13690,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>賭博罪</p>",
+            "id": 13691,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 11,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>非公務機關對個人資料之蒐集或處理，應有特定目的，並應符合下列何者情形？</p>",
+        "difficulty_level": "medium",
+        "id": 3756,
+        "last_updated_at": "2025-05-22T15:11:36Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>法律明文規定</p>",
+            "id": 13683,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>與當事人有契約或類似契約之關係，且已採取適當之安全措施</p>",
+            "id": 13684,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>當事人自行公開或其他已合法公開之個人資料</p>",
+            "id": 13685,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>經當事人同意</p>",
+            "id": 13686,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 13687,
+            "is_answer": true,
+            "sort": 4,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 10,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列有關業務員招攬保險業務時，應確實遵守規定，何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 3755,
+        "last_updated_at": "2025-05-22T15:11:36Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>充分瞭解要保人及被保險人之基本資料、投保目的和需求程度</p>",
+            "id": 13679,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>不得散布流言或以詐術損害保險業、外國保險業之信用</p>",
+            "id": 13680,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>充分瞭解要保人、被保險人和受益人間關係之合宜度</p>",
+            "id": 13681,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 13682,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 9,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>關於壽險招攬行為，下列敘述何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 3754,
+        "last_updated_at": "2025-05-22T15:11:36Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>勸誘客戶解除或終止契約，或以貸款、保險單借款繳交保險費</p>",
+            "id": 13675,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>不以誇大不實、引人錯誤之宣傳為招攬</p>",
+            "id": 13676,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>以不同保險公司之契約內容作不當比較</p>",
+            "id": 13677,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>各局及業務員招攬保險時，可以使用非本公司設計、印製之壽險廣告文宣</p>",
+            "id": 13678,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 8,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>從事業務招攬時，不得有那些情事?</p>",
+        "difficulty_level": "medium",
+        "id": 3753,
+        "last_updated_at": "2025-05-22T15:11:36Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>違反法令、主管機關之規定或自律規範</p>",
+            "id": 13671,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>虛偽不實、詐欺、隱匿、或其他足致他人誤信</p>",
+            "id": 13672,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>使用之文字或訊息內容使人誤信能保證本金之安全或保證獲利</p>",
+            "id": 13673,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 13674,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 7,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>關於壽險招攬行為，下列敘述何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 3752,
+        "last_updated_at": "2025-05-22T15:11:36Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>應充分瞭解要保人及被保險人之基本資料、投保目的和需求程度及要保人、被保險人和受益人間關係之合宜度</p>",
+            "id": 13667,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>保戶是否確實瞭解其所交保險費係用以購買保險商品或服務</p>",
+            "id": 13668,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>保戶投保之險種、保險金額及保險費支出與其實際需求是否相當</p>",
+            "id": 13669,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 13670,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 6,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>從事業務招攬時，不得有那些情事?</p>",
+        "difficulty_level": "medium",
+        "id": 3751,
+        "last_updated_at": "2025-05-22T15:11:36Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>透過網際網路(包括各大入口網站、各拍賣網站、部落格等)從事特定保險商品銷售招攬廣告(含透露商品名稱、特色或其他足以辨別為某特定保險商品之內容)</p>",
+            "id": 13663,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>散布流言或以詐術損害保險業、外國保險業之信用</p>",
+            "id": 13664,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>藉主管機關對保險商品或服務之核准或備查程序，誤導保戶認為主管機關已對該保險商品或服務提供保證</p>",
+            "id": 13665,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 13666,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 5,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何種情形，不得申請登記為本公司業務員?</p>",
+        "difficulty_level": "medium",
+        "id": 3750,
+        "last_updated_at": "2025-05-22T15:11:36Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>經簡易人壽教育訓練，並通過業務員資格測驗者</p>",
+            "id": 13660,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>具小學以上學校畢業或同等學歷</p>",
+            "id": 13661,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>具國中以上學校畢業或同等學歷</p>",
+            "id": 13662,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 4,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 14
+  },
+  {
+    "end": 14,
+    "page": 2,
+    "page_size": 10,
+    "pages": 2,
+    "start": 11,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>申請登記之業務員有下列情事之一者，本公司應不予登記；已登記者，應予註銷?</p>",
+        "difficulty_level": "medium",
+        "id": 3749,
+        "last_updated_at": "2025-05-22T15:11:36Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>無行為能力、限制行為能力或受輔助宣告尚未撤銷</p>",
+            "id": 13656,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>申請登記之文件有虛偽之記載</p>",
+            "id": 13657,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>受破產之宣告，尚未復權</p>",
+            "id": 13658,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 13659,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 3,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>以下何者正確?</p>",
+        "difficulty_level": "medium",
+        "id": 3748,
+        "last_updated_at": "2025-05-22T15:11:36Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>業務員經登記後，應專為本公司從事簡易人壽保險之招攬</p>",
+            "id": 13653,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>業務員經登記後，得為其他公司從事保險招攬</p>",
+            "id": 13654,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 13655,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 2,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關業務員教育訓練，以下何者錯誤?</p>",
+        "difficulty_level": "medium",
+        "id": 3747,
+        "last_updated_at": "2025-05-22T15:11:36Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>業務員辦理登記後，應參加本公司辦理之教育訓練</p>",
+            "id": 13649,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>業務員辦理登記後，得選擇性參加本公司辦理之教育訓練</p>",
+            "id": 13650,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>業務員每年參加之在職訓練應包括公平對待65歲以上客戶之相關課程</p>",
+            "id": 13651,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆非</p>",
+            "id": 13652,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 1,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關業務員招攬資格，以下何者正確?</p>",
+        "difficulty_level": "medium",
+        "id": 3746,
+        "last_updated_at": "2025-05-22T15:11:36Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>業務員受停止招攬行為之處分者，應予以停止招攬登記</p>",
+            "id": 13645,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>業務員有終止合約或其他終止招攬行為之情事者，應予以註銷登記</p>",
+            "id": 13646,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>業務員不參加教育訓練者，應予以撤銷登記</p>",
+            "id": 13647,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 13648,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 0,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 14
+  }
+]

@@ -1,0 +1,1345 @@
+﻿[
+  {
+    "end": 10,
+    "page": 1,
+    "page_size": 10,
+    "pages": 3,
+    "start": 1,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>關於我國金融業的檢舉制度，應包含之事項下列何者為非?</p>",
+        "difficulty_level": "medium",
+        "id": 194,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>檢舉人保護制度</p>",
+            "id": 616,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>受理之檢舉案件類型</p>",
+            "id": 617,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>檢舉案件之處理情形不須通知檢舉人</p>",
+            "id": 618,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>設置並公布檢舉之管道</p>",
+            "id": 619,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 29,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>依照保險業務員管理規則第5條規定，關於保險業務員登錄之資格，下列敘述何者錯誤?</p>",
+        "difficulty_level": "medium",
+        "id": 193,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>應為成年人。</p>",
+            "id": 612,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>高中職以上學校畢業或同等學歷。</p>",
+            "id": 613,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>業務員資格測驗合格。</p>",
+            "id": 614,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>國外學歷即使經教育部認可或相關認證者也不承認。</p>",
+            "id": 615,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 28,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>受理身心障礙者投保時，下列敘述何者錯誤</p>",
+        "difficulty_level": "medium",
+        "id": 192,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>業務員不得僅參閱核保手冊，自行判斷被保險人不符合承保條件。</p>",
+            "id": 608,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>應對公司承保條件及核保規則加以說明，並提供有關之諮詢服務。</p>",
+            "id": 609,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>得因被保險人為身心障礙者而有不公平之待遇。</p>",
+            "id": 610,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>對肢體障礙者宜比照一般正常人之核保規則辦理。</p>",
+            "id": 611,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 27,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列敘述何者正確</p>",
+        "difficulty_level": "medium",
+        "id": 191,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>就定義而言，過世的人的資料也算個人資料。</p>",
+            "id": 604,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>直接識別是指僅以該資料不能識別，須與其他資料對照、組合、連結等，始能識別該特定個人。</p>",
+            "id": 605,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>間接識別是指直接透過該資料可識別出當事人者。</p>",
+            "id": 606,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆非。</p>",
+            "id": 607,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 26,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>犯罪者為使執法機關更難追查，會藉由許多複雜金融交易來清洗其不法所得，此種消弭、包裝的程序，即稱為?</p>",
+        "difficulty_level": "medium",
+        "id": 190,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>處置</p>",
+            "id": 600,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>分層化</p>",
+            "id": 601,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>整合</p>",
+            "id": 602,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>Placement</p>",
+            "id": 603,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 25,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列關於帳號被盜用的原因，何者為非?</p>",
+        "difficulty_level": "medium",
+        "id": 189,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>密碼太簡單。</p>",
+            "id": 596,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>缺乏資訊安全意識。</p>",
+            "id": 597,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>密碼走到哪用到哪。</p>",
+            "id": 598,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>密碼時常變更。</p>",
+            "id": 599,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 24,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>洗錢的架構，何者為非?</p>",
+        "difficulty_level": "medium",
+        "id": 188,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>特定犯罪行為。</p>",
+            "id": 592,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>取得不法利益。</p>",
+            "id": 593,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>清洗黑錢。</p>",
+            "id": 594,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是。</p>",
+            "id": 595,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 23,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列敘述何者正確?</p>",
+        "difficulty_level": "medium",
+        "id": 187,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>為了提供更完善的服務，業務員可同時登錄於同種類之公司。(同時登錄於2家產險公司或2家壽險公司)</p>",
+            "id": 588,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>因教育訓練不合格遭撤銷登錄證者，可立即重考，不需滿1年後才能補考。</p>",
+            "id": 589,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>業務員招攬行為所生損失，所屬公司不須負連帶責任。</p>",
+            "id": 590,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>各公司一定要依照懲處參考標準訂立完全一樣的懲處內容。</p>",
+            "id": 591,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 22,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者非當事人可行使之權利?</p>",
+        "difficulty_level": "medium",
+        "id": 186,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>查詢或請求閱覽。</p>",
+            "id": 584,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>請求停止蒐集、處理或利用。</p>",
+            "id": 585,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>請求補充、更正或刪除。</p>",
+            "id": 586,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆為當事人的權利。</p>",
+            "id": 587,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 21,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>受理身心障礙者投保，應由何單位決定是否承保</p>",
+        "difficulty_level": "medium",
+        "id": 185,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>各局行銷科</p>",
+            "id": 580,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>業務員自己</p>",
+            "id": 581,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>受理局經理</p>",
+            "id": 582,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>壽險處核保單位</p>",
+            "id": 583,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 20,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 30
+  },
+  {
+    "end": 20,
+    "page": 2,
+    "page_size": 10,
+    "pages": 3,
+    "start": 11,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>關於資訊存在的形式，下列何者為是?</p>",
+        "difficulty_level": "medium",
+        "id": 184,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>列印或書寫於書本</p>",
+            "id": 576,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>電子形式儲存</p>",
+            "id": 577,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>交談口述</p>",
+            "id": 578,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 579,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 19,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者非三個資訊控管方式?</p>",
+        "difficulty_level": "medium",
+        "id": 183,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>People</p>",
+            "id": 572,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>Processes</p>",
+            "id": 573,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>Protect</p>",
+            "id": 574,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>Technology</p>",
+            "id": 575,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 18,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>業務員登錄證期限為?</p>",
+        "difficulty_level": "medium",
+        "id": 182,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>2年。</p>",
+            "id": 568,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>3年。</p>",
+            "id": 569,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>5年。</p>",
+            "id": 570,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>10年。</p>",
+            "id": 571,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 17,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>根據GDPR的規定，如果個資不小心外洩時，要在多久以內通報?</p>",
+        "difficulty_level": "medium",
+        "id": 181,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>24小時</p>",
+            "id": 564,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>48小時</p>",
+            "id": 565,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>72小時</p>",
+            "id": 566,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>7天</p>",
+            "id": 567,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 16,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>身心障礙者若於投保前已符合傷害險「失能程度與保險金給付表」所列失能等級狀況，下列作法何者為非</p>",
+        "difficulty_level": "medium",
+        "id": 180,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p> 無須特別請客戶填寫告知事項。</p>",
+            "id": 561,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>應請保戶據實填寫體況。</p>",
+            "id": 562,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>投保時應於要保書告知欄，聲明放棄該項失能給付請求權。</p>",
+            "id": 563,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 15,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>評議委員會之評議決定應以爭議處理機構名義作成評議書，送達當事人。前項送達，不適用民事訴訟法有關送達之規定。</p>",
+        "difficulty_level": "medium",
+        "id": 179,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 559,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 560,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 14,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>金融服務業辦理授信業務，應同時審酌借款戶、資金用途、還款來源、債權保障及授信展望等授信原則，得因金融消費者拒絕授權向經營金融機構間信用資料之服務事業查詢信用資料，作為不同意授信之唯一理由</p>",
+        "difficulty_level": "medium",
+        "id": 178,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 557,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 558,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 13,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>手機上的應用程式絕對不會存取個人資訊。</p>",
+        "difficulty_level": "medium",
+        "id": 177,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 555,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 556,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 12,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>吹哨者也就是揭弊者，是反貪腐的重要環節，應該要公開表揚吹哨者，做為大家的楷模，不須特別保護。</p>",
+        "difficulty_level": "medium",
+        "id": 176,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 553,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 554,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 11,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>消費者就金融消費爭議事件提出申訴後，金融服務業應於收受之日起30天內為適當之處理，並將處理結果回覆提出申訴之金融消費者。</p>",
+        "difficulty_level": "medium",
+        "id": 175,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 551,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 552,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 10,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 30
+  },
+  {
+    "end": 30,
+    "page": 3,
+    "page_size": 10,
+    "pages": 3,
+    "start": 21,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>為確保金融消費爭議可以迅速有效解決，《金融消費者保護法》設立評議決定一定額度的機制，120萬元以內只要消費者接受評議內容，金融業者則不得拒絕接受，若是理賠金額過大，且保戶不接受評議內容，則再考慮是否走其他訴訟管道。</p>",
+        "difficulty_level": "medium",
+        "id": 174,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 549,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 550,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 9,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>金融消費者申請評議後，爭議處理機構得試行調處；當事人任一方不同意調處或經調處不成立者，爭議處理機構應續行評議。</p>",
+        "difficulty_level": "medium",
+        "id": 173,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 547,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 548,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 8,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>登錄期間停招累積達2年者，應予以撤銷登錄。</p>",
+        "difficulty_level": "medium",
+        "id": 172,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 545,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 546,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 7,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>同時登錄產、壽險公司經一公司依據第19條規定辦理停招時，另一公司是否應停止登錄?</p>",
+        "difficulty_level": "medium",
+        "id": 171,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 543,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 544,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 6,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>業務員受理身心障礙者投保件，其處理流程是否與一般投保件相同?</p>",
+        "difficulty_level": "medium",
+        "id": 170,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 541,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 542,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 5,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>聯合國身心障礙者權利公約之英文簡寫為CRPD?</p>",
+        "difficulty_level": "medium",
+        "id": 169,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 539,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 540,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 4,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>取得帳號後，破解密碼的難度會變低。</p>",
+        "difficulty_level": "medium",
+        "id": 168,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 537,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 538,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 3,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>蒐集個資時，如果依法律規定免告知，則不需告知當事人。</p>",
+        "difficulty_level": "medium",
+        "id": 167,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 535,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 536,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 2,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>與個資有關的4個活動是指：蒐集、處理、利用、國際傳輸。</p>",
+        "difficulty_level": "medium",
+        "id": 166,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 533,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 534,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 1,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>人壽保險公司較易被利用為洗錢之產品為具有保單價值準備金或現金價值之保險商品。</p>",
+        "difficulty_level": "medium",
+        "id": 165,
+        "last_updated_at": "2024-01-24T08:40:47Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 531,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 532,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 0,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 30
+  }
+]

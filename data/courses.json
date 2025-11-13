@@ -64,6 +64,13 @@
       "course_id": 368,
       "delay": 7.0,
       "description": "預防職場不法侵害課程（主管版）"
+    },
+    {
+      "program_name": "高齡客戶投保權益保障(114年度)",
+      "exam_name": "高齡測驗(100分及格)",
+      "course_type": "exam",
+      "delay": 10.0,
+      "description": "高齡客戶投保權益保障考試流程 (新增於 2025-01-13)"
     }
   ]
 }

@@ -1,0 +1,1106 @@
+﻿[
+  {
+    "end": 10,
+    "page": 1,
+    "page_size": 10,
+    "pages": 3,
+    "start": 1,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問針對身心障礙者的描述，下列何者有誤?</p>",
+        "difficulty_level": "medium",
+        "id": 215,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>身心障礙者也是社會中的一份子，因此他們的權利跟義務應和非身心障礙者相同。</p>",
+            "id": 700,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>只要有身體上的損傷，就會面臨到障礙。</p>",
+            "id": 701,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>每一位身心障礙者的需求都有所差異，不知道如何提供服務時，可以直接詢問身心障礙者本人。</p>",
+            "id": 702,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>身心障礙者相對於非身心障礙者而言，更容易處於社會權利不對等的情形中，因此工作者需要常常檢視自己權利行使的適當性。</p>",
+            "id": 703,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 20,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問與精神障礙者溝通時，下列描述何者有誤?</p>",
+        "difficulty_level": "medium",
+        "id": 214,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>非語言及語言一致。</p>",
+            "id": 696,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>運用適當簡單且明確的訊息溝通。</p>",
+            "id": 697,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>不斷問問題或給建議。</p>",
+            "id": 698,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>瞭解他人需求。</p>",
+            "id": 699,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 19,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問與精神障礙者互動何者有誤?</p>",
+        "difficulty_level": "medium",
+        "id": 213,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>不去批評。</p>",
+            "id": 692,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>傾聽需求想法。</p>",
+            "id": 693,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>注意力轉移。</p>",
+            "id": 694,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>説服精障者的幻聽內容，並告知內容是假的，不應該相信。</p>",
+            "id": 695,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 18,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問針對精神復健計畫的定義何者有誤?</p>",
+        "difficulty_level": "medium",
+        "id": 212,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>強化個人能力及技巧，符合居住、就業、社會化以及個人成長所需。</p>",
+            "id": 688,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>以改善精神疾患個案的生活品質為目標。</p>",
+            "id": 689,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>協助他們儘可能在社會中擔負起主動以及獨立生活能力及責任。</p>",
+            "id": 690,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>精神障礙者可完全遵從專業人員的安排，不需練習表達想法與選擇。</p>",
+            "id": 691,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 17,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問針對躁鬱症下列描述何者正確?</p>",
+        "difficulty_level": "medium",
+        "id": 211,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>所有躁鬱症患者的行為都是無法預測的。</p>",
+            "id": 684,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>冬天是躁鬱症易好發季節。</p>",
+            "id": 685,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>躁鬱症患者是危險人物。</p>",
+            "id": 686,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>躁鬱症是一種週期性情緒過度高昂或低落的疾病。</p>",
+            "id": 687,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 16,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問針對憂鬱症下列描述何者正確?</p>",
+        "difficulty_level": "medium",
+        "id": 210,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>憂鬱症患者不需要吃藥，時間過去就會好了。</p>",
+            "id": 680,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>大部分的憂鬱症患者都是食慾不佳，但有部分患者會嗜睡、增加食慾。</p>",
+            "id": 681,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>憂鬱症患者只要想開一點就好了。</p>",
+            "id": 682,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>憂鬱症患者心情的低落是全面性的，但只要做自己有興趣的事情，情緒就可以好轉。</p>",
+            "id": 683,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 15,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問針對思覺失調症下列描述何者有誤?</p>",
+        "difficulty_level": "medium",
+        "id": 209,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>該疾病是腦內神經發展病理加上環境病理因素，促發神經介質或神經賀爾蒙的功能失調。</p>",
+            "id": 676,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>思覺失調症患者大多低病識感。</p>",
+            "id": 677,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>其主要症狀是大腦的思考和感覺功能障礙。</p>",
+            "id": 678,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>思覺失調症患者一定具有暴力攻擊傾向。</p>",
+            "id": 679,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 14,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>為因應聽覺障礙者的個別差異，以下哪一項不是該進行的調整?</p>",
+        "difficulty_level": "medium",
+        "id": 208,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>老師上課時配載調頻系統的發射器。</p>",
+            "id": 672,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>教學環境避免過於吵鬧。</p>",
+            "id": 673,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>説話清晰，讓障礙者能夠看到主講者的臉。</p>",
+            "id": 674,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>開會位置儘量安排在一樓。</p>",
+            "id": 675,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 13,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問國家對待手語的方式，何者是尊重差異?</p>",
+        "difficulty_level": "medium",
+        "id": 207,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>強迫聽障者只能學習口語。</p>",
+            "id": 668,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>將手語視為一種語言，並納入國家語言中。</p>",
+            "id": 669,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>將手語學習視為一種治療。</p>",
+            "id": 670,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>將手語視為口語的補充。</p>",
+            "id": 671,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 12,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問哪一部法明訂「視覺、聽覺、肢體功能障礙者由合格導盲犬、導聾犬、肢體輔助犬陪同或導盲犬、導聾犬、肢體輔助犬專業訓練人員於執行訓練時帶同幼犬，得自由出入公共場所、公共建築物、營業場所、大眾運輸工具及其他公共設施。」?</p>",
+        "difficulty_level": "medium",
+        "id": 206,
+        "last_updated_at": "2024-01-25T00:23:32Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>憲法。</p>",
+            "id": 664,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>身心障礙者權利公約。</p>",
+            "id": 665,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>身心障礙者權益保障法。</p>",
+            "id": 666,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>身心障礙者保護法。</p>",
+            "id": 667,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 11,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 21
+  },
+  {
+    "end": 20,
+    "page": 2,
+    "page_size": 10,
+    "pages": 3,
+    "start": 11,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問看見導盲犬執勤時，我們應遵守哪些事?</p>",
+        "difficulty_level": "medium",
+        "id": 205,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>不餵食。</p>",
+            "id": 660,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>不干擾。</p>",
+            "id": 661,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>主動詢問視障礙者是否需要協助。</p>",
+            "id": 662,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是。</p>",
+            "id": 663,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 10,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請正確排列出協助視覺障礙者之正確順序「1、引2、報3、問4、拍」。</p>",
+        "difficulty_level": "medium",
+        "id": 204,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>1234。</p>",
+            "id": 656,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>3412。</p>",
+            "id": 657,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>4312。</p>",
+            "id": 658,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>3421。</p>",
+            "id": 659,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 9,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問下列何者不是「視覺障礙」者常用輔具?</p>",
+        "difficulty_level": "medium",
+        "id": 203,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>白手杖。</p>",
+            "id": 652,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>登山杖。</p>",
+            "id": 653,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>放大鏡。</p>",
+            "id": 654,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>螢幕報讀軟體。</p>",
+            "id": 655,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 8,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請選出最適合下列描述之訓練「能夠自由的行動，是視障者獨立生活重要的關鍵。透過老師的教導，從居家環境開始，協助您熟悉輔助器材的運用，逐步跨出家門，妥善的運用剩餘視力，感知外在環境的情況，以及安全的行走、搭乘交通工具，找回自己行動的自由。」</p>",
+        "difficulty_level": "medium",
+        "id": 202,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>盲用電腦訓練。</p>",
+            "id": 648,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>點字及文書訓練。</p>",
+            "id": 649,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>獨立生活自理能力訓練。</p>",
+            "id": 650,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>定向行動訓練</p>",
+            "id": 651,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 7,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問下列何種格式不適用於「視覺障礙」者?</p>",
+        "difficulty_level": "medium",
+        "id": 201,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>口述影像版。</p>",
+            "id": 644,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>點字。</p>",
+            "id": 645,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>手語。</p>",
+            "id": 646,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>有聲書。</p>",
+            "id": 647,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 6,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>以下有關視覺障礙者資訊接受與學習的敘述，何者錯誤?</p>",
+        "difficulty_level": "medium",
+        "id": 200,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>擴視機可以將字放大，協助弱勢障礙者閲讀。</p>",
+            "id": 640,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>可提供大字體教科書或錄製有聲圖書協助視覺障礙者學習。</p>",
+            "id": 641,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>國語點字是以不同的點字記號來代表不同的注音符號和字形。</p>",
+            "id": 642,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>製作觸覺地圖來教導視覺障礙者閲讀地圖或圖表。</p>",
+            "id": 643,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 5,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問下列針對視覺障礙者何項描述錯誤?</p>",
+        "difficulty_level": "medium",
+        "id": 199,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>視覺障礙一詞可涵蓋低視能與弱視。</p>",
+            "id": 636,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>視力未達萬國優眼視力測定值0.03者，稱為全盲。</p>",
+            "id": 637,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>低視能不等同弱視。</p>",
+            "id": 638,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>視覺障礙者等於全盲。</p>",
+            "id": 639,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 4,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問針對與自閉症(肯納症)者互動的技巧，下列描述何者正確?</p>",
+        "difficulty_level": "medium",
+        "id": 198,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>給予明確的指令並告知工作流程，可讓自閉症者有規則可依循。</p>",
+            "id": 632,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>互動時應使用簡單、口語化的語言溝通。</p>",
+            "id": 633,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>事先説明清楚環境與工作規範，可譲自閉症者先做好心理準備。</p>",
+            "id": 634,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是。</p>",
+            "id": 635,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 3,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問下列何者非製作易讀版需要注意的事項?</p>",
+        "difficulty_level": "medium",
+        "id": 197,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>產出過程需要邀請心智障礙者共同參與討論。</p>",
+            "id": 628,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>內容應以專家學者的意見為主，不需要考量心智障礙者的需求。</p>",
+            "id": 629,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>使用淺顯易懂的文字，不宜使用稚化的兒語。</p>",
+            "id": 630,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>應使用較高的顏色對比度。</p>",
+            "id": 631,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 2,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>請問針對智能障礙者的描述，下列何者有誤?</p>",
+        "difficulty_level": "medium",
+        "id": 196,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>心智障礙者的注意力持續時間較非身心障礙者短。</p>",
+            "id": 624,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>智能障礙者沒有辦法表達自己的想法，所以不需要諮詢他們的意見。</p>",
+            "id": 625,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>智能障礙者的抽象思考能力較非身心障礙者弱。</p>",
+            "id": 626,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>透過訓練與協助，智能障礙者也能擁有照顧自己的能力，並進入職場就業。</p>",
+            "id": 627,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 1,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 21
+  },
+  {
+    "end": 21,
+    "page": 3,
+    "page_size": 10,
+    "pages": 3,
+    "start": 21,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列關於《身心障礙者權益保障法》的描述，何者為非?</p>",
+        "difficulty_level": "medium",
+        "id": 195,
+        "last_updated_at": "2024-01-24T11:17:35Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>《身心障礙者權益保障法》使用ICF分類，將身心障礙類別分為八大類。</p>",
+            "id": 620,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>《身心障礙者權益保障法》由功能導向替代過去疾病導向系統。</p>",
+            "id": 621,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>《身心障礙者權益保障法》要求所有服務都免費。</p>",
+            "id": 622,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>《身心障礙者權益保障法》將身心障礙者定義為「經專業人員評估，取得身心障礙證明之公民」。</p>",
+            "id": 623,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 0,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 21
+  }
+]

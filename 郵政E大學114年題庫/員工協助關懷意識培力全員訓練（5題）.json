@@ -1,0 +1,197 @@
+﻿[
+  {
+    "end": 5,
+    "page": 1,
+    "page_size": 10,
+    "pages": 1,
+    "start": 1,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>心情溫度計(簡式健康量表)，可以幫助個人自我測量情緒困擾的程度。</p>",
+        "difficulty_level": "medium",
+        "id": 134,
+        "last_updated_at": "2024-01-17T10:34:58Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 423,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 424,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 4,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>本公司員工協助方案相關資訊，置放於郵政人資全員作業系統/員工協助方案專區項下，供同仁參考運用。</p>",
+        "difficulty_level": "medium",
+        "id": 133,
+        "last_updated_at": "2024-01-17T10:34:58Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 421,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 422,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 3,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>本公司員工協助方案專業諮詢服務，提供同仁(含眷屬)一年 3 小時與專業人員諮詢、討論，費用由公司負擔。</p>",
+        "difficulty_level": "medium",
+        "id": 132,
+        "last_updated_at": "2024-01-17T10:34:58Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 419,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 420,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 2,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>本公司員工協助方案專業諮詢服務提供免付費心情諮詢專線，電話號碼為0800-555-590。</p>",
+        "difficulty_level": "medium",
+        "id": 131,
+        "last_updated_at": "2024-01-17T10:34:58Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 417,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 418,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 1,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>本公司員工協助方案專業諮詢服務提供心理、法律\n、健康(醫療)、財務(理財)及管理類等諮詢服務。</p>",
+        "difficulty_level": "medium",
+        "id": 130,
+        "last_updated_at": "2024-01-17T10:34:58Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 415,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 416,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 0,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 5
+  }
+]

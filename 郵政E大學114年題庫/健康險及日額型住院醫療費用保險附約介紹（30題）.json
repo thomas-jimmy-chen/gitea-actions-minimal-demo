@@ -1,0 +1,1142 @@
+﻿[
+  {
+    "end": 10,
+    "page": 1,
+    "page_size": 10,
+    "pages": 3,
+    "start": 1,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」中途不得申請增加日額，須先終止原附約，再重新按新日額加保。</p>",
+        "difficulty_level": "easy",
+        "id": 391,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1274,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1275,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 29,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>如果主契約有遭拒保、緩保之情事或距離滿期日不滿一年，均不得中途加保「郵政簡易人壽日額型住院醫療費用保險附約」。</p>",
+        "difficulty_level": "medium",
+        "id": 390,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1272,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1273,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 28,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>保單批註是指針對不屬於原保單中的條款約定事項，雙方另外進行約定。必須由保險公司與要保人雙方表示同意才生效，並附在保單成為保險契約的一部分。</p>",
+        "difficulty_level": "medium",
+        "id": 389,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1270,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1271,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 27,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>投保主約為快樂寶貝兒童保險及安心小額終身壽險不得附加「郵政簡易人壽日額型住院醫療費用保險附約」。</p>",
+        "difficulty_level": "medium",
+        "id": 388,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1268,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1269,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 26,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」可附加於定期壽險，另所有定期壽險之日額附約累積投保金額不得超過1000元。</p>",
+        "difficulty_level": "medium",
+        "id": 387,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1266,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1267,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 25,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」為附約形式，需附加於主約之下。</p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>客戶可單獨投保「郵政簡易人壽日額型住院醫療費用保險附約」，不需附加於其他主約之下。</p>",
+        "difficulty_level": "medium",
+        "id": 386,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1264,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1265,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 24,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」被保險人同一保單年度同一次住院最高日數以90日為限。</p>",
+        "difficulty_level": "easy",
+        "id": 385,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1262,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1263,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 23,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>終身型的醫療保險保費較高，但民眾對於「終身概念」的醫療保障，普遍更有安心感，因此在市場上依舊熱賣。</p>",
+        "difficulty_level": "easy",
+        "id": 384,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1260,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1261,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 22,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>保單條款附著之要保書、批註及其他約定書，均為保險契約的構成部分。</p>",
+        "difficulty_level": "medium",
+        "id": 383,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1258,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1259,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 21,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p>被保險人因美容手術、外科整型而住院診療者，本公司不負給付保險金責任。但為重建其基本功能所作之必要整形，不在此限。</p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>被保險人因重建基本功能所作之必要整型手術，保險公司不負給付責任。</p>",
+        "difficulty_level": "medium",
+        "id": 382,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1256,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1257,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 20,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 30
+  },
+  {
+    "end": 20,
+    "page": 2,
+    "page_size": 10,
+    "pages": 3,
+    "start": 11,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>被保險人之住院診療或手術需求如果是因為犯罪行為，如偷竊、搶劫，保險公司不負給付責任。</p>",
+        "difficulty_level": "easy",
+        "id": 381,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1254,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1255,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 19,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p>投保年齡為15歲至65歲</p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」投保年齡為16歲至65歲。</p>",
+        "difficulty_level": "medium",
+        "id": 380,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1252,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1253,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 18,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」繳費方式為與主契約合併於主契約轉帳帳戶扣繳保險費。</p>",
+        "difficulty_level": "easy",
+        "id": 379,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1250,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1251,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 17,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p>須考量負擔保費的經濟能力、個人健康條件，以及保障的內容與範圍，無須考量投資報酬率。</p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>個人投保商業健康保險時，須考量投資報酬率</p>",
+        "difficulty_level": "easy",
+        "id": 378,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1248,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1249,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 16,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」，簡稱為「日額型醫療保險」，保險種類代號填「H01」。</p>",
+        "difficulty_level": "easy",
+        "id": 377,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1246,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1247,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 15,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」所生的權利自得為請求之日起，經過5年不行使而消滅。</p>",
+        "difficulty_level": "medium",
+        "id": 376,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1244,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1245,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 14,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」被保險人續保之投保年齡最高為70歲。</p>",
+        "difficulty_level": "easy",
+        "id": 375,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1242,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1243,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 13,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」保險期間為1年，保險期間屆滿時，要保人得交付續保保險費，以逐年使本附約繼續有效，本公司不得拒絕續保。</p>",
+        "difficulty_level": "easy",
+        "id": 374,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1240,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1241,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 12,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」住院醫療日額分為1,000元、2,000元及3,000元三種。</p>",
+        "difficulty_level": "easy",
+        "id": 373,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1238,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1239,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 11,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>住院醫療費用保險所稱同一事故，係指因同一疾病或傷害，或因此引起之併發症於出院後14日內於同一醫院再次住院。</p>",
+        "difficulty_level": "easy",
+        "id": 372,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1236,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1237,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 10,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 30
+  },
+  {
+    "end": 30,
+    "page": 3,
+    "page_size": 10,
+    "pages": 3,
+    "start": 21,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>保險事故雖已發生，但保險人可藉以免責的事由有二種，一為除外原因，一為除外事故。</p>",
+        "difficulty_level": "easy",
+        "id": 371,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1234,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1235,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 9,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p>如有疑義時，以做有利被保險人的解釋為原則。</p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>契約的解釋，應探求當事人真義，不得拘泥所用的文字，如有疑義時，以做有利於保險人的解釋為原則。</p>",
+        "difficulty_level": "easy",
+        "id": 370,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1232,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1233,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 8,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p>本附約續保時，是逐年依據被保險人年齡重新計算保險費。</p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」續保時，保費以投保時為準。</p>",
+        "difficulty_level": "easy",
+        "id": 369,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1230,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1231,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 7,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p>不可以申請撤保</p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>中途加保之「郵政簡易人壽日額型住院醫療費用保險附約」評估後如不需要，可以申請撤保。</p>",
+        "difficulty_level": "easy",
+        "id": 368,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1228,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1229,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 6,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>依傷害示範條款及住院示範條款：「以要保人所住地方法院為管轄法院，要保人居住國外時，條款宜訂定ΟΟ地方法院。」</p>",
+        "difficulty_level": "medium",
+        "id": 367,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1226,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1227,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 5,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p>經過2年不行使而消滅</p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>依傷害示範條款及住院示範條款：「由本契約所生的權利，自得為請求之日起，經過5年不行使而消滅。」</p>",
+        "difficulty_level": "medium",
+        "id": 366,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1224,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1225,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 4,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p>本附約無保單價值準備金，辦理終止時，僅按日數比例退還未到期保險費，本款項由要保人領取。</p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」辦理終止時，可領回應得之保單價值準備金。</p>",
+        "difficulty_level": "medium",
+        "id": 365,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1222,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1223,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 3,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>健康險契約成立時，如被保險人已患疾病或在妊娠情況中，保險公司對該項疾病或分娩的醫療費用，不予給付。</p>",
+        "difficulty_level": "easy",
+        "id": 364,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1220,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1221,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 2,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」繳費期別同主契約。主契約繳費期滿後或變更為減額繳清保險本附約仍屬有效時，本附約繳費期別一律改為年繳。</p>",
+        "difficulty_level": "hard",
+        "id": 363,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1218,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1219,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 1,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「郵政簡易人壽日額型住院醫療費用保險附約」復效時，應收取本附約按日數比例計算之當期未滿期保險費與停效前寬限期間的欠繳保費。</p>",
+        "difficulty_level": "hard",
+        "id": 362,
+        "last_updated_at": "2024-04-29T10:01:26Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>是</p>",
+            "id": 1216,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>否</p>",
+            "id": 1217,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 0,
+        "sub_subjects": [],
+        "type": "true_or_false",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 30
+  }
+]

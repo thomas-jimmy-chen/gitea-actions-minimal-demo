@@ -1,0 +1,522 @@
+﻿[
+  {
+    "end": 10,
+    "page": 1,
+    "page_size": 10,
+    "pages": 1,
+    "start": 1,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者為我國國家風險評估報告指出非常高風險弱點之行業/部門？</p>",
+        "difficulty_level": "medium",
+        "id": 4259,
+        "last_updated_at": "2025-06-02T14:42:50Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>銀樓業</p>",
+            "id": 15263,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>國際金融業務分行</p>",
+            "id": 15264,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>提供虛擬資產服務之事業或人員</p>",
+            "id": 15265,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>本國銀行</p>",
+            "id": 15266,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 9,
+        "sub_subjects": [],
+        "type": "multiple_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者為我國國家風險評估報告中評估非常高威脅之犯罪類型？</p>",
+        "difficulty_level": "medium",
+        "id": 4258,
+        "last_updated_at": "2025-06-02T14:42:50Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>詐欺</p>",
+            "id": 15259,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>貪污</p>",
+            "id": 15260,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>第三方洗錢</p>",
+            "id": 15261,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>智慧財產犯罪</p>",
+            "id": 15262,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 8,
+        "sub_subjects": [],
+        "type": "multiple_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>以下何者為亞太防制洗錢組織(APG)相互評鑑成績等級落入「加強追蹤名單」之影響？</p>",
+        "difficulty_level": "medium",
+        "id": 4257,
+        "last_updated_at": "2025-06-02T14:42:50Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>國際形象不佳</p>",
+            "id": 15255,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>整體金融貿易體系受創</p>",
+            "id": 15256,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>外國投資意願降低</p>",
+            "id": 15257,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>臺灣企業及交易受高度嚴格審查</p>",
+            "id": 15258,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 7,
+        "sub_subjects": [],
+        "type": "multiple_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者為防制洗錢與打擊資助恐怖份子有嚴重缺失之國家或地區？</p>",
+        "difficulty_level": "medium",
+        "id": 4256,
+        "last_updated_at": "2025-06-02T14:42:50Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>越南</p>",
+            "id": 15251,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>北韓</p>",
+            "id": 15252,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>伊朗</p>",
+            "id": 15253,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>緬甸</p>",
+            "id": 15254,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 6,
+        "sub_subjects": [],
+        "type": "multiple_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>洗錢防制法所稱的洗錢行為包括哪些？</p>",
+        "difficulty_level": "medium",
+        "id": 4255,
+        "last_updated_at": "2025-06-02T14:42:50Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>隱匿特定犯罪所得或掩飾其來源</p>",
+            "id": 15247,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>妨礙或危害國家對於特定犯罪所得之調查、發現、保全、沒收或追徵</p>",
+            "id": 15248,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>收受、持有或使用他人之特定犯罪所得</p>",
+            "id": 15249,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>使用自己之特定犯罪所得與他人進行交易</p>",
+            "id": 15250,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 5,
+        "sub_subjects": [],
+        "type": "multiple_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列哪一個單位是我國之金融情報中心（FIU），負責受理、分析金融機構所申報之疑似洗錢交易報告？</p>",
+        "difficulty_level": "medium",
+        "id": 4254,
+        "last_updated_at": "2025-06-02T14:42:50Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>中央銀行國庫局</p>",
+            "id": 15243,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>金融監督管理委員會</p>",
+            "id": 15244,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>法務部調查局洗錢防制處</p>",
+            "id": 15245,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>內政部警政署</p>",
+            "id": 15246,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 4,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關資恐/資武擴/非營利組織之評估結果，下列何者錯誤？</p>",
+        "difficulty_level": "medium",
+        "id": 4253,
+        "last_updated_at": "2025-06-02T14:42:50Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>我國尚無任何證據顯示與恐怖活動或資恐活動有關，資恐風險為「低度」。</p>",
+            "id": 15239,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>我國資武擴整體風險在北韓部分評等為「中度」</p>",
+            "id": 15240,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>我國資武擴整體風險在伊朗部分評等為「高度」</p>",
+            "id": 15241,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>非營利組織評等結果較有風險者包括人民團體、全國性宗教財團法人及社會福利財團法人</p>",
+            "id": 15242,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 3,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關國家洗錢資恐及資武擴風險評估之宗旨，下列何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 4252,
+        "last_updated_at": "2025-06-02T14:42:50Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>識別我國面臨的威脅及自身弱點</p>",
+            "id": 15235,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>檢視我國實施之控制措施是否有效</p>",
+            "id": 15236,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>瞭解剩餘風險並據以發展行動計畫</p>",
+            "id": 15237,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 15238,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 2,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>我國行業/部門弱點評估結果中，「辦理儲金匯兌之郵政機構」之評估結果為下列何者？</p>",
+        "difficulty_level": "medium",
+        "id": 4251,
+        "last_updated_at": "2025-06-02T14:42:50Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>低風險弱點</p>",
+            "id": 15231,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>中風險弱點</p>",
+            "id": 15232,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>高風險弱點</p>",
+            "id": 15233,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>非常高風險弱點</p>",
+            "id": 15234,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 1,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>「將非法所得拆分成小額交易，透過金融或非金融管道，進入合法體系，分散日期、機構、帳戶等，避免引起注意及規避監管偵測」，指的是洗錢行為的哪一個階段？</p>",
+        "difficulty_level": "medium",
+        "id": 4250,
+        "last_updated_at": "2025-06-02T14:42:50Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>處置(Placement)</p>",
+            "id": 15227,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>多層化(Layering)</p>",
+            "id": 15228,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>整合(Integration)</p>",
+            "id": 15229,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆非</p>",
+            "id": 15230,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 0,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 10
+  }
+]

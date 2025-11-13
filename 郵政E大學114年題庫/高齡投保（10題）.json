@@ -1,0 +1,528 @@
+﻿[
+  {
+    "end": 10,
+    "page": 1,
+    "page_size": 10,
+    "pages": 1,
+    "start": 1,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>高齡客戶投保下列何種保險商品、保險公司應指派非銷售通路之人員、於銷售保險契約後且同意承保前，進行電話訪問、視訊或遠距訪問?</p>",
+        "difficulty_level": "medium",
+        "id": 225,
+        "last_updated_at": "2024-02-01T08:49:53Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>小額終老保險</p>",
+            "id": 740,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>團體年金保險</p>",
+            "id": 741,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>投資型保險</p>",
+            "id": 742,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>保險期間在三年以下之傷害保險</p>",
+            "id": 743,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 9,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>對高齡客戶招攬保險契約時，應注意下列何者?</p>",
+        "difficulty_level": "medium",
+        "id": 224,
+        "last_updated_at": "2024-02-01T08:49:53Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>自我建立金融道德觀念，杜絕不實招攬與不當話術</p>",
+            "id": 736,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>招攬過程及要保過程邀請高齡客戶的家人參與</p>",
+            "id": 737,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>重視保單週年，定期檢視並為高齡者重新說明保障權利</p>",
+            "id": 738,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 739,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 8,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>在進行保險商品招攬過程中，應針對65歲以上的哪一種高齡者填寫「高齡投保評估量表」，判斷其是否有辨識不利其投保權益情形之能力?</p>",
+        "difficulty_level": "medium",
+        "id": 223,
+        "last_updated_at": "2024-02-01T08:49:53Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>要保人</p>",
+            "id": 732,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>被保險人</p>",
+            "id": 733,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>繳費人</p>",
+            "id": 734,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 735,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 7,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>金管會鼓勵壽險業者開發設計及推廣小額終老保險商品，目前保障包括傳統型終身人壽保險及一年期傷害保險附約，其保額分別為?</p>",
+        "difficulty_level": "medium",
+        "id": 222,
+        "last_updated_at": "2024-02-21T02:28:16Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>30萬/ 5萬</p>",
+            "id": 728,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>50萬/ 8萬</p>",
+            "id": 729,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>90萬/ 10萬</p>",
+            "id": 730,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>100萬/ 15萬</p>",
+            "id": 731,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 6,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>適合高齡者的保險商品應具備下列何種特性?</p>",
+        "difficulty_level": "medium",
+        "id": 221,
+        "last_updated_at": "2024-02-01T08:49:53Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>較高的投資效益</p>",
+            "id": 724,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>保護資產並能明確移轉長壽的財務風險</p>",
+            "id": 725,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>自負盈虧、不保證投資收益</p>",
+            "id": 726,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>連結高收益金融商品</p>",
+            "id": 727,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 5,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>保險業銷售各種有解約金之保險商品予65歲以上之客戶，應經客戶同意後，將銷售過程以錄音或錄影方式保留紀錄，或以電子設備留存相關作業過程之軌跡，且該紀錄應保存至保險契約期滿後多久?</p>",
+        "difficulty_level": "medium",
+        "id": 220,
+        "last_updated_at": "2024-02-21T07:23:33Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>1年</p>",
+            "id": 720,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>3年</p>",
+            "id": 721,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>5年</p>",
+            "id": 722,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>10年</p>",
+            "id": 723,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "case_sensitive": true,
+          "option_type": "text",
+          "options_layout": "vertical",
+          "unordered": false
+        },
+        "sort": 4,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>金管會規畫強化高齡金融消費者保護的措施，下列何者為有關招攬的重點?</p>",
+        "difficulty_level": "medium",
+        "id": 219,
+        "last_updated_at": "2024-02-01T08:49:53Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>落實瞭解客戶及商品適合度</p>",
+            "id": 716,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>銷售過程錄音錄影</p>",
+            "id": 717,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>落實告知投資風險</p>",
+            "id": 718,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 719,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 3,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列哪種行為可能代表客戶有認知低下之疑慮?</p>",
+        "difficulty_level": "medium",
+        "id": 218,
+        "last_updated_at": "2024-02-01T08:49:53Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>無法充分表達及理解投保重要事項</p>",
+            "id": 712,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>頻繁詢問相同的問題</p>",
+            "id": 713,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>對商品內容說明無法瞭解</p>",
+            "id": 714,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 715,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 2,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>以下何者為高齡金融剝削常見的類型?</p>",
+        "difficulty_level": "medium",
+        "id": 217,
+        "last_updated_at": "2024-02-01T08:49:53Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>不當勸誘投資</p>",
+            "id": 708,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>未充分說明</p>",
+            "id": 709,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>違反適合度義務</p>",
+            "id": 710,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 711,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 1,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>高齡客戶投保權益保障的主要對象是指幾歲以上的長者?</p>",
+        "difficulty_level": "medium",
+        "id": 216,
+        "last_updated_at": "2024-02-01T08:49:53Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>60歲</p>",
+            "id": 704,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>65歲</p>",
+            "id": 705,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>70歲</p>",
+            "id": 706,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>80歲</p>",
+            "id": 707,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 0,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 10
+  }
+]

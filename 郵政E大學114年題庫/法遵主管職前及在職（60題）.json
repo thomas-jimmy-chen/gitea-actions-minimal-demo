@@ -1,0 +1,3122 @@
+﻿[
+  {
+    "end": 10,
+    "page": 1,
+    "page_size": 10,
+    "pages": 6,
+    "start": 1,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>郵政簡易人壽心e88定期壽險，</p>",
+        "difficulty_level": "medium",
+        "id": 2935,
+        "last_updated_at": "2025-02-13T18:55:24Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>為網路投保商品</p>",
+            "id": 10377,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>投保年齡：18足歲~60歲</p>",
+            "id": 10378,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>扣款帳戶：限要保人本人之郵政儲金帳戶</p>",
+            "id": 10379,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10380,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 19,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>保戶不熟悉網路投保之操作，下列作法何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 2934,
+        "last_updated_at": "2025-02-13T18:55:24Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>由業務員代為設定帳號及密碼</p>",
+            "id": 10373,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>將經辦郵局地址設為保戶通訊地址</p>",
+            "id": 10374,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>得從旁協助，並請保戶親自設定/輸入帳號及密碼</p>",
+            "id": 10375,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>請保戶提供帳號及密碼予業務員，逕由業務員辦理網路投保</p>",
+            "id": 10376,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 18,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關網路投保要保人、被保險人資格限制，何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 2933,
+        "last_updated_at": "2025-02-13T18:55:24Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>要保人、被保險人限同一人</p>",
+            "id": 10369,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>未成年人亦得投保</p>",
+            "id": 10370,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>受有輔助宣告者，不需經輔助人同意</p>",
+            "id": 10371,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>身故受益人不以直系血親、配偶或法定繼承人為限</p>",
+            "id": 10372,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 17,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>依本公司檢舉制度實施要點，檢舉案件之調查，應依下列原則為之</p>",
+        "difficulty_level": "medium",
+        "id": 2932,
+        "last_updated_at": "2025-02-13T18:55:24Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>應以公開之方式為之</p>",
+            "id": 10365,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>對於被檢舉人原則上禁止訪談</p>",
+            "id": 10366,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>製作訪談筆錄前，不須徵得被訪談人同意</p>",
+            "id": 10367,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>進行訪談時，僅須1名訪談人員在場</p>",
+            "id": 10368,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 16,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>依本公司檢舉制度實施要點，檢舉人得以何種方式向本公司提出檢舉？</p>",
+        "difficulty_level": "medium",
+        "id": 2931,
+        "last_updated_at": "2025-02-13T18:55:24Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>書面</p>",
+            "id": 10361,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>電子郵件</p>",
+            "id": 10362,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>電話</p>",
+            "id": 10363,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆可</p>",
+            "id": 10364,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 15,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者敘述正確？</p>",
+        "difficulty_level": "medium",
+        "id": 2930,
+        "last_updated_at": "2025-02-13T18:55:24Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>業務員不得使用自行製作的文宣</p>",
+            "id": 10357,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>成立保險契約時，一定要親晤並親見保戶親簽</p>",
+            "id": 10358,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>要保書的告知事項欄位須由要保人或被保險人親自填寫</p>",
+            "id": 10359,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10360,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 14,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>為防範電子郵件社交工程，有關電子郵件安全性設定，何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 2929,
+        "last_updated_at": "2025-02-13T18:55:24Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>取消預覽功能</p>",
+            "id": 10353,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>設定純文字讀取</p>",
+            "id": 10354,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>取消自動下載圖片與檔案</p>",
+            "id": 10355,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10356,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 13,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關金融服務業公平待客原則中之「商品或服務適合度原則」，下列何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 2928,
+        "last_updated_at": "2025-02-13T18:55:24Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>與客戶訂立提供金融商品或服務之契約前，應充分瞭解客戶之相關資料</p>",
+            "id": 10349,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>一律推薦酬金較高之金融商品給客戶</p>",
+            "id": 10350,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>為求業績達標，未瞭解客戶資料，即推薦提供公司最新商品</p>",
+            "id": 10351,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>提供客戶複雜性高風險商品，以顯示公司業務員之專業</p>",
+            "id": 10352,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 12,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者為金融服務業公平待客原則之內涵？</p>",
+        "difficulty_level": "medium",
+        "id": 2927,
+        "last_updated_at": "2025-02-13T18:55:24Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>注意與忠實義務原則</p>",
+            "id": 10345,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>廣告招攬真實原則</p>",
+            "id": 10346,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>告知與揭露原則</p>",
+            "id": 10347,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10348,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 11,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>依金融消費者保護法第13條規定，</p>",
+        "difficulty_level": "medium",
+        "id": 2926,
+        "last_updated_at": "2025-02-13T18:55:24Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>金融消費者就金融消費爭議事件不須先向金融服務業提出申訴</p>",
+            "id": 10341,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>金融服務業應於收受申訴之日起30日內為適當之處理，並將處理結果回覆提出申訴之金融消費者</p>",
+            "id": 10342,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>金融消費者不接受處理結果者或金融服務業逾上述期限不為處理者，金融消費者得於收受處理結果或期限屆滿之日起20年內，向爭議處理機構申請評議</p>",
+            "id": 10343,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>為迅速有效處理金融消費爭議，爭議處理機構受理案件後應直接請金融消費者向法院提告</p>",
+            "id": 10344,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 10,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 60
+  },
+  {
+    "end": 20,
+    "page": 2,
+    "page_size": 10,
+    "pages": 6,
+    "start": 11,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>業務員受理身心障礙者之投保，應遵循之原則何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 2925,
+        "last_updated_at": "2025-02-13T18:55:24Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>僅參閱核保手冊，由業務員自行判斷被保險人是否符合承保條件</p>",
+            "id": 10337,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>與一般投保件處理流程不同，應先請示經理</p>",
+            "id": 10338,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>業務員先受理投保，將契約資料送交核保單位審核後，再由核保單位決定是否承保</p>",
+            "id": 10339,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆非</p>",
+            "id": 10340,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 9,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者為高風險客戶之審查頻率？</p>",
+        "difficulty_level": "medium",
+        "id": 2924,
+        "last_updated_at": "2025-02-13T18:55:24Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>至少每年一次</p>",
+            "id": 10333,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>至少2年一次</p>",
+            "id": 10334,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>至少3年一次</p>",
+            "id": 10335,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>至少4年一次</p>",
+            "id": 10336,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 8,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>以下何者為常被用來洗錢的管道？</p>",
+        "difficulty_level": "medium",
+        "id": 2923,
+        "last_updated_at": "2025-02-13T18:55:24Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>人頭帳戶</p>",
+            "id": 10329,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>不動產交易</p>",
+            "id": 10330,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>保險</p>",
+            "id": 10331,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10332,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 7,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>我國的金融情報中心為下列哪個單位？</p>",
+        "difficulty_level": "medium",
+        "id": 2922,
+        "last_updated_at": "2025-02-13T18:55:24Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>財政部國稅局</p>",
+            "id": 10325,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>經濟部國際貿易局</p>",
+            "id": 10326,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>法務部調查局</p>",
+            "id": 10327,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>國防部政治作戰局</p>",
+            "id": 10328,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 6,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者為「組織犯罪」可能利用之洗錢管道？</p>",
+        "difficulty_level": "medium",
+        "id": 2921,
+        "last_updated_at": "2025-02-13T18:55:24Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>地下通匯</p>",
+            "id": 10321,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>經營職業賭場</p>",
+            "id": 10322,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>販毒集團</p>",
+            "id": 10323,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10324,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 5,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者為個人資料保護法所稱之個人資料？</p>",
+        "difficulty_level": "medium",
+        "id": 2920,
+        "last_updated_at": "2025-02-13T18:55:24Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>指紋</p>",
+            "id": 10317,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>基因</p>",
+            "id": 10318,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>護照號碼</p>",
+            "id": 10319,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10320,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 4,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>員工缺乏資訊安全意識，將可能導致</p>",
+        "difficulty_level": "medium",
+        "id": 2919,
+        "last_updated_at": "2025-02-13T18:55:24Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>公司敏感性資料被竊取</p>",
+            "id": 10313,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>重要之系統主機遭駭客攻擊</p>",
+            "id": 10314,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>公司聲譽及金錢損失</p>",
+            "id": 10315,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10316,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 3,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>向當事人蒐集個人資料時，依個人資料法之規定，應明確告知</p>",
+        "difficulty_level": "medium",
+        "id": 2918,
+        "last_updated_at": "2025-02-13T18:55:24Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>蒐集之目的</p>",
+            "id": 10309,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>個人資料利用之期間、地區、對象及方式</p>",
+            "id": 10310,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>當事人得自由選擇提供個人資料時，不提供將對其權益之影響</p>",
+            "id": 10311,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10312,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 2,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>除個人資料保護法第6條第1項所規定之資料外，非公務機關對個人資料之蒐集或處理，</p>",
+        "difficulty_level": "medium",
+        "id": 2917,
+        "last_updated_at": "2025-02-13T18:55:24Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>得任意蒐集</p>",
+            "id": 10305,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>應有特定目的，並符合個人資料保護法規定之情形</p>",
+            "id": 10306,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>經主管同意始得處理</p>",
+            "id": 10307,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆非</p>",
+            "id": 10308,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 1,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>當事人就其個人資料依個人資料保護法得行使之權利為何？</p>",
+        "difficulty_level": "medium",
+        "id": 2916,
+        "last_updated_at": "2025-02-13T18:55:24Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>請求製給複製本</p>",
+            "id": 10301,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>請求補充或更正</p>",
+            "id": 10302,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>請求刪除</p>",
+            "id": 10303,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10304,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 0,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 60
+  },
+  {
+    "end": 30,
+    "page": 3,
+    "page_size": 10,
+    "pages": 6,
+    "start": 21,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>申請人為7歲以上未滿18歲之未成年人線上開立數位帳戶，得準備何者證件上傳？</p>",
+        "difficulty_level": "medium",
+        "id": 2915,
+        "last_updated_at": "2025-02-13T18:54:55Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>第1證件：身分證</p>",
+            "id": 10297,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>第2證件：健保卡</p>",
+            "id": 10298,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>第2證件：護照</p>",
+            "id": 10299,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10300,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 19,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>依郵政儲金匯兌法第19條有關存簿儲金之規定，下列何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 2914,
+        "last_updated_at": "2025-02-13T18:54:55Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>每人開戶戶數無限制</p>",
+            "id": 10293,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>每一團體開戶戶數無限制</p>",
+            "id": 10294,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>每一人或每一團體僅得為一戶</p>",
+            "id": 10295,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>儲戶計息之最高存款限額為500萬</p>",
+            "id": 10296,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 18,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>郵政簡易人壽心e88定期壽險，</p>",
+        "difficulty_level": "medium",
+        "id": 2913,
+        "last_updated_at": "2025-02-13T18:54:55Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>為網路投保商品</p>",
+            "id": 10289,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>投保年齡：18足歲~60歲</p>",
+            "id": 10290,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>扣款帳戶：限要保人本人之郵政儲金帳戶</p>",
+            "id": 10291,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10292,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 17,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>郵政簡易人壽珍愛015保險，下列敘述何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 2912,
+        "last_updated_at": "2025-02-13T18:54:55Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>針對兒童族群，推出0-15歲可投保的險種</p>",
+            "id": 10285,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>被保險人滿十五足歲前死亡者，其身故保險金變更為喪葬費用保險金。</p>",
+            "id": 10286,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>契約被保險人為0-15歲嬰、幼、兒童，仍應確實執行親晤親簽</p>",
+            "id": 10287,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10288,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 16,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關網路投保要保人、被保險人資格限制，何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 2911,
+        "last_updated_at": "2025-02-13T18:54:55Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>要保人、被保險人限同一人</p>",
+            "id": 10281,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>未成年人亦得投保</p>",
+            "id": 10282,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>受有輔助宣告者，不需經輔助人同意</p>",
+            "id": 10283,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>身故受益人不以直系血親、配偶或法定繼承人為限</p>",
+            "id": 10284,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 15,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>依本公司檢舉制度實施要點，檢舉案件之調查，應依下列原則為之</p>",
+        "difficulty_level": "medium",
+        "id": 2910,
+        "last_updated_at": "2025-02-13T18:54:55Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>應以公開之方式為之</p>",
+            "id": 10277,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>對於被檢舉人原則上禁止訪談</p>",
+            "id": 10278,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>製作訪談筆錄前，不須徵得被訪談人同意</p>",
+            "id": 10279,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>進行訪談時，僅須1名訪談人員在場</p>",
+            "id": 10280,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 14,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>依本公司檢舉制度實施要點，檢舉人得以何種方式向本公司提出檢舉？</p>",
+        "difficulty_level": "medium",
+        "id": 2909,
+        "last_updated_at": "2025-02-13T18:54:55Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>書面</p>",
+            "id": 10273,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>電子郵件</p>",
+            "id": 10274,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>電話</p>",
+            "id": 10275,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆可</p>",
+            "id": 10276,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 13,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>業務員受理身心障礙者之投保，應遵循之原則何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 2908,
+        "last_updated_at": "2025-02-13T18:54:55Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>僅參閱核保手冊，由業務員自行判斷被保險人是否符合承保條件</p>",
+            "id": 10269,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>與一般投保件處理流程不同，應先請示經理</p>",
+            "id": 10270,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>業務員先受理投保，將契約資料送交核保單位審核後，再由核保單位決定是否承保</p>",
+            "id": 10271,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆非</p>",
+            "id": 10272,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 12,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關金融服務業公平待客原則中之「商品或服務適合度原則」，下列何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 2907,
+        "last_updated_at": "2025-02-13T18:54:55Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>與客戶訂立提供金融商品或服務之契約前，應充分瞭解客戶之相關資料</p>",
+            "id": 10265,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>一律推薦酬金較高之金融商品給客戶</p>",
+            "id": 10266,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>為求業績達標，未瞭解客戶資料，即推薦提供公司最新商品</p>",
+            "id": 10267,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>提供客戶複雜性高風險商品，以顯示公司業務員之專業</p>",
+            "id": 10268,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 11,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者為金融服務業公平待客原則之內涵？</p>",
+        "difficulty_level": "medium",
+        "id": 2906,
+        "last_updated_at": "2025-02-13T18:54:55Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>注意與忠實義務原則</p>",
+            "id": 10261,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>廣告招攬真實原則</p>",
+            "id": 10262,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>告知與揭露原則</p>",
+            "id": 10263,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10264,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 10,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 60
+  },
+  {
+    "end": 40,
+    "page": 4,
+    "page_size": 10,
+    "pages": 6,
+    "start": 31,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>依金融消費者保護法第13條規定，</p>",
+        "difficulty_level": "medium",
+        "id": 2905,
+        "last_updated_at": "2025-02-13T18:54:55Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>金融消費者就金融消費爭議事件不須先向金融服務業提出申訴</p>",
+            "id": 10257,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>金融服務業應於收受申訴之日起30日內為適當之處理，並將處理結果回覆提出申訴之金融消費者</p>",
+            "id": 10258,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>金融消費者不接受處理結果者或金融服務業逾上述期限不為處理者，金融消費者得於收受處理結果或期限屆滿之日起20年內，向爭議處理機構申請評議</p>",
+            "id": 10259,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>為迅速有效處理金融消費爭議，爭議處理機構受理案件後應直接請金融消費者向法院提告</p>",
+            "id": 10260,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 9,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>我國的金融情報中心為下列哪個單位？</p>",
+        "difficulty_level": "medium",
+        "id": 2904,
+        "last_updated_at": "2025-02-13T18:54:55Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>財政部國稅局</p>",
+            "id": 10253,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>經濟部國際貿易局</p>",
+            "id": 10254,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>法務部調查局</p>",
+            "id": 10255,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>國防部政治作戰局</p>",
+            "id": 10256,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 8,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者為高風險客戶之審查頻率？</p>",
+        "difficulty_level": "medium",
+        "id": 2903,
+        "last_updated_at": "2025-02-13T18:54:55Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>至少每年一次</p>",
+            "id": 10249,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>至少2年一次</p>",
+            "id": 10250,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>至少3年一次</p>",
+            "id": 10251,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>至少4年一次</p>",
+            "id": 10252,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 7,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>以下何者為常被用來洗錢的管道？</p>",
+        "difficulty_level": "medium",
+        "id": 2902,
+        "last_updated_at": "2025-02-13T18:54:55Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>人頭帳戶</p>",
+            "id": 10245,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>不動產交易</p>",
+            "id": 10246,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>保險</p>",
+            "id": 10247,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10248,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 6,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>員工缺乏資訊安全意識，將可能導致</p>",
+        "difficulty_level": "medium",
+        "id": 2901,
+        "last_updated_at": "2025-02-13T18:54:55Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>公司敏感性資料被竊取</p>",
+            "id": 10241,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>重要之系統主機遭駭客攻擊</p>",
+            "id": 10242,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>公司聲譽及金錢損失</p>",
+            "id": 10243,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10244,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 5,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列哪一項正確？</p>",
+        "difficulty_level": "medium",
+        "id": 2900,
+        "last_updated_at": "2025-02-13T18:54:55Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>為避免感染病毒，應關閉電子郵件預覽窗格功能</p>",
+            "id": 10237,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>不開啟陌生人電子郵件是好的資安習慣</p>",
+            "id": 10238,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>電子郵件社交工程的攻擊有假冒寄件者、寄送讓收件者感興趣的主旨與内文</p>",
+            "id": 10239,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10240,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 4,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>當您收到一封來路不明的郵件時，應該如何處理？</p>",
+        "difficulty_level": "medium",
+        "id": 2899,
+        "last_updated_at": "2025-02-13T18:54:55Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>轉寄給朋友</p>",
+            "id": 10233,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>開啟郵件</p>",
+            "id": 10234,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>直接刪除</p>",
+            "id": 10235,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>有空再理會</p>",
+            "id": 10236,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 3,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者為個人資料保護法所稱之個人資料？</p>",
+        "difficulty_level": "medium",
+        "id": 2898,
+        "last_updated_at": "2025-02-13T18:54:55Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>指紋</p>",
+            "id": 10229,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>基因</p>",
+            "id": 10230,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>護照號碼</p>",
+            "id": 10231,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10232,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 2,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>向當事人蒐集個人資料時，依個人資料法之規定，應明確告知</p>",
+        "difficulty_level": "medium",
+        "id": 2897,
+        "last_updated_at": "2025-02-13T18:54:55Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>蒐集之目的</p>",
+            "id": 10225,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>個人資料利用之期間、地區、對象及方式</p>",
+            "id": 10226,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>當事人得自由選擇提供個人資料時，不提供將對其權益之影響</p>",
+            "id": 10227,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10228,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 1,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>除個人資料保護法第6條第1項所規定之資料外，非公務機關對個人資料之蒐集或處理，</p>",
+        "difficulty_level": "medium",
+        "id": 2896,
+        "last_updated_at": "2025-02-13T18:54:55Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>得任意蒐集</p>",
+            "id": 10221,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>應有特定目的，並符合個人資料保護法規定之情形</p>",
+            "id": 10222,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>經主管同意始得處理</p>",
+            "id": 10223,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆非</p>",
+            "id": 10224,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 0,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 60
+  },
+  {
+    "end": 50,
+    "page": 5,
+    "page_size": 10,
+    "pages": 6,
+    "start": 41,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>依郵政儲金匯兌法第19條有關存簿儲金之規定，下列何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 2895,
+        "last_updated_at": "2025-02-13T18:54:10Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>每人開戶戶數無限制</p>",
+            "id": 10217,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>每一團體開戶戶數無限制</p>",
+            "id": 10218,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>每一人或每一團體僅得為一戶</p>",
+            "id": 10219,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>儲戶計息之最高存款限額為500萬</p>",
+            "id": 10220,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 19,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>郵政簡易人壽心e88定期壽險，</p>",
+        "difficulty_level": "medium",
+        "id": 2894,
+        "last_updated_at": "2025-02-13T18:54:10Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>為網路投保商品</p>",
+            "id": 10213,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>投保年齡：18足歲~60歲</p>",
+            "id": 10214,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>扣款帳戶：限要保人本人之郵政儲金帳戶</p>",
+            "id": 10215,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10216,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 18,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>保戶不熟悉網路投保之操作，下列作法何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 2893,
+        "last_updated_at": "2025-02-13T18:54:10Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>由業務員代為設定帳號及密碼</p>",
+            "id": 10209,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>將經辦郵局地址設為保戶通訊地址</p>",
+            "id": 10210,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>得從旁協助，並請保戶親自設定/輸入帳號及密碼</p>",
+            "id": 10211,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>請保戶提供帳號及密碼予業務員，逕由業務員辦理網路投保</p>",
+            "id": 10212,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 17,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關網路投保要保人、被保險人資格限制，何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 2892,
+        "last_updated_at": "2025-02-13T18:54:10Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>要保人、被保險人限同一人</p>",
+            "id": 10205,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>未成年人亦得投保</p>",
+            "id": 10206,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>受有輔助宣告者，不需經輔助人同意</p>",
+            "id": 10207,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>身故受益人不以直系血親、配偶或法定繼承人為限</p>",
+            "id": 10208,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 16,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>郵政簡易人壽珍愛015保險，下列敘述何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 2891,
+        "last_updated_at": "2025-02-13T18:54:10Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>針對兒童族群，推出0-15歲可投保的險種</p>",
+            "id": 10201,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>被保險人滿十五足歲前死亡者，其身故保險金變更為喪葬費用保險金。</p>",
+            "id": 10202,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>契約被保險人為0-15歲嬰、幼、兒童，仍應確實執行親晤親簽</p>",
+            "id": 10203,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10204,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 15,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>有關金融服務業公平待客原則中之「商品或服務適合度原則」，下列何者正確？</p>",
+        "difficulty_level": "medium",
+        "id": 2890,
+        "last_updated_at": "2025-02-13T18:54:10Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>與客戶訂立提供金融商品或服務之契約前，應充分瞭解客戶之相關資料</p>",
+            "id": 10197,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>一律推薦酬金較高之金融商品給客戶</p>",
+            "id": 10198,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>為求業績達標，未瞭解客戶資料，即推薦提供公司最新商品</p>",
+            "id": 10199,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>提供客戶複雜性高風險商品，以顯示公司業務員之專業</p>",
+            "id": 10200,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 14,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者為金融服務業公平待客原則之內涵？</p>",
+        "difficulty_level": "medium",
+        "id": 2889,
+        "last_updated_at": "2025-02-13T18:54:10Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>注意與忠實義務原則</p>",
+            "id": 10193,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>廣告招攬真實原則</p>",
+            "id": 10194,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>告知與揭露原則</p>",
+            "id": 10195,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10196,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 13,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>依金融消費者保護法第13條規定，</p>",
+        "difficulty_level": "medium",
+        "id": 2888,
+        "last_updated_at": "2025-02-13T18:54:10Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>金融消費者就金融消費爭議事件不須先向金融服務業提出申訴</p>",
+            "id": 10189,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>金融服務業應於收受申訴之日起30日內為適當之處理，並將處理結果回覆提出申訴之金融消費者</p>",
+            "id": 10190,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>金融消費者不接受處理結果者或金融服務業逾上述期限不為處理者，金融消費者得於收受處理結果或期限屆滿之日起20年內，向爭議處理機構申請評議</p>",
+            "id": 10191,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>為迅速有效處理金融消費爭議，爭議處理機構受理案件後應直接請金融消費者向法院提告</p>",
+            "id": 10192,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 12,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者為「組織犯罪」可能利用之洗錢管道？</p>",
+        "difficulty_level": "medium",
+        "id": 2887,
+        "last_updated_at": "2025-02-13T18:54:10Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>地下通匯</p>",
+            "id": 10185,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>經營職業賭場</p>",
+            "id": 10186,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>販毒集團</p>",
+            "id": 10187,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10188,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 11,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者為高風險客戶之審查頻率？</p>",
+        "difficulty_level": "medium",
+        "id": 2886,
+        "last_updated_at": "2025-02-13T18:54:10Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>至少每年一次</p>",
+            "id": 10181,
+            "is_answer": true,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>至少2年一次</p>",
+            "id": 10182,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>至少3年一次</p>",
+            "id": 10183,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>至少4年一次</p>",
+            "id": 10184,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 10,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 60
+  },
+  {
+    "end": 60,
+    "page": 6,
+    "page_size": 10,
+    "pages": 6,
+    "start": 51,
+    "subjects": [
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>以下何者為常被用來洗錢的管道？</p>",
+        "difficulty_level": "medium",
+        "id": 2885,
+        "last_updated_at": "2025-02-13T18:54:10Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>人頭帳戶</p>",
+            "id": 10177,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>不動產交易</p>",
+            "id": 10178,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>保險</p>",
+            "id": 10179,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10180,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 9,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>我國的金融情報中心為下列哪個單位？</p>",
+        "difficulty_level": "medium",
+        "id": 2884,
+        "last_updated_at": "2025-02-13T18:54:10Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>財政部國稅局</p>",
+            "id": 10173,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>法務部調查局</p>",
+            "id": 10174,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>經濟部國際貿易局</p>",
+            "id": 10175,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>國防部政治作戰局</p>",
+            "id": 10176,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 8,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者為安全密碼之條件？</p>",
+        "difficulty_level": "medium",
+        "id": 2883,
+        "last_updated_at": "2025-02-13T18:54:10Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>不須經常更換密碼</p>",
+            "id": 10169,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>密碼長度短於3個字</p>",
+            "id": 10170,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>包含英文、數字及特殊符號</p>",
+            "id": 10171,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以便條紙抄寫密碼貼在螢幕旁</p>",
+            "id": 10172,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 7,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>當您收到一封來路不明的郵件時，應該如何處理？</p>",
+        "difficulty_level": "medium",
+        "id": 2882,
+        "last_updated_at": "2025-02-13T18:54:10Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>轉寄給朋友</p>",
+            "id": 10165,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>開啟郵件</p>",
+            "id": 10166,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>直接刪除</p>",
+            "id": 10167,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>有空再理會</p>",
+            "id": 10168,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 6,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>個資當事人請求查詢閱覽個人資料，企業須多久內給予回覆？</p>",
+        "difficulty_level": "medium",
+        "id": 2881,
+        "last_updated_at": "2025-02-13T18:54:10Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>1年內</p>",
+            "id": 10161,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>6個月</p>",
+            "id": 10162,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>15天</p>",
+            "id": 10163,
+            "is_answer": true,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>3天</p>",
+            "id": 10164,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 5,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>員工缺乏資訊安全意識，將可能導致</p>",
+        "difficulty_level": "medium",
+        "id": 2880,
+        "last_updated_at": "2025-02-13T18:54:10Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>公司敏感性資料被竊取</p>",
+            "id": 10157,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>重要之系統主機遭駭客攻擊</p>",
+            "id": 10158,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>公司聲譽及金錢損失</p>",
+            "id": 10159,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10160,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 4,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>當事人就其個人資料依個人資料保護法得行使之權利為何？</p>",
+        "difficulty_level": "medium",
+        "id": 2879,
+        "last_updated_at": "2025-02-13T18:54:10Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>請求製給複製本</p>",
+            "id": 10153,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>請求補充或更正</p>",
+            "id": 10154,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>請求刪除</p>",
+            "id": 10155,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10156,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 3,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>下列何者為個人資料保護法所稱之個人資料？</p>",
+        "difficulty_level": "medium",
+        "id": 2878,
+        "last_updated_at": "2025-02-13T18:54:10Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>指紋</p>",
+            "id": 10149,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>基因</p>",
+            "id": 10150,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>護照號碼</p>",
+            "id": 10151,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10152,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 2,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>向當事人蒐集個人資料時，依個人資料法之規定，應明確告知</p>",
+        "difficulty_level": "medium",
+        "id": 2877,
+        "last_updated_at": "2025-02-13T18:54:10Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>蒐集之目的</p>",
+            "id": 10145,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>個人資料利用之期間、地區、對象及方式</p>",
+            "id": 10146,
+            "is_answer": false,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>當事人得自由選擇提供個人資料時，不提供將對其權益之影響</p>",
+            "id": 10147,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>以上皆是</p>",
+            "id": 10148,
+            "is_answer": true,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 1,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      },
+      {
+        "answer_explanation": "<p></p>",
+        "answer_number": 0,
+        "audit_status": "agree",
+        "correct_answers": [],
+        "data": null,
+        "description": "<p>非公務機關對個人資料之蒐集或處理，</p>",
+        "difficulty_level": "medium",
+        "id": 2876,
+        "last_updated_at": "2025-02-13T18:54:10Z",
+        "note": null,
+        "options": [
+          {
+            "content": "<p>得任意蒐集</p>",
+            "id": 10141,
+            "is_answer": false,
+            "sort": 0,
+            "type": "text"
+          },
+          {
+            "content": "<p>應有特定目的，並符合個人資料保護法規定之情形</p>",
+            "id": 10142,
+            "is_answer": true,
+            "sort": 1,
+            "type": "text"
+          },
+          {
+            "content": "<p>經主管同意始得處理</p>",
+            "id": 10143,
+            "is_answer": false,
+            "sort": 2,
+            "type": "text"
+          },
+          {
+            "content": "<p>藉職務之便蒐集並處理</p>",
+            "id": 10144,
+            "is_answer": false,
+            "sort": 3,
+            "type": "text"
+          }
+        ],
+        "parent_id": 0,
+        "point": null,
+        "settings": {
+          "options_layout": "vertical"
+        },
+        "sort": 0,
+        "sub_subjects": [],
+        "type": "single_selection",
+        "wrong_explanation": ""
+      }
+    ],
+    "total": 60
+  }
+]
