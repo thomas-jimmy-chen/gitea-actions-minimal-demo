@@ -503,6 +503,331 @@ cat docs/CHANGELOG.md
 
 ---
 
+## 🎯 規劃中功能：自動答題系統 (Phase 2)
+
+> **狀態**: 規劃階段（評估於 2025-01-14）
+> **預計實作時間**: 待定
+> **目前進度**: 考試流程自動化已完成，自動答題尚未實作
+
+### 功能概述
+
+自動答題系統將透過比對考試頁面題目與題庫答案，實現自動答題功能。
+
+### 題庫資料
+
+**位置**: `郵政E大學114年題庫/`
+
+**統計資料**:
+- 總題數：**1,766 題**
+- 總大小：**5.3 MB**
+- 分類數：**23 個主題**
+- 格式：**JSON 檔案**
+
+**範例分類**:
+```
+窗口線上測驗（390題）
+郵務窗口(114年度)（188題）
+法令遵循／防制洗錢（262題）
+資通安全（30題）
+高齡投保（10題）
+... 共 23 個分類
+```
+
+---
+
+### 考試頁面元素分析
+
+#### 題目元素
+```html
+<li class="subject">
+    <span class="subject-description">題目內容</span>
+</li>
+```
+
+**定位方式**: `.subject-description` 或 `//span[@class='subject-description']`
+
+#### 選項元素
+
+**單選題 (Radio)**:
+```html
+<input type="radio" ng-model="subject.answeredOption" />
+<div class="option-content"><span>選項內容</span></div>
+```
+
+**複選題 (Checkbox)**:
+```html
+<input type="checkbox" ng-model="option.checked" />
+<div class="option-content"><span>選項內容</span></div>
+```
+
+**定位方式**: `.option-content`, `input[type="radio"]`, `input[type="checkbox"]`
+
+#### 交卷按鈕
+```html
+<a class="button button-green" ng-click="calUnsavedSubjects()">交卷</a>
+<button ng-click="submitAnswer(...)">確定</button>
+```
+
+**重要**: 考試採用**整頁顯示**模式（所有題目在同一頁），非分頁模式。
+
+---
+
+### 資料庫方案評估
+
+#### 推薦方案：混合模式 (SQLite + JSON)
+
+| 方案 | 適用性 | 速度 | 部署難度 | 推薦度 |
+|------|-------|------|---------|--------|
+| **SQLite** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ (零配置) | **✅ 強烈推薦** |
+| JSON | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ (現成) | ✅ 適合 MVP |
+| MySQL | ⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐ (需安裝) | ❌ 殺雞用牛刀 |
+
+**為何選擇 SQLite？**
+- ✅ 零配置（Python 內建 `sqlite3`）
+- ✅ 檔案式（單一 `.db` 檔案）
+- ✅ 查詢速度快（毫秒級）
+- ✅ 支援全文檢索（FTS5）
+- ✅ 適合 5.3MB 資料量
+
+**分階段策略**:
+```
+階段 1 (MVP)：直接使用現有 JSON 檔案
+階段 2 (優化)：首次啟動自動建立 SQLite
+階段 3 (正式)：使用 SQLite，保留 JSON 作備份
+```
+
+---
+
+### 新增檔案架構（符合 POM 模式）
+
+```
+eebot/
+├── src/
+│   ├── pages/
+│   │   ├── exam_detail_page.py        # 現有（勿改）
+│   │   └── exam_answer_page.py        # 【新增】答題頁面
+│   │
+│   ├── scenarios/
+│   │   ├── exam_learning.py           # 現有（勿改）
+│   │   └── exam_auto_answer.py        # 【新增】自動答題場景
+│   │
+│   ├── services/                      # 【新增】業務邏輯層
+│   │   ├── question_bank.py           # 題庫查詢服務
+│   │   └── answer_matcher.py          # 答案匹配引擎
+│   │
+│   └── models/                        # 【新增】資料模型
+│       └── question.py                # 題目/選項資料類別
+│
+├── data/
+│   ├── courses.json                   # 現有
+│   └── questions.db                   # 【新增】SQLite 資料庫
+│
+└── 郵政E大學114年題庫/
+    └── *.json                         # 現有（保留作備份）
+```
+
+---
+
+### 核心模組設計
+
+#### ExamAnswerPage（答題頁面物件）
+```python
+class ExamAnswerPage(BasePage):
+    def get_all_questions()              # 取得所有題目元素
+    def get_question_text(question_elem) # 取得題目文字
+    def get_options(question_elem)       # 取得題目選項
+    def get_option_text(option_elem)     # 取得選項文字
+    def click_option(option_elem)        # 點擊選項
+    def submit_exam()                    # 提交考試
+```
+
+#### QuestionBankService（題庫服務）
+```python
+class QuestionBankService:
+    def __init__(mode='sqlite', **kwargs)
+    def find_answer(question_text) -> Optional[Dict]
+    # 返回：{question_id, type, correct_options[]}
+```
+
+#### AnswerMatcher（答案匹配引擎）
+```python
+class AnswerMatcher:
+    @staticmethod
+    def normalize_text(text)             # 標準化文字
+    def find_best_match(web_q, db_qs)    # 模糊匹配
+    # 多層級回退：
+    # 1. 精確匹配（最快）
+    # 2. 包含匹配
+    # 3. 相似度匹配（SequenceMatcher）
+```
+
+---
+
+### 匹配策略
+
+#### 挑戰：網頁題目 vs 題庫題目差異
+
+| 差異類型 | 範例 | 解決方案 |
+|---------|------|---------|
+| HTML 標籤 | `<p>題目</p>` vs `題目` | BeautifulSoup 去除 |
+| 空白字元 | 多空格 vs 單空格 | 正規化 |
+| 標點符號 | 全形 vs 半形 | 統一轉換 |
+
+#### 匹配信心門檻
+
+**設定**: 0.85（85% 相似度）以避免誤配
+
+---
+
+### SQLite 資料表設計
+
+```sql
+-- 題目表
+CREATE TABLE questions (
+    id INTEGER PRIMARY KEY,
+    category TEXT NOT NULL,
+    description TEXT NOT NULL,
+    description_text TEXT,              -- 純文字版（用於匹配）
+    type TEXT NOT NULL,                 -- single_selection/multiple_selection
+    difficulty_level TEXT,
+    answer_explanation TEXT
+);
+
+-- 選項表
+CREATE TABLE options (
+    id INTEGER PRIMARY KEY,
+    question_id INTEGER NOT NULL,
+    content TEXT NOT NULL,
+    content_text TEXT,                  -- 純文字版
+    is_answer BOOLEAN NOT NULL,         -- 正確答案標記
+    sort INTEGER,
+    FOREIGN KEY (question_id) REFERENCES questions(id)
+);
+
+-- 全文檢索索引（關鍵！）
+CREATE VIRTUAL TABLE questions_fts USING fts5(
+    description_text,
+    content='questions',
+    content_rowid='id'
+);
+```
+
+---
+
+### 實作階段規劃
+
+#### 階段 1：MVP（最小可行產品）
+**目標**: 驗證自動答題可行性
+
+- ✅ 使用現有 JSON 檔案
+- ✅ 實作 `QuestionBankService`（JSON 模式）
+- ✅ 實作基礎 `AnswerMatcher`
+- ✅ 實作 `ExamAnswerPage`
+- ✅ 整合至 `ExamLearningScenario`
+
+**預估時間**: 2-3 小時
+
+#### 階段 2：優化匹配準確度
+**目標**: 提升匹配率
+
+- ✅ 改進相似度演算法
+- ✅ 處理 HTML 清理邏輯
+- ✅ 新增匹配日誌
+
+**預估時間**: 2-3 小時
+
+#### 階段 3：遷移至 SQLite
+**目標**: 效能優化
+
+- ✅ 撰寫 JSON → SQLite 遷移腳本
+- ✅ 建立 FTS5 全文檢索索引
+- ✅ 實作 `QuestionBankService`（SQLite 模式）
+
+**預估時間**: 1-2 小時
+
+#### 階段 4：生產就緒
+**目標**: 穩健與可維護
+
+- ✅ 混合模式（首次啟動自動建立 SQLite）
+- ✅ 自動偵測題庫更新
+- ✅ 失敗時截圖除錯
+- ✅ 生成答題準確率報告
+
+**預估時間**: 2-3 小時
+
+---
+
+### 配置選項（規劃）
+
+#### eebot.cfg 新增項目
+```ini
+# 現有配置...
+user_name=your_username
+password=your_password
+
+# 新增：自動答題配置
+enable_auto_answer=y                     # 啟用自動答題
+question_bank_mode=sqlite                # 'sqlite' 或 'json'
+question_bank_path=data/questions.db
+answer_confidence_threshold=0.85         # 最低相似度門檻
+auto_submit_exam=y                       # 自動提交考試
+screenshot_on_mismatch=y                 # 無法匹配時截圖
+```
+
+---
+
+### 風險評估
+
+| 風險 | 描述 | 緩解策略 |
+|------|------|---------|
+| **匹配失敗** | 網頁題目與題庫不一致 | 多層級回退 + 信心門檻 |
+| **動態載入** | AngularJS 渲染延遲 | 增加 WebDriverWait |
+| **檢測風險** | 網站可能偵測自動化 | 已使用 Stealth JS |
+| **題庫過期** | 題庫與考試不同步 | 記錄失敗案例 |
+
+---
+
+### 成功標準
+
+**MVP 成功**:
+- [ ] 成功匹配 ≥80% 題目
+- [ ] 自動點擊正確選項（單選）
+- [ ] 自動點擊正確選項（複選）
+- [ ] 自動提交考試
+
+**正式版成功**:
+- [ ] 匹配率 ≥95%
+- [ ] SQLite 查詢 <10ms/題
+- [ ] 零誤答（無誤判）
+- [ ] 優雅處理未匹配題目
+
+---
+
+### 重要提醒
+
+⚠️ **請勿實作**，直到：
+1. 使用者明確要求實作
+2. 現有考試流程功能穩定
+3. 題庫資料已驗證且最新
+4. 法律與道德考量已處理
+
+✅ **本規劃文檔**作為：
+- 未來 AI 助手的參考
+- 實作設計藍圖
+- 風險評估與緩解指南
+- 成功標準檢查清單
+
+---
+
+**規劃文檔版本**: 1.0
+**評估者**: Claude Code CLI (Sonnet 4.5)
+**評估日期**: 2025-01-14
+**狀態**: ⏸️ 規劃階段 - 等待用戶批准
+
+**詳細技術規格**: 請參考 `docs/AI_ASSISTANT_GUIDE.md` 的對應章節
+
+---
+
 ## 📚 延伸閱讀
 
 - **通用 AI 助手指南**: `docs/AI_ASSISTANT_GUIDE.md`

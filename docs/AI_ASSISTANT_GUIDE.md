@@ -819,6 +819,499 @@ Types: `feat`, `fix`, `docs`, `refactor`, `test`, `chore`
 
 ---
 
+## 🎯 Planned Features: Auto-Answer System (Phase 2)
+
+> **Status**: Planning Phase (Evaluated 2025-01-14)
+> **Estimated Implementation**: To be determined
+> **Current State**: Exam flow automation completed, auto-answering not yet implemented
+
+### Overview
+
+The auto-answer system will enable automated question answering during exams by matching questions from the exam page with answers from a pre-loaded question bank.
+
+### Question Bank Data
+
+**Location**: `郵政E大學114年題庫/` (Question Bank Directory)
+
+**Data Statistics**:
+- Total Questions: **1,766**
+- Total Size: **5.3 MB**
+- Categories: **23 topic categories**
+- Format: **JSON files**
+- Database: `總題庫.json` (Master question bank)
+
+**Sample Categories**:
+```
+窗口線上測驗（390題）.json
+郵務窗口(114年度)（188題）.json
+儲匯壽窗口(114年度)（202題）.json
+資通安全（30題）.json
+法令遵循／防制洗錢（262題）.json
+高齡投保（10題）.json
+... (and 17 more categories)
+```
+
+**Question Data Structure**:
+```json
+{
+  "description": "<p>問題內容</p>",
+  "type": "single_selection",  // or "multiple_selection"
+  "difficulty_level": "medium",
+  "options": [
+    {
+      "content": "<p>選項內容</p>",
+      "is_answer": true,  // Correct answer flag
+      "sort": 0
+    }
+  ]
+}
+```
+
+---
+
+### Exam Page Analysis
+
+**HTML Structure** (Analyzed from exam snapshot):
+
+#### 1. Question Elements
+```html
+<li class="subject" ng-repeat="subject in subjects">
+    <span class="subject-description"
+          ng-compile-html="subject.description">
+        題目內容
+    </span>
+</li>
+```
+
+**Locators**:
+- CSS Class: `.subject-description`
+- XPath: `//li[@class='subject']//span[@class='subject-description']`
+
+#### 2. Option Elements
+
+**Single Choice (Radio)**:
+```html
+<li class="option">
+    <label>
+        <input type="radio"
+               ng-model="subject.answeredOption"
+               ng-change="onChangeSubmission(subject)" />
+        <div class="option-content">
+            <span>選項內容</span>
+        </div>
+    </label>
+</li>
+```
+
+**Multiple Choice (Checkbox)**:
+```html
+<li class="option">
+    <label>
+        <input type="checkbox"
+               ng-model="option.checked"
+               ng-change="onChangeSubmission(subject)" />
+        <div class="option-content">
+            <span>選項內容</span>
+        </div>
+    </label>
+</li>
+```
+
+**Locators**:
+- CSS Class: `.option-content`
+- Radio: `input[type="radio"]`
+- Checkbox: `input[type="checkbox"]`
+
+#### 3. Submit Button
+```html
+<a class="button button-green"
+   ng-click="calUnsavedSubjects()">
+   交卷
+</a>
+
+<!-- Confirmation popup -->
+<button ng-click="submitAnswer(...)">確定</button>
+```
+
+**Important**: Exam uses **whole-page display** (all questions on one page), not paginated.
+
+---
+
+### Database Strategy Evaluation
+
+#### Recommended Approach: **Hybrid Mode (SQLite + JSON)**
+
+| Database | Single-User | Speed | Deployment | Matching | Recommendation |
+|----------|------------|-------|------------|----------|----------------|
+| **SQLite** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ (Zero config) | ⭐⭐⭐⭐⭐ (SQL LIKE) | **✅ Recommended** |
+| JSON | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ (Already exists) | ⭐⭐⭐ (String match) | ✅ For MVP |
+| MySQL | ⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐ (Need server) | ⭐⭐⭐⭐⭐ | ❌ Overkill |
+| DuckDB | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ (Need install) | ⭐⭐⭐⭐⭐ | ⚠️ Alternative |
+
+**Why SQLite?**
+- ✅ Zero configuration (built-in Python `sqlite3`)
+- ✅ File-based (single `.db` file, easy backup)
+- ✅ Fast queries (millisecond-level for 1,766 questions)
+- ✅ Full-text search support (FTS5 extension)
+- ✅ Perfect for 5.3MB dataset
+- ✅ Cross-platform compatibility
+
+**Hybrid Strategy**:
+```
+Phase 1 (MVP): Use existing JSON files directly
+Phase 2 (Optimization): Auto-build SQLite on first run
+Phase 3 (Production): Use SQLite, keep JSON as backup
+```
+
+---
+
+### Proposed Architecture
+
+#### New File Structure (POM Compliant)
+```
+eebot/
+├── src/
+│   ├── pages/
+│   │   ├── exam_detail_page.py        # Existing (DO NOT MODIFY)
+│   │   └── exam_answer_page.py        # NEW - Answer page operations
+│   │
+│   ├── scenarios/
+│   │   ├── exam_learning.py           # Existing (DO NOT MODIFY)
+│   │   └── exam_auto_answer.py        # NEW - Auto-answer scenario
+│   │
+│   ├── services/                      # NEW - Business logic layer
+│   │   ├── __init__.py
+│   │   ├── question_bank.py           # NEW - Question bank service
+│   │   └── answer_matcher.py          # NEW - Answer matching engine
+│   │
+│   └── models/                        # NEW - Data models
+│       ├── __init__.py
+│       └── question.py                # NEW - Question/Option classes
+│
+├── data/
+│   ├── courses.json                   # Existing
+│   ├── schedule.json                  # Existing
+│   └── questions.db                   # NEW - SQLite database (auto-generated)
+│
+└── 郵政E大學114年題庫/
+    └── *.json                         # Existing (kept as backup)
+```
+
+#### Layer Responsibilities
+
+**ExamAnswerPage** (Page Object):
+```python
+class ExamAnswerPage(BasePage):
+    def get_all_questions() -> List[WebElement]
+    def get_question_text(question_elem) -> str
+    def get_options(question_elem) -> List[WebElement]
+    def get_option_text(option_elem) -> str
+    def click_option(option_elem, is_checkbox=False)
+    def submit_exam(delay=2.0)
+    def get_progress() -> (answered, total)
+```
+
+**QuestionBankService** (Data Layer):
+```python
+class QuestionBankService:
+    def __init__(mode='sqlite', **kwargs)
+    def find_answer(question_text) -> Optional[Dict]
+    # Returns: {question_id, type, correct_options[]}
+```
+
+**AnswerMatcher** (Matching Engine):
+```python
+class AnswerMatcher:
+    @staticmethod
+    def normalize_text(text) -> str
+    def find_best_match(web_q, db_qs) -> Optional[Dict]
+    # Multi-level fallback:
+    # 1. Exact match (fastest)
+    # 2. Contains match
+    # 3. Similarity match (SequenceMatcher)
+```
+
+**ExamAutoAnswerScenario** (Orchestration):
+```python
+class ExamAutoAnswerScenario:
+    def auto_answer_all_questions()
+    # Workflow:
+    # 1. Get all questions from page
+    # 2. For each question:
+    #    - Extract question text
+    #    - Query question bank
+    #    - Match options
+    #    - Click correct option(s)
+    # 3. Submit exam
+```
+
+---
+
+### Answer Matching Strategy
+
+#### Challenge: Web Question vs Database Question Differences
+
+| Difference Type | Example | Solution |
+|----------------|---------|----------|
+| HTML Tags | `<p>問題</p>` vs `問題` | Strip HTML with BeautifulSoup |
+| Whitespace | Multiple spaces vs single | Normalize with regex |
+| Punctuation | Full-width vs half-width | Standardize `？` → `?` |
+| Line breaks | `\n` vs `<br>` | Replace all to space |
+
+#### Multi-Level Matching Algorithm
+
+```python
+class AnswerMatcher:
+    def find_best_match(self, web_question, db_questions):
+        web_norm = self.normalize_text(web_question)
+
+        for db_q in db_questions:
+            db_norm = self.normalize_text(db_q['description'])
+
+            # Strategy 1: Exact match (fastest)
+            if web_norm == db_norm:
+                return db_q
+
+            # Strategy 2: Contains match
+            if web_norm in db_norm or db_norm in web_norm:
+                return db_q
+
+            # Strategy 3: Similarity match (SequenceMatcher)
+            similarity = SequenceMatcher(None, web_norm, db_norm).ratio()
+            if similarity >= 0.85:  # Confidence threshold
+                return db_q
+
+        return None  # No match found
+```
+
+**Confidence Threshold**: 0.85 (85% similarity required to avoid false positives)
+
+---
+
+### SQLite Database Schema
+
+#### Tables
+
+**questions** (Main question table):
+```sql
+CREATE TABLE questions (
+    id INTEGER PRIMARY KEY,
+    category TEXT NOT NULL,              -- 分類（窗口線上測驗、法遵等）
+    description TEXT NOT NULL,            -- 題目內容（HTML）
+    description_text TEXT,                -- 純文字版本（用於匹配）
+    difficulty_level TEXT,                -- 難度（easy/medium/hard）
+    type TEXT NOT NULL,                   -- 題型（single_selection/multiple_selection）
+    answer_explanation TEXT,
+    last_updated_at TEXT
+);
+```
+
+**options** (Options table):
+```sql
+CREATE TABLE options (
+    id INTEGER PRIMARY KEY,
+    question_id INTEGER NOT NULL,
+    content TEXT NOT NULL,                -- 選項內容（HTML）
+    content_text TEXT,                    -- 純文字版本
+    is_answer BOOLEAN NOT NULL,           -- 是否為正確答案
+    sort INTEGER,
+    FOREIGN KEY (question_id) REFERENCES questions(id)
+);
+```
+
+**Indexes** (Performance optimization):
+```sql
+-- Full-text search (Critical for fuzzy matching)
+CREATE VIRTUAL TABLE questions_fts USING fts5(
+    description_text,
+    content='questions',
+    content_rowid='id'
+);
+
+-- Regular indexes
+CREATE INDEX idx_category ON questions(category);
+CREATE INDEX idx_type ON questions(type);
+CREATE INDEX idx_description_text ON questions(description_text);
+```
+
+#### Migration Script Concept
+```python
+def migrate_json_to_sqlite(json_dir, db_path):
+    # 1. Read all JSON files
+    # 2. Extract questions and options
+    # 3. Clean HTML → plain text
+    # 4. Insert into SQLite
+    # 5. Build FTS5 index
+```
+
+---
+
+### Implementation Phases
+
+#### Phase 1: MVP (Minimum Viable Product)
+**Goal**: Prove auto-answering works
+
+- ✅ Use existing JSON files (no conversion needed)
+- ✅ Implement `QuestionBankService` (JSON mode)
+- ✅ Implement basic `AnswerMatcher`
+- ✅ Implement `ExamAnswerPage` (read questions, click options)
+- ✅ Integrate into `ExamLearningScenario`
+- ✅ Test with single exam
+
+**Estimated Time**: 2-3 hours
+
+#### Phase 2: Optimize Matching
+**Goal**: Improve accuracy
+
+- ✅ Enhance `AnswerMatcher` (similarity algorithms)
+- ✅ Handle HTML cleaning edge cases
+- ✅ Add matching logs (track success/failure)
+- ✅ Test with full question bank
+
+**Estimated Time**: 2-3 hours
+
+#### Phase 3: Migrate to SQLite
+**Goal**: Performance optimization
+
+- ✅ Write JSON → SQLite migration script
+- ✅ Build FTS5 full-text index
+- ✅ Implement `QuestionBankService` (SQLite mode)
+- ✅ Performance comparison testing
+
+**Estimated Time**: 1-2 hours
+
+#### Phase 4: Production Ready
+**Goal**: Robust and maintainable
+
+- ✅ Hybrid mode (auto-build SQLite on first run)
+- ✅ Auto-detect question bank updates
+- ✅ Screenshot failed matches for debugging
+- ✅ Generate answer accuracy reports
+- ✅ Configuration options in `eebot.cfg`
+
+**Estimated Time**: 2-3 hours
+
+---
+
+### Configuration Options (Planned)
+
+#### eebot.cfg additions
+```ini
+# Existing config...
+user_name=your_username
+password=your_password
+
+# NEW: Auto-answer configuration
+enable_auto_answer=y                     # Enable auto-answering
+question_bank_mode=sqlite                # 'sqlite' or 'json'
+question_bank_path=data/questions.db
+answer_confidence_threshold=0.85         # Minimum similarity score
+auto_submit_exam=y                       # Auto-submit after answering
+screenshot_on_mismatch=y                 # Screenshot when no match found
+```
+
+---
+
+### Risk Assessment
+
+| Risk | Description | Mitigation |
+|------|-------------|------------|
+| **Matching Failure** | Web question ≠ DB question | Multi-level fallback + confidence threshold |
+| **Dynamic Loading** | AngularJS render delay | Increase WebDriverWait timeout |
+| **Detection Risk** | Website may detect automation | Already using Stealth JS |
+| **Outdated Bank** | Question bank out of sync | Log mismatches, manual review |
+| **Multiple Choice** | Need to click multiple options | Check `type` field in database |
+
+---
+
+### Success Criteria
+
+**MVP Success**:
+- [ ] Successfully match ≥80% of questions
+- [ ] Auto-click correct options (single choice)
+- [ ] Auto-click correct options (multiple choice)
+- [ ] Submit exam automatically
+
+**Production Success**:
+- [ ] Match rate ≥95%
+- [ ] SQLite query time <10ms per question
+- [ ] Zero false positives (wrong answers)
+- [ ] Graceful handling of unmatched questions
+
+---
+
+### Testing Strategy
+
+#### Unit Testing
+```python
+# Test answer matcher
+def test_exact_match():
+    assert matcher.find_best_match("問題A", ["問題A", "問題B"]) == "問題A"
+
+def test_html_cleaning():
+    assert matcher.normalize_text("<p>問題</p>") == "問題"
+```
+
+#### Integration Testing
+```bash
+# Test single exam with known answers
+python main.py --test-mode --exam="高齡測驗"
+```
+
+#### Manual Testing Checklist
+- [ ] Single choice questions answered correctly
+- [ ] Multiple choice questions answered correctly
+- [ ] Exam submission successful
+- [ ] Unmatched questions skipped gracefully
+- [ ] Screenshot saved for failed matches
+
+---
+
+### Documentation Requirements
+
+When implementing auto-answer:
+
+1. **Update this file** (`AI_ASSISTANT_GUIDE.md`):
+   - Move from "Planned Features" to "Implemented Features"
+   - Add usage examples
+
+2. **Update `CLAUDE_CODE_HANDOVER.md`**:
+   - Add auto-answer workflow
+   - Update file structure
+
+3. **Update `CHANGELOG.md`**:
+   - Record implementation date
+   - List all new files
+   - Document breaking changes
+
+4. **Update `README.md`**:
+   - Add auto-answer quick start guide
+
+---
+
+### Important Notes
+
+⚠️ **DO NOT** implement auto-answer until:
+1. User explicitly requests implementation
+2. All existing exam flow features are stable
+3. Question bank data is verified and up-to-date
+4. Legal and ethical considerations are addressed
+
+✅ **This planning document** serves as:
+- Reference for future AI assistants
+- Design blueprint for implementation
+- Risk assessment and mitigation guide
+- Success criteria checklist
+
+---
+
+**Planning Document Version**: 1.0
+**Evaluated By**: Claude Code CLI (Sonnet 4.5)
+**Evaluation Date**: 2025-01-14
+**Status**: ⏸️ Planning Phase - Awaiting User Approval
+
+---
+
 ## 📞 Support & Resources
 
 ### Documentation
