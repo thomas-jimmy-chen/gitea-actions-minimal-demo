@@ -68,7 +68,7 @@ def main():
     print('\n[Step 4/6] Loading scheduled courses...')
     schedule_file = 'data/schedule.json'
     try:
-        with open(schedule_file, 'r', encoding='utf-8') as f:
+        with open(schedule_file, 'r', encoding='utf-8-sig') as f:
             schedule_data = json.load(f)
         courses = schedule_data.get('courses', [])
 
@@ -122,6 +122,9 @@ def main():
         # 執行考試
         if exams:
             print('\n[6.2] Executing exams...')
+            print('  → Using smart exam scenario (auto-answer for specific exams only)')
+
+            # 使用考試場景（根據每個考試的 enable_auto_answer 字段決定是否自動答題）
             exam_scenario = ExamLearningScenario(config, keep_browser_on_error=keep_browser_on_error)
             print('  ✓ Exam scenario initialized')
             exam_scenario.execute(exams)

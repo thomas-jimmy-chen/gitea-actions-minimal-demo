@@ -33,7 +33,7 @@ class CourseScheduler:
     def load_courses(self):
         """載入所有可用課程"""
         try:
-            with open(self.courses_file, 'r', encoding='utf-8') as f:
+            with open(self.courses_file, 'r', encoding='utf-8-sig') as f:
                 data = json.load(f)
                 self.all_courses = data.get('courses', [])
             print(f'✓ 已載入 {len(self.all_courses)} 個課程')
@@ -52,7 +52,7 @@ class CourseScheduler:
             return
 
         try:
-            with open(self.schedule_file, 'r', encoding='utf-8') as f:
+            with open(self.schedule_file, 'r', encoding='utf-8-sig') as f:
                 data = json.load(f)
                 self.scheduled_courses = data.get('courses', [])
         except:
@@ -226,7 +226,7 @@ class CourseScheduler:
                 if self.scheduled_courses:
                     # 檢查是否與已儲存的不同
                     try:
-                        with open(self.schedule_file, 'r', encoding='utf-8') as f:
+                        with open(self.schedule_file, 'r', encoding='utf-8-sig') as f:
                             saved_data = json.load(f)
                             saved_courses = saved_data.get('courses', [])
                             if saved_courses != self.scheduled_courses:

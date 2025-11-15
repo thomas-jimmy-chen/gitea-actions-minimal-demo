@@ -4,10 +4,22 @@
 >
 > 本文檔使用 Claude Code 的最佳實踐格式編寫，方便快速理解項目結構並進行後續開發。
 
-**文檔版本**: 1.0
-**最後更新**: 2025-01-13
-**項目版本**: 2.0.1+exam
+**文檔版本**: 1.1
+**最後更新**: 2025-11-15 晚間
+**項目版本**: 2.0.2+auto-answer.1
+**項目代號**: **Gleipnir** (格萊普尼爾 / 縛狼鎖)
 **維護者**: wizard03
+
+---
+
+## 🔗 項目代號：Gleipnir (格萊普尼爾)
+
+北歐神話中用來綑綁魔狼芬里爾 (Fenrir) 的鎖鏈。由矮人工匠用六種不可能的材料鍛造而成，看似輕盈如絲卻牢不可破。
+
+**寓意**:
+- **糾纏者 (Entangler)**: 如同此鎖鏈綑綁芬里爾，本工具精準控制複雜的學習流程
+- **欺詐者 (Deceiver)**: 外表簡潔優雅的 API 隱藏著複雜的自動化邏輯
+- **縛狼鎖**: 象徵系統的可靠性與不可破壞的自動化能力
 
 ---
 
@@ -168,15 +180,18 @@ eebot/
   "program_name": "課程計畫名稱",
   "exam_name": "考試名稱",
   "course_type": "exam",
-  "delay": 10.0,
+  "delay": 7.0,
   "description": "考試描述"
 }
 ```
+
+**⚠️ 重要規則**: 所有課程（一般課程與考試）的 `delay` **必須統一為 7.0 秒**。這是強制標準。
 
 **關鍵差異**:
 - 課程使用 `lesson_name` + `course_id`
 - 考試使用 `exam_name` + `course_type: "exam"`
 - 考試沒有 `course_id`（因為考試的返回邏輯不同）
+- 延遲時間與一般課程相同（7.0 秒統一標準）
 
 ### 2. 執行流程
 
@@ -244,7 +259,7 @@ python main.py
   "program_name": "考試計畫名稱",
   "exam_name": "考試名稱",
   "course_type": "exam",      // 必須設為 "exam"
-  "delay": 10.0,              // 考試流程較複雜，建議 10 秒以上
+  "delay": 7.0,               // 統一標準：所有課程必須為 7.0 秒
   "description": "考試描述"
 }
 ```
@@ -503,11 +518,12 @@ cat docs/CHANGELOG.md
 
 ---
 
-## 🎯 規劃中功能：自動答題系統 (Phase 2)
+## 🎯 已完成功能：自動答題系統 (Phase 2)
 
-> **狀態**: 規劃階段（評估於 2025-01-14）
-> **預計實作時間**: 待定
-> **目前進度**: 考試流程自動化已完成，自動答題尚未實作
+> **狀態**: ✅ **已實作完成** (2025-11-15)
+> **版本**: 2.0.2+auto-answer
+> **實作者**: wizard03 (with Claude Code CLI)
+> **目前進度**: 完整的自動答題系統，含智能匹配引擎
 
 ### 功能概述
 
@@ -803,28 +819,570 @@ screenshot_on_mismatch=y                 # 無法匹配時截圖
 
 ---
 
-### 重要提醒
+### ✅ 實作完成總結 (2025-11-15)
 
-⚠️ **請勿實作**，直到：
-1. 使用者明確要求實作
-2. 現有考試流程功能穩定
-3. 題庫資料已驗證且最新
-4. 法律與道德考量已處理
+**實作狀態**: ✅ 所有規劃功能已完整實作
 
-✅ **本規劃文檔**作為：
-- 未來 AI 助手的參考
-- 實作設計藍圖
-- 風險評估與緩解指南
-- 成功標準檢查清單
+**新增檔案**:
+```
+src/models/
+├── __init__.py
+└── question.py                  # 資料模型
+
+src/services/
+├── __init__.py
+├── question_bank.py             # 題庫服務
+└── answer_matcher.py            # 匹配引擎
+
+src/pages/
+└── exam_answer_page.py          # 答題頁面
+
+src/scenarios/
+└── exam_auto_answer.py          # 自動答題場景
+```
+
+**修改檔案**:
+- `config/eebot.cfg` - 新增 AUTO_ANSWER 配置區塊
+- `main.py` - 整合自動答題場景
+- `requirements.txt` - 新增 beautifulsoup4 依賴
+
+**使用方式**:
+```bash
+# 1. 安裝依賴
+pip install beautifulsoup4
+
+# 2. 設定排程
+python menu.py
+
+# 3. 執行自動答題（enable_auto_answer=y）
+python main.py
+```
+
+**核心功能**:
+- ✅ 自動偵測題目數量與題型
+- ✅ 多層級匹配演算法 (85% 門檻)
+- ✅ 單選/複選題自動作答
+- ✅ 未匹配題目截圖記錄
+- ✅ 答題統計報告
+- ✅ 使用者確認交卷機制
 
 ---
 
-**規劃文檔版本**: 1.0
-**評估者**: Claude Code CLI (Sonnet 4.5)
-**評估日期**: 2025-01-14
-**狀態**: ⏸️ 規劃階段 - 等待用戶批准
+**實作版本**: 2.0.2+auto-answer
+**實作者**: wizard03 (with Claude Code CLI - Sonnet 4.5)
+**實作日期**: 2025-11-15
+**狀態**: ✅ **已完成並可使用**
 
-**詳細技術規格**: 請參考 `docs/AI_ASSISTANT_GUIDE.md` 的對應章節
+**詳細變更記錄**: 請參考 `CHANGELOG.md` 版本 2.0.2+auto-answer
+**技術細節**: 請參考 `docs/AI_ASSISTANT_GUIDE.md` Phase 2 章節
+
+---
+
+## 🚀 智能模式：按課程啟用自動答題 (2025-11-15 更新)
+
+> **重大變更**: 自動答題邏輯從全局啟用改為按課程啟用
+
+### 變更概述
+
+**舊邏輯** (v2.0.2+auto-answer):
+- 全局 `enable_auto_answer` 設定於 `config/eebot.cfg`
+- 所有考試統一啟用或停用自動答題
+- 需修改配置檔才能切換模式
+
+**新邏輯** (v2.0.2+auto-answer Smart Mode):
+- 每個考試獨立設定 `enable_auto_answer` 於 `data/courses.json`
+- 不同考試可選擇不同模式（自動/手動）
+- 自動偵測考卷區頁面後才啟動
+- 懶加載機制（僅在需要時載入題庫）
+
+### 配置變更
+
+#### 1. 課程配置 (courses.json)
+
+**新增 `enable_auto_answer` 欄位**:
+
+```json
+{
+  "program_name": "高齡客戶投保權益保障(114年度)",
+  "exam_name": "高齡測驗(100分及格)",
+  "course_type": "exam",
+  "enable_auto_answer": true,    // 新增：啟用此考試的自動答題
+  "delay": 7.0,
+  "description": "高齡測驗 - 自動答題"
+}
+```
+
+**未設定則預設為手動模式**:
+
+```json
+{
+  "program_name": "其他考試(114年度)",
+  "exam_name": "其他測驗",
+  "course_type": "exam",
+  // 未設定 enable_auto_answer → 手動模式
+  "delay": 7.0,
+  "description": "需手動完成"
+}
+```
+
+#### 2. 系統配置 (eebot.cfg)
+
+**推薦設定**: 改用 `file_mapping` 模式
+
+```ini
+[AUTO_ANSWER]
+enable_auto_answer = y                          # 保留（舊版相容）
+question_bank_mode = file_mapping               # 從 'total_bank' 改為此
+question_bank_path = 郵政E大學114年題庫/總題庫.json
+answer_confidence_threshold = 0.85
+auto_submit_exam = n
+screenshot_on_mismatch = y
+skip_unmatched_questions = y
+screenshot_dir = screenshots/unmatched
+```
+
+### 工作流程變更
+
+#### 舊流程（全局模式）
+```
+1. 編輯 config/eebot.cfg → 設定 enable_auto_answer=y
+2. 執行 python menu.py → 選擇考試
+3. 執行 python main.py → 所有考試自動答題
+4. 如需停用，再編輯 config/eebot.cfg
+```
+
+#### 新流程（智能模式）
+```
+1. 編輯 data/courses.json → 為特定考試加入 "enable_auto_answer": true
+2. 執行 python menu.py → 選擇考試
+3. 執行 python main.py → 只有標記的考試自動答題
+4. 系統自動偵測考卷區後才啟動
+```
+
+### 技術實作細節
+
+#### 1. 考卷區頁面偵測
+
+**新增方法**: `_is_in_exam_answer_page()` 於 `ExamLearningScenario`
+
+```python
+def _is_in_exam_answer_page(self) -> bool:
+    """偵測是否進入考卷區頁面"""
+    try:
+        driver = self.driver_manager.get_driver()
+        WebDriverWait(driver, 5).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, "li.subject"))
+        )
+        questions = driver.find_elements(By.CSS_SELECTOR, "li.subject")
+        if len(questions) > 0:
+            print(f'  ✅ 偵測到考卷區頁面（共 {len(questions)} 題）')
+            return True
+        return False
+    except Exception as e:
+        print(f'  ⚠️  考卷區檢測失敗: {e}')
+        return False
+```
+
+**目的**: 防止在錯誤頁面啟動自動答題
+
+#### 2. 懶加載機制
+
+**舊方式**: 為所有考試載入題庫和匹配器
+
+**新方式**: 僅在需要時才初始化
+
+```python
+class ExamLearningScenario:
+    def __init__(self, config, keep_browser_on_error=False):
+        # ... 現有代碼 ...
+        self.exam_answer_page = ExamAnswerPage(driver)
+        self.question_bank = None      # 懶加載
+        self.answer_matcher = None     # 懶加載
+
+    def _auto_answer_current_exam(self, exam):
+        """僅在需要時初始化題庫"""
+        if self.question_bank is None:
+            print('[初始化] 載入題庫...')
+            self.question_bank = QuestionBankService(self.config)
+            question_count = self.question_bank.load_question_bank(
+                exam.get('program_name')
+            )
+
+        if self.answer_matcher is None:
+            print('[初始化] 載入答案匹配器...')
+            self.answer_matcher = AnswerMatcher(self.config)
+```
+
+**優點**:
+- 節省記憶體（手動考試不載入）
+- 加快啟動速度
+- 只載入相關題庫（file_mapping 模式）
+
+#### 3. 條件啟動邏輯
+
+**新流程** (於 `_process_exam()` 中):
+
+```python
+def _process_exam(self, exam: Dict[str, any]):
+    # ... 現有考試流程（登入、導航、點擊考試）...
+
+    # 新增：檢查該考試是否啟用自動答題
+    enable_auto_answer = exam.get('enable_auto_answer', False)
+
+    if enable_auto_answer and self._is_in_exam_answer_page():
+        print('【自動答題模式啟動】')
+        self._auto_answer_current_exam(exam)
+    else:
+        print('請手動完成考試')
+        input('完成後按 Enter 繼續...')
+```
+
+**決策樹**:
+```
+是否 enable_auto_answer=true?
+  ├─ 否 → 手動模式（等待使用者）
+  └─ 是 → 檢查是否在考卷區頁面
+      ├─ 否 → 手動模式（頁面錯誤）
+      └─ 是 → 自動答題模式（啟動）
+```
+
+### 主程式簡化
+
+**舊方式**: 兩個分離的場景
+
+```python
+# 舊代碼（已移除）
+if enable_auto_answer:
+    exam_scenario = ExamAutoAnswerScenario(...)
+else:
+    exam_scenario = ExamLearningScenario(...)
+```
+
+**新方式**: 統一場景
+
+```python
+# 新代碼（簡化）
+exam_scenario = ExamLearningScenario(config, keep_browser_on_error)
+exam_scenario.execute(exams)
+# 每個考試內部自行決定模式
+```
+
+**優點**:
+- 單一瀏覽器會話處理所有考試
+- 無需在考試間重啟瀏覽器
+- main.py 代碼更簡潔
+
+### 重要 Bug 修復 (2025-11-15)
+
+#### 1. UTF-8 BOM 編碼
+**問題**: JSON 檔案含有 UTF-8 BOM 標記
+**解決**: 所有 JSON 讀取改用 `encoding='utf-8-sig'`
+
+**影響檔案**:
+- `src/services/question_bank.py` (2 處)
+- `main.py` (1 處)
+- `menu.py` (3 處)
+
+#### 2. 分頁結構解析
+**問題**: 題庫檔案使用 `[{"subjects": [...]}]` 分頁結構
+**解決**: `_load_specific_bank()` 新增分頁偵測處理
+
+```python
+if isinstance(data[0], dict) and 'subjects' in data[0]:
+    # 分頁結構
+    for page in data:
+        if 'subjects' in page:
+            for subject in page['subjects']:
+                # 處理題目
+```
+
+#### 3. 元素互動問題
+**問題**: 交卷按鈕無法點擊 (element not interactable)
+**解決**: 使用 JavaScript 點擊 + 精確 XPath
+
+```python
+# 更新定位器 (exam_answer_page.py)
+SUBMIT_BUTTON = (By.XPATH, "/html/body/div[3]/div[4]/div[3]/div[9]/div/div/div[3]/div/div[3]/a")
+CONFIRM_BUTTON = (By.XPATH, "//*[@id='submit-exam-confirmation-popup']/div/div[3]/div/button[1]")
+
+# JavaScript 點擊
+self.driver.execute_script("arguments[0].click();", submit_btn)
+time.sleep(3)
+```
+
+#### 4. QuestionBankService 初始化
+**問題**: 使用錯誤參數 `mode=...`, `total_bank_path=...`
+**解決**: 正確初始化方式
+
+```python
+self.question_bank = QuestionBankService(self.config)
+question_count = self.question_bank.load_question_bank(exam.get('program_name'))
+```
+
+#### 5. 方法名稱不一致
+**問題**: `get_all_questions()` 等方法不存在
+**解決**: 統一命名
+
+```python
+# 正確的方法名稱 (ExamAnswerPage)
+detect_questions()             # 非 get_all_questions()
+extract_question_text()        # 非 get_question_text()
+extract_options()              # 非 get_options()
+submit_exam_with_confirmation() # 非 submit_exam()
+```
+
+#### 6. 回傳型別處理
+**問題**: `find_best_match()` 回傳 tuple 非 dict
+**解決**: 正確的 tuple 解包
+
+```python
+match_result = self.answer_matcher.find_best_match(question_text, questions)
+if match_result is None:
+    # 處理無匹配
+else:
+    db_question, confidence = match_result  # tuple 解包
+```
+
+### 測試結果
+
+**測試課程**: 高齡客戶投保權益保障考試
+
+| 項目 | 結果 |
+|-----|------|
+| 題庫載入 | 10 題 |
+| 匹配成功 | 10/10 (100%) |
+| 匹配信心度 | 95-100% |
+| 自動作答 | ✅ 全部正確 |
+| 考試提交 | ✅ 成功 |
+
+### 使用範例
+
+#### 範例 1: 為特定考試啟用自動答題
+
+**步驟 1**: 編輯 `data/courses.json`
+
+```json
+{
+  "description": "課程資料配置檔",
+  "version": "1.0",
+  "courses": [
+    {
+      "program_name": "高齡客戶投保權益保障(114年度)",
+      "exam_name": "高齡測驗(100分及格)",
+      "course_type": "exam",
+      "enable_auto_answer": true,    // 啟用此考試
+      "delay": 7.0,
+      "description": "高齡測驗 - 自動答題"
+    },
+    {
+      "program_name": "其他考試(114年度)",
+      "exam_name": "其他測驗",
+      "course_type": "exam",
+      // 未設定 → 手動模式
+      "delay": 7.0,
+      "description": "其他測驗 - 手動完成"
+    }
+  ]
+}
+```
+
+**步驟 2**: 排程與執行
+
+```bash
+python menu.py
+# 選擇兩個考試
+
+python main.py
+# 考試 1: 自動答題 ✅
+# 考試 2: 手動模式 ⏸️
+```
+
+#### 範例 2: 混合課程與考試排程
+
+```bash
+python menu.py
+# 選擇:
+# [1] 課程 A (一般課程)
+# [2] 課程 B (一般課程)
+# [3] 考試 A (enable_auto_answer: true)
+# [4] 考試 B (enable_auto_answer: false)
+
+python main.py
+# 執行順序:
+# 1. 課程 A → 自動完成 ✅
+# 2. 課程 B → 自動完成 ✅
+# 3. 考試 A → 自動答題 ✅
+# 4. 考試 B → 手動模式 ⏸️
+```
+
+### 向後相容性
+
+**相容性說明**:
+- ✅ 未設定 `enable_auto_answer` 的考試預設為手動模式
+- ✅ 原有手動考試流程完全保留
+- ✅ 所有課程學習功能不受影響
+- ✅ 配置檔 `enable_auto_answer` 保留但作用改變
+
+**破壞性變更**:
+- ❌ 全局 `enable_auto_answer` 不再控制所有考試
+- ❌ 必須為每個考試明確設定配置
+- ❌ `ExamAutoAnswerScenario` 類別已移除（功能整合至 `ExamLearningScenario`）
+
+### 遷移指南
+
+**如果你正在使用全局 `enable_auto_answer`**:
+
+1. 保留 `enable_auto_answer=y` 於 `config/eebot.cfg`（向後相容）
+2. 為需要自動答題的考試加入 `"enable_auto_answer": true`
+3. 將 `question_bank_mode` 改為 `file_mapping` 提升準確度
+4. 移除舊的 `ExamAutoAnswerScenario` 匯入（如果有）
+
+### 最佳實踐
+
+#### 1. 先手動測試
+```json
+{
+  "enable_auto_answer": false,  // 或省略此欄位
+  "description": "先手動測試"
+}
+```
+
+#### 2. 確認題庫對應
+檢查 `src/services/question_bank.py` 中的 program name 對應:
+
+```python
+QUESTION_BANK_MAPPING = {
+    "高齡客戶投保權益保障(114年度)": "高齡投保（10題）.json",
+    # 根據需求新增更多對應
+}
+```
+
+#### 3. 監控匹配成功率
+觀察終端輸出:
+```
+[匹配] 第 1 題: 題目內容
+  ✅ 匹配成功（信心: 100.00%）
+  ✅ 正確答案: ['選項1', '選項2']
+```
+
+#### 4. 檢視失敗截圖
+未匹配題目儲存於 `screenshots/unmatched/`:
+```
+question_5_20251115_143022.png
+question_5_20251115_143022.txt  // 含題目文字
+```
+
+### 問題排查
+
+#### 問題 1: 自動答題未啟動
+
+**檢查**:
+1. `courses.json` 中是否設定 `"enable_auto_answer": true`？
+2. 是否成功進入考卷區頁面？
+3. 查看終端是否有頁面偵測訊息
+
+**除錯輸出**:
+```
+✅ 偵測到考卷區頁面（共 10 題）
+【自動答題模式啟動】
+[初始化] 載入題庫...
+```
+
+#### 問題 2: 題目無法匹配
+
+**檢查**:
+1. `question_bank_mode` 是否正確設定？
+2. program name 是否精確對應題庫對應表？
+3. 信心門檻是否過高（預設 0.85）
+
+**除錯輸出**:
+```
+[載入] 題庫檔案: 郵政E大學114年題庫/高齡投保（10題）.json
+[成功] 載入題庫: 10 題
+```
+
+#### 問題 3: 交卷按鈕無法使用
+
+**檢查**:
+1. `exam_answer_page.py` 中的 XPath 定位器
+2. 點擊間的等待時間（預設 3 秒）
+3. JavaScript 執行是否啟用
+
+**解決方案**: 定位器已更新為使用者提供的精確 XPath
+
+#### 問題 4: 第二個考試 0% 匹配率 (嚴重 Bug - 已修復)
+
+**症狀**:
+- 第一個考試: 100% 匹配率 ✅
+- 第二個考試: 0% 匹配率 ❌
+- 所有題目顯示「無法匹配」
+
+**根本原因**:
+`src/scenarios/exam_learning.py:261` 的懶載入邏輯錯誤，導致多個考試共用同一個題庫實例。
+
+**問題機制**:
+```python
+# ❌ 錯誤代碼（修復前）
+if self.question_bank is None:
+    self.question_bank = QuestionBankService(self.config)
+    question_count = self.question_bank.load_question_bank(exam.get('program_name'))
+```
+
+1. 考試 1 載入題庫 A（例如：高齡投保 10 題）
+2. `self.question_bank` 不再是 `None`
+3. 考試 2 跳過初始化
+4. 考試 2 嘗試用錯誤的題庫 A 匹配題庫 B 的題目
+5. 結果：0% 匹配率
+
+**修復方案** (v2.0.2+auto-answer.1):
+```python
+# ✅ 修復後代碼
+# 為每個考試重新載入對應題庫
+self.question_bank = QuestionBankService(self.config)
+program_name = exam.get('program_name')
+question_count = self.question_bank.load_question_bank(program_name)
+```
+
+**關鍵改變**:
+- ✅ 移除 `if self.question_bank is None` 檢查
+- ✅ 每個考試都創建新的 `QuestionBankService` 實例
+- ✅ 每個考試都載入對應的題庫
+- ✅ 新增 program_name 日誌輸出
+
+**驗證方式**:
+執行包含多個考試的流程，應看到每個考試都正確載入對應題庫：
+```
+--- Processing Exam 1/2 ---
+  📚 正在載入題庫...
+  ✅ 題庫已載入（共 10 題）
+  📋 課程名稱: 高齡客戶投保權益保障(114年度)
+
+--- Processing Exam 2/2 ---
+  📚 正在載入題庫...
+  ✅ 題庫已載入（共 21 題）
+  📋 課程名稱: 金融服務業公平待客原則＆洗錢防制及打擊資恐教育訓練(114年度)
+```
+
+**⚠️ 重要經驗**:
+> **懶載入 + 共享狀態 = 潛在 Bug**
+>
+> 當物件實例被重複使用處理不同資料集時：
+> - ❌ 不要在不檢查資料上下文的情況下使用懶載入
+> - ✅ 處理新資料時務必重新載入資源
+> - ✅ 加入日誌追蹤載入的資源
+> - ✅ 測試多個連續操作的場景
+
+**程式碼審查檢查清單**:
+- [ ] 是否有懶載入邏輯（`if self.resource is None`）？
+- [ ] 該實例是否會被重複使用處理不同資料？
+- [ ] 資源是否依賴輸入參數？
+- [ ] 是否有測試多個連續操作的情境？
+
+---
+
+**智能模式版本**: 2.0.2+auto-answer.1 (懶載入 Bug 已修復)
+**更新日期**: 2025-11-15 晚間
+**更新者**: wizard03 (with Claude Code CLI - Gleipnir Project)
 
 ---
 
@@ -838,7 +1396,7 @@ screenshot_on_mismatch=y                 # 無法匹配時截圖
 ---
 
 **維護者**: wizard03
-**文檔版本**: 1.0
-**最後更新**: 2025-01-13
+**文檔版本**: 1.1
+**最後更新**: 2025-11-15 (新增自動答題系統實作記錄)
 
 如有任何問題，請參考 `docs/AI_ASSISTANT_GUIDE.md` 或查看 `docs/CHANGELOG.md` 了解最新修改。

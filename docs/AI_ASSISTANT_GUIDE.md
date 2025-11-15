@@ -4,10 +4,28 @@
 >
 > Compatible with: Claude Code CLI, Cursor, GitHub Copilot CLI, Cody, Tabnine, and all AI-powered code assistants
 
-**Document Version**: 1.0
-**Last Updated**: 2025-01-13
-**Project Version**: 2.0.1+exam
+**Document Version**: 1.1
+**Last Updated**: 2025-11-15
+**Project Version**: 2.0.2+auto-answer.1
+**Project Codename**: **Gleipnir** (格萊普尼爾 / 縛狼鎖)
 **Maintainer**: wizard03
+
+---
+
+## 🔗 Project Codename: Gleipnir
+
+> **Gleipnir** (格萊普尼爾) - The mythical chain from Norse mythology
+
+In Norse mythology, **Gleipnir** is the binding that holds the mighty wolf **Fenrir**. Crafted by dwarves from impossible materials, this chain appears deceptively light and silky but possesses unbreakable strength.
+
+**Meaning**: "Open One" / "Deceiver" / "Entangler"
+**Chinese**: 格萊普尼爾 / 縛狼鎖 / 荒謬之鎖
+
+**Why Gleipnir for This Project?**
+- Just as Gleipnir binds Fenrir, this automation tool "binds" and controls the complex e-learning workflow
+- The chain's deceptive simplicity mirrors our clean API hiding complex automation
+- The unbreakable nature symbolizes reliable, consistent automation
+- "Entangler" reflects how we weave together multiple systems (Selenium + MitmProxy + Question Banks)
 
 ---
 
@@ -15,7 +33,7 @@
 
 ### What is EEBot?
 
-**EEBot** (Elearn Automation Bot) is a **Selenium-based automation tool** designed specifically for Taiwan Post's e-Learning platform (郵政e大學). It automates the process of completing online courses and exams.
+**EEBot** (Elearn Automation Bot) - **Codename: Gleipnir** - is a **Selenium-based automation tool** designed specifically for Taiwan Post's e-Learning platform (郵政e大學). It automates the process of completing online courses and exams with intelligent question-answering capabilities.
 
 ### Key Information
 
@@ -191,8 +209,10 @@ D:\Dev\eebot\data\courses.json
 - `program_name`: Course program name (must match link text on website)
 - `lesson_name`: Lesson name (must match link text)
 - `course_id`: Unique ID used in back navigation XPath
-- `delay`: Wait time in seconds before clicking
+- `delay`: Wait time in seconds before clicking (**MUST be 7.0 - unified standard**)
 - `description`: Optional description for documentation
+
+**⚠️ IMPORTANT RULE**: All courses (regular and exams) **MUST** use `"delay": 7.0`. This is a mandatory standard.
 
 #### Exam Type (NEW ✨ 2025-01-13)
 ```json
@@ -200,7 +220,7 @@ D:\Dev\eebot\data\courses.json
   "program_name": "課程計畫名稱",
   "exam_name": "考試名稱",
   "course_type": "exam",
-  "delay": 10.0,
+  "delay": 7.0,
   "description": "考試描述"
 }
 ```
@@ -209,7 +229,7 @@ D:\Dev\eebot\data\courses.json
 - Uses `exam_name` instead of `lesson_name`
 - Has `course_type: "exam"` marker
 - No `course_id` (exam flow doesn't use it)
-- Longer `delay` (10.0s) due to complex exam flow
+- Same `delay` (7.0s) as regular courses (unified standard)
 
 ### Example Configuration
 ```json
@@ -228,7 +248,7 @@ D:\Dev\eebot\data\courses.json
       "program_name": "高齡客戶投保權益保障(114年度)",
       "exam_name": "高齡測驗(100分及格)",
       "course_type": "exam",
-      "delay": 10.0,
+      "delay": 7.0,
       "description": "高齡客戶投保權益保障考試流程"
     }
   ]
@@ -499,14 +519,14 @@ python main.py  # Execute
   "program_name": "Exam Program Name",
   "exam_name": "Exam Name",
   "course_type": "exam",
-  "delay": 10.0,
+  "delay": 7.0,
   "description": "Exam description"
 }
 ```
 
 #### Step 3: (If flow is different) Modify exam_detail_page.py
 ```python
-def my_custom_exam_step(self, delay: float = 10.0):
+def my_custom_exam_step(self, delay: float = 7.0):
     """Custom step for this exam"""
     # Your custom logic here
     pass
@@ -819,11 +839,12 @@ Types: `feat`, `fix`, `docs`, `refactor`, `test`, `chore`
 
 ---
 
-## 🎯 Planned Features: Auto-Answer System (Phase 2)
+## 🎯 Implemented Features: Auto-Answer System (Phase 2)
 
-> **Status**: Planning Phase (Evaluated 2025-01-14)
-> **Estimated Implementation**: To be determined
-> **Current State**: Exam flow automation completed, auto-answering not yet implemented
+> **Status**: ✅ **IMPLEMENTED** (Completed 2025-11-15)
+> **Version**: 2.0.2+auto-answer
+> **Implementation By**: wizard03 (with Claude Code CLI)
+> **Current State**: Fully functional auto-answering system with intelligent matching
 
 ### Overview
 
@@ -1289,26 +1310,529 @@ When implementing auto-answer:
 
 ---
 
-### Important Notes
+### ✅ Implementation Status (Updated 2025-11-15)
 
-⚠️ **DO NOT** implement auto-answer until:
-1. User explicitly requests implementation
-2. All existing exam flow features are stable
-3. Question bank data is verified and up-to-date
-4. Legal and ethical considerations are addressed
+**Implementation Completed**: ✅ All planned features have been implemented
 
-✅ **This planning document** serves as:
-- Reference for future AI assistants
-- Design blueprint for implementation
-- Risk assessment and mitigation guide
-- Success criteria checklist
+**Implemented Components**:
+1. ✅ Data Models (`src/models/question.py`)
+2. ✅ Question Bank Service (`src/services/question_bank.py`)
+3. ✅ Answer Matcher Engine (`src/services/answer_matcher.py`)
+4. ✅ Exam Answer Page (`src/pages/exam_answer_page.py`)
+5. ✅ Auto Answer Scenario (`src/scenarios/exam_auto_answer.py`)
+6. ✅ Configuration System (`config/eebot.cfg`)
+7. ✅ Main Integration (`main.py`)
+
+**Key Features Delivered**:
+- ✅ Automatic question detection (count, type)
+- ✅ Multi-level matching algorithm (exact → contains → similarity)
+- ✅ Single/multiple choice handling
+- ✅ Screenshot capture for unmatched questions
+- ✅ Answer statistics and reporting
+- ✅ User confirmation before submission
+- ✅ Total bank mode (1,766 questions)
+
+**Configuration File**: `config/eebot.cfg`
+```ini
+enable_auto_answer = y
+question_bank_mode = total_bank
+answer_confidence_threshold = 0.85
+auto_submit_exam = n
+screenshot_on_mismatch = y
+skip_unmatched_questions = y
+```
+
+**Dependencies Added**:
+- `beautifulsoup4>=4.9.0` (HTML parsing)
+
+**Testing Status**: Ready for user testing
 
 ---
 
-**Planning Document Version**: 1.0
-**Evaluated By**: Claude Code CLI (Sonnet 4.5)
-**Evaluation Date**: 2025-01-14
-**Status**: ⏸️ Planning Phase - Awaiting User Approval
+**Implementation Version**: 2.0.2+auto-answer
+**Implemented By**: wizard03 (with Claude Code CLI - Sonnet 4.5)
+**Implementation Date**: 2025-11-15
+**Status**: ✅ **PRODUCTION READY**
+
+---
+
+## 🎯 Smart Mode: Per-Course Auto-Answer (Updated 2025-11-15)
+
+> **Breaking Change**: Auto-answer logic changed from global activation to per-course activation
+
+### Overview
+
+**Previous Behavior (v2.0.2+auto-answer)**:
+- Global `enable_auto_answer` setting in `config/eebot.cfg`
+- All exams either enabled or disabled for auto-answer
+- Required changing config file to enable/disable
+
+**New Behavior (v2.0.2+auto-answer Smart Mode)**:
+- Per-course `enable_auto_answer` field in `data/courses.json`
+- Each exam can independently enable/disable auto-answer
+- No need to modify config file for different exams
+- Automatic detection of exam answer page before activation
+
+### Configuration Changes
+
+#### 1. Per-Exam Configuration (courses.json)
+
+**Add `enable_auto_answer` field to specific exams**:
+
+```json
+{
+  "program_name": "高齡客戶投保權益保障(114年度)",
+  "exam_name": "高齡測驗(100分及格)",
+  "course_type": "exam",
+  "enable_auto_answer": true,    // Enable auto-answer for this exam only
+  "delay": 7.0,
+  "description": "高齡客戶投保權益保障考試流程 - 啟用自動答題"
+}
+```
+
+**Exams without this field default to manual mode**:
+
+```json
+{
+  "program_name": "其他考試(114年度)",
+  "exam_name": "其他測驗",
+  "course_type": "exam",
+  // enable_auto_answer not set → manual mode (user completes exam)
+  "delay": 7.0,
+  "description": "需手動完成的考試"
+}
+```
+
+#### 2. Question Bank Mode (config/eebot.cfg)
+
+**Recommended Setting**: Use `file_mapping` mode for better accuracy
+
+```ini
+[AUTO_ANSWER]
+enable_auto_answer = y                          # Keep enabled (legacy setting)
+question_bank_mode = file_mapping               # Changed from 'total_bank'
+question_bank_path = 郵政E大學114年題庫/總題庫.json
+answer_confidence_threshold = 0.85
+auto_submit_exam = n
+screenshot_on_mismatch = y
+skip_unmatched_questions = y
+screenshot_dir = screenshots/unmatched
+```
+
+**Question Bank Mapping** (in `QuestionBankService`):
+
+| Program Name | Question Bank File |
+|-------------|-------------------|
+| 高齡客戶投保權益保障(114年度) | 高齡投保（10題）.json |
+| 資通安全學程課程(114年度) | 資通安全（30題）.json |
+| 壽險業務員在職訓練學程課程及測驗(114年度) | 壽險業務員在職訓練（30題）.json |
+| 金融服務業公平待客原則＆洗錢防制及打擊資恐教育訓練(114年度) | 法令遵循／防制洗錢（262題）.json |
+
+### Workflow Changes
+
+#### Previous Workflow (Global Mode)
+```
+1. Edit config/eebot.cfg → set enable_auto_answer=y
+2. Run python menu.py → select exam
+3. Run python main.py → all exams auto-answer
+4. Edit config back to enable_auto_answer=n (if needed)
+```
+
+#### New Workflow (Smart Mode)
+```
+1. Edit data/courses.json → add "enable_auto_answer": true to specific exam
+2. Run python menu.py → select exam
+3. Run python main.py → only marked exams auto-answer
+4. System auto-detects exam answer page before activation
+```
+
+### Technical Implementation
+
+#### 1. Exam Answer Page Detection
+
+**New Method**: `_is_in_exam_answer_page()` in `ExamLearningScenario`
+
+```python
+def _is_in_exam_answer_page(self) -> bool:
+    """Detect if currently on exam answer page"""
+    try:
+        driver = self.driver_manager.get_driver()
+        WebDriverWait(driver, 5).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, "li.subject"))
+        )
+        questions = driver.find_elements(By.CSS_SELECTOR, "li.subject")
+        if len(questions) > 0:
+            print(f'  ✅ 偵測到考卷區頁面（共 {len(questions)} 題）')
+            return True
+        return False
+    except Exception as e:
+        print(f'  ⚠️  考卷區檢測失敗: {e}')
+        return False
+```
+
+**Purpose**: Prevents auto-answer from activating on wrong pages
+
+#### 2. Lazy Initialization
+
+**Previous**: Question bank and matcher loaded for all exams
+
+**New**: Only load when `enable_auto_answer=true` and on exam answer page
+
+```python
+class ExamLearningScenario:
+    def __init__(self, config, keep_browser_on_error=False):
+        # ... existing code ...
+        self.exam_answer_page = ExamAnswerPage(driver)
+        self.question_bank = None      # Lazy init
+        self.answer_matcher = None     # Lazy init
+
+    def _auto_answer_current_exam(self, exam):
+        """Initialize question bank only when needed"""
+        if self.question_bank is None:
+            print('[初始化] 載入題庫...')
+            self.question_bank = QuestionBankService(self.config)
+            question_count = self.question_bank.load_question_bank(
+                exam.get('program_name')
+            )
+
+        if self.answer_matcher is None:
+            print('[初始化] 載入答案匹配器...')
+            self.answer_matcher = AnswerMatcher(self.config)
+```
+
+**Benefits**:
+- Save memory for manual exams
+- Faster startup time
+- Only load relevant question bank (file_mapping mode)
+
+#### 3. Conditional Activation Logic
+
+**New Process in `_process_exam()`**:
+
+```python
+def _process_exam(self, exam: Dict[str, any]):
+    # ... existing exam flow (login, navigate, click exam) ...
+
+    # NEW: Check if auto-answer is enabled for this exam
+    enable_auto_answer = exam.get('enable_auto_answer', False)
+
+    if enable_auto_answer and self._is_in_exam_answer_page():
+        print('【自動答題模式啟動】')
+        self._auto_answer_current_exam(exam)
+    else:
+        print('請手動完成考試')
+        input('完成後按 Enter 繼續...')
+```
+
+**Decision Tree**:
+```
+Is enable_auto_answer=true?
+  ├─ No → Manual mode (wait for user)
+  └─ Yes → Check if on exam answer page
+      ├─ No → Manual mode (wrong page)
+      └─ Yes → Auto-answer mode (activate)
+```
+
+### Main Program Simplification
+
+**Previous**: Two separate scenarios
+
+```python
+# Old code (removed)
+if enable_auto_answer:
+    exam_scenario = ExamAutoAnswerScenario(...)
+else:
+    exam_scenario = ExamLearningScenario(...)
+```
+
+**New**: Unified scenario
+
+```python
+# New code (simplified)
+exam_scenario = ExamLearningScenario(config, keep_browser_on_error)
+exam_scenario.execute(exams)
+# Each exam decides its own mode internally
+```
+
+**Benefits**:
+- Single browser session for all exams
+- No browser restarts between exams
+- Cleaner main.py code
+
+### Important Bug Fixes (2025-11-15)
+
+#### 1. UTF-8 BOM Encoding
+**Problem**: JSON files have UTF-8 BOM markers
+**Solution**: Changed all JSON reads to `encoding='utf-8-sig'`
+
+**Affected Files**:
+- `src/services/question_bank.py`
+- `main.py`
+- `menu.py`
+
+#### 2. Pagination Structure Handling
+**Problem**: Question bank files use `[{"subjects": [...]}]` structure
+**Solution**: Added pagination detection in `_load_specific_bank()`
+
+```python
+if isinstance(data[0], dict) and 'subjects' in data[0]:
+    # Pagination structure
+    for page in data:
+        if 'subjects' in page:
+            for subject in page['subjects']:
+                # Process question
+```
+
+#### 3. Element Interaction Issues
+**Problem**: Submit buttons not clickable (element not interactable)
+**Solution**: Use JavaScript clicks with precise XPaths
+
+```python
+# Updated locators in exam_answer_page.py
+SUBMIT_BUTTON = (By.XPATH, "/html/body/div[3]/div[4]/div[3]/div[9]/div/div/div[3]/div/div[3]/a")
+CONFIRM_BUTTON = (By.XPATH, "//*[@id='submit-exam-confirmation-popup']/div/div[3]/div/button[1]")
+
+# JavaScript click
+self.driver.execute_script("arguments[0].click();", submit_btn)
+time.sleep(3)
+```
+
+### Usage Examples
+
+#### Example 1: Enable Auto-Answer for Specific Exam
+
+**Step 1**: Edit `data/courses.json`
+
+```json
+{
+  "description": "課程資料配置檔",
+  "version": "1.0",
+  "courses": [
+    {
+      "program_name": "高齡客戶投保權益保障(114年度)",
+      "exam_name": "高齡測驗(100分及格)",
+      "course_type": "exam",
+      "enable_auto_answer": true,    // Enable for this exam
+      "delay": 7.0,
+      "description": "高齡測驗 - 自動答題"
+    },
+    {
+      "program_name": "其他考試(114年度)",
+      "exam_name": "其他測驗",
+      "course_type": "exam",
+      // No enable_auto_answer → manual mode
+      "delay": 7.0,
+      "description": "其他測驗 - 手動完成"
+    }
+  ]
+}
+```
+
+**Step 2**: Schedule and run
+
+```bash
+python menu.py
+# Select both exams
+
+python main.py
+# Exam 1: Auto-answer activated ✅
+# Exam 2: Manual mode (user completes) ⏸️
+```
+
+#### Example 2: Mixed Course and Exam Schedule
+
+```bash
+python menu.py
+# Select:
+# [1] Course A (regular course)
+# [2] Course B (regular course)
+# [3] Exam A (enable_auto_answer: true)
+# [4] Exam B (enable_auto_answer: false)
+
+python main.py
+# Execution order:
+# 1. Course A → Auto-complete ✅
+# 2. Course B → Auto-complete ✅
+# 3. Exam A → Auto-answer ✅
+# 4. Exam B → Manual mode (wait for user) ⏸️
+```
+
+### Testing Results
+
+**Test Case**: 高齡客戶投保權益保障考試
+
+| Metric | Result |
+|--------|--------|
+| Questions Loaded | 10 |
+| Questions Matched | 10 (100%) |
+| Match Confidence | 95-100% |
+| Auto-Answer Success | ✅ All correct |
+| Exam Submission | ✅ Success |
+
+### Migration Guide (from v2.0.2+auto-answer)
+
+**If you were using global `enable_auto_answer`**:
+
+1. Keep `enable_auto_answer=y` in `config/eebot.cfg` (backward compatible)
+2. Add `"enable_auto_answer": true` to exams you want automated
+3. Change `question_bank_mode` to `file_mapping` for better accuracy
+4. Remove old `ExamAutoAnswerScenario` imports (if any)
+
+**Breaking Changes**:
+- Global config `enable_auto_answer` no longer controls all exams
+- Must explicitly set per-exam configuration
+- `ExamAutoAnswerScenario` class removed (functionality merged into `ExamLearningScenario`)
+
+**Backward Compatibility**:
+- Exams without `enable_auto_answer` field default to manual mode
+- All existing manual exam workflows unchanged
+- Course learning flows unaffected
+
+### Best Practices
+
+#### 1. Start with Manual Testing
+```json
+{
+  "enable_auto_answer": false,  // or omit field
+  "description": "Test manually first"
+}
+```
+
+#### 2. Verify Question Bank Mapping
+Check `src/services/question_bank.py` for program name mapping:
+
+```python
+QUESTION_BANK_MAPPING = {
+    "高齡客戶投保權益保障(114年度)": "高齡投保（10題）.json",
+    # Add more mappings as needed
+}
+```
+
+#### 3. Monitor Match Success
+Watch console output:
+```
+[匹配] 第 1 題: 正確答案為哪一個選項？
+  ✅ 匹配成功（信心: 100.00%）
+  ✅ 正確答案: ['選項1', '選項2']
+```
+
+#### 4. Review Screenshots for Failures
+Unmatched questions saved to `screenshots/unmatched/`:
+```
+question_5_20251115_143022.png
+question_5_20251115_143022.txt  // Contains question text
+```
+
+### Troubleshooting Smart Mode
+
+#### Issue 1: Auto-Answer Not Activating
+
+**Check**:
+1. Is `"enable_auto_answer": true` in courses.json?
+2. Is exam on the correct page (exam answer page)?
+3. Check console for page detection messages
+
+**Debug Output**:
+```
+✅ 偵測到考卷區頁面（共 10 題）
+【自動答題模式啟動】
+[初始化] 載入題庫...
+```
+
+#### Issue 2: Questions Not Matching
+
+**Check**:
+1. Is `question_bank_mode` set correctly?
+2. Is program name exactly matching the mapping?
+3. Check confidence threshold (default 0.85)
+
+**Debug Output**:
+```
+[載入] 題庫檔案: 郵政E大學114年題庫/高齡投保（10題）.json
+[成功] 載入題庫: 10 題
+```
+
+#### Issue 3: Submit Button Not Working
+
+**Check**:
+1. XPath locators in `exam_answer_page.py`
+2. Wait times between clicks (default 3 seconds)
+3. JavaScript execution enabled
+
+**Solution**: Locators were updated with user-provided XPaths
+
+#### Issue 4: 0% Match Rate on Second Exam (CRITICAL BUG - FIXED)
+
+**Symptom**:
+- First exam: 100% match rate ✅
+- Second exam: 0% match rate ❌
+- All questions showing as "無法匹配"
+
+**Root Cause**:
+Lazy loading bug in `src/scenarios/exam_learning.py:261` caused multiple exams to share the same question bank instance.
+
+**Problem Mechanism**:
+```python
+# ❌ BUGGY CODE (Before Fix)
+if self.question_bank is None:
+    self.question_bank = QuestionBankService(self.config)
+    question_count = self.question_bank.load_question_bank(exam.get('program_name'))
+```
+
+1. Exam 1 loads question bank A (e.g., 高齡投保 10 題)
+2. `self.question_bank` is no longer `None`
+3. Exam 2 skips initialization
+4. Exam 2 tries to match against wrong question bank A
+5. Result: 0% match rate
+
+**Solution** (Applied in v2.0.2+auto-answer.1):
+```python
+# ✅ FIXED CODE
+# Always reload question bank for each exam
+self.question_bank = QuestionBankService(self.config)
+program_name = exam.get('program_name')
+question_count = self.question_bank.load_question_bank(program_name)
+```
+
+**Key Changes**:
+- ✅ Removed `if self.question_bank is None` check
+- ✅ Always create new `QuestionBankService` instance per exam
+- ✅ Added program_name logging for debugging
+
+**Verification**:
+Run multiple exams and verify each loads correct question bank:
+```
+--- Processing Exam 1/2 ---
+  📚 正在載入題庫...
+  ✅ 題庫已載入（共 10 題）
+  📋 課程名稱: 高齡客戶投保權益保障(114年度)
+
+--- Processing Exam 2/2 ---
+  📚 正在載入題庫...
+  ✅ 題庫已載入（共 21 題）
+  📋 課程名稱: 金融服務業公平待客原則＆洗錢防制及打擊資恐教育訓練(114年度)
+```
+
+**⚠️ Important Lesson**:
+> **Lazy Loading + Shared State = Potential Bug**
+>
+> When an object instance is reused for processing multiple different datasets:
+> - ❌ DO NOT use lazy loading without checking if data context changed
+> - ✅ DO reload resources when processing new data
+> - ✅ DO add logging to track which resource is loaded
+> - ✅ DO test with multiple sequential operations
+
+**Code Review Checklist for Similar Patterns**:
+- [ ] Is there lazy loading (`if self.resource is None`)?
+- [ ] Is the instance reused for different data?
+- [ ] Does the resource depend on input parameters?
+- [ ] Is there a test for multiple sequential operations?
+
+---
+
+**Smart Mode Version**: 2.0.2+auto-answer.1 (Lazy Loading Bug Fixed)
+**Updated**: 2025-11-15 晚間
+**Updated By**: wizard03 (with Claude Code CLI - Gleipnir Project)
 
 ---
 

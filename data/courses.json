@@ -1,6 +1,11 @@
 {
   "description": "課程資料配置檔 - 定義需要自動學習的課程列表",
   "version": "1.0",
+  "_rules": {
+    "delay_standard": "所有課程（一般課程與考試）的 delay 延遲時間必須統一為 7.0 秒",
+    "delay_value": 7.0,
+    "note": "此為強制規則，新增課程時請遵守此統一標準"
+  },
   "courses": [
     {
       "program_name": "預防執行職務遭受不法侵害(員工)(114年度)",
@@ -69,8 +74,17 @@
       "program_name": "高齡客戶投保權益保障(114年度)",
       "exam_name": "高齡測驗(100分及格)",
       "course_type": "exam",
-      "delay": 10.0,
-      "description": "高齡客戶投保權益保障考試流程 (新增於 2025-01-13)"
+      "enable_auto_answer": true,
+      "delay": 7.0,
+      "description": "高齡客戶投保權益保障考試流程 (新增於 2025-01-13) - 啟用自動答題"
+    },
+    {
+      "program_name": "金融服務業公平待客原則＆洗錢防制及打擊資恐教育訓練(114年度)",
+      "exam_name": "金融友善服務測驗",
+      "course_type": "exam",
+      "enable_auto_answer": true,
+      "delay": 7.0,
+      "description": "金融友善服務測驗 - 啟用自動答題 (新增於 2025-11-15)"
     }
   ]
 }

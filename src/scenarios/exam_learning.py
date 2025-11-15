@@ -10,12 +10,17 @@ Based on: CourseLearningScenario
 
 from typing import List, Dict
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
 from ..core.config_loader import ConfigLoader
 from ..core.driver_manager import DriverManager
 from ..core.cookie_manager import CookieManager
 from ..pages.login_page import LoginPage
 from ..pages.course_list_page import CourseListPage
 from ..pages.exam_detail_page import ExamDetailPage
+from ..pages.exam_answer_page import ExamAnswerPage
+from ..services.question_bank import QuestionBankService
+from ..services.answer_matcher import AnswerMatcher
 
 
 class ExamLearningScenario:
@@ -43,6 +48,11 @@ class ExamLearningScenario:
         self.login_page = LoginPage(driver, self.cookie_manager)
         self.course_list = CourseListPage(driver)
         self.exam_detail = ExamDetailPage(driver)
+        self.exam_answer_page = ExamAnswerPage(driver)
+
+        # 初始化自動答題相關服務（如果需要的話會用到）
+        self.question_bank = None
+        self.answer_matcher = None
 
     def execute(self, exams: List[Dict[str, any]]):
         """
@@ -159,26 +169,32 @@ class ExamLearningScenario:
             # 使用 ExamDetailPage 的便捷方法完成整個考試流程
             self.exam_detail.complete_exam_flow(exam_name, delay=delay)
 
-            # ========== 新增：元素定位測試 ==========
-            print('\n' + '=' * 80)
-            print('  【考卷區元素定位測試】')
-            print('=' * 80)
+            # ========== 檢查是否需要自動答題 ==========
+            enable_auto_answer = exam.get('enable_auto_answer', False)
 
-            # 執行測試並獲取輸出文件路徑
-            output_file = self._test_exam_page_locators()
+            if enable_auto_answer and self._is_in_exam_answer_page():
+                print('\n' + '=' * 80)
+                print('  【自動答題模式啟動】')
+                print('=' * 80)
+                print(f'  📝 偵測到該考試啟用自動答題功能')
+                print(f'  🎯 開始自動答題流程...\n')
 
-            if output_file:
-                print(f'\n  📄 測試結果已輸出至: {output_file}')
-                print('  ✅ 請檢閱文檔內容')
+                # 執行自動答題
+                self._auto_answer_current_exam(exam)
+
+                print('\n' + '=' * 80)
+                print('  【自動答題完成】')
+                print('=' * 80)
             else:
-                print('\n  ⚠️ 測試結果輸出失敗')
+                if not enable_auto_answer:
+                    print('\n  ℹ️  該考試未啟用自動答題，保持手動模式')
+                elif not self._is_in_exam_answer_page():
+                    print('\n  ⚠️  未偵測到考卷區頁面，跳過自動答題')
 
-            print('=' * 80)
-
-            # 等待用戶按 Enter
-            print('\n⏸️  測試完成！')
-            input('  按 Enter 繼續...')
-            # ========== 測試結束 ==========
+                # 等待用戶手動操作
+                print('\n  ⏸️  請手動完成考試')
+                input('  完成後按 Enter 繼續...')
+            # ========== 自動答題檢查結束 ==========
 
             # 返回課程列表（直接跳轉 URL）
             print('\n  [Done] Returning to course list...')
@@ -203,203 +219,208 @@ class ExamLearningScenario:
         except:
             pass
 
-    def _test_exam_page_locators(self):
+    def _is_in_exam_answer_page(self) -> bool:
         """
-        測試考試頁面的元素定位
-        將所有題目、選項、單選按鈕等資訊輸出到文檔
+        檢測是否已進入考卷區頁面
 
         Returns:
-            str: 輸出文件路徑，失敗時返回 None
+            bool: 如果在考卷區返回 True，否則返回 False
         """
-        from selenium.webdriver.common.by import By
-        from selenium.webdriver.support.ui import WebDriverWait
-        from selenium.webdriver.support import expected_conditions as EC
-        import time
-        import os
-        from datetime import datetime
-
-        driver = self.driver_manager.get_driver()
-
-        # 準備輸出目錄和文件
-        output_dir = 'logs'
-        if not os.path.exists(output_dir):
-            os.makedirs(output_dir)
-
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        output_file = os.path.join(output_dir, f'exam_locator_test_{timestamp}.txt')
-
         try:
-            # 等待題目載入
-            print('  ⏳ 等待考卷載入...')
-            WebDriverWait(driver, 10).until(
+            driver = self.driver_manager.get_driver()
+
+            # 等待考卷頁面載入，使用短超時避免長時間等待
+            WebDriverWait(driver, 5).until(
                 EC.presence_of_element_located((By.CSS_SELECTOR, "li.subject"))
             )
-            time.sleep(2)  # 額外等待確保完全載入
-            print('  ✅ 考卷已載入')
 
-            # 開始寫入文件
-            with open(output_file, 'w', encoding='utf-8') as f:
-                # 寫入標題
-                f.write('=' * 100 + '\n')
-                f.write('考試頁面元素定位測試報告\n')
-                f.write('=' * 100 + '\n')
-                f.write(f'測試時間: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}\n')
-                f.write(f'當前 URL: {driver.current_url}\n')
-                f.write('=' * 100 + '\n\n')
-
-                # === 測試 1: 獲取總題數 ===
-                f.write('【測試 1】獲取總題數\n')
-                f.write('-' * 100 + '\n')
-
-                questions = driver.find_elements(By.CSS_SELECTOR, "li.subject")
-                total_questions = len(questions)
-
-                f.write(f'定位方法: CSS Selector "li.subject"\n')
-                f.write(f'總題數: {total_questions} 題\n')
-                f.write(f'邊界值: 第 1 題 ~ 第 {total_questions} 題\n')
-                f.write('\n')
-
-                # 控制台同步輸出
-                print(f'  📊 偵測到總題數: {total_questions} 題')
-                print(f'  📏 邊界值: 1 ~ {total_questions}')
-
-                if total_questions == 0:
-                    f.write('❌ 錯誤：未找到任何題目！\n')
-                    print('  ❌ 錯誤：未找到任何題目！')
-                    return output_file
-
-                # === 測試 2: 遍歷所有題目 ===
-                f.write('【測試 2】遍歷所有題目並提取資訊\n')
-                f.write('-' * 100 + '\n\n')
-
-                print(f'  🔍 開始遍歷 {total_questions} 題...')
-
-                # 遍歷所有題目
-                for idx, question_elem in enumerate(questions, 1):
-                    f.write(f'>>> 第 {idx} 題（共 {total_questions} 題）<<<\n')
-
-                    # 控制台顯示進度
-                    print(f'    處理第 {idx}/{total_questions} 題...', end='\r')
-
-                    # 2.1 獲取題目文字
-                    try:
-                        desc_elem = question_elem.find_element(
-                            By.XPATH, ".//span[contains(@class, 'subject-description')]"
-                        )
-                        question_text = desc_elem.text.strip()
-                        question_html = desc_elem.get_attribute('innerHTML')
-
-                        f.write(f'  ✅ 題目文字定位成功\n')
-                        f.write(f'  📝 題目內容（純文字）:\n')
-                        f.write(f'     {question_text}\n')
-                        f.write(f'  📄 HTML 長度: {len(question_html)} 字元\n')
-                    except Exception as e:
-                        f.write(f'  ❌ 題目文字定位失敗: {e}\n')
-                        continue
-
-                    # 2.2 獲取題型
-                    try:
-                        subject_class = question_elem.get_attribute('class')
-                        if "single_selection" in subject_class:
-                            subject_type = "單選題"
-                        elif "multiple_selection" in subject_class:
-                            subject_type = "複選題"
-                        elif "true_or_false" in subject_class:
-                            subject_type = "是非題"
-                        else:
-                            subject_type = "未知題型"
-                        f.write(f'  📋 題型: {subject_type}\n')
-                    except Exception as e:
-                        f.write(f'  ⚠️ 無法判斷題型: {e}\n')
-
-                    # 2.3 獲取所有選項
-                    try:
-                        options = question_elem.find_elements(
-                            By.XPATH, ".//li[contains(@class, 'option')]"
-                        )
-                        f.write(f'  ✅ 選項數量: {len(options)}\n')
-                        f.write(f'  選項詳細資訊:\n')
-
-                        # 2.4 遍歷每個選項
-                        for opt_idx, option_elem in enumerate(options):
-                            try:
-                                # 獲取選項文字
-                                option_content = option_elem.find_element(
-                                    By.CSS_SELECTOR, ".option-content"
-                                )
-                                option_text = option_content.text.strip()
-
-                                # 獲取單選/複選按鈕
-                                input_type = "無"
-                                input_element = None
-                                try:
-                                    radio = option_elem.find_element(By.CSS_SELECTOR, "input[type='radio']")
-                                    input_type = "radio（單選按鈕）"
-                                    input_element = radio
-                                except:
-                                    try:
-                                        checkbox = option_elem.find_element(By.CSS_SELECTOR, "input[type='checkbox']")
-                                        input_type = "checkbox（複選按鈕）"
-                                        input_element = checkbox
-                                    except:
-                                        input_type = "無按鈕"
-
-                                # 獲取按鈕狀態
-                                button_status = ""
-                                if input_element:
-                                    is_selected = input_element.is_selected()
-                                    is_enabled = input_element.is_enabled()
-                                    button_status = f"已選: {is_selected}, 可用: {is_enabled}"
-
-                                # 寫入選項資訊
-                                f.write(f'    {chr(65+opt_idx)}. {option_text}\n')
-                                f.write(f'       - 按鈕類型: {input_type}\n')
-                                if button_status:
-                                    f.write(f'       - 按鈕狀態: {button_status}\n')
-
-                            except Exception as e:
-                                f.write(f'    {chr(65+opt_idx)}. ❌ 選項定位失敗: {e}\n')
-
-                    except Exception as e:
-                        f.write(f'  ❌ 選項定位失敗: {e}\n')
-
-                    f.write('\n' + '-' * 100 + '\n\n')
-
-                # 清除進度顯示
-                print(' ' * 50, end='\r')
-                print(f'  ✅ 已完成 {total_questions} 題的資料收集')
-
-                # === 測試總結 ===
-                f.write('=' * 100 + '\n')
-                f.write('【測試總結】\n')
-                f.write('=' * 100 + '\n')
-                f.write(f'✅ 總題數定位: 成功\n')
-                f.write(f'✅ 題目總數: {total_questions} 題\n')
-                f.write(f'✅ 邊界值: 1 ~ {total_questions}\n')
-                f.write(f'✅ 題目文字定位: 成功\n')
-                f.write(f'✅ 選項定位: 成功\n')
-                f.write(f'✅ 單選/複選按鈕定位: 成功\n')
-                f.write('=' * 100 + '\n')
-                f.write(f'\n報告生成時間: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}\n')
-                f.write(f'輸出文件: {output_file}\n')
-
-            print(f'  ✅ 測試報告已生成')
-            return output_file
+            # 檢查是否有題目元素
+            questions = driver.find_elements(By.CSS_SELECTOR, "li.subject")
+            if len(questions) > 0:
+                print(f'  ✅ 偵測到考卷區頁面（共 {len(questions)} 題）')
+                return True
+            else:
+                print('  ⚠️  未偵測到題目元素')
+                return False
 
         except Exception as e:
-            print(f'  ❌ 測試過程發生錯誤: {e}')
+            print(f'  ⚠️  考卷區檢測失敗: {e}')
+            return False
+
+    def _auto_answer_current_exam(self, exam: Dict[str, any]):
+        """
+        執行自動答題邏輯（針對當前考試）
+
+        Args:
+            exam: 考試資料字典
+        """
+        import time
+
+        try:
+            # 1. 為每個考試載入對應的題庫
+            # 修復：每次都重新載入，避免不同考試使用錯誤的題庫
+            print('  📚 正在載入題庫...')
+
+            # 創建新的題庫服務實例
+            self.question_bank = QuestionBankService(self.config)
+
+            # 載入題庫（根據 program_name 或使用總題庫）
+            program_name = exam.get('program_name')
+            question_count = self.question_bank.load_question_bank(program_name)
+
+            if question_count > 0:
+                print(f'  ✅ 題庫已載入（共 {question_count} 題）')
+                print(f'  📋 課程名稱: {program_name}')
+            else:
+                print(f'  ❌ 題庫載入失敗')
+                return
+
+            # 2. 初始化答案匹配器（如果尚未初始化）
+            if self.answer_matcher is None:
+                confidence_threshold = float(self.config.get('answer_confidence_threshold', 0.85))
+                self.answer_matcher = AnswerMatcher(confidence_threshold=confidence_threshold)
+                print(f'  ✅ 答案匹配器已初始化（信心門檻: {confidence_threshold}）')
+
+            # 3. 獲取所有題目
+            print('\n  🔍 開始分析考試題目...')
+            all_questions = self.exam_answer_page.detect_questions()
+            total_questions = len(all_questions)
+            print(f'  📊 偵測到 {total_questions} 題')
+
+            if total_questions == 0:
+                print('  ❌ 未找到任何題目，無法自動答題')
+                return
+
+            # 4. 逐題作答
+            matched_count = 0
+            answered_count = 0
+            unmatched_questions = []
+
+            for idx, question_elem in enumerate(all_questions, 1):
+                print(f'\n  --- 第 {idx}/{total_questions} 題 ---')
+
+                try:
+                    # 4.1 獲取題目文字
+                    question_text = self.exam_answer_page.extract_question_text(question_elem)
+                    print(f'  📝 題目: {question_text[:50]}...' if len(question_text) > 50 else f'  📝 題目: {question_text}')
+
+                    # 4.2 查詢題庫
+                    match_result = self.answer_matcher.find_best_match(
+                        question_text,
+                        self.question_bank.questions
+                    )
+
+                    if match_result is None:
+                        print(f'  ⚠️  無法匹配題目')
+                        unmatched_questions.append({'index': idx, 'text': question_text})
+
+                        # 截圖保存
+                        if self.config.get_bool('screenshot_on_mismatch', True):
+                            self._save_unmatched_screenshot(idx, question_text)
+
+                        # 根據配置決定是否跳過
+                        if self.config.get_bool('skip_unmatched_questions', True):
+                            print(f'  ⏭️   跳過該題')
+                            continue
+                        else:
+                            print(f'  ❌ 停止自動答題（設定不允許跳過）')
+                            break
+
+                    # 解包 tuple: (Question对象, 信心分数)
+                    db_question, confidence = match_result
+                    matched_count += 1
+                    print(f'  ✅ 匹配成功（信心: {confidence:.2%}）')
+
+                    # 4.3 獲取選項並作答
+                    options = self.exam_answer_page.extract_options(question_elem)
+
+                    # 從 Question 對象中獲取正確答案索引
+                    correct_option_indices = db_question.get_correct_indices()
+
+                    print(f'  🎯 正確答案索引: {correct_option_indices}')
+
+                    # 點擊正確選項
+                    for correct_idx in correct_option_indices:
+                        if correct_idx < len(options):
+                            # options 返回的格式是 [{'element': ..., 'text': ..., 'input': ...}, ...]
+                            self.exam_answer_page.click_option(options[correct_idx]['input'])
+                            answered_count += 1
+                            print(f'  ✓ 已選擇選項 {chr(65 + correct_idx)}')
+                        else:
+                            print(f'  ⚠️  選項索引 {correct_idx} 超出範圍（選項數: {len(options)}）')
+
+                    time.sleep(0.5)  # 短暫延遲避免過快操作
+
+                except Exception as e:
+                    print(f'  ❌ 處理第 {idx} 題時發生錯誤: {e}')
+                    import traceback
+                    traceback.print_exc()
+                    continue
+
+            # 5. 顯示統計結果
+            print('\n' + '=' * 80)
+            print('  【答題統計】')
+            print('=' * 80)
+            print(f'  總題數: {total_questions}')
+            print(f'  匹配成功: {matched_count}')
+            print(f'  無法匹配: {len(unmatched_questions)}')
+            print(f'  已作答: {answered_count}')
+            print(f'  匹配成功率: {matched_count / total_questions * 100:.1f}%')
+            print('=' * 80)
+
+            # 6. 詢問是否交卷
+            auto_submit = self.config.get_bool('auto_submit_exam', False)
+
+            if not auto_submit:
+                print('\n  ⏸️  自動答題完成，請確認答案')
+                # 使用 ExamAnswerPage 的提交方法（內建確認機制）
+                self.exam_answer_page.submit_exam_with_confirmation(auto_submit=False)
+            else:
+                print('\n  📤 自動提交模式啟用，正在提交考試...')
+                time.sleep(2)
+                # 使用 ExamAnswerPage 的提交方法（自動確認）
+                self.exam_answer_page.submit_exam_with_confirmation(auto_submit=True)
+
+        except Exception as e:
+            print(f'\n  ❌ 自動答題過程發生錯誤: {e}')
             import traceback
             traceback.print_exc()
 
-            # 即使發生錯誤，也嘗試寫入錯誤資訊
-            try:
-                with open(output_file, 'a', encoding='utf-8') as f:
-                    f.write(f'\n\n❌ 測試過程發生錯誤:\n{str(e)}\n')
-                    f.write(traceback.format_exc())
-            except:
-                pass
+    def _save_unmatched_screenshot(self, question_index: int, question_text: str):
+        """
+        儲存無法匹配題目的截圖
 
-            return None
+        Args:
+            question_index: 題目索引
+            question_text: 題目文字
+        """
+        import os
+        from datetime import datetime
+
+        try:
+            driver = self.driver_manager.get_driver()
+            screenshot_dir = self.config.get('screenshot_dir', 'screenshots/unmatched')
+
+            if not os.path.exists(screenshot_dir):
+                os.makedirs(screenshot_dir)
+
+            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+            screenshot_file = os.path.join(screenshot_dir, f'unmatched_q{question_index}_{timestamp}.png')
+            text_file = os.path.join(screenshot_dir, f'unmatched_q{question_index}_{timestamp}.txt')
+
+            # 保存截圖
+            driver.save_screenshot(screenshot_file)
+
+            # 保存題目文字
+            with open(text_file, 'w', encoding='utf-8') as f:
+                f.write(f'題號: {question_index}\n')
+                f.write(f'時間: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}\n')
+                f.write(f'題目內容:\n{question_text}\n')
+
+            print(f'  📸 已保存截圖: {screenshot_file}')
+
+        except Exception as e:
+            print(f'  ⚠️  截圖保存失敗: {e}')
 
     def execute_single_exam(self, program_name: str, exam_name: str, delay: float = 10.0):
         """
