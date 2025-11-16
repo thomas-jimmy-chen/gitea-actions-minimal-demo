@@ -85,6 +85,23 @@
       "enable_auto_answer": true,
       "delay": 7.0,
       "description": "金融友善服務測驗 - 啟用自動答題 (新增於 2025-11-15)"
+    },
+    {
+      "program_name": "壽險業務員在職訓練學程課程及測驗(114年度)",
+      "exam_name": "壽險業務員測驗",
+      "course_type": "exam",
+      "enable_auto_answer": true,
+      "delay": 7.0,
+      "_備用_xpath": "//*[@id='learning-activity-49']/div/div[2]/div[1]/div/a",
+      "description": "壽險業務員在職訓練測驗 - 啟用自動答題 (新增於 2025-11-16)"
+    },
+    {
+      "program_name": "資通安全測驗(114年度)",
+      "exam_name": "資通安全測驗",
+      "course_type": "exam",
+      "enable_auto_answer": true,
+      "delay": 7.0,
+      "description": "資通安全測驗 - 啟用自動答題 (新增於 2025-11-16)"
     }
   ]
 }

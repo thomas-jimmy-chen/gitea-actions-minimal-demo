@@ -4,9 +4,9 @@
 >
 > Compatible with: Claude Code CLI, Cursor, GitHub Copilot CLI, Cody, Tabnine, and all AI-powered code assistants
 
-**Document Version**: 1.1
-**Last Updated**: 2025-11-15
-**Project Version**: 2.0.2+auto-answer.1
+**Document Version**: 1.3
+**Last Updated**: 2025-11-16 Evening
+**Project Version**: 2.0.2+auto-answer.3
 **Project Codename**: **Gleipnir** (格萊普尼爾 / 縛狼鎖)
 **Maintainer**: wizard03
 
@@ -44,15 +44,16 @@ In Norse mythology, **Gleipnir** is the binding that holds the mighty wolf **Fen
 | **Core Framework** | Selenium WebDriver + MitmProxy |
 | **Target Website** | https://elearn.post.gov.tw |
 | **Architecture** | POM (Page Object Model) + API Interceptor |
-| **Latest Feature** | Exam flow support (2025-01-13) |
+| **Latest Feature** | Smart recommendation fix (2025-11-16 晚) + Option-based matching (2025-11-16 早) ⭐ NEW |
 
 ### Core Functionality
 
 1. ✅ **Auto Login**: Cookie-based or credential-based authentication
 2. ✅ **Course Automation**: Navigate and complete learning courses
-3. ✅ **Exam Automation**: Handle exam confirmation flows (NEW ✨)
-4. ✅ **Duration Spoofing**: Use MitmProxy to modify visit duration
-5. ✅ **Interactive Scheduling**: Menu-based course/exam selection
+3. ✅ **Exam Automation**: Handle exam confirmation flows + Auto-answer
+4. ✅ **Smart Matching**: Question + Option matching (40% + 60%) ⭐ NEW
+5. ✅ **Duration Spoofing**: Use MitmProxy to modify visit duration
+6. ✅ **Interactive Scheduling**: Menu-based course/exam selection
 
 ---
 
@@ -250,6 +251,14 @@ D:\Dev\eebot\data\courses.json
       "course_type": "exam",
       "delay": 7.0,
       "description": "高齡客戶投保權益保障考試流程"
+    },
+    {
+      "program_name": "資通安全測驗(114年度)",
+      "exam_name": "資通安全測驗",
+      "course_type": "exam",
+      "enable_auto_answer": true,
+      "delay": 7.0,
+      "description": "資通安全測驗 - 啟用自動答題"
     }
   ]
 }
@@ -1349,10 +1358,182 @@ skip_unmatched_questions = y
 
 ---
 
-**Implementation Version**: 2.0.2+auto-answer
+**Implementation Version**: 2.0.2+auto-answer.2
 **Implemented By**: wizard03 (with Claude Code CLI - Sonnet 4.5)
-**Implementation Date**: 2025-11-15
+**Implementation Date**: 2025-11-15 (Initial) | 2025-11-16 (Option Matching)
 **Status**: ✅ **PRODUCTION READY**
+
+---
+
+## ⭐ NEW: Smart Recommendation Bug Fix (2025-11-16 Evening)
+
+> **Bug Fix**: Fixed course scanning issues in intelligent recommendation feature
+
+### Problem Background
+
+**Issue Discovered**: Smart recommendation feature (option `i` in menu.py) couldn't find any "修習中" (in-progress) courses
+- **Symptom 1**: Step 3 scanning returned 0 course programs
+- **Symptom 2**: Step 4 entering programs found 0 courses, 0 exams
+- **Root Cause**: XPath selectors didn't match actual HTML structure
+
+### Solution
+
+#### 1. Fixed Course Program Scanning Logic
+
+**File**: `src/pages/course_list_page.py`
+**Method**: `get_in_progress_programs()` (Lines 111-248)
+
+**Problem Analysis**:
+- Original XPath: `//a[contains(@ng-click, 'goToProgramDetail')]` didn't match
+- Actual structure: Courses in container `/html/body/div[2]/div[5]/div/div/div[2]/div/div[1]/div[2]`
+- Course links: `<a ng-bind="course.display_name" href="/course/{id}/content">`
+- "修習中" tag: `<span>修習中</span>` in same course card
+
+**Fix Applied**:
+- Use precise container path provided by user
+- Correct course link selector: `@ng-bind='course.display_name'`
+- Search 2-7 ancestor levels to find "修習中" text
+- Auto-adapt to different HTML nesting structures
+
+#### 2. Fixed Internal Course/Exam Scanning
+
+**File**: `src/pages/course_list_page.py`
+**Method**: `get_program_courses_and_exams()` (Lines 250-321)
+
+**Problem Analysis**:
+- Original XPath: `//a[contains(@ng-click, 'goToLesson')]` didn't match
+- Actual structure: `<a ng-bind="activity.title">Course Name</a>`
+
+**Fix Applied**:
+- Correct activity selector: `@ng-bind='activity.title'`
+- Smart type detection: "測驗" or "考試" in name → exam type
+- Increased delay from 3 to 5 seconds
+- Added DEBUG output for each found item
+
+#### 3. Added Page Load Delay
+
+**File**: `menu.py`
+**Location**: Lines 220-224
+
+**Problem**: Scanning started before AngularJS finished rendering courses
+
+**Fix**: Added 10-second delay after navigating to "我的課程"
+```python
+# Step 3: Wait for page load (NEW)
+print('[Step 3] 等待頁面載入...')
+import time
+time.sleep(10)
+print('  ✓ 頁面已載入\n')
+```
+
+### Test Results
+
+**Test Environment**: Taiwan Post eLearning (114年度)
+
+**Success Rate**: 100%
+- ✅ Found 8 "修習中" course programs
+- ✅ Successfully scanned all internal courses and exams
+- ✅ Smart recommendation feature fully functional
+
+**Modified Files**:
+- `src/pages/course_list_page.py` (2 methods)
+- `menu.py` (added load delay + renumbered steps)
+
+### User Contributions
+
+Thanks to the user for providing critical HTML structure info:
+- Course container path: `/html/body/div[2]/div[5]/div/div/div[2]/div/div[1]/div[2]`
+- Course link HTML: `<a ng-bind="course.display_name">`
+- Activity HTML: `<a ng-bind="activity.title">`
+
+---
+
+## ⭐ NEW: Option-Based Matching Logic (2025-11-16 Morning)
+
+> **Enhancement**: Improved answer matching accuracy by comparing both question text AND option content
+
+### Problem Background
+
+**Issue Discovered**: Question bank contains questions with similar text but different options
+- **Example**:
+  - ID:191 - "下列敘述何者正確" (no question mark)
+  - ID:187 - "下列敘述何者正確?" (with question mark)
+- **Difference**: Questions are 94% similar, but options are completely different topics
+- **Old Logic Problem**: Matched only question text → might return wrong answer
+
+### Solution
+
+#### Dual Matching Mechanism
+
+**New Algorithm**: Question Text (40%) + Option Content (60%)
+
+```
+Stage 1: Collect all candidate questions with ≥85% similarity
+Stage 2: Only one candidate? Return directly
+Stage 3: Multiple candidates + No options? Return highest question similarity
+Stage 4: Multiple candidates + Has options?
+        ├─ Calculate option similarity for each candidate
+        ├─ Combined Score = Question Similarity × 40% + Option Similarity × 60%
+        └─ Return candidate with highest combined score
+```
+
+**Weight Design**:
+- Question Similarity: 40%
+- Option Similarity: 60% ← Higher weight (options are key when questions match)
+
+#### Test Results
+
+**Test Case**: ID:191 vs ID:187
+
+| Candidate | Question Sim | Option Sim | Combined Score | Result |
+|-----------|-------------|------------|----------------|--------|
+| ID:191    | 94.12%      | 11.12%     | 44.32%         | ✗ Not selected |
+| ID:187    | 100.00%     | 100.00%    | 100.00%        | ✓ Correctly selected |
+
+**Test Pass Rate**: 100% ✅
+
+### Modified Files
+
+1. **`src/services/answer_matcher.py`** (Core improvement)
+   - Modified `find_best_match()`: Added `web_options` parameter (optional)
+   - New method `_calculate_option_similarity()`: Calculate option matching score
+
+2. **`src/scenarios/exam_learning.py`** (Caller update)
+   - Extract options before matching
+   - Pass option texts to `find_best_match()`
+
+3. **`src/scenarios/exam_auto_answer.py`** (Caller update)
+   - Extract option texts before matching
+   - Pass to matching function
+
+4. **`data/courses.json`** (New exam config)
+   - Added "壽險業務員測驗" exam configuration
+
+### New Files
+
+- **`test_duplicate_questions.py`**: Unit test script for option matching logic
+
+### Backward Compatibility
+
+✅ **Fully backward compatible**
+- `web_options` is optional parameter
+- Without options, logic falls back to original behavior
+- No breaking changes
+
+### Performance Impact
+
+✅ **Minimal performance impact**
+- Only triggered when multiple candidate questions exist
+- Direct return for single candidate (no extra computation)
+- Most cases have ≤ 2 candidates
+
+### Usage
+
+**Auto-enabled for all exams** - No configuration changes required.
+
+The improved matching logic automatically activates when:
+1. Question text matches multiple candidates (similarity ≥ 85%)
+2. Web options are extracted and available
 
 ---
 
@@ -1704,6 +1885,8 @@ Check `src/services/question_bank.py` for program name mapping:
 ```python
 QUESTION_BANK_MAPPING = {
     "高齡客戶投保權益保障(114年度)": "高齡投保（10題）.json",
+    "資通安全測驗(114年度)": "資通安全（30題）.json",
+    "壽險業務員在職訓練學程課程及測驗(114年度)": "壽險業務員在職訓練（30題）.json",
     # Add more mappings as needed
 }
 ```

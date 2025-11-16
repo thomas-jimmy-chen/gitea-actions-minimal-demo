@@ -304,10 +304,15 @@ class ExamLearningScenario:
                     question_text = self.exam_answer_page.extract_question_text(question_elem)
                     print(f'  📝 題目: {question_text[:50]}...' if len(question_text) > 50 else f'  📝 題目: {question_text}')
 
-                    # 4.2 查詢題庫
+                    # 4.2 獲取選項（提前獲取，用於匹配）
+                    options = self.exam_answer_page.extract_options(question_elem)
+                    option_texts = [opt['text'] for opt in options]
+
+                    # 4.3 查詢題庫（傳入選項用於精確匹配）
                     match_result = self.answer_matcher.find_best_match(
                         question_text,
-                        self.question_bank.questions
+                        self.question_bank.questions,
+                        option_texts  # 傳入選項文字列表
                     )
 
                     if match_result is None:
@@ -330,9 +335,6 @@ class ExamLearningScenario:
                     db_question, confidence = match_result
                     matched_count += 1
                     print(f'  ✅ 匹配成功（信心: {confidence:.2%}）')
-
-                    # 4.3 獲取選項並作答
-                    options = self.exam_answer_page.extract_options(question_elem)
 
                     # 從 Question 對象中獲取正確答案索引
                     correct_option_indices = db_question.get_correct_indices()
@@ -365,14 +367,29 @@ class ExamLearningScenario:
             print(f'  匹配成功: {matched_count}')
             print(f'  無法匹配: {len(unmatched_questions)}')
             print(f'  已作答: {answered_count}')
-            print(f'  匹配成功率: {matched_count / total_questions * 100:.1f}%')
+
+            # 計算匹配成功率
+            match_rate = (matched_count / total_questions * 100) if total_questions > 0 else 0
+            print(f'  匹配成功率: {match_rate:.1f}%')
             print('=' * 80)
 
-            # 6. 詢問是否交卷
+            # 6. 判斷是否自動交卷
             auto_submit = self.config.get_bool('auto_submit_exam', False)
 
-            if not auto_submit:
+            # 新邏輯: 如果匹配成功率達到 100%，自動交卷
+            if match_rate == 100.0:
+                print('\n  🎉 匹配成功率達到 100%！自動交卷中...')
+                print('  ⏱️  等待 3 秒後自動提交...')
+                time.sleep(3)
+                # 自動交卷並確認
+                success = self.exam_answer_page.submit_exam_with_confirmation(auto_submit=True)
+                if success:
+                    print('  ✅ 考試已成功提交！')
+                else:
+                    print('  ⚠️  交卷過程可能有問題，請手動確認')
+            elif not auto_submit:
                 print('\n  ⏸️  自動答題完成，請確認答案')
+                print(f'  📊 匹配成功率: {match_rate:.1f}% (未達 100%，需手動確認)')
                 # 使用 ExamAnswerPage 的提交方法（內建確認機制）
                 self.exam_answer_page.submit_exam_with_confirmation(auto_submit=False)
             else:

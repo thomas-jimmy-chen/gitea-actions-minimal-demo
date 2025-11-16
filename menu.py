@@ -104,6 +104,7 @@ class CourseScheduler:
         print('  • 輸入數字 (1-{}) 選擇課程加入排程'.format(len(self.all_courses)))
         print('  • 輸入 v - 查看目前排程')
         print('  • 輸入 c - 清除排程')
+        print('  • 輸入 i - 智能推薦 ⭐ NEW')
         print('  • 輸入 s - 儲存排程')
         print('  • 輸入 r - 執行排程')
         print('  • 輸入 q - 離開')
@@ -155,6 +156,260 @@ class CourseScheduler:
         """清除所有排程"""
         self.scheduled_courses = []
         print('\n✓ 排程已清除')
+
+    def handle_intelligent_recommendation(self):
+        """處理智能推薦功能 - 僅掃描課程，不需要 mitmproxy"""
+        driver_manager = None
+
+        try:
+            from src.core.config_loader import ConfigLoader
+            from src.core.driver_manager import DriverManager
+            from src.core.cookie_manager import CookieManager
+            from src.pages.login_page import LoginPage
+            from src.pages.course_list_page import CourseListPage
+
+            print('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
+            print('【智能推薦】正在啟動...')
+            print('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n')
+
+            # 1. 載入配置
+            print('[初始化 1/4] 載入配置...')
+            config = ConfigLoader('config/eebot.cfg')
+            config.load()
+            print('  ✓ 配置已載入')
+
+            # 2. 初始化核心元件（不使用 proxy）
+            print('[初始化 2/4] 初始化核心元件...')
+            driver_manager = DriverManager(config)
+            cookie_manager = CookieManager(config.get('cookies_file'))
+            print('  ✓ 核心元件已初始化')
+
+            # 3. 建立 Driver（停用 proxy）
+            print('[初始化 3/4] 啟動瀏覽器...')
+            driver = driver_manager.create_driver(use_proxy=False)
+            print('  ✓ 瀏覽器已啟動')
+
+            # 4. 初始化頁面物件
+            print('[初始化 4/4] 初始化頁面物件...')
+            login_page = LoginPage(driver, cookie_manager)
+            course_list_page = CourseListPage(driver)
+            print('  ✓ 頁面物件已初始化\n')
+
+            # ===== 參考 CourseLearningScenario.execute() 的登入流程 =====
+
+            print('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
+            print('【智能推薦】開始執行')
+            print('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n')
+
+            # Step 1: 自動登入（完全參考 CourseLearningScenario）
+            print('[Step 1] 正在登入...')
+            login_page.auto_login(
+                username=config.get('user_name'),
+                password=config.get('password'),
+                url=config.get('target_http')
+            )
+            print('  ✓ 登入成功\n')
+
+            # Step 2: 前往我的課程
+            print('[Step 2] 前往我的課程...')
+            course_list_page.goto_my_courses()
+            print('  ✓ 已進入我的課程\n')
+
+            # ===== 接上掃描步驟 =====
+
+            # Step 3: 等待頁面載入完成（課程數據需要時間渲染）
+            print('[Step 3] 等待頁面載入...')
+            import time
+            time.sleep(10)
+            print('  ✓ 頁面已載入\n')
+
+            # Step 4: 掃描課程計畫
+            print('[Step 4] 掃描「修習中」的課程計畫...')
+            programs = course_list_page.get_in_progress_programs()
+
+            if not programs:
+                print('  ⚠️  未找到任何「修習中」的課程計畫')
+                input('\n按 Enter 返回主選單...')
+                return
+
+            print(f'  ✓ 找到 {len(programs)} 個課程計畫\n')
+
+            # Step 4: 分析課程詳情
+            print('[Step 4] 正在分析課程詳情...\n')
+            available_courses = []
+            for i, program in enumerate(programs, 1):
+                program_name = program['name']
+                print(f'  [{i}/{len(programs)}] {program_name[:50]}...')
+
+                details = course_list_page.get_program_courses_and_exams(program_name)
+                available_courses.append({
+                    "program_name": program_name,
+                    "courses": details.get('courses', []),
+                    "exams": details.get('exams', [])
+                })
+
+            print('\n  ✓ 分析完成！\n')
+
+            # Step 6: 比對配置
+            print('[Step 6] 比對已配置的課程...')
+
+            # 載入 courses.json
+            try:
+                import json
+                from difflib import SequenceMatcher
+
+                with open('data/courses.json', 'r', encoding='utf-8-sig') as f:
+                    config_data = json.load(f)
+                    config_courses = config_data.get('courses', [])
+            except Exception as e:
+                print(f'  ✗ 載入配置失敗: {e}')
+                input('\n按 Enter 返回主選單...')
+                return
+
+            # 簡化的匹配邏輯（直接在這裡實作，不使用 CourseRecommender）
+            def normalize_text(text):
+                """正規化文字"""
+                if not text:
+                    return ""
+                return ''.join(text.split()).lower()
+
+            def match_course(web_name, courses_list):
+                """匹配課程"""
+                web_norm = normalize_text(web_name)
+                for course in courses_list:
+                    config_name = course.get('lesson_name') or course.get('exam_name')
+                    if not config_name:
+                        continue
+                    config_norm = normalize_text(config_name)
+                    # 精確匹配
+                    if web_norm == config_norm:
+                        return course
+                    # 包含匹配
+                    if web_norm in config_norm or config_norm in web_norm:
+                        return course
+                    # 模糊匹配 (90%)
+                    similarity = SequenceMatcher(None, web_norm, config_norm).ratio()
+                    if similarity >= 0.90:
+                        return course
+                return None
+
+            recommendations = []
+            for program in available_courses:
+                program_name = program['program_name']
+                # 比對一般課程
+                for course in program.get('courses', []):
+                    matched_config = match_course(course['name'], config_courses)
+                    if matched_config:
+                        recommendations.append({
+                            "program_name": program_name,
+                            "item_name": course['name'],
+                            "type": "course",
+                            "matched": True,
+                            "config": matched_config
+                        })
+                # 比對考試
+                for exam in program.get('exams', []):
+                    matched_config = match_course(exam['name'], config_courses)
+                    if matched_config:
+                        recommendations.append({
+                            "program_name": program_name,
+                            "item_name": exam['name'],
+                            "type": "exam",
+                            "matched": True,
+                            "auto_answer": matched_config.get('enable_auto_answer', False),
+                            "config": matched_config
+                        })
+
+            if not recommendations:
+                print('  ⚠️  未找到可推薦的課程')
+                print('\n提示: 請先在 courses.json 中配置您想要上的課程')
+                input('\n按 Enter 返回主選單...')
+                return
+
+            print(f'  ✓ 找到 {len(recommendations)} 個已配置的課程\n')
+
+            # Step 7: 顯示推薦結果
+            print('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
+            print('【課程推薦】本服務推薦可以上的課程如下：')
+            print('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n')
+
+            for i, item in enumerate(recommendations, 1):
+                item_type = "考試" if item['type'] == "exam" else "課程"
+                print(f"{i}. [{item_type}] {item['item_name']}")
+                print(f"   📚 所屬計畫: {item['program_name']}")
+                print(f"   ✅ 已配置")
+
+                item_config = item.get('config', {})
+                delay = item_config.get('delay', 7.0)
+                print(f"   ⏱️  延遲時間: {delay} 秒")
+
+                if item['type'] == 'exam' and item.get('auto_answer'):
+                    print(f"   🤖 自動答題: 啟用")
+
+                print()
+
+            print('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
+            print(f'總計: {len(recommendations)} 個課程可以立即執行')
+            print('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n')
+
+            # Step 8: 詢問用戶加入選項
+            print('請選擇要加入排程的方式：')
+            print('  a - 全部加入')
+            print('  s - 選擇性加入（輸入編號，例如: 1,3,5）')
+            print('  n - 不加入，返回主選單')
+
+            choice = input('\n請輸入選項: ').strip().lower()
+
+            if choice == 'a':
+                # 全部加入
+                added_count = 0
+                for item in recommendations:
+                    self.scheduled_courses.append(item['config'])
+                    added_count += 1
+
+                print(f'\n✓ 已將 {added_count} 個推薦課程全部加入排程')
+
+            elif choice == 's':
+                # 選擇性加入
+                selection = input('請輸入要加入的課程編號 (用逗號分隔，例如: 1,3,5): ').strip()
+
+                try:
+                    indices = [int(x.strip()) for x in selection.split(',')]
+                    added_count = 0
+
+                    for idx in indices:
+                        if 1 <= idx <= len(recommendations):
+                            self.scheduled_courses.append(recommendations[idx - 1]['config'])
+                            added_count += 1
+                        else:
+                            print(f'  ✗ 忽略無效編號: {idx}')
+
+                    if added_count > 0:
+                        print(f'\n✓ 已將 {added_count} 個推薦課程加入排程')
+                    else:
+                        print('\n✗ 未加入任何課程')
+
+                except ValueError:
+                    print('\n✗ 輸入格式錯誤')
+
+            elif choice == 'n':
+                print('\n✓ 已取消加入')
+            else:
+                print('\n✗ 無效的選項')
+
+        except ImportError as e:
+            print(f'\n✗ 無法載入推薦服務: {e}')
+            print('  請確保已正確安裝所有依賴')
+        except Exception as e:
+            print(f'\n✗ 智能推薦執行失敗: {e}')
+            import traceback
+            traceback.print_exc()
+        finally:
+            # 關閉瀏覽器（參考 CourseLearningScenario 的清理流程）
+            if driver_manager:
+                print('\n[清理] 關閉瀏覽器...')
+                driver_manager.quit()
+                print('  ✓ 瀏覽器已關閉')
 
     def run_schedule(self):
         """執行排程（啟動 main.py）"""
@@ -208,6 +463,10 @@ class CourseScheduler:
                 confirm = input('\n確定要清除所有排程嗎？(y/n): ').strip().lower()
                 if confirm == 'y':
                     self.clear_schedule()
+
+            # 智能推薦
+            elif choice == 'i':
+                self.handle_intelligent_recommendation()
 
             # 儲存排程
             elif choice == 's':

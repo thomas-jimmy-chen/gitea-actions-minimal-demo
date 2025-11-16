@@ -212,8 +212,15 @@ class ExamAutoAnswerScenario:
             print(f"  題型: {'單選' if question_type == 'single_selection' else '複選'}")
             print(f"  選項數: {len(options)}")
 
-            # 匹配題庫
-            match_result = self.answer_matcher.find_best_match(question_text, question_bank)
+            # 提取選項文字
+            web_option_texts = [opt['text'] for opt in options]
+
+            # 匹配題庫（傳入選項用於精確匹配）
+            match_result = self.answer_matcher.find_best_match(
+                question_text,
+                question_bank,
+                web_option_texts  # 傳入選項文字列表
+            )
 
             if not match_result:
                 # 無法匹配

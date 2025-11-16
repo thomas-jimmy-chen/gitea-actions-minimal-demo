@@ -29,9 +29,12 @@ class DriverManager:
         self.driver = None
         self.stealth_enabled = stealth_enabled
 
-    def create_driver(self) -> webdriver.Chrome:
+    def create_driver(self, use_proxy: bool = True) -> webdriver.Chrome:
         """
         建立並配置 WebDriver
+
+        Args:
+            use_proxy: 是否使用 proxy（預設 True）
 
         Returns:
             webdriver.Chrome: 配置好的 Chrome WebDriver
@@ -40,7 +43,7 @@ class DriverManager:
             Exception: 當 WebDriver 初始化失敗時
         """
         try:
-            opts = self._get_chrome_options()
+            opts = self._get_chrome_options(use_proxy=use_proxy)
             service = Service(self.config.get('execute_file'))
             self.driver = webdriver.Chrome(service=service, options=opts)
             self.driver.maximize_window()
@@ -55,20 +58,24 @@ class DriverManager:
             print(f'[ERROR] Failed to initialize WebDriver: {e}')
             raise
 
-    def _get_chrome_options(self) -> ChromeOptions:
+    def _get_chrome_options(self, use_proxy: bool = True) -> ChromeOptions:
         """
         配置 Chrome 選項
+
+        Args:
+            use_proxy: 是否使用 proxy（預設 True）
 
         Returns:
             ChromeOptions: Chrome 瀏覽器選項
         """
         opts = ChromeOptions()
 
-        # Proxy 設定
-        proxy_host = self.config.get('listen_host', '127.0.0.1')
-        proxy_port = self.config.get('listen_port', '8080')
-        opts.add_argument(f"--proxy-server={proxy_host}:{proxy_port}")
-        opts.add_argument("--ignore-certificate-errors")
+        # Proxy 設定（可選）
+        if use_proxy:
+            proxy_host = self.config.get('listen_host', '127.0.0.1')
+            proxy_port = self.config.get('listen_port', '8080')
+            opts.add_argument(f"--proxy-server={proxy_host}:{proxy_port}")
+            opts.add_argument("--ignore-certificate-errors")
 
         # 反自動化檢測設定
         opts.add_experimental_option('useAutomationExtension', False)

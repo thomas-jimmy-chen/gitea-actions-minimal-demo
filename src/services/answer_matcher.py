@@ -74,19 +74,21 @@ class AnswerMatcher:
     def find_best_match(
         self,
         web_question_text: str,
-        question_bank: List[Question]
+        question_bank: List[Question],
+        web_options: Optional[List[str]] = None
     ) -> Optional[Tuple[Question, float]]:
         """
-        尋找最佳匹配的題目
+        尋找最佳匹配的題目（含選項比對）
 
         使用多層級匹配策略：
-        1. 精確匹配（最快）
-        2. 包含匹配（處理編號前綴）
-        3. 相似度匹配（模糊匹配）
+        1. 題目文字匹配（精確/包含/相似度）
+        2. 選項內容匹配（若提供 web_options）
+        3. 綜合評分（題目40% + 選項60%）
 
         Args:
             web_question_text: 網頁上的題目文字
             question_bank: 題庫列表
+            web_options: 網頁上的選項文字列表（可選）
 
         Returns:
             (匹配的題目, 信心分數)，若無匹配則返回 None
@@ -95,34 +97,115 @@ class AnswerMatcher:
             return None
 
         web_norm = self.normalize_text(web_question_text)
-        best_match = None
-        best_score = 0.0
+
+        # 階段 1: 收集所有題目文字達到門檻的候選題目
+        candidates = []
 
         for db_question in question_bank:
             db_norm = self.normalize_text(db_question.description_text)
 
-            # 策略 1: 精確匹配
+            # 計算題目相似度
             if web_norm == db_norm:
-                return (db_question, 1.0)
+                question_similarity = 1.0
+            elif web_norm in db_norm or db_norm in web_norm:
+                question_similarity = 0.95
+            else:
+                question_similarity = SequenceMatcher(None, web_norm, db_norm).ratio()
 
-            # 策略 2: 包含匹配（處理題號前綴，例如 "1. 題目" vs "題目"）
-            if web_norm in db_norm or db_norm in web_norm:
-                score = 0.95  # 包含匹配給 95% 信心
-                if score > best_score:
-                    best_match = db_question
-                    best_score = score
+            # 只保留達到門檻的題目
+            if question_similarity >= self.confidence_threshold:
+                candidates.append((db_question, question_similarity))
 
-            # 策略 3: 相似度匹配
-            similarity = SequenceMatcher(None, web_norm, db_norm).ratio()
-            if similarity > best_score:
+        if not candidates:
+            return None
+
+        # 階段 2: 如果只有一個候選，直接返回
+        if len(candidates) == 1:
+            return candidates[0]
+
+        # 階段 3: 有多個候選題目
+        if web_options is None or len(web_options) == 0:
+            # 沒有提供選項資訊，返回題目相似度最高的
+            return max(candidates, key=lambda x: x[1])
+
+        # 階段 4: 有多個候選且提供選項，計算綜合評分
+        best_match = None
+        best_combined_score = 0.0
+
+        for db_question, question_sim in candidates:
+            # 計算選項相似度
+            option_sim = self._calculate_option_similarity(web_options, db_question.options)
+
+            # 綜合評分 = 題目相似度 * 0.4 + 選項相似度 * 0.6
+            # （選項權重更高，因為題目相同時選項是關鍵）
+            combined_score = question_sim * 0.4 + option_sim * 0.6
+
+            if combined_score > best_combined_score:
+                best_combined_score = combined_score
                 best_match = db_question
-                best_score = similarity
 
-        # 檢查是否達到信心門檻
-        if best_match and best_score >= self.confidence_threshold:
-            return (best_match, best_score)
+        # 檢查綜合分數是否達到門檻
+        if best_match and best_combined_score >= self.confidence_threshold:
+            return (best_match, best_combined_score)
 
         return None
+
+    def _calculate_option_similarity(
+        self,
+        web_options: List[str],
+        db_options: List[Option]
+    ) -> float:
+        """
+        計算選項相似度
+
+        比對網頁選項與題庫選項的匹配程度
+
+        Args:
+            web_options: 網頁上的選項文字列表
+            db_options: 題庫中的選項列表
+
+        Returns:
+            選項相似度分數 (0.0 ~ 1.0)
+        """
+        if not web_options or not db_options:
+            return 0.0
+
+        # 標準化所有選項
+        web_opts_norm = [self.normalize_text(opt) for opt in web_options]
+        db_opts_norm = [self.normalize_text(opt.content_text) for opt in db_options]
+
+        total_similarity = 0.0
+        matched_count = 0
+
+        # 計算每個網頁選項與題庫選項的最佳匹配
+        for web_opt in web_opts_norm:
+            best_sim = 0.0
+
+            for db_opt in db_opts_norm:
+                # 精確匹配
+                if web_opt == db_opt:
+                    sim = 1.0
+                # 包含匹配
+                elif web_opt in db_opt or db_opt in web_opt:
+                    sim = 0.9
+                # 相似度匹配
+                else:
+                    sim = SequenceMatcher(None, web_opt, db_opt).ratio()
+
+                if sim > best_sim:
+                    best_sim = sim
+
+            total_similarity += best_sim
+
+            # 如果匹配度 >= 80%，視為匹配成功
+            if best_sim >= 0.8:
+                matched_count += 1
+
+        # 計算平均相似度
+        avg_similarity = total_similarity / len(web_options) if web_options else 0.0
+
+        # 返回平均相似度
+        return avg_similarity
 
     def match_correct_options(
         self,
