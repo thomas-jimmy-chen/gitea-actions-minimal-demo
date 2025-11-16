@@ -1,0 +1,30 @@
+{
+  "description": "延遲時間與截圖配置檔",
+  "version": "1.0",
+  "last_updated": "2025-01-16",
+
+  "delays": {
+    "stage_1_course_list": 3.0,
+    "stage_2_program_detail": 11.0,
+    "stage_3_lesson_detail": 7.0,
+    "stage_2_exam": 7.0
+  },
+
+  "screenshot": {
+    "enabled": true,
+    "base_directory": "screenshots",
+    "organize_by_user": true,
+    "organize_by_date": true,
+    "date_format": "%Y-%m-%d",
+    "timestamp_format": "%Y-%m-%d %H:%M:%S",
+    "filename_timestamp": "%y%m%d%H%M",
+    "font_settings": {
+      "size": 64,
+      "color": "#FFFF00",
+      "background_color": "#000000",
+      "background_opacity": 200,
+      "position": "bottom-right",
+      "margin": 20
+    }
+  }
+}

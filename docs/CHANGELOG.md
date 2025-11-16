@@ -4,7 +4,396 @@
 
 ---
 
-## [2025-11-16] - 智能推薦功能修復 (Bug Fix Phase)
+## [2025-01-16] - 截圖功能實作與時間配置分離
+
+### 📝 功能摘要
+
+實作課程學習截圖功能,在第二階段(課程計畫詳情頁)自動截圖並添加時間戳水印。同時將延遲時間配置從課程配置中分離出來,統一管理於獨立配置檔。
+
+### ✨ 新增功能
+
+#### 1. 截圖功能
+**目的**: 記錄課程學習過程,提供視覺化證明
+
+**特點**:
+- 📸 在第二階段(課程計畫詳情頁)截圖
+- ⏰ 每個課程截圖 2 次:
+  - 第 1 次: 進入第二階段時
+  - 第 2 次: 從第三階段返回第二階段時
+- 🏷️ 時間戳水印: 右下角顯示系統日期時間
+- 📁 自動分類存儲: `screenshots/{username}/{yyyy-mm-dd}/`
+- 🎨 可自訂字體大小、顏色、背景透明度
+- 🔧 每個課程可獨立啟用/停用截圖
+
+**檔名格式**: `{課程名稱}_{yymmddHHmm}-{序號}.jpg`
+
+**範例**: `性別平等工作法及相關子法修法重點與實務案例_2501161530-1.jpg`
+
+#### 2. 時間配置分離
+**目的**: 集中管理延遲時間,方便統一調整
+
+**改動**:
+- ✅ 創建 `config/timing.json` - 獨立的時間與截圖配置檔
+- ✅ 從 `data/courses.json` 移除所有 `delay` 欄位
+- ✅ 按階段設定延遲時間:
+  - Stage 1 (課程列表): 3.0 秒
+  - Stage 2 (課程計畫詳情): **11.0 秒** (從 7.0 調整)
+  - Stage 3 (課程單元詳情): 7.0 秒
+  - Stage 2 Exam (考試): 7.0 秒
+
+**優點**:
+- 統一修改所有課程的延遲時間
+- 減少 `courses.json` 重複配置
+- 分離關注點(課程定義 vs 執行參數)
+
+### 🔧 修改的文件
+
+#### 1. `config/timing.json` (新增)
+**內容**:
+```json
+{
+  "description": "延遲時間與截圖配置檔",
+  "version": "1.0",
+  "delays": {
+    "stage_1_course_list": 3.0,
+    "stage_2_program_detail": 11.0,
+    "stage_3_lesson_detail": 7.0,
+    "stage_2_exam": 7.0
+  },
+  "screenshot": {
+    "enabled": true,
+    "base_directory": "screenshots",
+    "organize_by_user": true,
+    "organize_by_date": true,
+    "font_settings": {
+      "size": 64,
+      "color": "#FFFF00",
+      "background_color": "#000000",
+      "background_opacity": 200,
+      "position": "bottom-right",
+      "margin": 20
+    }
+  }
+}
+```
+
+#### 2. `src/utils/screenshot_utils.py` (新增)
+**功能**: 截圖管理器,負責截圖與時間戳水印
+
+**核心方法**:
+```python
+class ScreenshotManager:
+    def __init__(self, config_loader, timing_config)
+    def take_screenshot(driver, lesson_name, sequence) -> str
+    def _add_timestamp_to_image(image_path) -> bool
+    def _get_save_directory() -> str
+```
+
+**技術細節**:
+- 使用 Pillow (PIL) 進行圖像處理
+- ImageDraw 繪製文字與半透明背景
+- 從 `config_loader` 讀取 username 作為分類依據
+- 從 `timing_config` 讀取字體設定
+
+#### 3. `src/core/config_loader.py` (修改)
+**新增方法**:
+```python
+def load_timing_config(timing_config_path='config/timing.json') -> dict
+@staticmethod
+def _get_default_timing_config() -> dict
+```
+
+**作用**: 載入時間與截圖配置,提供預設值回退機制
+
+#### 4. `src/scenarios/course_learning.py` (修改)
+**改動內容**:
+- 新增 `ScreenshotManager` 初始化
+- 載入 `timing_config`
+- 修改 `_process_course()` 方法,整合截圖邏輯:
+  - 第 1 次截圖: 進入第二階段後 (Line ~170)
+  - 第 2 次截圖: 返回第二階段後 (Line ~190)
+- 使用 `timing_config` 中的延遲時間,不再從課程配置讀取
+
+#### 5. `data/courses.json` (修改)
+**變更內容**:
+- ✅ 移除所有課程的 `delay` 欄位
+- ✅ 為所有課程新增 `enable_screenshot` 欄位
+- ✅ **預設啟用**: 所有一般課程的 `enable_screenshot` 設為 `true`
+- ✅ 更新 `_rules` 說明
+
+**範例**:
+```json
+{
+  "program_name": "性別平等工作法、性騷擾防治法及相關子法修法重點與實務案例(114年度)",
+  "lesson_name": "性別平等工作法及相關子法修法重點與實務案例",
+  "course_id": 465,
+  "enable_screenshot": true,
+  "description": "性別平等與性騷擾防治課程"
+}
+```
+
+#### 6. `requirements.txt` (修改)
+**新增依賴**: `Pillow>=10.0.0`
+
+**用途**: 圖像處理、截圖時間戳水印
+
+#### 7. `menu.py` (修改)
+**修改位置**: Line 92-101, Line 343-356
+
+**變更內容**:
+- 移除 `delay` 欄位的顯示
+- 改為顯示功能狀態:
+  - 一般課程: `[啟用截圖]` / `[停用截圖]`
+  - 考試課程: `[考試 - 自動答題]` / `[考試 - 手動作答]`
+
+#### 8. `main.py` (修改)
+**新增內容**: 程式結束時自動清除排程檔案 (Line 161-178)
+
+**作用**: 執行完畢後自動清空 `data/schedule.json`,避免重複執行
+
+### 📊 技術細節
+
+#### 截圖時間戳實作
+```python
+# 1. 截取螢幕
+driver.save_screenshot(filepath)
+
+# 2. 開啟圖片
+image = Image.open(filepath)
+draw = ImageDraw.Draw(image, 'RGBA')
+
+# 3. 繪製半透明黑色背景
+background = (0, 0, 0, 200)  # RGBA
+draw.rectangle([x1, y1, x2, y2], fill=background)
+
+# 4. 繪製黃色文字
+text_color = (255, 255, 0)  # 黃色
+draw.text((x, y), timestamp_text, font=font, fill=text_color)
+
+# 5. 儲存
+image.save(filepath, quality=95)
+```
+
+#### 字體設定優化歷程
+| 版本 | 字體大小 | 顏色 | 背景透明度 | 說明 |
+|------|---------|------|-----------|------|
+| v1 | 48 | 白色 | 180 | 初始版本 |
+| v2 | **64** | **黃色** | **200** | 優化版本(更清晰) |
+
+**優化理由**:
+- 字體更大 → 縮圖也清晰可見
+- 黃色文字 → 在任何背景下都醒目
+- 背景更深 → 文字對比度更高
+
+#### 延遲時間調整
+| 階段 | 舊值 | 新值 | 說明 |
+|------|-----|------|------|
+| Stage 2 | 7.0秒 | **11.0秒** | 截圖需要更多時間載入 |
+| 其他 | - | 不變 | 維持原有設定 |
+
+### 📁 檔案結構變更
+
+**新增檔案**:
+```
+config/
+└── timing.json           (新增)
+
+src/utils/
+└── screenshot_utils.py   (新增)
+```
+
+**修改檔案**:
+```
+src/core/config_loader.py
+src/scenarios/course_learning.py
+data/courses.json
+requirements.txt
+menu.py
+main.py
+```
+
+### ✅ 測試建議
+
+#### 測試步驟
+```bash
+# 1. 安裝新依賴
+pip install Pillow
+
+# 2. 執行選單
+python menu.py
+# 選擇任一課程(應顯示 [啟用截圖] 標記)
+
+# 3. 執行排程
+python main.py
+
+# 4. 檢查截圖
+# 位置: screenshots/{username}/2025-01-16/
+# 應有 2 張截圖,檔名格式: {課程名稱}_2501161xxx-1.jpg, -2.jpg
+# 每張圖片右下角應有黃色時間戳
+```
+
+#### 驗證項目
+- [ ] 截圖檔案正確生成
+- [ ] 目錄結構符合 `{username}/{date}/` 格式
+- [ ] 時間戳清晰可見(黃色 64px 字體)
+- [ ] 每個課程有 2 張截圖
+- [ ] 檔名格式正確
+- [ ] menu.py 顯示截圖狀態
+- [ ] 執行完畢後 schedule.json 被清空
+
+### 🔄 向後相容性
+
+**完全相容**:
+- ✅ 未安裝 Pillow 時會優雅降級(跳過截圖)
+- ✅ 缺少 `timing.json` 時使用預設值
+- ✅ 課程配置未設定 `enable_screenshot` 時預設為 `false`
+- ✅ 所有原有功能(課程學習、考試)完全不受影響
+
+**破壞性變更**:
+- ❌ `data/courses.json` 中的 `delay` 欄位已移除
+- ❌ 依賴 `delay` 欄位的外部工具需要更新
+
+### 💡 使用範例
+
+#### 範例 1: 啟用特定課程截圖
+```json
+{
+  "lesson_name": "某課程",
+  "enable_screenshot": true   // 啟用
+}
+```
+
+#### 範例 2: 停用特定課程截圖
+```json
+{
+  "lesson_name": "某課程",
+  "enable_screenshot": false  // 停用
+}
+```
+
+#### 範例 3: 調整字體設定
+修改 `config/timing.json`:
+```json
+{
+  "screenshot": {
+    "font_settings": {
+      "size": 72,              // 更大字體
+      "color": "#00FF00",      // 綠色
+      "background_opacity": 220 // 更不透明
+    }
+  }
+}
+```
+
+### 📈 統計資訊
+
+| 項目 | 數量 |
+|------|------|
+| 新增檔案 | 2 個 |
+| 修改檔案 | 6 個 |
+| 新增代碼行數 | ~400 行 |
+| 新增依賴 | 1 個 (Pillow) |
+| 新增配置欄位 | 1 個 (enable_screenshot) |
+| 移除配置欄位 | 1 個 (delay) |
+
+### 🎯 未來改進方向
+
+- [ ] 支援截圖格式選擇 (JPG/PNG/WebP)
+- [ ] 支援自訂水印位置
+- [ ] 支援截圖壓縮等級設定
+- [ ] 支援截圖失敗重試機制
+- [ ] 支援截圖上傳雲端儲存
+
+### 📝 經驗總結
+
+**成功經驗**:
+1. ✅ 分離關注點 - 時間配置獨立於課程定義
+2. ✅ 預設安全 - 缺少配置時使用合理預設值
+3. ✅ 漸進式增強 - Pillow 不可用時優雅降級
+4. ✅ 使用者導向 - 每個課程可獨立控制截圖
+5. ✅ 清晰命名 - 截圖檔名包含足夠資訊
+
+**技術亮點**:
+1. ✅ PIL ImageDraw 實現專業級水印
+2. ✅ RGBA 半透明背景提升可讀性
+3. ✅ 懶載入 timing_config 減少啟動時間
+4. ✅ 目錄自動建立 (os.makedirs)
+5. ✅ UTF-8 檔名處理 (Windows 相容)
+
+---
+
+## [2025-11-16 晚] - 安全性增強：自動清理臨時檔案
+
+### 📝 修改摘要
+
+在程式結束時自動刪除敏感的臨時檔案（cookies.json 和 stealth.min.js），提升安全性與隱私保護。
+
+### 🔧 修改內容
+
+**修改檔案**:
+1. `main.py` (Line 144-159) - 程式結束時清理
+2. `menu.py` (Line 414-429) - 智能推薦後清理
+
+**清理目標**:
+1. `cookies.json` - 根目錄臨時 Cookie 檔案
+2. `resource/cookies/cookies.json` - 登入憑證
+3. `stealth.min.js` - 根目錄臨時反檢測腳本
+4. `resource/plugins/stealth.min.js` - 反檢測腳本
+
+**實作方式**:
+```python
+# 在 finally 區塊新增清理邏輯
+print('\n[Cleanup] Removing temporary files...')
+temp_files = [
+    'cookies.json',
+    'resource/cookies/cookies.json',
+    'stealth.min.js',
+    'resource/plugins/stealth.min.js'
+]
+
+for file_path in temp_files:
+    if os.path.exists(file_path):
+        try:
+            os.remove(file_path)
+            print(f'  ✓ Removed: {file_path}')
+        except OSError as e:
+            print(f'  ✗ Failed to remove {file_path}: {e}')
+```
+
+### ✅ 優點
+
+- **安全性**: 防止登入憑證洩漏
+- **隱私保護**: 不保留登入狀態記錄
+- **自動化**: 無需手動清理，程式結束時自動執行
+- **可靠性**: 在正常結束、中斷、錯誤時均會執行
+
+### 📋 執行時機
+
+清理操作會在以下情況執行：
+
+**main.py 清理時機**:
+- ✅ 程式正常執行完成
+- ✅ 使用者按 Ctrl+C 中斷
+- ✅ 程式發生異常錯誤
+
+**menu.py 清理時機**:
+- ✅ 智能推薦功能（`i` 選項）執行完成後
+- ✅ 智能推薦過程中發生錯誤
+- ✅ 智能推薦過程中使用者中斷
+
+### 🔄 向後相容性
+
+- ✅ 不影響任何現有功能
+- ✅ 所需檔案會在下次執行時自動重新生成
+- ✅ CookieManager 會在需要時重新建立 Cookie 檔案
+- ✅ StealthExtractor 會在需要時重新提取反檢測腳本
+
+### 作者
+- wizard03 (with Claude Code CLI)
+
+---
+
+## [2025-11-16 早] - 智能推薦功能修復 (Bug Fix Phase)
 
 ### 📝 修復摘要
 

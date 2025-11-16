@@ -14,6 +14,8 @@ from ..core.cookie_manager import CookieManager
 from ..pages.login_page import LoginPage
 from ..pages.course_list_page import CourseListPage
 from ..pages.course_detail_page import CourseDetailPage
+from ..utils.screenshot_utils import ScreenshotManager
+import time
 
 
 class CourseLearningScenario:
@@ -30,6 +32,9 @@ class CourseLearningScenario:
         self.config = config
         self.keep_browser_on_error = keep_browser_on_error
 
+        # 載入時間與截圖配置
+        self.timing_config = config.load_timing_config()
+
         # 初始化核心元件
         self.driver_manager = DriverManager(config)
         self.cookie_manager = CookieManager(config.get('cookies_file'))
@@ -41,6 +46,9 @@ class CourseLearningScenario:
         self.login_page = LoginPage(driver, self.cookie_manager)
         self.course_list = CourseListPage(driver)
         self.course_detail = CourseDetailPage(driver)
+
+        # 初始化截圖管理器
+        self.screenshot_manager = ScreenshotManager(config, self.timing_config)
 
     def execute(self, courses: List[Dict[str, any]]):
         """
@@ -123,7 +131,7 @@ class CourseLearningScenario:
 
     def _process_course(self, course: Dict[str, any]):
         """
-        處理單一課程
+        處理單一課程（整合截圖功能）
 
         Args:
             course: 課程資料字典
@@ -131,37 +139,74 @@ class CourseLearningScenario:
                     "program_name": str,
                     "lesson_name": str,
                     "course_id": int,
-                    "delay": float (optional)
+                    "enable_screenshot": bool (optional, default: False)
                 }
         """
         program_name = course.get('program_name')
         lesson_name = course.get('lesson_name')
         course_id = course.get('course_id')
-        delay = course.get('delay', 7.0)
+        enable_screenshot = course.get('enable_screenshot', False)
 
-        print(f'  Program: {program_name}')
-        print(f'  Lesson: {lesson_name}')
-        print(f'  Course ID: {course_id}')
+        # 取得延遲時間（從 timing.json）
+        delay_stage2 = self.timing_config.get('delays', {}).get('stage_2_program_detail', 11.0)
+        delay_stage3 = self.timing_config.get('delays', {}).get('stage_3_lesson_detail', 7.0)
+        delay_stage1 = self.timing_config.get('delays', {}).get('stage_1_course_list', 3.0)
+
+        print(f'\n{"=" * 80}')
+        print(f'課程: {lesson_name}')
+        print(f'計畫: {program_name}')
+        print(f'截圖: {"啟用" if enable_screenshot else "停用"}')
+        print(f'{"=" * 80}\n')
 
         try:
-            # 選擇課程計畫
-            self.course_list.select_course_by_name(program_name, delay=delay)
+            # Step 1: 選擇課程計畫（進入第二階）
+            print(f'[Step 1] 選擇課程計畫: {program_name}')
+            self.course_list.select_course_by_name(program_name, delay=delay_stage2)
+            print(f'  ✓ 已進入第二階，等待 {delay_stage2} 秒...\n')
 
-            # 選擇課程
-            self.course_detail.select_lesson_by_name(lesson_name, delay=delay)
+            # 📸 第一次截圖（第二階 - 進入時）
+            if enable_screenshot:
+                print(f'[截圖 1/2] 第二階 - 進入時')
+                self.screenshot_manager.take_screenshot(
+                    self.driver_manager.get_driver(),
+                    lesson_name,
+                    sequence=1
+                )
+                print()
 
-            # 返回課程計畫
+            # Step 2: 選擇課程單元（進入第三階）
+            print(f'[Step 2] 選擇課程單元: {lesson_name}')
+            self.course_detail.select_lesson_by_name(lesson_name, delay=delay_stage3)
+            print(f'  ✓ 已進入第三階，等待 {delay_stage3} 秒...\n')
+
+            # Step 3: 返回課程計畫（返回第二階）
+            print(f'[Step 3] 返回課程計畫 (course_id: {course_id})')
             self.course_detail.go_back_to_course(course_id)
+            print(f'  ✓ 已返回第二階，等待 {delay_stage2} 秒...\n')
+            time.sleep(delay_stage2)
 
-            # 返回課程列表
+            # 📸 第二次截圖（第二階 - 返回時）
+            if enable_screenshot:
+                print(f'[截圖 2/2] 第二階 - 返回時')
+                self.screenshot_manager.take_screenshot(
+                    self.driver_manager.get_driver(),
+                    lesson_name,
+                    sequence=2
+                )
+                print()
+
+            # Step 4: 返回課程列表（返回第一階）
+            print(f'[Step 4] 返回課程列表')
             self.course_list.go_back_to_course_list()
+            time.sleep(delay_stage1)
+            print(f'  ✓ 已返回第一階\n')
 
-            print(f'  ✓ Course processed successfully')
+            print(f'[SUCCESS] 課程完成: {lesson_name}\n')
 
         except Exception as e:
-            print(f'  ✗ Failed to process course: {e}')
-            # 可以選擇繼續或中斷
-            # raise
+            print(f'[ERROR] 處理課程失敗: {lesson_name}')
+            print(f'錯誤訊息: {str(e)}\n')
+            raise
 
     def _wait_for_manual_close(self):
         """等待手動關閉瀏覽器"""

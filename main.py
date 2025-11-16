@@ -141,6 +141,42 @@ def main():
             print('\n[Cleanup] Stopping mitmproxy...')
             proxy.stop()
 
+        # 7. 刪除臨時檔案（cookies 和 stealth.min.js）
+        print('\n[Cleanup] Removing temporary files...')
+        temp_files = [
+            'cookies.json',                           # 根目錄臨時檔案
+            'resource/cookies/cookies.json',          # Cookie 檔案
+            'stealth.min.js',                         # 根目錄臨時 stealth
+            'resource/plugins/stealth.min.js'         # Stealth 檔案
+        ]
+
+        for file_path in temp_files:
+            if os.path.exists(file_path):
+                try:
+                    os.remove(file_path)
+                    print(f'  ✓ Removed: {file_path}')
+                except OSError as e:
+                    print(f'  ✗ Failed to remove {file_path}: {e}')
+
+        # 8. 清除排程檔案
+        print('\n[Cleanup] Clearing schedule...')
+        schedule_file = 'data/schedule.json'
+        if os.path.exists(schedule_file):
+            try:
+                # 清空排程（保留檔案結構，但清空課程列表）
+                empty_schedule = {
+                    "description": "課程執行排程 - 自動清除",
+                    "last_cleared": __import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                    "courses": []
+                }
+                with open(schedule_file, 'w', encoding='utf-8') as f:
+                    json.dump(empty_schedule, f, indent=2, ensure_ascii=False)
+                print(f'  ✓ Schedule cleared: {schedule_file}')
+            except OSError as e:
+                print(f'  ✗ Failed to clear schedule: {e}')
+        else:
+            print(f'  ⚠️  Schedule file not found (already cleared or never created)')
+
     print('\n' + '=' * 60)
     print('Program terminated')
     print('=' * 60)

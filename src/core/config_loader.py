@@ -126,3 +126,43 @@ class ConfigLoader:
 
     def __repr__(self) -> str:
         return f"ConfigLoader(config_file='{self.config_file}', loaded={len(self._config)} keys)"
+
+    def load_timing_config(self, timing_config_path: str = 'config/timing.json') -> dict:
+        """
+        載入時間延遲與截圖配置
+
+        Args:
+            timing_config_path: timing.json 路徑
+
+        Returns:
+            dict: 配置字典
+        """
+        import json
+
+        try:
+            with open(timing_config_path, 'r', encoding='utf-8-sig') as f:
+                timing_config = json.load(f)
+            print(f'[配置] 已載入時間配置: {timing_config_path}')
+            return timing_config
+        except FileNotFoundError:
+            print(f'[警告] 找不到 {timing_config_path}，使用預設值')
+            return self._get_default_timing_config()
+        except Exception as e:
+            print(f'[錯誤] 載入時間配置失敗: {e}')
+            return self._get_default_timing_config()
+
+    @staticmethod
+    def _get_default_timing_config() -> dict:
+        """預設時間配置"""
+        return {
+            "delays": {
+                "stage_1_course_list": 3.0,
+                "stage_2_program_detail": 11.0,
+                "stage_3_lesson_detail": 7.0,
+                "stage_2_exam": 7.0
+            },
+            "screenshot": {
+                "enabled": False,
+                "base_directory": "screenshots"
+            }
+        }

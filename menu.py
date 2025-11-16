@@ -91,12 +91,13 @@ class CourseScheduler:
 
             if course_type == 'exam':
                 # 考試類型
-                print(f'      └─ {course["exam_name"]} [考試]')
-                print(f'         (類型: 考試, 延遲: {course["delay"]}秒)')
+                auto_answer = '自動答題' if course.get('enable_auto_answer', False) else '手動作答'
+                print(f'      └─ {course["exam_name"]} [考試 - {auto_answer}]')
             else:
                 # 課程類型
-                print(f'      └─ {course["lesson_name"]}')
-                print(f'         (課程ID: {course["course_id"]}, 延遲: {course["delay"]}秒)')
+                screenshot = '啟用截圖' if course.get('enable_screenshot', False) else '停用截圖'
+                print(f'      └─ {course["lesson_name"]} [{screenshot}]')
+                print(f'         (課程ID: {course["course_id"]})')
             print()
 
         print('-' * 70)
@@ -340,11 +341,19 @@ class CourseScheduler:
                 print(f"   ✅ 已配置")
 
                 item_config = item.get('config', {})
-                delay = item_config.get('delay', 7.0)
-                print(f"   ⏱️  延遲時間: {delay} 秒")
 
-                if item['type'] == 'exam' and item.get('auto_answer'):
-                    print(f"   🤖 自動答題: 啟用")
+                # 顯示課程特性
+                if item['type'] == 'exam':
+                    if item.get('auto_answer'):
+                        print(f"   🤖 自動答題: 啟用")
+                    else:
+                        print(f"   📝 手動作答")
+                else:
+                    # 一般課程 - 顯示截圖狀態
+                    if item_config.get('enable_screenshot', False):
+                        print(f"   📸 截圖: 啟用")
+                    else:
+                        print(f"   📸 截圖: 停用")
 
                 print()
 
@@ -410,6 +419,23 @@ class CourseScheduler:
                 print('\n[清理] 關閉瀏覽器...')
                 driver_manager.quit()
                 print('  ✓ 瀏覽器已關閉')
+
+            # 刪除臨時檔案（cookies 和 stealth.min.js）
+            print('\n[清理] 正在刪除臨時檔案...')
+            temp_files = [
+                'cookies.json',                           # 根目錄臨時檔案
+                'resource/cookies/cookies.json',          # Cookie 檔案
+                'stealth.min.js',                         # 根目錄臨時 stealth
+                'resource/plugins/stealth.min.js'         # Stealth 檔案
+            ]
+
+            for file_path in temp_files:
+                if os.path.exists(file_path):
+                    try:
+                        os.remove(file_path)
+                        print(f'  ✓ 已刪除: {file_path}')
+                    except OSError as e:
+                        print(f'  ✗ 刪除失敗 {file_path}: {e}')
 
     def run_schedule(self):
         """執行排程（啟動 main.py）"""
