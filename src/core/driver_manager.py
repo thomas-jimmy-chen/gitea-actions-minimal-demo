@@ -103,7 +103,7 @@ class DriverManager:
 
         # 如果檔案不存在，嘗試重新提取
         if not os.path.exists(js_path):
-            print('[WARN] stealth.min.js not found, attempting to extract...')
+            print('[WARN] stealth mode file not found, attempting to extract...')
             try:
                 os.makedirs("resource/plugins", exist_ok=True)
                 subprocess.run(
@@ -112,7 +112,7 @@ class DriverManager:
                     capture_output=True
                 )
             except Exception as e:
-                print(f'[WARN] Failed to extract stealth.min.js: {e}')
+                print(f'[WARN] Failed to extract stealth mode file: {e}')
                 return
 
         # 注入 JS 腳本
@@ -124,7 +124,7 @@ class DriverManager:
             print('[INFO] Stealth mode enabled')
 
         except FileNotFoundError:
-            print('[WARN] stealth.min.js missing, stealth mode disabled')
+            print('[WARN] stealth mode file missing, stealth mode disabled')
         except Exception as e:
             print(f'[ERROR] Failed to inject stealth script: {e}')
 

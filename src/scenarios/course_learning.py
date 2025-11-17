@@ -21,19 +21,25 @@ import time
 class CourseLearningScenario:
     """課程學習場景 - 編排多個頁面物件完成業務流程"""
 
-    def __init__(self, config: ConfigLoader, keep_browser_on_error: bool = False):
+    def __init__(self, config: ConfigLoader, keep_browser_on_error: bool = False, time_tracker=None, visit_duration_increase: int = None):
         """
         初始化場景
 
         Args:
             config: 配置載入器
             keep_browser_on_error: 發生錯誤時是否保持瀏覽器開啟（預設為 False）
+            time_tracker: 時間追蹤器（可選）
+            visit_duration_increase: 訪問時長增加值（秒），從 main.py 傳入
         """
         self.config = config
         self.keep_browser_on_error = keep_browser_on_error
+        self.time_tracker = time_tracker
 
         # 載入時間與截圖配置
         self.timing_config = config.load_timing_config()
+
+        # 儲存蟲洞功能配置（訪問時長增加值）
+        self.visit_duration_increase = visit_duration_increase
 
         # 初始化核心元件
         self.driver_manager = DriverManager(config)
@@ -73,13 +79,32 @@ class CourseLearningScenario:
             print('Course Learning Scenario Started')
             print('=' * 60)
 
-            # 1. 自動登入
+            # 1. 自動登入（最多重試 3 次）
             print('\n[Step 1] Logging in...')
-            self.login_page.auto_login(
-                username=self.config.get('user_name'),
-                password=self.config.get('password'),
-                url=self.config.get('target_http')
-            )
+            max_retries = 3
+            login_success = False
+
+            for attempt in range(max_retries):
+                login_success = self.login_page.auto_login(
+                    username=self.config.get('user_name'),
+                    password=self.config.get('password'),
+                    url=self.config.get('target_http')
+                )
+
+                if login_success:
+                    print('[SUCCESS] Login successful\n')
+                    break
+                else:
+                    if attempt < max_retries - 1:
+                        print(f'[WARN] Login failed, retrying... ({attempt + 1}/{max_retries})\n')
+                        # 刷新頁面以獲取新的驗證碼
+                        self.login_page.goto(self.config.get('target_http'))
+                    else:
+                        print('[ERROR] Login failed after maximum retries\n')
+                        raise Exception('Login failed after maximum retries')
+
+            if not login_success:
+                raise Exception('Login failed')
 
             # 2. 前往我的課程
             print('\n[Step 2] Navigating to my courses...')
@@ -158,11 +183,19 @@ class CourseLearningScenario:
         print(f'截圖: {"啟用" if enable_screenshot else "停用"}')
         print(f'{"=" * 80}\n')
 
+        # 開始追蹤課程時間
+        if self.time_tracker:
+            self.time_tracker.start_course(lesson_name, program_name)
+
         try:
             # Step 1: 選擇課程計畫（進入第二階）
             print(f'[Step 1] 選擇課程計畫: {program_name}')
             self.course_list.select_course_by_name(program_name, delay=delay_stage2)
             print(f'  ✓ 已進入第二階，等待 {delay_stage2} 秒...\n')
+
+            # 記錄延遲時間
+            if self.time_tracker:
+                self.time_tracker.record_delay(delay_stage2, '課程計畫頁面載入等待')
 
             # 📸 第一次截圖（第二階 - 進入時）
             if enable_screenshot:
@@ -174,16 +207,41 @@ class CourseLearningScenario:
                 )
                 print()
 
+            # 顯示蟲洞功能狀態（第二階 - 進入時）
+            if self.config.get_bool('modify_visits'):
+                minutes = self.visit_duration_increase // 60
+                print(f'⏰ 蟲洞: 已開啟，時間推至 {minutes} 分鐘\n')
+
             # Step 2: 選擇課程單元（進入第三階）
             print(f'[Step 2] 選擇課程單元: {lesson_name}')
             self.course_detail.select_lesson_by_name(lesson_name, delay=delay_stage3)
+
+            # 顯示蟲洞功能狀態（進入第三階）
+            if self.config.get_bool('modify_visits'):
+                minutes = self.visit_duration_increase // 60
+                print(f'⏰ 蟲洞: 已開啟，時間推至 {minutes} 分鐘')
+
             print(f'  ✓ 已進入第三階，等待 {delay_stage3} 秒...\n')
+
+            # 記錄延遲時間
+            if self.time_tracker:
+                self.time_tracker.record_delay(delay_stage3, '課程單元頁面載入等待')
 
             # Step 3: 返回課程計畫（返回第二階）
             print(f'[Step 3] 返回課程計畫 (course_id: {course_id})')
             self.course_detail.go_back_to_course(course_id)
+
+            # 顯示蟲洞功能狀態（返回第二階）
+            if self.config.get_bool('modify_visits'):
+                minutes = self.visit_duration_increase // 60
+                print(f'⏰ 蟲洞: 已開啟，時間推至 {minutes} 分鐘')
+
             print(f'  ✓ 已返回第二階，等待 {delay_stage2} 秒...\n')
             time.sleep(delay_stage2)
+
+            # 記錄延遲時間
+            if self.time_tracker:
+                self.time_tracker.record_delay(delay_stage2, '返回課程計畫等待')
 
             # 📸 第二次截圖（第二階 - 返回時）
             if enable_screenshot:
@@ -201,7 +259,15 @@ class CourseLearningScenario:
             time.sleep(delay_stage1)
             print(f'  ✓ 已返回第一階\n')
 
+            # 記錄延遲時間
+            if self.time_tracker:
+                self.time_tracker.record_delay(delay_stage1, '返回課程列表等待')
+
             print(f'[SUCCESS] 課程完成: {lesson_name}\n')
+
+            # 結束追蹤課程時間
+            if self.time_tracker:
+                self.time_tracker.end_course()
 
         except Exception as e:
             print(f'[ERROR] 處理課程失敗: {lesson_name}')

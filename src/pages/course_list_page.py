@@ -270,12 +270,20 @@ class CourseListPage(BasePage):
 
             courses = []
             exams = []
+            seen_names = set()  # 追蹤已見過的課程/考試名稱，防止重複
 
             for elem in activity_elements:
                 try:
                     name = elem.text.strip()
                     if not name:
                         continue
+
+                    # 去重：如果已經見過這個名稱，跳過
+                    if name in seen_names:
+                        print(f'[DEBUG] 跳過重複項目: {name[:50]}')
+                        continue
+
+                    seen_names.add(name)
 
                     # 根據名稱判斷是課程還是考試
                     if '測驗' in name or '考試' in name:

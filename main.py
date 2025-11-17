@@ -24,6 +24,7 @@ from src.api.interceptors.visit_duration import VisitDurationInterceptor
 from src.scenarios.course_learning import CourseLearningScenario
 from src.scenarios.exam_learning import ExamLearningScenario
 from src.utils.stealth_extractor import StealthExtractor
+from src.utils.time_tracker import TimeTracker
 
 
 def main():
@@ -36,7 +37,12 @@ def main():
 ╚══════════════════════════════════════════════════════════╝
     """)
 
+    # 初始化時間追蹤器
+    tracker = TimeTracker()
+    tracker.start_program()
+
     # 1. 載入配置
+    tracker.start_phase('系統初始化')
     print('[Step 1/6] Loading configuration...')
     config = ConfigLoader("config/eebot.cfg")
     try:
@@ -54,17 +60,23 @@ def main():
     else:
         print('  ✓ Browser automation mode ready, skipping initialization')
 
+    # 2.5. 載入蟲洞功能配置（訪問時長增加值）
+    # 統一在這裡讀取，避免在多處 hardcode default 值
+    visit_duration_increase = config.get_int('visit_duration_increase', 9000)
+
     # 3. 啟動 Proxy（如需修改訪問時長）
     proxy = None
     if config.get_bool('modify_visits'):
         print('\n[Step 3/6] Starting network monitoring with visit duration interceptor...')
-        interceptor = VisitDurationInterceptor(increase_duration=9000)
+        interceptor = VisitDurationInterceptor(increase_duration=visit_duration_increase)
         proxy = ProxyManager(config, interceptors=[interceptor])
         proxy.start()
+        print(f'[INFO] Wormhole mode activated - Time will be accelerated by {visit_duration_increase // 60} minutes')
     else:
         print('\n[Step 3/6] Proxy disabled (modify_visits=n)')
 
     # 4. 載入排程資料
+    tracker.start_phase('載入排程資料')
     print('\n[Step 4/6] Loading scheduled courses...')
     schedule_file = 'data/schedule.json'
     try:
@@ -93,6 +105,7 @@ def main():
         return
 
     # 5. 分離課程和考試
+    tracker.start_phase('分離課程和考試')
     print('\n[Step 5/6] Separating courses and exams...')
     regular_courses = []
     exams = []
@@ -107,6 +120,7 @@ def main():
     print(f'  ✓ Found {len(regular_courses)} regular courses and {len(exams)} exams')
 
     # 6. 執行場景
+    tracker.start_phase('執行課程與考試')
     print('\n[Step 6/6] Executing scenarios...')
     try:
         # 從配置讀取是否在錯誤時保持瀏覽器開啟（預設為 False）
@@ -114,18 +128,30 @@ def main():
 
         # 執行一般課程
         if regular_courses:
+            tracker.start_phase('執行一般課程')
             print('\n[6.1] Executing regular courses...')
-            scenario = CourseLearningScenario(config, keep_browser_on_error=keep_browser_on_error)
+            scenario = CourseLearningScenario(
+                config,
+                keep_browser_on_error=keep_browser_on_error,
+                time_tracker=tracker,
+                visit_duration_increase=visit_duration_increase
+            )
             print('  ✓ Course scenario initialized')
             scenario.execute(regular_courses)
 
         # 執行考試
         if exams:
+            tracker.start_phase('執行考試')
             print('\n[6.2] Executing exams...')
             print('  → Using smart exam scenario (auto-answer for specific exams only)')
 
             # 使用考試場景（根據每個考試的 enable_auto_answer 字段決定是否自動答題）
-            exam_scenario = ExamLearningScenario(config, keep_browser_on_error=keep_browser_on_error)
+            exam_scenario = ExamLearningScenario(
+                config,
+                keep_browser_on_error=keep_browser_on_error,
+                time_tracker=tracker,
+                visit_duration_increase=visit_duration_increase
+            )
             print('  ✓ Exam scenario initialized')
             exam_scenario.execute(exams)
 
@@ -137,6 +163,7 @@ def main():
         traceback.print_exc()
     finally:
         # 6. 清理資源
+        tracker.start_phase('清理資源')
         if proxy:
             print('\n[Cleanup] Stopping network monitoring...')
             proxy.stop()
@@ -154,9 +181,12 @@ def main():
             if os.path.exists(file_path):
                 try:
                     os.remove(file_path)
-                    print(f'  ✓ Removed: {file_path}')
+                    # 將技術性檔名轉為使用者友善的顯示名稱
+                    display_name = file_path.replace('stealth.min.js', 'stealth mode file')
+                    print(f'  ✓ Removed: {display_name}')
                 except OSError as e:
-                    print(f'  ✗ Failed to remove {file_path}: {e}')
+                    display_name = file_path.replace('stealth.min.js', 'stealth mode file')
+                    print(f'  ✗ Failed to remove {display_name}: {e}')
 
         # 8. 清除排程檔案
         print('\n[Cleanup] Clearing schedule...')
@@ -176,6 +206,10 @@ def main():
                 print(f'  ✗ Failed to clear schedule: {e}')
         else:
             print(f'  ⚠️  Schedule file not found (already cleared or never created)')
+
+        # 9. 打印時間統計報告
+        tracker.end_phase('清理資源')
+        tracker.print_report()
 
     print('\n' + '=' * 60)
     print('Program terminated')

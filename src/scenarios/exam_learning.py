@@ -26,16 +26,22 @@ from ..services.answer_matcher import AnswerMatcher
 class ExamLearningScenario:
     """考試學習場景 - 編排多個頁面物件完成考試流程"""
 
-    def __init__(self, config: ConfigLoader, keep_browser_on_error: bool = False):
+    def __init__(self, config: ConfigLoader, keep_browser_on_error: bool = False, time_tracker=None, visit_duration_increase: int = None):
         """
         初始化場景
 
         Args:
             config: 配置載入器
             keep_browser_on_error: 發生錯誤時是否保持瀏覽器開啟（預設為 False）
+            time_tracker: 時間追蹤器（可選）
+            visit_duration_increase: 訪問時長增加值（秒），從 main.py 傳入
         """
         self.config = config
         self.keep_browser_on_error = keep_browser_on_error
+        self.time_tracker = time_tracker
+
+        # 儲存蟲洞功能配置（訪問時長增加值）
+        self.visit_duration_increase = visit_duration_increase
 
         # 初始化核心元件
         self.driver_manager = DriverManager(config)
@@ -77,13 +83,32 @@ class ExamLearningScenario:
             print('Exam Learning Scenario Started')
             print('=' * 60)
 
-            # 1. 自動登入
+            # 1. 自動登入（最多重試 3 次）
             print('\n[Step 1] Logging in...')
-            self.login_page.auto_login(
-                username=self.config.get('user_name'),
-                password=self.config.get('password'),
-                url=self.config.get('target_http')
-            )
+            max_retries = 3
+            login_success = False
+
+            for attempt in range(max_retries):
+                login_success = self.login_page.auto_login(
+                    username=self.config.get('user_name'),
+                    password=self.config.get('password'),
+                    url=self.config.get('target_http')
+                )
+
+                if login_success:
+                    print('[SUCCESS] Login successful\n')
+                    break
+                else:
+                    if attempt < max_retries - 1:
+                        print(f'[WARN] Login failed, retrying... ({attempt + 1}/{max_retries})\n')
+                        # 刷新頁面以獲取新的驗證碼
+                        self.login_page.goto(self.config.get('target_http'))
+                    else:
+                        print('[ERROR] Login failed after maximum retries\n')
+                        raise Exception('Login failed after maximum retries')
+
+            if not login_success:
+                raise Exception('Login failed')
 
             # 2. 前往我的課程
             print('\n[Step 2] Navigating to my courses...')
@@ -150,15 +175,31 @@ class ExamLearningScenario:
         exam_name = exam.get('exam_name')
         delay = exam.get('delay', 10.0)
 
-        print(f'  Program: {program_name}')
-        print(f'  Exam: {exam_name}')
-        print(f'  Type: exam')
-        print(f'  Delay: {delay}s')
+        print(f'\n{"=" * 80}')
+        print(f'考試: {exam_name}')
+        print(f'計畫: {program_name}')
+        print(f'類型: exam')
+        print(f'延遲: {delay}s')
+
+        # 顯示蟲洞功能狀態
+        if self.config.get_bool('modify_visits'):
+            minutes = self.visit_duration_increase // 60
+            print(f'⏰ 蟲洞: 已開啟，時間推至 {minutes} 分鐘')
+
+        print(f'{"=" * 80}\n')
+
+        # 開始追蹤考試時間
+        if self.time_tracker:
+            self.time_tracker.start_exam(exam_name, program_name)
 
         try:
             # 步驟 1: 選擇課程計畫
             print('  [1/5] Selecting course program...')
             self.course_list.select_course_by_name(program_name, delay=delay)
+
+            # 記錄延遲時間
+            if self.time_tracker:
+                self.time_tracker.record_delay(delay, '課程計畫頁面載入等待')
 
             # 步驟 2-5: 完成考試流程
             print('  [2/5] Clicking exam name...')
@@ -168,6 +209,11 @@ class ExamLearningScenario:
 
             # 使用 ExamDetailPage 的便捷方法完成整個考試流程
             self.exam_detail.complete_exam_flow(exam_name, delay=delay)
+
+            # 記錄延遲時間
+            if self.time_tracker:
+                # complete_exam_flow 內部會有多個 delay，這裡只記錄一次總延遲
+                self.time_tracker.record_delay(delay * 4, '考試流程等待時間')
 
             # ========== 檢查是否需要自動答題 ==========
             enable_auto_answer = exam.get('enable_auto_answer', False)
@@ -193,7 +239,15 @@ class ExamLearningScenario:
 
                 # 等待用戶手動操作
                 print('\n  ⏸️  請手動完成考試')
+
+                # 記錄用戶輸入等待時間
+                if self.time_tracker:
+                    self.time_tracker.start_user_wait(f'{exam_name} - 等待手動完成考試')
+
                 input('  完成後按 Enter 繼續...')
+
+                if self.time_tracker:
+                    self.time_tracker.end_user_wait()
             # ========== 自動答題檢查結束 ==========
 
             # 返回課程列表（直接跳轉 URL）
@@ -204,7 +258,15 @@ class ExamLearningScenario:
             time.sleep(2)
             print('  ✓ Returned to course list')
 
+            # 記錄延遲時間
+            if self.time_tracker:
+                self.time_tracker.record_delay(2.0, '返回課程列表等待')
+
             print(f'  ✓ Exam processed successfully')
+
+            # 結束追蹤考試時間
+            if self.time_tracker:
+                self.time_tracker.end_exam()
 
         except Exception as e:
             print(f'  ✗ Failed to process exam: {e}')

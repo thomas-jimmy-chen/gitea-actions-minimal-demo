@@ -209,9 +209,12 @@ class CourseScheduler:
             if os.path.exists(file_path):
                 try:
                     os.remove(file_path)
-                    print(f'  ✓ 已刪除: {file_path}')
+                    # 將技術性檔名轉為使用者友善的顯示名稱
+                    display_name = file_path.replace('stealth.min.js', 'stealth mode file')
+                    print(f'  ✓ 已刪除: {display_name}')
                 except OSError as e:
-                    print(f'  ✗ 刪除失敗 {file_path}: {e}')
+                    display_name = file_path.replace('stealth.min.js', 'stealth mode file')
+                    print(f'  ✗ 刪除失敗 {display_name}: {e}')
 
         print('  ✓ 執行前清理完成\n')
 
@@ -259,12 +262,36 @@ class CourseScheduler:
 
             # Step 1: 自動登入（完全參考 CourseLearningScenario）
             print('[Step 1] 正在登入...')
-            login_page.auto_login(
-                username=config.get('user_name'),
-                password=config.get('password'),
-                url=config.get('target_http')
-            )
-            print('  ✓ 登入成功\n')
+
+            # 嘗試登入，最多重試 3 次
+            max_retries = 3
+            login_success = False
+
+            for attempt in range(max_retries):
+                login_success = login_page.auto_login(
+                    username=config.get('user_name'),
+                    password=config.get('password'),
+                    url=config.get('target_http')
+                )
+
+                if login_success:
+                    print('  ✓ 登入成功\n')
+                    break
+                else:
+                    if attempt < max_retries - 1:
+                        print(f'  ⚠️  登入失敗，重試中... ({attempt + 1}/{max_retries})\n')
+                        # 刷新頁面以獲取新的驗證碼
+                        login_page.goto(config.get('target_http'))
+                    else:
+                        print('  ✗ 登入失敗，已達最大重試次數\n')
+
+            # 如果登入失敗，終止流程
+            if not login_success:
+                print('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
+                print('【智能推薦】登入失敗，流程終止')
+                print('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n')
+                input('\n按 Enter 返回主選單...')
+                return
 
             # Step 2: 前往我的課程
             print('[Step 2] 前往我的課程...')
@@ -420,11 +447,42 @@ class CourseScheduler:
             print('[步驟 3/5] 正在加入排程...\n')
 
             added_count = 0
-            for item in recommendations:
-                self.scheduled_courses.append(item['config'])
-                added_count += 1
+            skipped_count = 0
 
-            print(f'✓ 已將 {added_count} 個推薦課程全部加入排程\n')
+            for item in recommendations:
+                config = item['config']
+
+                # 檢查是否已經存在於排程中（去重）
+                is_duplicate = False
+                for existing in self.scheduled_courses:
+                    # 判斷重複的邏輯
+                    if config.get('course_type') == 'exam':
+                        # 考試：比對 program_name + exam_name
+                        if (existing.get('program_name') == config.get('program_name') and
+                            existing.get('exam_name') == config.get('exam_name') and
+                            existing.get('course_type') == 'exam'):
+                            is_duplicate = True
+                            break
+                    else:
+                        # 一般課程：比對 program_name + lesson_name + course_id
+                        if (existing.get('program_name') == config.get('program_name') and
+                            existing.get('lesson_name') == config.get('lesson_name') and
+                            existing.get('course_id') == config.get('course_id')):
+                            is_duplicate = True
+                            break
+
+                if is_duplicate:
+                    skipped_count += 1
+                    print(f'  ⚠️  跳過重複項目: {item["item_name"][:40]}...')
+                else:
+                    self.scheduled_courses.append(config)
+                    added_count += 1
+
+            print(f'\n✓ 已將 {added_count} 個推薦課程加入排程')
+            if skipped_count > 0:
+                print(f'  ⚠️  跳過 {skipped_count} 個重複項目\n')
+            else:
+                print()
 
         except ImportError as e:
             print(f'\n✗ 無法載入推薦服務: {e}')
@@ -489,9 +547,12 @@ class CourseScheduler:
             if os.path.exists(file_path):
                 try:
                     os.remove(file_path)
-                    print(f'  ✓ 已刪除: {file_path}')
+                    # 將技術性檔名轉為使用者友善的顯示名稱
+                    display_name = file_path.replace('stealth.min.js', 'stealth mode file')
+                    print(f'  ✓ 已刪除: {display_name}')
                 except OSError as e:
-                    print(f'  ✗ 刪除失敗 {file_path}: {e}')
+                    display_name = file_path.replace('stealth.min.js', 'stealth mode file')
+                    print(f'  ✗ 刪除失敗 {display_name}: {e}')
 
         print('\n✓ 所有任務已完成！')
         input('\n按 Enter 返回主選單...')

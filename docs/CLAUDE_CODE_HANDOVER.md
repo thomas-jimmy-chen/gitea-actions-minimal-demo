@@ -4,9 +4,9 @@
 >
 > 本文檔使用 Claude Code 的最佳實踐格式編寫，方便快速理解項目結構並進行後續開發。
 
-**文檔版本**: 1.6
-**最後更新**: 2025-01-17（一鍵自動執行 + 跨平台字體支援）
-**項目版本**: 2.0.3
+**文檔版本**: 1.9
+**最後更新**: 2025-11-17（穩定性與配置優化）
+**項目版本**: 2.0.5
 **項目代號**: **Gleipnir** (格萊普尼爾 / 縛狼鎖)
 **維護者**: wizard03
 
@@ -28,7 +28,7 @@
 ### 閱讀本文檔前
 1. 使用 `@workspace` 索引整個項目（建議）
 2. 閱讀本文檔獲取項目概覽
-3. 查看 `docs/CHANGELOG.md` 了解最新修改
+3. 查看 `CHANGELOG.md` 了解最新修改（歷史版本見 `docs/changelogs/`）
 
 ### 關鍵文件路徑
 ```
@@ -43,9 +43,16 @@ D:\Dev\eebot\
 │   ├── exam_detail_page.py    ← 考試頁面（2025-01-13 新增）
 │   ├── course_list_page.py    ← 課程列表（原有，勿改）
 │   └── course_detail_page.py  ← 課程詳情（原有，勿改）
+├── src/utils/                 ← 工具類別
+│   ├── time_tracker.py        ← 時間追蹤器（2025-01-17 新增）
+│   ├── screenshot_utils.py    ← 截圖管理器
+│   └── stealth_extractor.py   ← 反檢測工具
+├── reports/                   ← 時間統計報告（自動生成）
 └── docs/                      ← 項目文檔
+    ├── changelogs/            ← CHANGELOG 歷史歸檔
+    │   └── CHANGELOG_archive_2025.md  ← 2025 年歷史版本
     ├── AI_ASSISTANT_GUIDE.md  ← 通用 AI 助手文檔
-    └── CHANGELOG.md           ← 修改歷史記錄
+    └── CHANGELOG.md           ← 修改歷史記錄（最新版本）
 ```
 
 ---
@@ -69,14 +76,131 @@ POM (Page Object Model) + API Interceptor
 ```
 
 ### 工作原理
-1. **自動登入**: 使用 Cookies 或帳密登入
+1. **自動登入**: 使用 Cookies 或帳密登入（支援 3 次重試）⭐ NEW (2025-11-17)
 2. **課程/考試選擇**: 根據 `data/courses.json` 配置
 3. **自動瀏覽**: Selenium 模擬用戶操作
-4. **時長修改**: MitmProxy 攔截並修改訪問時長
+4. **時長修改**: MitmProxy 攔截並修改訪問時長（配置外部化）⭐ NEW (2025-11-17)
 5. **智能答題**: 題目文字 + 選項內容雙重比對
 6. **完成學習**: 自動完成課程或考試流程
-7. **一鍵執行**: 自動掃描、排程、執行所有「修習中」課程 ⭐ NEW (2025-01-17)
-8. **跨平台截圖**: 支援 Windows/Linux/macOS 字體 ⭐ NEW (2025-01-17)
+7. **一鍵執行**: 自動掃描、排程、執行所有「修習中」課程（雙層去重）⭐ NEW (2025-11-17)
+8. **跨平台截圖**: 支援 Windows/Linux/macOS 字體
+9. **時間統計**: 完整追蹤執行時間並生成報告 (2025-01-17)
+10. **蟲洞提示**: 在關鍵階段顯示時間加速狀態 ⭐ NEW (2025-11-17)
+
+### ⭐ 最新功能 (2025-11-17)
+
+**穩定性與配置優化（v2.0.5）**
+
+本次更新專注於提升系統穩定性、改善配置管理架構，並優化使用者體驗。
+
+**核心特點**:
+- 🔄 **登入重試機制**: 驗證碼錯誤時自動重試（最多 3 次）
+- 🛡️ **雙層去重保護**: 掃描階段 + 排程階段雙重防護
+- ⚙️ **配置外部化**: 統一配置管理，移除 hardcoded 值
+- ⏰ **蟲洞顯示優化**: 在關鍵階段透明化顯示時間加速效果
+
+**1. 登入重試機制強化**
+```python
+# 智能推薦、課程場景、考試場景全部支援
+max_retries = 3
+for attempt in range(max_retries):
+    if login_success:
+        break
+    else:
+        # 刷新頁面獲取新驗證碼
+        login_page.goto(config.get('target_http'))
+```
+
+**2. 排程去重機制（雙層保護）**
+- **第一層**: 掃描階段使用 `set()` 防止 DOM 重複元素
+- **第二層**: 加入排程階段檢查現有排程避免重複
+- 考試與課程使用不同的比對邏輯
+
+**3. MitmProxy 配置外部化**
+```ini
+# config/eebot.cfg
+visit_duration_increase = 9000  # 統一管理
+```
+- 採用「單一數據源」設計模式
+- Default 值只在 `main.py` 一處
+- 使用依賴注入傳遞配置
+
+**4. 蟲洞功能顯示優化**
+在三個關鍵階段顯示：
+- 第二階 - 進入時（截圖後）
+- 第三階 - 進入時（選擇課程單元後）
+- 第二階 - 返回時（返回課程計畫後）
+
+**修改檔案**:
+1. `menu.py` - 登入重試 + 排程去重
+2. `src/scenarios/course_learning.py` - 登入重試 + 配置參數 + 蟲洞顯示
+3. `src/scenarios/exam_learning.py` - 登入重試 + 配置參數
+4. `src/pages/course_list_page.py` - 掃描階段去重
+5. `config/eebot.cfg` - 新增配置參數
+6. `main.py` - 統一配置讀取與傳遞
+
+**向後相容**:
+- ✅ 所有原有功能不受影響
+- ✅ 配置值向後相容（預設 9000 秒）
+- ✅ 蟲洞顯示可隨 `modify_visits` 開關
+
+**詳細記錄**:
+- 查看 `CHANGELOG.md` 了解完整技術細節
+- 查看 `docs/DAILY_WORK_LOG_20251117.md` 了解開發過程
+
+---
+
+### ⭐ 最新功能 (2025-01-17) - 第三更新
+
+**完整時間統計系統 + 產品化輸出訊息**
+
+新增完整的時間追蹤與統計功能，精確記錄程式執行的每個階段、每個課程/考試的時間，並生成詳細報告。
+
+**核心特點**:
+- ⏱️ **全方位追蹤**: 程式總時間、階段時間、課程時間、考試時間
+- 📊 **智能分類**: 區分淨執行時間、延遲時間、使用者等待時間
+- 📈 **階層統計**: 課程計畫分組 → 課程/考試明細 → 時間明細
+- 🖥️ **雙重輸出**: 螢幕格式化報告 + Markdown 文件報告
+- 📁 **自動保存**: 報告自動保存到 `reports/` 目錄
+- 🎨 **產品化訊息**: 技術術語改為使用者友善描述
+
+**新增檔案**:
+1. `src/utils/time_tracker.py` - 時間追蹤器類別（596 行）
+
+**修改檔案**:
+1. `main.py` - 整合時間追蹤器
+2. `src/scenarios/course_learning.py` - 添加課程時間追蹤
+3. `src/scenarios/exam_learning.py` - 添加考試時間追蹤
+4. `src/core/driver_manager.py` - 產品化輸出訊息
+5. `menu.py` - 產品化輸出訊息（2 處）
+
+**使用方式**:
+```bash
+python main.py
+# 程式結束時自動顯示時間統計報告
+# 報告同時保存到 reports/time_report_YYYYMMDD_HHMMSS.md
+```
+
+**報告範例**:
+```
+【程式執行時間】
+  總執行時間: 15m 30s
+  總延遲時間: 5m 20s
+  使用者等待: 2m 10s
+  淨執行時間: 8m 0s
+
+【課程計畫統計】
+  📚 資通安全教育訓練(114年度)
+     項目數: 3 (課程: 2, 考試: 1)
+     總時間: 10m 30s (執行: 7m 10s + 延遲: 3m 20s)
+```
+
+**向後相容**:
+- ✅ 所有原有功能不受影響
+- ✅ 時間追蹤自動啟用（可選擇性關閉）
+- ✅ 無報告文件時優雅降級
+
+---
 
 ### ⭐ 最新功能 (2025-01-17) - 第一更新
 
@@ -392,9 +516,11 @@ eebot/
 │   └── eebot.cfg                # 系統配置
 │
 ├── docs/                        # 項目文檔
+│   ├── changelogs/              # CHANGELOG 歷史歸檔目錄
+│   │   └── CHANGELOG_archive_2025.md  # 2025 年歷史版本
 │   ├── AI_ASSISTANT_GUIDE.md    # 通用 AI 助手指南
 │   ├── CLAUDE_CODE_HANDOVER.md  # 本文件
-│   └── CHANGELOG.md             # 修改歷史
+│   └── CHANGELOG.md             # 修改歷史（最新版本）
 │
 ├── main.py                      # 主程式入口
 └── menu.py                      # 互動式選單
@@ -604,6 +730,45 @@ surveys = [item for item in courses if item.get('course_type') == 'survey']
 
 ### 原因
 這些文件是系統的核心，已經過充分測試且穩定運行。修改可能導致現有功能崩潰。
+
+---
+
+## 📋 文檔管理規則
+
+### CHANGELOG.md 拆分策略 (2025-01-17 新增規則)
+
+**背景**: CHANGELOG.md 文件過長（769 行, 23KB）會影響 Claude Code CLI 的讀取效能。
+
+**拆分規則**:
+1. **主 CHANGELOG.md**: 保留最新 2-3 個版本（約 400 行以內）
+2. **歷史歸檔**: 舊版本移至 `docs/changelogs/CHANGELOG_archive_YYYY.md`
+3. **導航鏈接**: 主文件頂部包含歸檔文件的導航鏈接
+
+**當前結構**:
+```
+CHANGELOG.md                              # 最新版本（v2.0.4, v2.0.2+auto-answer.1, v2.0.2+auto-answer）
+docs/changelogs/
+└── CHANGELOG_archive_2025.md            # 歷史版本（v2.0.1, v2.0.0）
+```
+
+**觸發條件**:
+- CHANGELOG.md 超過 **400 行**或 **15KB**
+- Claude Code CLI 提示文件過大無法正常讀取
+
+**拆分流程**:
+1. 創建歸檔文件（如果不存在）
+2. 將舊版本移至歸檔
+3. 更新主 CHANGELOG.md，添加歸檔鏈接
+4. 更新相關文檔（本文檔、AI_ASSISTANT_GUIDE.md）
+
+**查看歷史版本**:
+```bash
+# 查看最新版本
+cat CHANGELOG.md
+
+# 查看歷史歸檔
+cat docs/changelogs/CHANGELOG_archive_2025.md
+```
 
 ---
 
@@ -1652,8 +1817,8 @@ question_count = self.question_bank.load_question_bank(program_name)
 ---
 
 **維護者**: wizard03
-**文檔版本**: 1.6
-**最後更新**: 2025-01-17 (一鍵自動執行 + 跨平台字體支援)
+**文檔版本**: 1.8
+**最後更新**: 2025-01-17 (CHANGELOG 拆分優化)
 
 如有任何問題，請參考 `docs/AI_ASSISTANT_GUIDE.md` 或查看 `docs/CHANGELOG.md` 了解最新修改。
 
@@ -1661,7 +1826,10 @@ question_count = self.question_bank.load_question_bank(program_name)
 
 ## 📅 最新工作日誌
 
-- **2025-01-17**: 一鍵自動執行功能 + 跨平台字體支援 (v2.0.3)
+- **2025-01-17 (更新4)**: CHANGELOG.md 拆分優化 - 提升 Claude Code CLI 可讀性 (v2.0.4)
+- **2025-01-17 (更新3)**: 完整時間統計系統 + 產品化輸出訊息 (v2.0.4)
+- **2025-01-17 (更新2)**: 產品化輸出訊息優化（MVP → Release） (v2.0.3)
+- **2025-01-17 (更新1)**: 一鍵自動執行功能 + 跨平台字體支援 (v2.0.3)
 - **2025-01-16**: [DAILY_WORK_LOG_20250116.md](./DAILY_WORK_LOG_20250116.md) - 截圖功能實作與時間配置分離
 - **2025-11-16**: [DAILY_WORK_LOG_20251116.md](./DAILY_WORK_LOG_20251116.md) - 安全性增強與智能推薦修復
 - **2025-11-15**: [DAILY_WORK_LOG_20251115.md](./DAILY_WORK_LOG_20251115.md) - 自動答題系統完整實作
