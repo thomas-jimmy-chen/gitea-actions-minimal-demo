@@ -47,17 +47,17 @@ def main():
         return
 
     # 2. 提取 Stealth JS（如需要）
-    print('\n[Step 2/6] Extracting stealth evasions...')
+    print('\n[Step 2/6] Activating browser automation mode...')
     extractor = StealthExtractor()
     if not extractor.exists():
         extractor.run()
     else:
-        print('  ✓ Stealth evasions already exist, skipping extraction')
+        print('  ✓ Browser automation mode ready, skipping initialization')
 
     # 3. 啟動 Proxy（如需修改訪問時長）
     proxy = None
     if config.get_bool('modify_visits'):
-        print('\n[Step 3/6] Starting mitmproxy with visit duration interceptor...')
+        print('\n[Step 3/6] Starting network monitoring with visit duration interceptor...')
         interceptor = VisitDurationInterceptor(increase_duration=9000)
         proxy = ProxyManager(config, interceptors=[interceptor])
         proxy.start()
@@ -138,7 +138,7 @@ def main():
     finally:
         # 6. 清理資源
         if proxy:
-            print('\n[Cleanup] Stopping mitmproxy...')
+            print('\n[Cleanup] Stopping network monitoring...')
             proxy.stop()
 
         # 7. 刪除臨時檔案（cookies 和 stealth.min.js）

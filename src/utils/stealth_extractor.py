@@ -37,7 +37,7 @@ class StealthExtractor:
             os.makedirs(self.output_dir, exist_ok=True)
 
             # 執行 npx extract-stealth-evasions
-            print('[INFO] Extracting stealth evasions...')
+            print('[INFO] Activating automated browser stealth mode...')
             result = subprocess.run(
                 ['npx', 'extract-stealth-evasions'],
                 check=True,
@@ -53,10 +53,10 @@ class StealthExtractor:
                     os.remove(self.output_path)
 
                 os.replace("stealth.min.js", self.output_path)
-                print(f'[SUCCESS] Stealth evasions extracted to {self.output_path}')
+                print('[SUCCESS] Automated browser stealth mode activated')
                 return True
             else:
-                print('[WARN] stealth.min.js not generated')
+                print('[WARN] Browser automation mode not available')
                 return False
 
         except subprocess.TimeoutExpired:

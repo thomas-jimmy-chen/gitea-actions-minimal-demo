@@ -81,17 +81,17 @@ class ProxyManager:
     def start(self):
         """啟動 MitmProxy"""
         if not self.silent:
-            print(f"[INFO] Starting mitmproxy on {self.host}:{self.port}")
+            print(f"[INFO] Starting network monitoring on {self.host}:{self.port}")
         elif self.log_save:
-            print("[INFO] Starting mitmproxy in silent mode with logging...")
+            print("[INFO] Starting network monitoring in silent mode with logging...")
         else:
-            print("[INFO] Starting mitmproxy in silent mode...")
+            print("[INFO] Starting network monitoring in silent mode...")
 
         self.process = Process(target=self._run)
         self.process.start()
         time.sleep(1)  # 等待 Proxy 啟動
 
-        print('[INFO] MitmProxy started successfully')
+        print('[INFO] Network monitoring started successfully')
 
     def stop(self):
         """停止 MitmProxy"""
@@ -103,9 +103,9 @@ class ProxyManager:
                 if self.process.is_alive():
                     self.process.kill()
 
-                print('[INFO] MitmProxy stopped')
+                print('[INFO] Network monitoring stopped')
             except Exception as e:
-                print(f'[WARN] Error while stopping mitmproxy: {e}')
+                print(f'[WARN] Error while stopping network monitoring: {e}')
             finally:
                 self.process = None
 

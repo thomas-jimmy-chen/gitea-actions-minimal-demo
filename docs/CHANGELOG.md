@@ -181,11 +181,98 @@ def select_course_by_name(self, course_name: str, delay: float = 7.0):
 
 ---
 
-### 🔧 修改的文件
+### 🎨 產品化改進：輸出訊息優化（MVP → Release）
 
-**修改**:
+#### 核心變更：螢幕輸出訊息產品化
+
+**目標**: 從 MVP 階段轉向 Release 版本，將技術性輸出改為使用者友善描述
+
+**修改範圍**:
+- ✅ 修改所有 `print()` 語句中的技術性用詞
+- ❌ 保持文檔、註解、類別名稱不變（僅修改螢幕輸出）
+
+**術語替換**:
+
+| 原始技術術語 | 產品化描述 | 目的 |
+|------------|-----------|------|
+| `mitmproxy` | `network monitoring` | 避免暴露底層技術實作 |
+| `stealth evasions` | `browser automation mode` | 使用更通用易懂的描述 |
+| `Starting mitmproxy` | `Starting network monitoring` | 降低專業技術門檻 |
+| `Stealth evasions extracted` | `Automated browser stealth mode activated` | 適合正式產品發布 |
+
+**修改檔案清單**:
+
+1. **src/core/proxy_manager.py** (6 處修改)
+   - Line 84: `Starting mitmproxy on {host}:{port}` → `Starting network monitoring on {host}:{port}`
+   - Line 86: `Starting mitmproxy in silent mode with logging...` → `Starting network monitoring in silent mode with logging...`
+   - Line 88: `Starting mitmproxy in silent mode...` → `Starting network monitoring in silent mode...`
+   - Line 94: `MitmProxy started successfully` → `Network monitoring started successfully`
+   - Line 106: `MitmProxy stopped` → `Network monitoring stopped`
+   - Line 108: `Error while stopping mitmproxy: {e}` → `Error while stopping network monitoring: {e}`
+
+2. **src/utils/stealth_extractor.py** (3 處修改)
+   - Line 40: `Extracting stealth evasions...` → `Activating automated browser stealth mode...`
+   - Line 56: `Stealth evasions extracted to {path}` → `Automated browser stealth mode activated`
+   - Line 59: `stealth.min.js not generated` → `Browser automation mode not available`
+
+3. **main.py** (4 處修改)
+   - Line 50: `Extracting stealth evasions...` → `Activating browser automation mode...`
+   - Line 55: `Stealth evasions already exist, skipping extraction` → `Browser automation mode ready, skipping initialization`
+   - Line 60: `Starting mitmproxy with visit duration interceptor...` → `Starting network monitoring with visit duration interceptor...`
+   - Line 141: `Stopping mitmproxy...` → `Stopping network monitoring...`
+
+**輸出效果對比**:
+
+**修改前**:
+```
+[Step 2/6] Extracting stealth evasions...
+[Step 3/6] Starting mitmproxy with visit duration interceptor...
+[INFO] Starting mitmproxy on 127.0.0.1:8080
+[INFO] MitmProxy started successfully
+...
+[Cleanup] Stopping mitmproxy...
+```
+
+**修改後**:
+```
+[Step 2/6] Activating browser automation mode...
+[Step 3/6] Starting network monitoring with visit duration interceptor...
+[INFO] Starting network monitoring on 127.0.0.1:8080
+[INFO] Network monitoring started successfully
+...
+[Cleanup] Stopping network monitoring...
+```
+
+**產品化優勢**:
+- ✅ 使用者友善的訊息描述
+- ✅ 隱藏底層技術細節
+- ✅ 更適合正式產品發布
+- ✅ 降低使用門檻
+
+**技術文檔保留**:
+- ✅ AI_ASSISTANT_GUIDE.md 保留技術細節
+- ✅ CLAUDE_CODE_HANDOVER.md 保留技術細節
+- ✅ 類別名稱、變數名稱保持不變
+- ✅ 程式碼可維護性不受影響
+
+**修改統計**:
+- 修改檔案數: 3 個
+- 修改行數: 13 行（純 print 語句）
+- 邏輯變更: 0 個
+- 向後相容性: 100%
+
+---
+
+### 🔧 修改的文件總覽
+
+**程式碼修改**:
 - `menu.py` - 智能推薦功能重構
 - `src/utils/screenshot_utils.py` - 跨平台字體支援
+- `src/pages/course_list_page.py` - 截圖時機修正
+- `src/scenarios/exam_auto_answer.py` - 清理重複延遲
+- `src/core/proxy_manager.py` - 產品化輸出訊息 ⭐ NEW
+- `src/utils/stealth_extractor.py` - 產品化輸出訊息 ⭐ NEW
+- `main.py` - 產品化輸出訊息 ⭐ NEW
 
 **測試建議**:
 1. 測試一鍵自動執行功能：
@@ -196,6 +283,10 @@ def select_course_by_name(self, course_name: str, delay: float = 7.0):
 2. 測試 Linux/macOS 截圖功能：
    - 檢查截圖水印是否正確顯示中文
    - 檢查終端是否輸出載入的字體路徑
+3. 驗證產品化輸出訊息：
+   - 執行 `python main.py`
+   - 確認所有輸出使用友善的描述
+   - 不應出現 "mitmproxy" 或 "stealth evasions" 字樣
 
 **向後相容性**:
 - ✅ 所有原有功能維持不變
