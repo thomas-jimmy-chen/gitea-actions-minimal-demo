@@ -34,17 +34,17 @@ class CourseListPage(BasePage):
 
         Args:
             course_name: 課程名稱（完整的連結文字）
-            delay: 點擊前的延遲時間（秒）
+            delay: 點擊後的延遲時間（秒），等待頁面載入完成
         """
         try:
             locator = (By.LINK_TEXT, course_name)
 
-            # 等待一段時間（確保頁面穩定）
-            time.sleep(delay)
-
             # 點擊課程
             self.click(locator)
             print(f'[SUCCESS] Selected course: {course_name}')
+
+            # 等待頁面載入完成
+            time.sleep(delay)
 
         except Exception as e:
             print(f'[ERROR] Failed to select course "{course_name}": {e}')
@@ -56,15 +56,17 @@ class CourseListPage(BasePage):
 
         Args:
             partial_name: 課程名稱的部分文字
-            delay: 點擊前的延遲時間（秒）
+            delay: 點擊後的延遲時間（秒），等待頁面載入完成
         """
         try:
             locator = (By.PARTIAL_LINK_TEXT, partial_name)
 
-            time.sleep(delay)
-
+            # 點擊課程
             self.click(locator)
             print(f'[SUCCESS] Selected course containing: {partial_name}')
+
+            # 等待頁面載入完成
+            time.sleep(delay)
 
         except Exception as e:
             print(f'[ERROR] Failed to select course containing "{partial_name}": {e}')
@@ -253,9 +255,8 @@ class CourseListPage(BasePage):
         try:
             print(f'[掃描] 正在分析課程計畫: {program_name[:30]}...')
 
-            # 點擊進入課程計畫
-            self.select_course_by_name(program_name, delay=2.0)
-            time.sleep(5)  # 等待頁面載入
+            # 點擊進入課程計畫（內部已包含延遲等待頁面載入）
+            self.select_course_by_name(program_name, delay=5.0)
 
             # 根據實際 HTML 結構：
             # <a class="title ng-binding ng-scope" ng-bind="activity.title" ...>課程名稱</a>

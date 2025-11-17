@@ -163,18 +163,47 @@ class ScreenshotManager:
             return None
 
     def _load_font(self):
-        """載入字體"""
-        try:
-            # Windows 系統字體
-            return ImageFont.truetype("C:/Windows/Fonts/arial.ttf", self.font_size)
-        except:
+        """載入字體（支援 Windows 與 Linux）"""
+        # 字體搜尋順序列表
+        font_paths = [
+            # Windows 字體
+            "C:/Windows/Fonts/msyh.ttc",          # 微軟雅黑（支援中文）
+            "C:/Windows/Fonts/arial.ttf",         # Arial
+
+            # Linux 字體（支援中文）
+            "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",           # 文泉驛正黑
+            "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc", # Noto Sans CJK
+            "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc",
+            "/usr/share/fonts/truetype/arphic/uming.ttc",             # AR PL UMing
+
+            # Linux 字體（通用拉丁字母）
+            "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+            "/usr/share/fonts/truetype/freefont/FreeSans.ttf",
+
+            # macOS 字體
+            "/System/Library/Fonts/PingFang.ttc",     # 蘋方（支援中文）
+            "/Library/Fonts/Arial.ttf",
+
+            # 相對路徑
+            "arial.ttf",
+        ]
+
+        # 嘗試載入字體
+        for font_path in font_paths:
             try:
-                # 備用字體
-                return ImageFont.truetype("arial.ttf", self.font_size)
-            except:
-                # 使用預設字體
-                print('[警告] 無法載入 TrueType 字體，使用預設字體')
-                return ImageFont.load_default()
+                font = ImageFont.truetype(font_path, self.font_size)
+                print(f'[截圖] 已載入字體: {font_path}')
+                return font
+            except (OSError, IOError):
+                continue
+
+        # 所有字體都失敗，使用預設字體
+        print('[警告] 無法載入任何 TrueType 字體，使用預設字體')
+        print('[提示] 在 Linux 上可安裝字體：')
+        print('       sudo apt-get install fonts-wqy-zenhei')
+        print('       或 sudo apt-get install fonts-noto-cjk')
+        return ImageFont.load_default()
 
     @staticmethod
     def _hex_to_rgba(hex_color: str, opacity: int):

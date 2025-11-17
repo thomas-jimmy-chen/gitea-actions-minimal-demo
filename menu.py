@@ -105,7 +105,7 @@ class CourseScheduler:
         print('  • 輸入數字 (1-{}) 選擇課程加入排程'.format(len(self.all_courses)))
         print('  • 輸入 v - 查看目前排程')
         print('  • 輸入 c - 清除排程')
-        print('  • 輸入 i - 智能推薦 ⭐ NEW')
+        print('  • 輸入 i - 一鍵自動執行 (掃描所有修習中課程並自動執行) ⭐')
         print('  • 輸入 s - 儲存排程')
         print('  • 輸入 r - 執行排程')
         print('  • 輸入 q - 離開')
@@ -159,7 +159,63 @@ class CourseScheduler:
         print('\n✓ 排程已清除')
 
     def handle_intelligent_recommendation(self):
-        """處理智能推薦功能 - 僅掃描課程，不需要 mitmproxy"""
+        """智能推薦 - 一鍵自動執行所有修習中課程"""
+
+        # ===== 顯示警告提示 =====
+        print('\n' + '=' * 70)
+        print('  ⚠️  智能推薦 - 一鍵自動執行')
+        print('=' * 70)
+        print()
+        print('本選項會自動登入(有驗證碼時，必須人工輸入)，')
+        print('一直到所有課程完成。')
+        print()
+        print('執行流程：')
+        print('  1. 自動清除 cookies 與排程')
+        print('  2. 自動掃描所有「修習中」課程')
+        print('  3. 自動加入排程並執行')
+        print('  4. 執行完成後自動清除 cookies 與排程')
+        print('=' * 70)
+
+        confirm = input('\n確定要執行嗎？(y/n): ').strip().lower()
+        if confirm != 'y':
+            print('\n✓ 已取消')
+            input('\n按 Enter 返回主選單...')
+            return
+
+        # ===== 步驟 1: 執行前清理 =====
+        print('\n[步驟 1/5] 執行前清理...')
+
+        # 清除內部排程
+        self.scheduled_courses = []
+        print('  ✓ 已清除內部排程')
+
+        # 清除排程檔案
+        if os.path.exists(self.schedule_file):
+            try:
+                os.remove(self.schedule_file)
+                print(f'  ✓ 已刪除排程檔案')
+            except OSError as e:
+                print(f'  ✗ 刪除排程檔案失敗: {e}')
+
+        # 清除 cookies 和相關檔案
+        temp_files = [
+            'cookies.json',
+            'resource/cookies/cookies.json',
+            'stealth.min.js',
+            'resource/plugins/stealth.min.js'
+        ]
+
+        for file_path in temp_files:
+            if os.path.exists(file_path):
+                try:
+                    os.remove(file_path)
+                    print(f'  ✓ 已刪除: {file_path}')
+                except OSError as e:
+                    print(f'  ✗ 刪除失敗 {file_path}: {e}')
+
+        print('  ✓ 執行前清理完成\n')
+
+        # ===== 步驟 2-4: 掃描課程 =====
         driver_manager = None
 
         try:
@@ -169,8 +225,7 @@ class CourseScheduler:
             from src.pages.login_page import LoginPage
             from src.pages.course_list_page import CourseListPage
 
-            print('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
-            print('【智能推薦】正在啟動...')
+            print('[步驟 2/5] 正在啟動瀏覽器...')
             print('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n')
 
             # 1. 載入配置
@@ -361,81 +416,85 @@ class CourseScheduler:
             print(f'總計: {len(recommendations)} 個課程可以立即執行')
             print('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n')
 
-            # Step 8: 詢問用戶加入選項
-            print('請選擇要加入排程的方式：')
-            print('  a - 全部加入')
-            print('  s - 選擇性加入（輸入編號，例如: 1,3,5）')
-            print('  n - 不加入，返回主選單')
+            # Step 8: 自動全部加入排程（不再詢問）
+            print('[步驟 3/5] 正在加入排程...\n')
 
-            choice = input('\n請輸入選項: ').strip().lower()
+            added_count = 0
+            for item in recommendations:
+                self.scheduled_courses.append(item['config'])
+                added_count += 1
 
-            if choice == 'a':
-                # 全部加入
-                added_count = 0
-                for item in recommendations:
-                    self.scheduled_courses.append(item['config'])
-                    added_count += 1
-
-                print(f'\n✓ 已將 {added_count} 個推薦課程全部加入排程')
-
-            elif choice == 's':
-                # 選擇性加入
-                selection = input('請輸入要加入的課程編號 (用逗號分隔，例如: 1,3,5): ').strip()
-
-                try:
-                    indices = [int(x.strip()) for x in selection.split(',')]
-                    added_count = 0
-
-                    for idx in indices:
-                        if 1 <= idx <= len(recommendations):
-                            self.scheduled_courses.append(recommendations[idx - 1]['config'])
-                            added_count += 1
-                        else:
-                            print(f'  ✗ 忽略無效編號: {idx}')
-
-                    if added_count > 0:
-                        print(f'\n✓ 已將 {added_count} 個推薦課程加入排程')
-                    else:
-                        print('\n✗ 未加入任何課程')
-
-                except ValueError:
-                    print('\n✗ 輸入格式錯誤')
-
-            elif choice == 'n':
-                print('\n✓ 已取消加入')
-            else:
-                print('\n✗ 無效的選項')
+            print(f'✓ 已將 {added_count} 個推薦課程全部加入排程\n')
 
         except ImportError as e:
             print(f'\n✗ 無法載入推薦服務: {e}')
             print('  請確保已正確安裝所有依賴')
+            input('\n按 Enter 返回主選單...')
+            return
         except Exception as e:
             print(f'\n✗ 智能推薦執行失敗: {e}')
             import traceback
             traceback.print_exc()
+            input('\n按 Enter 返回主選單...')
+            return
         finally:
             # 關閉瀏覽器（參考 CourseLearningScenario 的清理流程）
             if driver_manager:
-                print('\n[清理] 關閉瀏覽器...')
+                print('\n[步驟 4/5] 關閉瀏覽器...')
                 driver_manager.quit()
                 print('  ✓ 瀏覽器已關閉')
 
-            # 刪除臨時檔案（cookies 和 stealth.min.js）
-            print('\n[清理] 正在刪除臨時檔案...')
-            temp_files = [
-                'cookies.json',                           # 根目錄臨時檔案
-                'resource/cookies/cookies.json',          # Cookie 檔案
-                'stealth.min.js',                         # 根目錄臨時 stealth
-                'resource/plugins/stealth.min.js'         # Stealth 檔案
-            ]
+        # ===== 步驟 5: 自動執行排程 =====
+        if not self.scheduled_courses:
+            print('\n⚠️  未找到可執行的課程')
+            input('\n按 Enter 返回主選單...')
+            return
 
-            for file_path in temp_files:
-                if os.path.exists(file_path):
-                    try:
-                        os.remove(file_path)
-                        print(f'  ✓ 已刪除: {file_path}')
-                    except OSError as e:
-                        print(f'  ✗ 刪除失敗 {file_path}: {e}')
+        print('\n[步驟 5/5] 正在執行排程...')
+        print('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n')
+
+        # 儲存排程
+        self.save_schedule()
+
+        # 執行 main.py
+        print('\n啟動 main.py...\n')
+        print('=' * 70)
+        os.system('python main.py')
+        print('=' * 70)
+
+        # ===== 執行後清理 =====
+        print('\n[執行完成] 正在清理...')
+
+        # 清除內部排程
+        self.scheduled_courses = []
+        print('  ✓ 已清除內部排程')
+
+        # 清除排程檔案
+        if os.path.exists(self.schedule_file):
+            try:
+                os.remove(self.schedule_file)
+                print(f'  ✓ 已刪除排程檔案')
+            except OSError as e:
+                print(f'  ✗ 刪除排程檔案失敗: {e}')
+
+        # 清除 cookies 和相關檔案
+        temp_files = [
+            'cookies.json',
+            'resource/cookies/cookies.json',
+            'stealth.min.js',
+            'resource/plugins/stealth.min.js'
+        ]
+
+        for file_path in temp_files:
+            if os.path.exists(file_path):
+                try:
+                    os.remove(file_path)
+                    print(f'  ✓ 已刪除: {file_path}')
+                except OSError as e:
+                    print(f'  ✗ 刪除失敗 {file_path}: {e}')
+
+        print('\n✓ 所有任務已完成！')
+        input('\n按 Enter 返回主選單...')
 
     def run_schedule(self):
         """執行排程（啟動 main.py）"""

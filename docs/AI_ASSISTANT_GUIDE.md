@@ -4,9 +4,9 @@
 >
 > Compatible with: Claude Code CLI, Cursor, GitHub Copilot CLI, Cody, Tabnine, and all AI-powered code assistants
 
-**Document Version**: 1.3
-**Last Updated**: 2025-11-16 Evening
-**Project Version**: 2.0.2+auto-answer.3
+**Document Version**: 1.4
+**Last Updated**: 2025-01-17
+**Project Version**: 2.0.3
 **Project Codename**: **Gleipnir** (格萊普尼爾 / 縛狼鎖)
 **Maintainer**: wizard03
 
@@ -44,16 +44,18 @@ In Norse mythology, **Gleipnir** is the binding that holds the mighty wolf **Fen
 | **Core Framework** | Selenium WebDriver + MitmProxy |
 | **Target Website** | https://elearn.post.gov.tw |
 | **Architecture** | POM (Page Object Model) + API Interceptor |
-| **Latest Feature** | Smart recommendation fix (2025-11-16 晚) + Option-based matching (2025-11-16 早) ⭐ NEW |
+| **Latest Feature** | One-click auto-execution (2025-01-17) + Cross-platform font support ⭐ NEW |
 
 ### Core Functionality
 
 1. ✅ **Auto Login**: Cookie-based or credential-based authentication
 2. ✅ **Course Automation**: Navigate and complete learning courses
 3. ✅ **Exam Automation**: Handle exam confirmation flows + Auto-answer
-4. ✅ **Smart Matching**: Question + Option matching (40% + 60%) ⭐ NEW
+4. ✅ **Smart Matching**: Question + Option matching (40% + 60%)
 5. ✅ **Duration Spoofing**: Use MitmProxy to modify visit duration
 6. ✅ **Interactive Scheduling**: Menu-based course/exam selection
+7. ✅ **One-Click Execution**: Auto-scan, schedule & execute all in-progress courses ⭐ NEW
+8. ✅ **Cross-Platform Screenshots**: Support Windows/Linux/macOS fonts ⭐ NEW
 
 ---
 
@@ -1365,7 +1367,317 @@ skip_unmatched_questions = y
 
 ---
 
-## ⭐ NEW: Smart Recommendation Bug Fix (2025-11-16 Evening)
+## ⭐ NEW: Screenshot Timing Fix (2025-01-17)
+
+> **Bug Fix**: Screenshots now capture fully loaded pages
+
+### Problem
+
+Screenshots were being taken before pages finished loading, resulting in incomplete screenshot content.
+
+**Root Cause**:
+- `select_course_by_name()` delayed **before** clicking
+- Screenshot taken immediately after click → page still loading ❌
+
+**Execution Order (Wrong)**:
+```
+Delay 11s → Click → Screenshot ❌ (page loading)
+```
+
+**Expected Order**:
+```
+Click → Delay 11s (wait for page load) → Screenshot ✅ (page fully loaded)
+```
+
+### Solution
+
+**Changed delay semantics in `select_course_by_name()`**:
+- **Before**: Delay → Click → (caller does screenshot)
+- **After**: Click → Delay → (caller does screenshot) ✅
+
+**Modified Files**:
+1. `src/pages/course_list_page.py`:
+   - `select_course_by_name()`: Moved delay from before click to after click
+   - `select_course_by_partial_name()`: Same change for consistency
+   - Removed duplicate `time.sleep(5)` in `get_program_courses_and_exams()`
+
+2. `src/scenarios/exam_auto_answer.py`:
+   - Removed duplicate `time.sleep(2)` after course selection
+
+### Benefits
+
+**Fixed Features**:
+1. ✅ Screenshot function - Now captures fully loaded pages
+2. ✅ Smart recommendation - Eliminated unnecessary double delays
+3. ✅ Auto-answer - Eliminated unnecessary double delays
+
+**Affected Call Sites**:
+- `src/scenarios/course_learning.py:164` - Screenshot timing fixed ✅
+- `src/pages/course_list_page.py:257` - Duplicate delay removed ✅
+- `src/scenarios/exam_auto_answer.py:144` - Duplicate delay removed ✅
+- `src/scenarios/exam_learning.py:161` - No change needed ✅
+
+### Testing
+
+**Test Screenshot Function**:
+```bash
+# Enable screenshot in courses.json
+"enable_screenshot": true
+
+# Run course and check screenshots
+python main.py
+
+# Verify screenshots show fully loaded pages
+# Location: screenshots/{username}/{date}/
+```
+
+**Backward Compatibility**:
+- ✅ All features work correctly
+- ✅ No breaking changes
+- ✅ Total delay time unchanged (only order adjusted)
+
+---
+
+## ⭐ NEW: One-Click Auto-Execution (2025-01-17)
+
+> **Feature Upgrade**: Smart Recommendation → Fully Automated Execution
+
+### Overview
+
+The "Smart Recommendation" feature has been completely redesigned as "One-Click Auto-Execution" (一鍵自動執行), providing a fully automated workflow from scanning to execution without any manual intervention.
+
+### What Changed
+
+**Previous Behavior** (v2.0.2+screenshot.1):
+1. Scan "in-progress" courses
+2. Display recommendations
+3. **Ask user** to choose (a)ll / (s)elective / (n)o
+4. **User manually** runs `python main.py`
+
+**New Behavior** (v2.0.3):
+1. **Step 1/5**: Auto-cleanup (schedule, cookies, stealth.min.js)
+2. **Step 2-4/5**: Scan "in-progress" courses
+3. **Step 3/5**: Auto-add all to schedule (no confirmation)
+4. **Step 5/5**: Auto-execute `python main.py`
+5. **Post-execution**: Auto-cleanup (schedule, cookies, stealth.min.js)
+
+### Key Features
+
+**Fully Automated Workflow**:
+- ✅ Pre-execution cleanup
+- ✅ Automatic scheduling (no user input)
+- ✅ Automatic execution via `os.system('python main.py')`
+- ✅ Post-execution cleanup
+
+**User Experience Improvements**:
+- ✅ Menu text changed: "智能推薦 ⭐ NEW" → "一鍵自動執行 ⭐"
+- ✅ Warning prompt with confirmation (y/n)
+- ✅ Clear step numbering (1/5 to 5/5)
+- ✅ Detailed execution flow description
+- ✅ Progress indicators throughout
+
+**Safety Features**:
+- ✅ Confirmation prompt before execution
+- ✅ Automatic cleanup prevents file accumulation
+- ✅ Clean execution environment (fresh cookies each time)
+
+### Usage
+
+**In menu.py**:
+```bash
+python menu.py
+# Select 'i' for One-Click Auto-Execution
+# Confirm with 'y'
+# Watch the automated process:
+#   Step 1/5: Cleanup
+#   Step 2/5: Browser startup
+#   Step 3/5: Add to schedule
+#   Step 4/5: Close browser
+#   Step 5/5: Execute main.py
+```
+
+### Technical Details
+
+**Modified File**: `menu.py`
+- Line 105: Menu text updated
+- Lines 161-497: `handle_intelligent_recommendation()` completely rewritten
+
+**Execution Flow**:
+```python
+def handle_intelligent_recommendation(self):
+    # Display warning & get confirmation
+    confirm = input('確定要執行嗎？(y/n): ')
+
+    # Step 1: Pre-cleanup
+    - Clear schedule
+    - Delete cookies.json
+    - Delete stealth.min.js
+
+    # Step 2-4: Scan courses (existing logic)
+
+    # Step 3: Auto-add all to schedule
+    for item in recommendations:
+        self.scheduled_courses.append(item['config'])
+
+    # Step 5: Auto-execute
+    self.save_schedule()
+    os.system('python main.py')
+
+    # Post-cleanup
+    - Clear schedule
+    - Delete cookies.json
+    - Delete stealth.min.js
+```
+
+### Use Cases
+
+**Unattended Automation**:
+- Perfect for scheduled task automation
+- No manual intervention required after confirmation
+- Ideal for batch processing multiple courses
+
+**Daily Routine**:
+```bash
+# Morning routine - one command:
+python menu.py
+# Press 'i' then 'y'
+# Go get coffee while it runs ☕
+```
+
+### Important Notes
+
+**Breaking Change**:
+- Users expecting the old interactive mode (a/s/n) will now see automatic execution
+- The feature no longer asks which courses to add - it adds ALL
+- Make sure you want to execute ALL in-progress courses before confirming
+
+**Backward Compatibility**:
+- All other menu functions unchanged
+- Can still use traditional workflow (select courses + 's' + 'r')
+
+---
+
+## ⭐ NEW: Cross-Platform Font Support (2025-01-17)
+
+> **Enhancement**: Screenshot watermarks now support Windows/Linux/macOS
+
+### Problem
+
+The original `_load_font()` method only supported Windows fonts:
+- Windows: ✅ Works (Arial)
+- Linux: ❌ Fails (no Chinese font support)
+- macOS: ❌ Fails (no Chinese font support)
+
+### Solution
+
+Completely rewrote `_load_font()` with cross-platform font search:
+
+**Font Search Order**:
+
+**Windows**:
+1. `C:/Windows/Fonts/msyh.ttc` - Microsoft YaHei (Chinese) ✅
+2. `C:/Windows/Fonts/arial.ttf` - Arial
+
+**Linux** (15+ font paths):
+1. `/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc` - WenQuanYi Zen Hei (Chinese) ✅
+2. `/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc` - Noto Sans CJK ✅
+3. `/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf` - DejaVu Sans
+4. Liberation, FreeSans, etc.
+
+**macOS**:
+1. `/System/Library/Fonts/PingFang.ttc` - PingFang (Chinese) ✅
+2. `/Library/Fonts/Arial.ttf` - Arial
+
+### Features
+
+**Intelligent Font Loading**:
+- ✅ Tries 15+ font paths in order
+- ✅ Prioritizes Chinese fonts
+- ✅ Logs loaded font path (for debugging)
+- ✅ Graceful fallback to default font
+- ✅ Provides Linux font installation instructions
+
+**Debug Output**:
+```bash
+[截圖] 已載入字體: /usr/share/fonts/truetype/wqy/wqy-zenhei.ttc
+```
+
+**Error Handling**:
+```bash
+[警告] 無法載入任何 TrueType 字體，使用預設字體
+[提示] 在 Linux 上可安裝字體：
+       sudo apt-get install fonts-wqy-zenhei
+       或 sudo apt-get install fonts-noto-cjk
+```
+
+### Technical Implementation
+
+**Modified File**: `src/utils/screenshot_utils.py`
+- Lines 165-209: `_load_font()` completely rewritten
+
+**Code Structure**:
+```python
+def _load_font(self):
+    font_paths = [
+        # Windows fonts (Chinese first)
+        "C:/Windows/Fonts/msyh.ttc",
+        "C:/Windows/Fonts/arial.ttf",
+
+        # Linux fonts (Chinese first)
+        "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
+        "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+        # ... more paths
+
+        # macOS fonts
+        "/System/Library/Fonts/PingFang.ttc",
+        "/Library/Fonts/Arial.ttf",
+    ]
+
+    for font_path in font_paths:
+        try:
+            font = ImageFont.truetype(font_path, self.font_size)
+            print(f'[截圖] 已載入字體: {font_path}')
+            return font
+        except (OSError, IOError):
+            continue
+
+    # Fallback
+    print('[警告] 無法載入任何 TrueType 字體')
+    return ImageFont.load_default()
+```
+
+### Benefits
+
+**Multi-Platform Support**:
+- Windows users: No change (still uses preferred fonts)
+- Linux users: Can now see Chinese watermarks
+- macOS users: Can now see Chinese watermarks
+
+**Developer Experience**:
+- Easy to add new font paths
+- Clear debug output
+- Helpful error messages
+
+### Testing
+
+**On Linux**:
+```bash
+# Install Chinese fonts
+sudo apt-get install fonts-wqy-zenhei
+
+# Test screenshot
+python main.py
+# Check watermark displays Chinese correctly
+```
+
+**Verification**:
+- Check terminal output for loaded font path
+- Verify screenshot watermark shows Chinese characters
+- Confirm timestamp is readable
+
+---
+
+## ⭐ Smart Recommendation Bug Fix (2025-11-16 Evening) - SUPERSEDED
 
 > **Bug Fix**: Fixed course scanning issues in intelligent recommendation feature
 

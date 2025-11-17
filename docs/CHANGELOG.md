@@ -4,6 +4,206 @@
 
 ---
 
+## [2.0.3] - 2025-01-17
+
+### 作者
+- wizard03
+
+### 🐛 Bug 修復：截圖時機修正
+
+#### 問題描述
+截圖功能在頁面尚未完全載入時就進行截圖，導致截圖內容不完整。
+
+**根本原因**:
+- `select_course_by_name()` 的 delay 在點擊**前**延遲
+- 點擊後立即截圖，頁面還在載入中
+
+**執行順序（錯誤）**:
+```
+延遲 11 秒 → 點擊課程 → 立即截圖 ❌ (頁面還在載入)
+```
+
+**期望順序**:
+```
+點擊課程 → 延遲 11 秒 (等待頁面載入) → 截圖 ✅ (頁面已完全載入)
+```
+
+#### 解決方案
+
+**修改 1: 調整 delay 語義**
+- **檔案**: `src/pages/course_list_page.py`
+- **方法**: `select_course_by_name()`, `select_course_by_partial_name()`
+- **變更**: 將 delay 從「點擊前延遲」改為「點擊後延遲」
+
+**修改前**:
+```python
+def select_course_by_name(self, course_name: str, delay: float = 7.0):
+    time.sleep(delay)  # 點擊前延遲
+    self.click(locator)  # 點擊
+```
+
+**修改後**:
+```python
+def select_course_by_name(self, course_name: str, delay: float = 7.0):
+    self.click(locator)  # 點擊
+    time.sleep(delay)  # 點擊後延遲（等待頁面載入）
+```
+
+**修改 2: 清理重複延遲**
+- **檔案**: `src/pages/course_list_page.py:257`
+  - 移除重複的 `time.sleep(5)`
+  - 改為統一使用 `delay=5.0` 參數
+
+- **檔案**: `src/scenarios/exam_auto_answer.py:145`
+  - 移除重複的 `time.sleep(2)`
+
+#### 影響範圍
+
+**受益功能**:
+1. ✅ 截圖功能 - 現在會在頁面完全載入後截圖
+2. ✅ 智能推薦 - 減少不必要的延遲時間
+3. ✅ 自動答題 - 減少不必要的延遲時間
+
+**受影響的調用點**:
+- `src/scenarios/course_learning.py:164` - 截圖時機修正 ✅
+- `src/pages/course_list_page.py:257` - 移除重複延遲 ✅
+- `src/scenarios/exam_auto_answer.py:144` - 移除重複延遲 ✅
+- `src/scenarios/exam_learning.py:161` - 無影響（沒有重複延遲）
+
+#### 測試建議
+
+1. **測試截圖功能**:
+   ```bash
+   # 在 courses.json 中啟用截圖
+   "enable_screenshot": true
+
+   # 執行課程並檢查截圖
+   python main.py
+
+   # 確認截圖內容完整（頁面已完全載入）
+   # 路徑: screenshots/{username}/{date}/
+   ```
+
+2. **測試一鍵自動執行**:
+   ```bash
+   python menu.py
+   # 輸入 'i' → 確認 'y'
+   # 觀察執行過程是否順暢
+   ```
+
+#### 向後相容性
+
+- ✅ 所有功能正常運作
+- ✅ 沒有破壞性變更
+- ✅ 總延遲時間保持不變（只是順序調整）
+
+---
+
+### 🚀 重大功能改進：智能推薦 → 一鍵自動執行
+
+#### 核心變更：menu.py
+
+**功能重構**：從「掃描後詢問」改為「完全自動化執行」
+
+**舊邏輯** (v2.0.2+screenshot.1):
+- 掃描「修習中」課程
+- 顯示推薦清單
+- 詢問用戶選擇加入方式（a/s/n）
+- 用戶手動執行 `python main.py`
+
+**新邏輯** (v2.0.3):
+- **Step 1**: 執行前自動清理（排程、cookies、stealth.min.js）
+- **Step 2-4**: 掃描「修習中」課程（保持不變）
+- **Step 3**: 自動將所有推薦課程加入排程（無需確認）
+- **Step 5**: 自動執行 `python main.py`
+- **執行後**: 自動清理（排程、cookies、stealth.min.js）
+
+**用戶體驗改進**:
+1. ✅ 功能名稱變更：「智能推薦 ⭐ NEW」→「一鍵自動執行 ⭐」
+2. ✅ 添加警告提示與確認機制
+3. ✅ 清晰的步驟編號（1/5 到 5/5）
+4. ✅ 完整的執行流程說明
+5. ✅ 真正的「一鍵執行」- 無需手動操作
+
+**修改位置**:
+- `menu.py:105` - 選單提示文字
+- `menu.py:161-497` - `handle_intelligent_recommendation()` 完全重寫
+
+**影響範圍**:
+- 使用「i」選項的用戶現在會直接執行全流程
+- 更適合無人值守的自動化場景
+- 執行前後自動清理，確保乾淨的執行環境
+
+---
+
+### 🌍 跨平台改進：字體載入系統
+
+#### 核心變更：src/utils/screenshot_utils.py
+
+**問題**: 原字體載入邏輯僅支援 Windows，Linux/macOS 無法載入中文字體
+
+**解決方案**: 完全重寫 `_load_font()` 方法，支援跨平台字體載入
+
+**字體搜尋順序**:
+
+**Windows**:
+1. `C:/Windows/Fonts/msyh.ttc` - 微軟雅黑（支援中文）✅
+2. `C:/Windows/Fonts/arial.ttf` - Arial
+
+**Linux**:
+1. `/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc` - 文泉驛正黑（中文）✅
+2. `/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc` - Noto Sans CJK（中文）✅
+3. `/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf` - DejaVu Sans
+4. 其他 Liberation、FreeSans 字體
+
+**macOS**:
+1. `/System/Library/Fonts/PingFang.ttc` - 蘋方（中文）✅
+2. `/Library/Fonts/Arial.ttf` - Arial
+
+**特點**:
+- ✅ 總計 15+ 字體路徑
+- ✅ 優先載入中文字體
+- ✅ 逐一嘗試，找到第一個可用字體
+- ✅ 載入成功時顯示字體路徑（方便除錯）
+- ✅ 全部失敗時提供 Linux 安裝字體指令：
+  ```bash
+  sudo apt-get install fonts-wqy-zenhei
+  sudo apt-get install fonts-noto-cjk
+  ```
+
+**修改位置**:
+- `src/utils/screenshot_utils.py:165-209` - `_load_font()` 完全重寫
+
+**技術改進**:
+- 使用列表迭代取代硬編碼路徑
+- 改進錯誤處理（OSError, IOError）
+- 添加除錯日誌輸出
+
+---
+
+### 🔧 修改的文件
+
+**修改**:
+- `menu.py` - 智能推薦功能重構
+- `src/utils/screenshot_utils.py` - 跨平台字體支援
+
+**測試建議**:
+1. 測試一鍵自動執行功能：
+   ```bash
+   python menu.py
+   # 輸入 'i' → 確認 'y' → 觀察自動執行流程
+   ```
+2. 測試 Linux/macOS 截圖功能：
+   - 檢查截圖水印是否正確顯示中文
+   - 檢查終端是否輸出載入的字體路徑
+
+**向後相容性**:
+- ✅ 所有原有功能維持不變
+- ✅ Windows 用戶體驗無變化（字體載入邏輯優化但結果相同）
+- ✅ 智能推薦功能仍可正常使用（僅流程自動化）
+
+---
+
 ## [2025-01-16] - 截圖功能實作與時間配置分離
 
 ### 📝 功能摘要

@@ -142,7 +142,6 @@ class ExamAutoAnswerScenario:
         # Step 2: 進入考試
         print("[Step 2] 進入考試...")
         self.course_list_page.select_course_by_name(program_name, delay=delay)
-        time.sleep(2)
 
         # Step 3: 點擊考試名稱
         print("[Step 3] 點擊考試...")
