@@ -227,29 +227,38 @@ class CourseScheduler:
             from src.core.cookie_manager import CookieManager
             from src.pages.login_page import LoginPage
             from src.pages.course_list_page import CourseListPage
+            from src.utils.stealth_extractor import StealthExtractor
 
             print('[步驟 2/5] 正在啟動瀏覽器...')
             print('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n')
 
             # 1. 載入配置
-            print('[初始化 1/4] 載入配置...')
+            print('[初始化 1/5] 載入配置...')
             config = ConfigLoader('config/eebot.cfg')
             config.load()
             print('  ✓ 配置已載入')
 
-            # 2. 初始化核心元件（不使用 proxy）
-            print('[初始化 2/4] 初始化核心元件...')
+            # 2. 啟動瀏覽器自動化模式（提取 Stealth JS）
+            print('[初始化 2/5] 啟動瀏覽器自動化模式...')
+            extractor = StealthExtractor()
+            if not extractor.exists():
+                extractor.run()
+            else:
+                print('  ✓ 瀏覽器自動化模式就緒，跳過初始化')
+
+            # 3. 初始化核心元件（不使用 proxy）
+            print('[初始化 3/5] 初始化核心元件...')
             driver_manager = DriverManager(config)
             cookie_manager = CookieManager(config.get('cookies_file'))
             print('  ✓ 核心元件已初始化')
 
-            # 3. 建立 Driver（停用 proxy）
-            print('[初始化 3/4] 啟動瀏覽器...')
+            # 4. 建立 Driver（停用 proxy）
+            print('[初始化 4/5] 啟動瀏覽器...')
             driver = driver_manager.create_driver(use_proxy=False)
             print('  ✓ 瀏覽器已啟動')
 
-            # 4. 初始化頁面物件
-            print('[初始化 4/4] 初始化頁面物件...')
+            # 5. 初始化頁面物件
+            print('[初始化 5/5] 初始化頁面物件...')
             login_page = LoginPage(driver, cookie_manager)
             course_list_page = CourseListPage(driver)
             print('  ✓ 頁面物件已初始化\n')
