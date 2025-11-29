@@ -1038,6 +1038,106 @@ cat docs/CHANGELOG.md
 
 ---
 
+### 問題 4: Pre-commit Hook 執行失敗 (2025-11-30 發現)
+
+**症狀**:
+```bash
+git commit -m "test"
+# Exit code: 1 (失敗，無錯誤訊息)
+```
+
+**原因**:
+- `.git/hooks/pre-commit` 使用 `#!/usr/bin/env python3`
+- Windows Git Bash 環境下無法正確解析 Python 路徑
+- Git 執行 hook 時的環境變數與手動執行不同
+
+**診斷方法**:
+```bash
+# 手動執行 hook (通常成功)
+python .git/hooks/pre-commit
+
+# 使用 Git 執行 (可能失敗)
+git commit -m "test"
+```
+
+**解決方案**:
+
+**方案 1: 使用 --no-verify 繞過** (臨時方案)
+```bash
+git commit --no-verify -m "your message"
+```
+
+**方案 2: 修復 hook 腳本** (永久方案)
+```bash
+# 修改 .git/hooks/pre-commit 第一行
+# 從: #!/usr/bin/env python3
+# 改為: #!/usr/bin/env python
+# 或使用絕對路徑: #!C:/Python313/python.exe
+```
+
+**方案 3: 配置 Git Python 路徑**
+```bash
+git config --global core.hooksPath /path/to/custom/hooks
+```
+
+**參考**: 詳見 `docs/DAILY_WORK_LOG_202511300605.md` 第 3 節
+
+---
+
+### 問題 5: Git 認證失敗 (2025-11-30 解決)
+
+**症狀**:
+```bash
+git push origin main
+# remote: Failed to authenticate user
+# fatal: Authentication failed
+```
+
+**原因**:
+遠端倉庫（特別是本地伺服器）需要認證，但未配置認證儲存。
+
+**解決方案**:
+
+**方案 1: 配置認證儲存** (推薦)
+```bash
+# 永久儲存認證（明文，適合本地開發）
+git config --global credential.helper store
+
+# 或使用記憶體快取（15 分鐘）
+git config --global credential.helper cache
+
+# 或使用系統認證管理員（Windows，加密）
+git config --global credential.helper manager
+```
+
+**方案 2: 使用 SSH 金鑰**
+```bash
+# 生成 SSH 金鑰
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+# 添加公鑰到遠端伺服器
+# 修改遠端 URL
+git remote set-url origin git@github.com:user/repo.git
+```
+
+**驗證**:
+```bash
+# 檢查當前設定
+git config --global credential.helper
+
+# 測試推送
+git push origin main
+```
+
+**安全性考量**:
+- `store`: 明文儲存在 `~/.git-credentials`，僅適合本地開發
+- `manager`: 使用系統加密儲存，推薦用於正式環境
+- SSH 金鑰: 最安全，推薦用於生產環境
+
+**參考**: 詳見 `docs/DAILY_WORK_LOG_202511300605.md` 第 5 節
+
+---
+
 
 ---
 
@@ -1047,4 +1147,4 @@ cat docs/CHANGELOG.md
 
 ---
 
-*文檔版本: 2.0 | 最後更新: 2025-11-24 | 專案: Gleipnir*
+*文檔版本: 2.1 | 最後更新: 2025-11-30 | 專案: Gleipnir*
