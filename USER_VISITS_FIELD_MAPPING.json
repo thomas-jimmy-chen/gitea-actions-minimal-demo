@@ -1,0 +1,570 @@
+{
+  "api_endpoint": "POST /statistics/api/user-visits",
+  "base_url": "https://elearn.post.gov.tw",
+  "http_method": "POST",
+  "description": "Record user visit duration and activity tracking",
+  "total_occurrences": 44,
+  "response_status": 204,
+  "response_status_text": "No Content",
+  "response_body": "EMPTY",
+  "request_headers": {
+    "common_headers": {
+      "Host": {
+        "type": "string",
+        "value": "elearn.post.gov.tw",
+        "description": "Target hostname"
+      },
+      "Content-Type": {
+        "type": "string",
+        "values": ["text/plain;charset=UTF-8", "application/json; charset=UTF-8"],
+        "description": "Request content type - varies between plain text and JSON"
+      },
+      "Content-Length": {
+        "type": "integer",
+        "range": "300-616",
+        "description": "Size of request body in bytes"
+      },
+      "Cookie": {
+        "type": "string",
+        "example": "session=V2-5cb0edda-4fb9-49f0-a6af-b1a9e2105330.MTk2ODg.1764705273708.ni0vIZv3FQltlksOgLV6AI_IqTI; lang=zh-TW; warning%3Achange_password=hide",
+        "description": "Session cookie and user preferences"
+      },
+      "User-Agent": {
+        "type": "string",
+        "example": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "description": "Full browser user agent string"
+      },
+      "Origin": {
+        "type": "string",
+        "value": "https://elearn.post.gov.tw",
+        "description": "Request origin - same origin requests"
+      },
+      "Referer": {
+        "type": "string",
+        "examples": ["/user/index", "/user/courses", "/course/465/content"],
+        "description": "Page that initiated the request"
+      },
+      "X-Requested-With": {
+        "type": "string",
+        "values": ["XMLHttpRequest"],
+        "optional": true,
+        "description": "Indicates AJAX request"
+      },
+      "Sec-Fetch-Site": {
+        "type": "string",
+        "value": "same-origin",
+        "description": "Fetch site context"
+      },
+      "Sec-Fetch-Mode": {
+        "type": "string",
+        "values": ["cors", "no-cors"],
+        "description": "Fetch mode"
+      },
+      "Sec-Fetch-Dest": {
+        "type": "string",
+        "value": "empty",
+        "description": "Fetch destination type"
+      },
+      "Accept-Encoding": {
+        "type": "string",
+        "value": "gzip, deflate",
+        "description": "Supported compression algorithms"
+      },
+      "Accept-Language": {
+        "type": "string",
+        "example": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "description": "Preferred languages"
+      }
+    }
+  },
+  "request_body": {
+    "type": "JSON",
+    "total_fields": 19,
+    "fields": {
+      "required_fields": {
+        "user_id": {
+          "type": "string",
+          "description": "Unique user identifier (numeric as string)",
+          "example": "19688",
+          "mandatory": true,
+          "security_level": "PII - Personally Identifiable Information"
+        },
+        "org_id": {
+          "type": "string|integer",
+          "description": "Organization ID",
+          "examples": ["1", 1],
+          "mandatory": true,
+          "notes": "Type inconsistent - sometimes string, sometimes integer"
+        },
+        "visit_duration": {
+          "type": "integer",
+          "unit": "seconds",
+          "description": "Session duration in seconds - CRITICAL FIELD FOR LEARNING TIME TRACKING",
+          "range": "0 to 1483",
+          "examples": [1483, 11, 3, 19, 0],
+          "mandatory": true,
+          "security_level": "CRITICAL - No server-side validation, easily falsifiable",
+          "notes": "This value is calculated on client-side and sent as-is. No HMAC or signature validation exists.",
+          "frequency_distribution": {
+            "0_seconds": "11%",
+            "1_to_5_seconds": "41%",
+            "6_to_10_seconds": "20%",
+            "11_plus_seconds": "28%"
+          }
+        },
+        "is_teacher": {
+          "type": "boolean",
+          "description": "Whether user is a teacher or student",
+          "examples": [false, true],
+          "mandatory": true,
+          "default": false
+        },
+        "browser": {
+          "type": "string",
+          "description": "Browser type",
+          "example": "chrome",
+          "mandatory": true,
+          "possible_values": ["chrome", "firefox", "safari", "edge"]
+        },
+        "user_agent": {
+          "type": "string",
+          "description": "Full browser User-Agent string",
+          "example": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+          "mandatory": true,
+          "length": "varies (50-200 chars)"
+        },
+        "visit_start_from": {
+          "type": "string",
+          "format": "ISO8601 / Custom",
+          "description": "Session start timestamp",
+          "example": "2025/12/02T13:35:26",
+          "mandatory": true,
+          "format_notes": "Uses custom format YYYY/MM/DDTHH:MM:SS instead of standard ISO8601",
+          "security_level": "CRITICAL - No server-side timestamp validation"
+        },
+        "org_name": {
+          "type": "string",
+          "description": "Organization name",
+          "example": "郵政ｅ大學",
+          "mandatory": true,
+          "language": "Traditional Chinese"
+        },
+        "user_no": {
+          "type": "string",
+          "description": "Employee or student number",
+          "example": "522673",
+          "mandatory": true,
+          "security_level": "PII"
+        },
+        "user_name": {
+          "type": "string",
+          "description": "User full name",
+          "example": "陳偉鳴",
+          "mandatory": true,
+          "security_level": "PII",
+          "language": "Traditional Chinese"
+        },
+        "dep_id": {
+          "type": "string",
+          "description": "Department/Division ID",
+          "example": "156",
+          "mandatory": true
+        },
+        "dep_name": {
+          "type": "string",
+          "description": "Department/Division name",
+          "example": "新興投遞股",
+          "mandatory": true,
+          "security_level": "PII",
+          "language": "Traditional Chinese"
+        },
+        "dep_code": {
+          "type": "string",
+          "description": "Department code",
+          "example": "0040001013",
+          "mandatory": true,
+          "format": "10-digit numeric string"
+        }
+      },
+      "optional_fields": {
+        "course_id": {
+          "type": "string|integer",
+          "description": "Course identifier - present when user is within a course",
+          "example": "465",
+          "mandatory": false,
+          "notes": "Type inconsistency: sometimes string, sometimes integer",
+          "presence_indicates": "User is viewing/accessing a specific course"
+        },
+        "course_code": {
+          "type": "string",
+          "description": "Course code",
+          "example": "901011114",
+          "mandatory": false,
+          "presence_condition": "Only present when course_id is present"
+        },
+        "course_name": {
+          "type": "string",
+          "description": "Full course name",
+          "example": "性別平等工作法、性騷擾防治法及相關子法修法重點與實務案例(114年度)",
+          "mandatory": false,
+          "language": "Traditional Chinese",
+          "presence_condition": "Only present when course_id is present"
+        },
+        "activity_id": {
+          "type": "string",
+          "description": "Activity/Content item identifier - present when user is within an activity",
+          "example": "1492",
+          "mandatory": false,
+          "notes": "Indicates user is viewing a specific learning activity/SCORM content",
+          "security_level": "MEDIUM - Can be used to track content viewing"
+        },
+        "activity_type": {
+          "type": "string",
+          "description": "Type of activity/content",
+          "example": "scorm",
+          "mandatory": false,
+          "possible_values": ["scorm", "video", "assignment", "quiz"],
+          "presence_condition": "Only present when activity_id is present"
+        },
+        "master_course_id": {
+          "type": "integer",
+          "description": "Parent/Master course ID",
+          "example": 0,
+          "mandatory": false,
+          "notes": "Typically 0 for standalone courses"
+        }
+      }
+    }
+  },
+  "response_headers": {
+    "HTTP_Status": {
+      "code": 204,
+      "text": "No Content",
+      "description": "Success - no response body"
+    },
+    "Server": {
+      "type": "string",
+      "value": "Tengine",
+      "description": "Taobao-developed HTTP server (open-source)"
+    },
+    "Content-Type": {
+      "type": "string",
+      "value": "text/html; charset=utf-8",
+      "notes": "No actual content is returned"
+    },
+    "Content-Length": {
+      "type": "integer",
+      "value": 0,
+      "description": "Response body is empty"
+    },
+    "Access-Control-Allow-Origin": {
+      "type": "string",
+      "value": "*",
+      "description": "Allows cross-origin requests from any origin",
+      "security_note": "PERMISSIVE - All origins accepted"
+    },
+    "X-Frame-Options": {
+      "type": "string",
+      "value": "SAMEORIGIN",
+      "description": "Clickjacking protection"
+    },
+    "X-XSS-Protection": {
+      "type": "string",
+      "value": "1; mode=block",
+      "description": "XSS protection header"
+    },
+    "X-Content-Type-Options": {
+      "type": "string",
+      "value": "nosniff",
+      "description": "Prevents MIME type sniffing"
+    },
+    "Strict-Transport-Security": {
+      "type": "string",
+      "value": "max-age=31536000; includeSubDomains; preload;",
+      "description": "HSTS security policy - 1 year validity"
+    },
+    "Permissions-Policy": {
+      "type": "string",
+      "value": "geolocation=(self), microphone=(), camera=()",
+      "description": "Feature permissions policy"
+    },
+    "Referrer-Policy": {
+      "type": "string",
+      "value": "strict-origin-when-cross-origin",
+      "description": "Referrer disclosure policy"
+    }
+  },
+  "response_body": {
+    "type": "EMPTY",
+    "description": "204 No Content status means no response body",
+    "schema": null
+  },
+  "metrics_api_response_schema": {
+    "endpoint": "GET /statistics/api/courses/{course_id}/users/{user_id}/user-visits/metrics",
+    "http_method": "GET",
+    "response_status": 200,
+    "response_body": {
+      "type": "JSON object",
+      "fields": {
+        "first_time": {
+          "type": "string",
+          "format": "YYYY/MM/DD HH:MM:SS",
+          "description": "First visit time (user-friendly format)",
+          "example": "2025/06/12 06:28:09"
+        },
+        "last_time": {
+          "type": "string",
+          "format": "YYYY/MM/DD HH:MM:SS",
+          "description": "Last visit time",
+          "example": "2025/12/02 22:00:22"
+        },
+        "first_visit_start_from": {
+          "type": "string",
+          "format": "ISO8601 with milliseconds",
+          "description": "First visit timestamp in ISO8601 format",
+          "example": "2025-06-11T22:28:13.000Z"
+        },
+        "count": {
+          "type": "integer",
+          "description": "Total number of visit records",
+          "example": 65
+        },
+        "sum": {
+          "type": "float",
+          "unit": "seconds",
+          "description": "Total accumulated visit duration in seconds",
+          "example": 202072.0,
+          "notes": "This is the sum of all visit_duration values sent to the API"
+        },
+        "distinct": {
+          "type": "integer",
+          "description": "Number of distinct sessions/IPs",
+          "example": 1
+        },
+        "student_count": {
+          "type": "integer",
+          "description": "Number of visits by students",
+          "example": 65
+        },
+        "student_sum": {
+          "type": "float",
+          "unit": "seconds",
+          "description": "Total student visit duration",
+          "example": 202072.0
+        },
+        "student_distinct": {
+          "type": "integer",
+          "description": "Number of distinct student sessions",
+          "example": 1
+        },
+        "teacher_count": {
+          "type": "integer",
+          "description": "Number of visits by teachers",
+          "example": 0
+        },
+        "teacher_sum": {
+          "type": "float",
+          "unit": "seconds",
+          "description": "Total teacher visit duration",
+          "example": 0.0
+        },
+        "teacher_distinct": {
+          "type": "integer",
+          "description": "Number of distinct teacher sessions",
+          "example": 0
+        }
+      }
+    }
+  },
+  "security_assessment": {
+    "overall_risk_level": "HIGH",
+    "issues": [
+      {
+        "risk_level": "CRITICAL",
+        "issue": "No server-side visit_duration validation",
+        "description": "The visit_duration value is sent from client and accepted as-is without any verification against server-side timestamps",
+        "impact": "Users can arbitrarily increase reported learning time",
+        "example_exploit": "Modify visit_duration from 3 to 3600 (1 hour) in network proxy",
+        "mitigation": "Implement server-side timing validation using session start time"
+      },
+      {
+        "risk_level": "CRITICAL",
+        "issue": "No request signature or HMAC validation",
+        "description": "Requests are not signed. No way to verify request authenticity or integrity",
+        "impact": "Requests can be modified in transit (with man-in-the-middle attack)",
+        "mitigation": "Add HMAC-SHA256 signature to requests"
+      },
+      {
+        "risk_level": "HIGH",
+        "issue": "No duplicate request detection",
+        "description": "The same request can be submitted multiple times without detection",
+        "impact": "Users can multiply their learning time by replaying requests",
+        "example_exploit": "Submit same request with visit_duration=100 ten times to get 1000 seconds",
+        "mitigation": "Implement request deduplication based on content hash and timestamp window"
+      },
+      {
+        "risk_level": "HIGH",
+        "issue": "No timestamp server-side validation",
+        "description": "visit_start_from timestamp is not validated against server time",
+        "impact": "Users can claim visits from arbitrary dates in the past or future",
+        "example_exploit": "Claim to have studied for 8 hours on 2024/12/31",
+        "mitigation": "Validate timestamp is within acceptable time window (±5 minutes of server time)"
+      },
+      {
+        "risk_level": "MEDIUM",
+        "issue": "No rate limiting",
+        "description": "No API rate limiting detected",
+        "impact": "Users can spam requests to increase metrics",
+        "mitigation": "Implement rate limiting (e.g., 1 request per 3 seconds per user)"
+      },
+      {
+        "risk_level": "MEDIUM",
+        "issue": "Type inconsistency in course_id and org_id",
+        "description": "Same fields sometimes submitted as string, sometimes as integer",
+        "impact": "May cause inconsistent database entries or bypass validation",
+        "mitigation": "Enforce strict type validation"
+      },
+      {
+        "risk_level": "LOW",
+        "issue": "No IP binding",
+        "description": "No verification that requests come from expected IP addresses",
+        "impact": "Accounts can be accessed from anywhere without detection",
+        "mitigation": "Consider implementing IP whitelist for sensitive operations"
+      }
+    ]
+  },
+  "attack_scenarios": {
+    "scenario_1_direct_modification": {
+      "name": "Direct visit_duration modification via MitmProxy",
+      "tools": ["MitmProxy", "Burp Suite", "Charles Proxy"],
+      "difficulty": "EASY",
+      "steps": [
+        "Setup MitmProxy to intercept HTTPS traffic",
+        "Identify POST /statistics/api/user-visits requests",
+        "Modify JSON request body - multiply visit_duration by 10x",
+        "Forward modified request to server",
+        "Server accepts and records inflated value"
+      ],
+      "impact": "Can claim 10 hours of learning in 1 hour of actual time"
+    },
+    "scenario_2_request_replay": {
+      "name": "Replay attack - submit same request multiple times",
+      "tools": ["curl", "Python requests", "Postman"],
+      "difficulty": "VERY_EASY",
+      "steps": [
+        "Capture a valid POST request with visit_duration=100",
+        "Save the request in a script",
+        "Execute the script 10 times in a loop",
+        "Total of 1000 seconds (16.7 hours) recorded",
+        "No duplicate detection exists"
+      ],
+      "impact": "Can multiply recorded time by any factor"
+    },
+    "scenario_3_timestamp_forgery": {
+      "name": "Claim visits from past dates",
+      "tools": ["MitmProxy", "Manual editing"],
+      "difficulty": "EASY",
+      "steps": [
+        "Intercept request",
+        "Change visit_start_from to '2024/12/01T00:00:00'",
+        "Set visit_duration to 86400 (entire day)",
+        "Server records as if user studied for 24 hours in December 2024"
+      ],
+      "impact": "Can fulfill course completion requirements for past courses"
+    },
+    "scenario_4_concurrent_session_exploitation": {
+      "name": "Submit requests from multiple concurrent sessions",
+      "tools": ["Script, multiple browser tabs/windows"],
+      "difficulty": "MEDIUM",
+      "steps": [
+        "Open course in multiple browser windows/tabs",
+        "Each sends separate visit_duration record",
+        "All requests are counted separately",
+        "Total time is sum of all parallel sessions"
+      ],
+      "impact": "Can double/triple time by simulating concurrent learning"
+    }
+  },
+  "field_dependencies": {
+    "course_related_fields_are_mutually_dependent": {
+      "if_present": "course_id",
+      "then_expect": ["course_code", "course_name", "master_course_id"],
+      "absence_indicates": "User is not in a course context"
+    },
+    "activity_related_fields_are_mutually_dependent": {
+      "if_present": "activity_id",
+      "then_expect": ["activity_type"],
+      "requires": "course_id must also be present",
+      "absence_indicates": "User is not viewing an activity"
+    },
+    "user_identification": {
+      "primary": "user_id",
+      "secondary_identifiers": ["user_no", "user_name"],
+      "organizational_context": ["org_id", "org_name", "dep_id", "dep_name", "dep_code"]
+    }
+  },
+  "data_flow_timeline": {
+    "description": "Typical user session flow based on observed patterns",
+    "sequence": [
+      {
+        "step": 1,
+        "endpoint": "POST /statistics/api/user-visits",
+        "context": "User logs in and accesses dashboard",
+        "typical_duration": 1483,
+        "fields_present": ["user_id", "org_id", "visit_duration", "is_teacher", "browser", "user_agent", "visit_start_from"]
+      },
+      {
+        "step": 2,
+        "endpoint": "GET /api/my-courses",
+        "context": "Fetch user's course list",
+        "fields_present": null
+      },
+      {
+        "step": 3,
+        "endpoint": "POST /statistics/api/user-visits",
+        "context": "User navigates to courses page",
+        "typical_duration": 11,
+        "fields_present": ["all_required_fields"]
+      },
+      {
+        "step": 4,
+        "endpoint": "GET /api/course/{course_id}/activity-reads-for-user",
+        "context": "Fetch activities for selected course",
+        "fields_present": null
+      },
+      {
+        "step": 5,
+        "endpoint": "POST /statistics/api/user-visits",
+        "context": "User enters a course",
+        "typical_duration": 3,
+        "fields_present": ["all_required_fields", "course_id", "course_code", "course_name"]
+      },
+      {
+        "step": 6,
+        "endpoint": "POST /statistics/api/user-visits",
+        "context": "User clicks on an activity/lesson",
+        "typical_duration": 19,
+        "fields_present": ["all_required_fields", "course_id", "course_code", "course_name", "activity_id", "activity_type"]
+      },
+      {
+        "step": 7,
+        "endpoint": "GET /statistics/api/courses/{cid}/users/{uid}/user-visits/metrics",
+        "context": "Dashboard queries user's visit statistics",
+        "response_fields": ["first_time", "last_time", "count", "sum", "distinct"]
+      },
+      {
+        "step": 8,
+        "endpoint": "POST /statistics/api/user-visits",
+        "context": "User leaves activity/course",
+        "typical_duration": 0,
+        "fields_present": ["all_required_fields"]
+      }
+    ]
+  },
+  "implementation_notes": {
+    "client_side_calculation": "visit_duration is calculated on client-side JavaScript based on elapsed time",
+    "no_server_side_timing": "Server does not track session start/end times",
+    "session_state": "Session timing state is maintained entirely in browser",
+    "browser_persistence": "If user closes/reopens browser, old session may still be sent if JavaScript preserves state"
+  }
+}

@@ -1,0 +1,787 @@
+{
+  "total_post_requests": 107,
+  "unique_paths": 30,
+  "path_groups": {
+    "/login": 2,
+    "/statistics/api/user-visits": 56,
+    "/api/courses/465/scorm-activities-read": 2,
+    "/api/course/activities-read/1492": 2,
+    "/api/courses/452/scorm-activities-read": 2,
+    "/api/course/activities-read/1453": 2,
+    "/api/course/activities-read/exam/48": 2,
+    "/api/exams/48/submissions/storage": 1,
+    "/api/exams/48/submissions": 1,
+    "/api/courses/450/scorm-activities-read": 3,
+    "/api/course/activities-read/1430": 2,
+    "/api/course/activities-read/exam/43": 2,
+    "/api/exams/43/submissions/storage": 1,
+    "/api/exams/43/submissions": 1,
+    "/api/courses/454/scorm-activities-read": 2,
+    "/api/course/activities-read/1486": 2,
+    "/api/course/activities-read/exam/49": 2,
+    "/api/exams/49/submissions/storage": 1,
+    "/api/exams/49/submissions": 1,
+    "/api/courses/367/scorm-activities-read": 3,
+    "/api/course/activities-read/1169": 1,
+    "/api/course/activities-read/1429": 2,
+    "/api/courses/365/scorm-activities-read": 2,
+    "/api/course/activities-read/1167": 2,
+    "/api/courses/366/scorm-activities-read": 1,
+    "/api/course/activities-read/exam/41": 3,
+    "/api/exams/41/submissions/storage": 1,
+    "/api/exams/41/submissions": 1,
+    "/api/courses/369/scorm-activities-read": 2,
+    "/api/course/activities-read/1190": 2
+  },
+  "post_requests": [
+    {
+      "url": "https://elearn.post.gov.tw/login?no_cas=&next=",
+      "path": "/login",
+      "request_body_length": 105,
+      "request_body_preview": "next=&org_id=1&user_name=522673&password=jHRnpqZIFRYOG2RsGZVz&captcha_code=4812&submit=%E7%99%BB%E5%85%A5",
+      "response_status": "HTTP/1.1 302 FOUND"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 371,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":3,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T13:55:00\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 371,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":6,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T13:55:05\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/courses/465/scorm-activities-read",
+      "path": "/api/courses/465/scorm-activities-read",
+      "request_body_length": 0,
+      "request_body_preview": "",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 486,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"465\",\"visit_duration\":4,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T13:55:12\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"901011114\",\"course_name\":\"性別平等工作法、性騷擾防治法及相關子法修法重點與實務案例(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/1492",
+      "path": "/api/course/activities-read/1492",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 530,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":465,\"activity_id\":\"1492\",\"visit_duration\":57,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T13:55:17\",\"master_course_id\":0,\"activity_type\":\"scorm\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"901011114\",\"course_name\":\"性別平等工作法、性騷擾防治法及相關子法修法重點與實務案例(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/1492",
+      "path": "/api/course/activities-read/1492",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/courses/465/scorm-activities-read",
+      "path": "/api/courses/465/scorm-activities-read",
+      "request_body_length": 0,
+      "request_body_preview": "",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 486,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"465\",\"visit_duration\":8,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T13:56:15\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"901011114\",\"course_name\":\"性別平等工作法、性騷擾防治法及相關子法修法重點與實務案例(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 371,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":6,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T13:56:24\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 371,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":0,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T13:56:31\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/courses/452/scorm-activities-read",
+      "path": "/api/courses/452/scorm-activities-read",
+      "request_body_length": 0,
+      "request_body_preview": "",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 468,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"452\",\"visit_duration\":2,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T13:56:31\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"305001114\",\"course_name\":\"高齡客戶投保權益保障(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/1453",
+      "path": "/api/course/activities-read/1453",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 512,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":452,\"activity_id\":\"1453\",\"visit_duration\":72,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T13:56:35\",\"master_course_id\":0,\"activity_type\":\"scorm\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"305001114\",\"course_name\":\"高齡客戶投保權益保障(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/1453",
+      "path": "/api/course/activities-read/1453",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/courses/452/scorm-activities-read",
+      "path": "/api/courses/452/scorm-activities-read",
+      "request_body_length": 0,
+      "request_body_preview": "",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 468,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"452\",\"visit_duration\":2,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T13:57:48\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"305001114\",\"course_name\":\"高齡客戶投保權益保障(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/exam/48",
+      "path": "/api/course/activities-read/exam/48",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 509,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"452\",\"activity_id\":48,\"visit_duration\":15,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T13:57:52\",\"master_course_id\":0,\"activity_type\":\"exam\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"305001114\",\"course_name\":\"高齡客戶投保權益保障(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"004",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/exams/48/submissions/storage",
+      "path": "/api/exams/48/submissions/storage",
+      "request_body_length": 992,
+      "request_body_preview": "{\"exam_paper_instance_id\":395912,\"exam_submission_id\":null,\"subjects\":[{\"subject_id\":2933,\"subject_updated_at\":\"2025-02-27T09:26:28Z\",\"answer_option_ids\":[]},{\"subject_id\":2932,\"subject_updated_at\":\"2025-02-27T09:26:28Z\",\"answer_option_ids\":[]},{\"subject_id\":2939,\"subject_updated_at\":\"2025-02-27T09:26:28Z\",\"answer_option_ids\":[]},{\"subject_id\":2934,\"subject_updated_at\":\"2025-02-27T09:26:28Z\",\"answer_option_ids\":[]},{\"subject_id\":2936,\"subject_updated_at\":\"2025-02-27T09:26:28Z\",\"answer_option_ids",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/exams/48/submissions",
+      "path": "/api/exams/48/submissions",
+      "request_body_length": 1051,
+      "request_body_preview": "{\"exam_paper_instance_id\":395912,\"exam_submission_id\":395781,\"subjects\":[{\"subject_id\":2933,\"subject_updated_at\":\"2025-02-27T09:26:28Z\",\"answer_option_ids\":[9824]},{\"subject_id\":2932,\"subject_updated_at\":\"2025-02-27T09:26:28Z\",\"answer_option_ids\":[9821]},{\"subject_id\":2939,\"subject_updated_at\":\"2025-02-27T09:26:28Z\",\"answer_option_ids\":[9849]},{\"subject_id\":2934,\"subject_updated_at\":\"2025-02-27T09:26:28Z\",\"answer_option_ids\":[9830]},{\"subject_id\":2936,\"subject_updated_at\":\"2025-02-27T09:26:28Z\",",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 510,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"452\",\"activity_id\":48,\"visit_duration\":207,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T13:58:08\",\"master_course_id\":0,\"activity_type\":\"exam\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"305001114\",\"course_name\":\"高齡客戶投保權益保障(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"00",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/exam/48",
+      "path": "/api/course/activities-read/exam/48",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 508,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"452\",\"activity_id\":48,\"visit_duration\":6,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:01:36\",\"master_course_id\":0,\"activity_type\":\"exam\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"305001114\",\"course_name\":\"高齡客戶投保權益保障(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 372,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":17,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:01:43\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 371,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":0,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:02:01\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/courses/450/scorm-activities-read",
+      "path": "/api/courses/450/scorm-activities-read",
+      "request_body_length": 0,
+      "request_body_preview": "",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 483,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"450\",\"visit_duration\":3,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:02:01\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"399005114\",\"course_name\":\"金融服務業公平待客原則＆洗錢防制及打擊資恐教育訓練(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/1430",
+      "path": "/api/course/activities-read/1430",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 527,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":450,\"activity_id\":\"1430\",\"visit_duration\":62,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:02:06\",\"master_course_id\":0,\"activity_type\":\"scorm\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"399005114\",\"course_name\":\"金融服務業公平待客原則＆洗錢防制及打擊資恐教育訓練(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/1430",
+      "path": "/api/course/activities-read/1430",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/courses/450/scorm-activities-read",
+      "path": "/api/courses/450/scorm-activities-read",
+      "request_body_length": 0,
+      "request_body_preview": "",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 483,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"450\",\"visit_duration\":5,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:03:10\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"399005114\",\"course_name\":\"金融服務業公平待客原則＆洗錢防制及打擊資恐教育訓練(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/exam/43",
+      "path": "/api/course/activities-read/exam/43",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 523,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"450\",\"activity_id\":43,\"visit_duration\":7,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:03:15\",\"master_course_id\":0,\"activity_type\":\"exam\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"399005114\",\"course_name\":\"金融服務業公平待客原則＆洗錢防制及打擊資恐教育訓練(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/exams/43/submissions/storage",
+      "path": "/api/exams/43/submissions/storage",
+      "request_body_length": 992,
+      "request_body_preview": "{\"exam_paper_instance_id\":395916,\"exam_submission_id\":null,\"subjects\":[{\"subject_id\":2831,\"subject_updated_at\":\"2025-01-24T16:57:39Z\",\"answer_option_ids\":[]},{\"subject_id\":2833,\"subject_updated_at\":\"2025-02-18T17:38:28Z\",\"answer_option_ids\":[]},{\"subject_id\":2837,\"subject_updated_at\":\"2025-02-18T17:38:28Z\",\"answer_option_ids\":[]},{\"subject_id\":2830,\"subject_updated_at\":\"2025-01-24T16:57:39Z\",\"answer_option_ids\":[]},{\"subject_id\":2838,\"subject_updated_at\":\"2025-01-24T16:57:39Z\",\"answer_option_ids",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/exams/43/submissions",
+      "path": "/api/exams/43/submissions",
+      "request_body_length": 1051,
+      "request_body_preview": "{\"exam_paper_instance_id\":395916,\"exam_submission_id\":395785,\"subjects\":[{\"subject_id\":2831,\"subject_updated_at\":\"2025-01-24T16:57:39Z\",\"answer_option_ids\":[9418]},{\"subject_id\":2833,\"subject_updated_at\":\"2025-02-18T17:38:28Z\",\"answer_option_ids\":[9425]},{\"subject_id\":2837,\"subject_updated_at\":\"2025-02-18T17:38:28Z\",\"answer_option_ids\":[9441]},{\"subject_id\":2830,\"subject_updated_at\":\"2025-01-24T16:57:39Z\",\"answer_option_ids\":[9414]},{\"subject_id\":2838,\"subject_updated_at\":\"2025-01-24T16:57:39Z\",",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 525,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"450\",\"activity_id\":43,\"visit_duration\":187,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:03:24\",\"master_course_id\":0,\"activity_type\":\"exam\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"399005114\",\"course_name\":\"金融服務業公平待客原則＆洗錢防制及打擊資恐教育訓練(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\"",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/exam/43",
+      "path": "/api/course/activities-read/exam/43",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 523,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"450\",\"activity_id\":43,\"visit_duration\":5,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:06:32\",\"master_course_id\":0,\"activity_type\":\"exam\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"399005114\",\"course_name\":\"金融服務業公平待客原則＆洗錢防制及打擊資恐教育訓練(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/courses/450/scorm-activities-read",
+      "path": "/api/courses/450/scorm-activities-read",
+      "request_body_length": 0,
+      "request_body_preview": "",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 483,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"450\",\"visit_duration\":2,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:06:39\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"399005114\",\"course_name\":\"金融服務業公平待客原則＆洗錢防制及打擊資恐教育訓練(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 371,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":6,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:06:42\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 371,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":0,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:06:49\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/courses/454/scorm-activities-read",
+      "path": "/api/courses/454/scorm-activities-read",
+      "request_body_length": 0,
+      "request_body_preview": "",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 474,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"454\",\"visit_duration\":3,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:06:50\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"399008114\",\"course_name\":\"壽險業務員在職訓練學程課程及測驗(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/1486",
+      "path": "/api/course/activities-read/1486",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 518,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":454,\"activity_id\":\"1486\",\"visit_duration\":23,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:06:54\",\"master_course_id\":0,\"activity_type\":\"scorm\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"399008114\",\"course_name\":\"壽險業務員在職訓練學程課程及測驗(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_c",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/1486",
+      "path": "/api/course/activities-read/1486",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/courses/454/scorm-activities-read",
+      "path": "/api/courses/454/scorm-activities-read",
+      "request_body_length": 0,
+      "request_body_preview": "",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 474,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"454\",\"visit_duration\":3,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:07:19\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"399008114\",\"course_name\":\"壽險業務員在職訓練學程課程及測驗(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/exam/49",
+      "path": "/api/course/activities-read/exam/49",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 514,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"454\",\"activity_id\":49,\"visit_duration\":8,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:07:22\",\"master_course_id\":0,\"activity_type\":\"exam\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"399008114\",\"course_name\":\"壽險業務員在職訓練學程課程及測驗(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\"",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/exams/49/submissions/storage",
+      "path": "/api/exams/49/submissions/storage",
+      "request_body_length": 992,
+      "request_body_preview": "{\"exam_paper_instance_id\":395918,\"exam_submission_id\":null,\"subjects\":[{\"subject_id\":2946,\"subject_updated_at\":\"2025-03-17T13:03:47Z\",\"answer_option_ids\":[]},{\"subject_id\":2951,\"subject_updated_at\":\"2025-03-18T14:00:39Z\",\"answer_option_ids\":[]},{\"subject_id\":2944,\"subject_updated_at\":\"2025-03-18T14:00:39Z\",\"answer_option_ids\":[]},{\"subject_id\":2955,\"subject_updated_at\":\"2025-03-17T13:03:04Z\",\"answer_option_ids\":[]},{\"subject_id\":2962,\"subject_updated_at\":\"2025-03-18T18:32:09Z\",\"answer_option_ids",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/exams/49/submissions",
+      "path": "/api/exams/49/submissions",
+      "request_body_length": 1051,
+      "request_body_preview": "{\"exam_paper_instance_id\":395918,\"exam_submission_id\":395787,\"subjects\":[{\"subject_id\":2946,\"subject_updated_at\":\"2025-03-17T13:03:47Z\",\"answer_option_ids\":[9872]},{\"subject_id\":2951,\"subject_updated_at\":\"2025-03-18T14:00:39Z\",\"answer_option_ids\":[9889]},{\"subject_id\":2944,\"subject_updated_at\":\"2025-03-18T14:00:39Z\",\"answer_option_ids\":[9866]},{\"subject_id\":2955,\"subject_updated_at\":\"2025-03-17T13:03:04Z\",\"answer_option_ids\":[9904]},{\"subject_id\":2962,\"subject_updated_at\":\"2025-03-18T18:32:09Z\",",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 516,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"454\",\"activity_id\":49,\"visit_duration\":166,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:07:32\",\"master_course_id\":0,\"activity_type\":\"exam\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"399008114\",\"course_name\":\"壽險業務員在職訓練學程課程及測驗(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_cod",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/exam/49",
+      "path": "/api/course/activities-read/exam/49",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 514,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"454\",\"activity_id\":49,\"visit_duration\":7,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:10:19\",\"master_course_id\":0,\"activity_type\":\"exam\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"399008114\",\"course_name\":\"壽險業務員在職訓練學程課程及測驗(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\"",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 371,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":5,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:10:27\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 371,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":0,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:10:32\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/courses/367/scorm-activities-read",
+      "path": "/api/courses/367/scorm-activities-read",
+      "request_body_length": 0,
+      "request_body_preview": "",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 472,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"367\",\"visit_duration\":4,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:10:33\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"902001114\",\"course_name\":\"環境教育學程課程(綠色金融)(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/1169",
+      "path": "/api/course/activities-read/1169",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 518,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":367,\"activity_id\":\"1169\",\"visit_duration\":7,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:10:39\",\"master_course_id\":0,\"activity_type\":\"material\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"902001114\",\"course_name\":\"環境教育學程課程(綠色金融)(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_c",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/courses/367/scorm-activities-read",
+      "path": "/api/courses/367/scorm-activities-read",
+      "request_body_length": 0,
+      "request_body_preview": "",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 472,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"367\",\"visit_duration\":2,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:10:47\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"902001114\",\"course_name\":\"環境教育學程課程(綠色金融)(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/1429",
+      "path": "/api/course/activities-read/1429",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 516,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":367,\"activity_id\":\"1429\",\"visit_duration\":87,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:10:50\",\"master_course_id\":0,\"activity_type\":\"scorm\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"902001114\",\"course_name\":\"環境教育學程課程(綠色金融)(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_cod",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/1429",
+      "path": "/api/course/activities-read/1429",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/courses/367/scorm-activities-read",
+      "path": "/api/courses/367/scorm-activities-read",
+      "request_body_length": 0,
+      "request_body_preview": "",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 472,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"367\",\"visit_duration\":3,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:12:18\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"902001114\",\"course_name\":\"環境教育學程課程(綠色金融)(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 371,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":6,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:12:22\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/courses/365/scorm-activities-read",
+      "path": "/api/courses/365/scorm-activities-read",
+      "request_body_length": 0,
+      "request_body_preview": "",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 466,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"365\",\"visit_duration\":2,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:12:30\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"903001114\",\"course_name\":\"資通安全學程課程(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/1167",
+      "path": "/api/course/activities-read/1167",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 510,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":365,\"activity_id\":\"1167\",\"visit_duration\":62,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:12:33\",\"master_course_id\":0,\"activity_type\":\"scorm\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"903001114\",\"course_name\":\"資通安全學程課程(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"00",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/1167",
+      "path": "/api/course/activities-read/1167",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/courses/365/scorm-activities-read",
+      "path": "/api/courses/365/scorm-activities-read",
+      "request_body_length": 0,
+      "request_body_preview": "",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 466,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"365\",\"visit_duration\":2,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:13:37\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"903001114\",\"course_name\":\"資通安全學程課程(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 371,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":3,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:13:40\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 371,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":0,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:13:44\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/courses/366/scorm-activities-read",
+      "path": "/api/courses/366/scorm-activities-read",
+      "request_body_length": 0,
+      "request_body_preview": "",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 464,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"366\",\"visit_duration\":4,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:13:45\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"903003114\",\"course_name\":\"資通安全測驗(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/exam/41",
+      "path": "/api/course/activities-read/exam/41",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 504,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"366\",\"activity_id\":41,\"visit_duration\":7,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:13:50\",\"master_course_id\":0,\"activity_type\":\"exam\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"903003114\",\"course_name\":\"資通安全測驗(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"00400010",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/exams/41/submissions/storage",
+      "path": "/api/exams/41/submissions/storage",
+      "request_body_length": 2297,
+      "request_body_preview": "{\"exam_paper_instance_id\":395920,\"exam_submission_id\":null,\"subjects\":[{\"subject_id\":2818,\"subject_updated_at\":\"2025-01-02T15:13:40Z\",\"answer_option_ids\":[]},{\"subject_id\":2813,\"subject_updated_at\":\"2025-01-03T16:38:21Z\",\"answer_option_ids\":[]},{\"subject_id\":2796,\"subject_updated_at\":\"2025-01-03T16:38:30Z\",\"answer_option_ids\":[]},{\"subject_id\":2801,\"subject_updated_at\":\"2025-01-03T16:38:30Z\",\"answer_option_ids\":[]},{\"subject_id\":2817,\"subject_updated_at\":\"2025-01-02T15:13:40Z\",\"answer_option_ids",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/exams/41/submissions",
+      "path": "/api/exams/41/submissions",
+      "request_body_length": 2416,
+      "request_body_preview": "{\"exam_paper_instance_id\":395920,\"exam_submission_id\":395789,\"subjects\":[{\"subject_id\":2818,\"subject_updated_at\":\"2025-01-02T15:13:40Z\",\"answer_option_ids\":[9380]},{\"subject_id\":2813,\"subject_updated_at\":\"2025-01-03T16:38:21Z\",\"answer_option_ids\":[9366]},{\"subject_id\":2796,\"subject_updated_at\":\"2025-01-03T16:38:30Z\",\"answer_option_ids\":[9316]},{\"subject_id\":2801,\"subject_updated_at\":\"2025-01-03T16:38:30Z\",\"answer_option_ids\":[9328]},{\"subject_id\":2817,\"subject_updated_at\":\"2025-01-02T15:13:40Z\",",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 506,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"366\",\"activity_id\":41,\"visit_duration\":351,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:13:58\",\"master_course_id\":0,\"activity_type\":\"exam\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"903003114\",\"course_name\":\"資通安全測驗(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"004000",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/exam/41",
+      "path": "/api/course/activities-read/exam/41",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 505,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"366\",\"activity_id\":41,\"visit_duration\":16,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:19:50\",\"master_course_id\":0,\"activity_type\":\"exam\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"903003114\",\"course_name\":\"資通安全測驗(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 505,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"366\",\"activity_id\":41,\"visit_duration\":30,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:20:08\",\"master_course_id\":0,\"activity_type\":\"exam\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"903003114\",\"course_name\":\"資通安全測驗(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/exam/41",
+      "path": "/api/course/activities-read/exam/41",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 504,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"366\",\"activity_id\":41,\"visit_duration\":1,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:20:39\",\"master_course_id\":0,\"activity_type\":\"exam\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"903003114\",\"course_name\":\"資通安全測驗(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"00400010",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 371,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":7,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:20:42\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 371,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":0,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:20:49\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/courses/369/scorm-activities-read",
+      "path": "/api/courses/369/scorm-activities-read",
+      "request_body_length": 0,
+      "request_body_preview": "",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 474,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"369\",\"visit_duration\":3,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:20:50\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"910008114\",\"course_name\":\"預防執行職務遭受不法侵害(員工)(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/1190",
+      "path": "/api/course/activities-read/1190",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 518,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":369,\"activity_id\":\"1190\",\"visit_duration\":81,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:20:54\",\"master_course_id\":0,\"activity_type\":\"scorm\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"910008114\",\"course_name\":\"預防執行職務遭受不法侵害(員工)(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_c",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/course/activities-read/1190",
+      "path": "/api/course/activities-read/1190",
+      "request_body_length": 2,
+      "request_body_preview": "{}",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/api/courses/369/scorm-activities-read",
+      "path": "/api/courses/369/scorm-activities-read",
+      "request_body_length": 0,
+      "request_body_preview": "",
+      "response_status": "HTTP/1.1 201 CREATED"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 475,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"369\",\"visit_duration\":11,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:22:16\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"910008114\",\"course_name\":\"預防執行職務遭受不法侵害(員工)(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 371,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":4,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:22:28\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/login?no_cas=&next=",
+      "path": "/login",
+      "request_body_length": 105,
+      "request_body_preview": "next=&org_id=1&user_name=522673&password=jHRnpqZIFRYOG2RsGZVz&captcha_code=7505&submit=%E7%99%BB%E5%85%A5",
+      "response_status": "HTTP/1.1 302 FOUND"
+    },
+    {
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "path": "/statistics/api/user-visits",
+      "request_body_length": 372,
+      "request_body_preview": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":25,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/03T14:22:46\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "response_status": "HTTP/1.1 204 NO CONTENT"
+    }
+  ]
+}

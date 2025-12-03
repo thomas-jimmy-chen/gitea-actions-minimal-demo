@@ -1,0 +1,3201 @@
+{
+  "summary": {
+    "total_items": 660,
+    "user_visits_posts": 44,
+    "user_visits_metrics_endpoints": 8,
+    "online_video_metrics_endpoints": 8,
+    "interactions_metrics_endpoints": 8,
+    "activity_reads_endpoints": 8,
+    "online_video_setting_endpoints": 8
+  },
+  "user_visits_posts": [
+    {
+      "index": 23,
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "method": "POST",
+      "req_headers": {
+        "Host": "elearn.post.gov.tw",
+        "Cookie": "warning%3Achange_password=hide; _ga=GA1.3.839482039.1755469685; _ga_227RNMEJEV=GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0; lang=zh-TW; warning:verification_email=show; session=V2-1-5cb0edda-4fb9-49f0-a6af-b1a9e2105330.MTk2ODg.1764705273708.ni0vIZv3FQltlksOgLV6AI_IqTI",
+        "Content-Length": "400",
+        "Sec-Ch-Ua-Platform": "\"Windows\"",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "Sec-Ch-Ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+        "Dnt": "1",
+        "Content-Type": "text/plain;charset=UTF-8",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Accept": "*/*",
+        "Origin": "https://elearn.post.gov.tw",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "no-cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "https://elearn.post.gov.tw/user/index",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Priority": "u=4, i",
+        "Connection": "close"
+      },
+      "req_body": {
+        "user_id": "19688",
+        "org_id": "1",
+        "visit_duration": 1483,
+        "is_teacher": false,
+        "browser": "chrome",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "visit_start_from": "2025/12/02T13:35:26",
+        "org_name": "郵政ｅ大學",
+        "user_no": "522673",
+        "user_name": "陳偉鳴",
+        "dep_id": "156",
+        "dep_name": "新興投遞股",
+        "dep_code": "0040001013"
+      },
+      "resp_status": "204",
+      "resp_headers": {
+        "Server": "Tengine",
+        "Date": "Tue, 02 Dec 2025 13:59:15 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "0",
+        "Connection": "close",
+        "Access-Control-Allow-Origin": "*",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "Permissions-Policy": "geolocation=(self), microphone=(), camera=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload;"
+      },
+      "resp_body": null,
+      "raw_req_body": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":1483,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/02T13:35:26\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "raw_resp_body": ""
+    },
+    {
+      "index": 32,
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "method": "POST",
+      "req_headers": {
+        "Host": "elearn.post.gov.tw",
+        "Cookie": "warning%3Achange_password=hide; _ga=GA1.3.839482039.1755469685; _ga_227RNMEJEV=GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0; lang=zh-TW; warning:verification_email=show; session=V2-1-5cb0edda-4fb9-49f0-a6af-b1a9e2105330.MTk2ODg.1764705559885.rRPAV5kRZOoPk95R9Mq7nag4gvM",
+        "Content-Length": "398",
+        "Sec-Ch-Ua-Platform": "\"Windows\"",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "Sec-Ch-Ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+        "Dnt": "1",
+        "Content-Type": "text/plain;charset=UTF-8",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Accept": "*/*",
+        "Origin": "https://elearn.post.gov.tw",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "no-cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "https://elearn.post.gov.tw/user/courses",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Priority": "u=4, i",
+        "Connection": "close"
+      },
+      "req_body": {
+        "user_id": "19688",
+        "org_id": "1",
+        "visit_duration": 11,
+        "is_teacher": false,
+        "browser": "chrome",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "visit_start_from": "2025/12/02T14:00:11",
+        "org_name": "郵政ｅ大學",
+        "user_no": "522673",
+        "user_name": "陳偉鳴",
+        "dep_id": "156",
+        "dep_name": "新興投遞股",
+        "dep_code": "0040001013"
+      },
+      "resp_status": "204",
+      "resp_headers": {
+        "Server": "Tengine",
+        "Date": "Tue, 02 Dec 2025 13:59:31 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "0",
+        "Connection": "close",
+        "Access-Control-Allow-Origin": "*",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "Permissions-Policy": "geolocation=(self), microphone=(), camera=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload;"
+      },
+      "resp_body": null,
+      "raw_req_body": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":11,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/02T14:00:11\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "raw_resp_body": ""
+    },
+    {
+      "index": 53,
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "method": "POST",
+      "req_headers": {
+        "Host": "elearn.post.gov.tw",
+        "Cookie": "warning%3Achange_password=hide; _ga=GA1.3.839482039.1755469685; _ga_227RNMEJEV=GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0; lang=zh-TW; warning:verification_email=show; session=V2-1-5cb0edda-4fb9-49f0-a6af-b1a9e2105330.MTk2ODg.1764705570153.Eh6A2GlOeZFog5DmvgquJxj7VgI",
+        "Content-Length": "572",
+        "Sec-Ch-Ua-Platform": "\"Windows\"",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "Sec-Ch-Ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+        "Dnt": "1",
+        "Content-Type": "text/plain;charset=UTF-8",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Accept": "*/*",
+        "Origin": "https://elearn.post.gov.tw",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "no-cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "https://elearn.post.gov.tw/course/465/content",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Priority": "u=4, i",
+        "Connection": "close"
+      },
+      "req_body": {
+        "user_id": "19688",
+        "org_id": 1,
+        "course_id": "465",
+        "visit_duration": 3,
+        "is_teacher": false,
+        "browser": "chrome",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "visit_start_from": "2025/12/02T14:00:23",
+        "master_course_id": 0,
+        "org_name": "郵政ｅ大學",
+        "user_no": "522673",
+        "user_name": "陳偉鳴",
+        "course_code": "901011114",
+        "course_name": "性別平等工作法、性騷擾防治法及相關子法修法重點與實務案例(114年度)",
+        "dep_id": "156",
+        "dep_name": "新興投遞股",
+        "dep_code": "0040001013"
+      },
+      "resp_status": "204",
+      "resp_headers": {
+        "Server": "Tengine",
+        "Date": "Tue, 02 Dec 2025 13:59:32 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "0",
+        "Connection": "close",
+        "Access-Control-Allow-Origin": "*",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "Permissions-Policy": "geolocation=(self), microphone=(), camera=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload;"
+      },
+      "resp_body": null,
+      "raw_req_body": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"465\",\"visit_duration\":3,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/02T14:00:23\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"901011114\",\"course_name\":\"性別平等工作法、性騷擾防治法及相關子法修法重點與實務案例(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "raw_resp_body": ""
+    },
+    {
+      "index": 99,
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "method": "POST",
+      "req_headers": {
+        "Host": "elearn.post.gov.tw",
+        "Cookie": "warning%3Achange_password=hide; _ga=GA1.3.839482039.1755469685; _ga_227RNMEJEV=GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0; lang=zh-TW; warning:verification_email=show; session=V2-1-5cb0edda-4fb9-49f0-a6af-b1a9e2105330.MTk2ODg.1764705592838.mHOLNiaIkWFMnyhbZfa_1BnzNj4",
+        "Content-Length": "616",
+        "Sec-Ch-Ua-Platform": "\"Windows\"",
+        "Sec-Ch-Ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "X-Requested-With": "XMLHttpRequest",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "Accept": "application/json, text/javascript, */*; q=0.01",
+        "Dnt": "1",
+        "Content-Type": "application/json; charset=UTF-8",
+        "Origin": "https://elearn.post.gov.tw",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "https://elearn.post.gov.tw/course/465/learning-activity/full-screen",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Priority": "u=0, i",
+        "Connection": "close"
+      },
+      "req_body": {
+        "user_id": "19688",
+        "org_id": 1,
+        "course_id": 465,
+        "activity_id": "1492",
+        "visit_duration": 19,
+        "is_teacher": false,
+        "browser": "chrome",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "visit_start_from": "2025/12/02T14:00:27",
+        "master_course_id": 0,
+        "activity_type": "scorm",
+        "org_name": "郵政ｅ大學",
+        "user_no": "522673",
+        "user_name": "陳偉鳴",
+        "course_code": "901011114",
+        "course_name": "性別平等工作法、性騷擾防治法及相關子法修法重點與實務案例(114年度)",
+        "dep_id": "156",
+        "dep_name": "新興投遞股",
+        "dep_code": "0040001013"
+      },
+      "resp_status": "204",
+      "resp_headers": {
+        "Server": "Tengine",
+        "Date": "Tue, 02 Dec 2025 13:59:55 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "0",
+        "Connection": "close",
+        "Access-Control-Allow-Origin": "*",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "Permissions-Policy": "geolocation=(self), microphone=(), camera=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload;"
+      },
+      "resp_body": null,
+      "raw_req_body": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":465,\"activity_id\":\"1492\",\"visit_duration\":19,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/02T14:00:27\",\"master_course_id\":0,\"activity_type\":\"scorm\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"901011114\",\"course_name\":\"性別平等工作法、性騷擾防治法及相關子法修法重點與實務案例(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "raw_resp_body": ""
+    },
+    {
+      "index": 100,
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "method": "POST",
+      "req_headers": {
+        "Host": "elearn.post.gov.tw",
+        "Cookie": "warning%3Achange_password=hide; _ga=GA1.3.839482039.1755469685; _ga_227RNMEJEV=GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0; lang=zh-TW; warning:verification_email=show; session=V2-1-5cb0edda-4fb9-49f0-a6af-b1a9e2105330.MTk2ODg.1764705592838.mHOLNiaIkWFMnyhbZfa_1BnzNj4",
+        "Content-Length": "615",
+        "Sec-Ch-Ua-Platform": "\"Windows\"",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "Sec-Ch-Ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+        "Dnt": "1",
+        "Content-Type": "text/plain;charset=UTF-8",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Accept": "*/*",
+        "Origin": "https://elearn.post.gov.tw",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "no-cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "https://elearn.post.gov.tw/course/465/learning-activity/full-screen",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Priority": "u=4, i",
+        "Connection": "close"
+      },
+      "req_body": {
+        "user_id": "19688",
+        "org_id": 1,
+        "course_id": 465,
+        "activity_id": "1492",
+        "visit_duration": 3,
+        "is_teacher": false,
+        "browser": "chrome",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "visit_start_from": "2025/12/02T14:00:47",
+        "master_course_id": 0,
+        "activity_type": "scorm",
+        "org_name": "郵政ｅ大學",
+        "user_no": "522673",
+        "user_name": "陳偉鳴",
+        "course_code": "901011114",
+        "course_name": "性別平等工作法、性騷擾防治法及相關子法修法重點與實務案例(114年度)",
+        "dep_id": "156",
+        "dep_name": "新興投遞股",
+        "dep_code": "0040001013"
+      },
+      "resp_status": "204",
+      "resp_headers": {
+        "Server": "Tengine",
+        "Date": "Tue, 02 Dec 2025 13:59:56 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "0",
+        "Connection": "close",
+        "Access-Control-Allow-Origin": "*",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "Permissions-Policy": "geolocation=(self), microphone=(), camera=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload;"
+      },
+      "resp_body": null,
+      "raw_req_body": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":465,\"activity_id\":\"1492\",\"visit_duration\":3,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/02T14:00:47\",\"master_course_id\":0,\"activity_type\":\"scorm\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"901011114\",\"course_name\":\"性別平等工作法、性騷擾防治法及相關子法修法重點與實務案例(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "raw_resp_body": ""
+    },
+    {
+      "index": 121,
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "method": "POST",
+      "req_headers": {
+        "Host": "elearn.post.gov.tw",
+        "Cookie": "warning%3Achange_password=hide; _ga=GA1.3.839482039.1755469685; _ga_227RNMEJEV=GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0; lang=zh-TW; warning:verification_email=show; session=V2-1-5cb0edda-4fb9-49f0-a6af-b1a9e2105330.MTk2ODg.1764705598111.qH3aL0_oY4ar8zHE-Q2XLRb4Xhk",
+        "Content-Length": "572",
+        "Sec-Ch-Ua-Platform": "\"Windows\"",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "Sec-Ch-Ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+        "Dnt": "1",
+        "Content-Type": "text/plain;charset=UTF-8",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Accept": "*/*",
+        "Origin": "https://elearn.post.gov.tw",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "no-cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "https://elearn.post.gov.tw/course/465/content",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Priority": "u=4, i",
+        "Connection": "close"
+      },
+      "req_body": {
+        "user_id": "19688",
+        "org_id": 1,
+        "course_id": "465",
+        "visit_duration": 3,
+        "is_teacher": false,
+        "browser": "chrome",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "visit_start_from": "2025/12/02T14:00:51",
+        "master_course_id": 0,
+        "org_name": "郵政ｅ大學",
+        "user_no": "522673",
+        "user_name": "陳偉鳴",
+        "course_code": "901011114",
+        "course_name": "性別平等工作法、性騷擾防治法及相關子法修法重點與實務案例(114年度)",
+        "dep_id": "156",
+        "dep_name": "新興投遞股",
+        "dep_code": "0040001013"
+      },
+      "resp_status": "204",
+      "resp_headers": {
+        "Server": "Tengine",
+        "Date": "Tue, 02 Dec 2025 14:00:03 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "0",
+        "Connection": "close",
+        "Access-Control-Allow-Origin": "*",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "Permissions-Policy": "geolocation=(self), microphone=(), camera=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload;"
+      },
+      "resp_body": null,
+      "raw_req_body": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"465\",\"visit_duration\":3,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/02T14:00:51\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"901011114\",\"course_name\":\"性別平等工作法、性騷擾防治法及相關子法修法重點與實務案例(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "raw_resp_body": ""
+    },
+    {
+      "index": 131,
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "method": "POST",
+      "req_headers": {
+        "Host": "elearn.post.gov.tw",
+        "Cookie": "warning%3Achange_password=hide; _ga=GA1.3.839482039.1755469685; _ga_227RNMEJEV=GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0; lang=zh-TW; warning:verification_email=show; session=V2-1-5cb0edda-4fb9-49f0-a6af-b1a9e2105330.MTk2ODg.1764705604150.db6sXqIMZ-y7jl7-6rxbxUcVEIk",
+        "Content-Length": "397",
+        "Sec-Ch-Ua-Platform": "\"Windows\"",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "Sec-Ch-Ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+        "Dnt": "1",
+        "Content-Type": "text/plain;charset=UTF-8",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Accept": "*/*",
+        "Origin": "https://elearn.post.gov.tw",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "no-cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "https://elearn.post.gov.tw/user/courses",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Priority": "u=4, i",
+        "Connection": "close"
+      },
+      "req_body": {
+        "user_id": "19688",
+        "org_id": "1",
+        "visit_duration": 4,
+        "is_teacher": false,
+        "browser": "chrome",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "visit_start_from": "2025/12/02T14:00:55",
+        "org_name": "郵政ｅ大學",
+        "user_no": "522673",
+        "user_name": "陳偉鳴",
+        "dep_id": "156",
+        "dep_name": "新興投遞股",
+        "dep_code": "0040001013"
+      },
+      "resp_status": "204",
+      "resp_headers": {
+        "Server": "Tengine",
+        "Date": "Tue, 02 Dec 2025 14:00:05 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "0",
+        "Connection": "close",
+        "Access-Control-Allow-Origin": "*",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "Permissions-Policy": "geolocation=(self), microphone=(), camera=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload;"
+      },
+      "resp_body": null,
+      "raw_req_body": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":4,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/02T14:00:55\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "raw_resp_body": ""
+    },
+    {
+      "index": 133,
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "method": "POST",
+      "req_headers": {
+        "Host": "elearn.post.gov.tw",
+        "Cookie": "warning%3Achange_password=hide; _ga=GA1.3.839482039.1755469685; _ga_227RNMEJEV=GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0; lang=zh-TW; warning:verification_email=show; session=V2-1-5cb0edda-4fb9-49f0-a6af-b1a9e2105330.MTk2ODg.1764705604150.db6sXqIMZ-y7jl7-6rxbxUcVEIk",
+        "Content-Length": "397",
+        "Sec-Ch-Ua-Platform": "\"Windows\"",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "Sec-Ch-Ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+        "Dnt": "1",
+        "Content-Type": "text/plain;charset=UTF-8",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Accept": "*/*",
+        "Origin": "https://elearn.post.gov.tw",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "no-cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "https://elearn.post.gov.tw/user/courses",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Priority": "u=4, i",
+        "Connection": "close"
+      },
+      "req_body": {
+        "user_id": "19688",
+        "org_id": "1",
+        "visit_duration": 0,
+        "is_teacher": false,
+        "browser": "chrome",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "visit_start_from": "2025/12/02T14:01:00",
+        "org_name": "郵政ｅ大學",
+        "user_no": "522673",
+        "user_name": "陳偉鳴",
+        "dep_id": "156",
+        "dep_name": "新興投遞股",
+        "dep_code": "0040001013"
+      },
+      "resp_status": "204",
+      "resp_headers": {
+        "Server": "Tengine",
+        "Date": "Tue, 02 Dec 2025 14:00:08 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "0",
+        "Connection": "close",
+        "Access-Control-Allow-Origin": "*",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "Permissions-Policy": "geolocation=(self), microphone=(), camera=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload;"
+      },
+      "resp_body": null,
+      "raw_req_body": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":0,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/02T14:01:00\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "raw_resp_body": ""
+    },
+    {
+      "index": 154,
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "method": "POST",
+      "req_headers": {
+        "Host": "elearn.post.gov.tw",
+        "Cookie": "warning%3Achange_password=hide; _ga=GA1.3.839482039.1755469685; _ga_227RNMEJEV=GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0; lang=zh-TW; warning:verification_email=show; session=V2-1-5cb0edda-4fb9-49f0-a6af-b1a9e2105330.MTk2ODg.1764705611187.z1JGZPs5M_yxjvC2DlYVY3pJ9Ig",
+        "Content-Length": "518",
+        "Sec-Ch-Ua-Platform": "\"Windows\"",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "Sec-Ch-Ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+        "Dnt": "1",
+        "Content-Type": "text/plain;charset=UTF-8",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Accept": "*/*",
+        "Origin": "https://elearn.post.gov.tw",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "no-cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "https://elearn.post.gov.tw/course/452/content",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Priority": "u=4, i",
+        "Connection": "close"
+      },
+      "req_body": {
+        "user_id": "19688",
+        "org_id": 1,
+        "course_id": "452",
+        "visit_duration": 3,
+        "is_teacher": false,
+        "browser": "chrome",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "visit_start_from": "2025/12/02T14:01:01",
+        "master_course_id": 0,
+        "org_name": "郵政ｅ大學",
+        "user_no": "522673",
+        "user_name": "陳偉鳴",
+        "course_code": "305001114",
+        "course_name": "高齡客戶投保權益保障(114年度)",
+        "dep_id": "156",
+        "dep_name": "新興投遞股",
+        "dep_code": "0040001013"
+      },
+      "resp_status": "204",
+      "resp_headers": {
+        "Server": "Tengine",
+        "Date": "Tue, 02 Dec 2025 14:00:12 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "0",
+        "Connection": "close",
+        "Access-Control-Allow-Origin": "*",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "Permissions-Policy": "geolocation=(self), microphone=(), camera=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload;"
+      },
+      "resp_body": null,
+      "raw_req_body": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"452\",\"visit_duration\":3,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/02T14:01:01\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"305001114\",\"course_name\":\"高齡客戶投保權益保障(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "raw_resp_body": ""
+    },
+    {
+      "index": 172,
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "method": "POST",
+      "req_headers": {
+        "Host": "elearn.post.gov.tw",
+        "Cookie": "warning%3Achange_password=hide; _ga=GA1.3.839482039.1755469685; _ga_227RNMEJEV=GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0; lang=zh-TW; warning:verification_email=show; session=V2-1-5cb0edda-4fb9-49f0-a6af-b1a9e2105330.MTk2ODg.1764705615028.00wbitRa-bMFN2fPiutnW_0dgDE",
+        "Content-Length": "561",
+        "Sec-Ch-Ua-Platform": "\"Windows\"",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "Sec-Ch-Ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+        "Dnt": "1",
+        "Content-Type": "text/plain;charset=UTF-8",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Accept": "*/*",
+        "Origin": "https://elearn.post.gov.tw",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "no-cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "https://elearn.post.gov.tw/course/452/learning-activity/full-screen",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Priority": "u=4, i",
+        "Connection": "close"
+      },
+      "req_body": {
+        "user_id": "19688",
+        "org_id": 1,
+        "course_id": 452,
+        "activity_id": "1453",
+        "visit_duration": 3,
+        "is_teacher": false,
+        "browser": "chrome",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "visit_start_from": "2025/12/02T14:01:05",
+        "master_course_id": 0,
+        "activity_type": "scorm",
+        "org_name": "郵政ｅ大學",
+        "user_no": "522673",
+        "user_name": "陳偉鳴",
+        "course_code": "305001114",
+        "course_name": "高齡客戶投保權益保障(114年度)",
+        "dep_id": "156",
+        "dep_name": "新興投遞股",
+        "dep_code": "0040001013"
+      },
+      "resp_status": "204",
+      "resp_headers": {
+        "Server": "Tengine",
+        "Date": "Tue, 02 Dec 2025 14:00:17 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "0",
+        "Connection": "close",
+        "Access-Control-Allow-Origin": "*",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "Permissions-Policy": "geolocation=(self), microphone=(), camera=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload;"
+      },
+      "resp_body": null,
+      "raw_req_body": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":452,\"activity_id\":\"1453\",\"visit_duration\":3,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/02T14:01:05\",\"master_course_id\":0,\"activity_type\":\"scorm\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"305001114\",\"course_name\":\"高齡客戶投保權益保障(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "raw_resp_body": ""
+    },
+    {
+      "index": 193,
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "method": "POST",
+      "req_headers": {
+        "Host": "elearn.post.gov.tw",
+        "Cookie": "warning%3Achange_password=hide; _ga=GA1.3.839482039.1755469685; _ga_227RNMEJEV=GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0; lang=zh-TW; warning:verification_email=show; session=V2-1-5cb0edda-4fb9-49f0-a6af-b1a9e2105330.MTk2ODg.1764705620584.r1s4pZMj0cbcEqQJDCqdI9dMo3Q",
+        "Content-Length": "518",
+        "Sec-Ch-Ua-Platform": "\"Windows\"",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "Sec-Ch-Ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+        "Dnt": "1",
+        "Content-Type": "text/plain;charset=UTF-8",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Accept": "*/*",
+        "Origin": "https://elearn.post.gov.tw",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "no-cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "https://elearn.post.gov.tw/course/452/content",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Priority": "u=4, i",
+        "Connection": "close"
+      },
+      "req_body": {
+        "user_id": "19688",
+        "org_id": 1,
+        "course_id": "452",
+        "visit_duration": 2,
+        "is_teacher": false,
+        "browser": "chrome",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "visit_start_from": "2025/12/02T14:01:09",
+        "master_course_id": 0,
+        "org_name": "郵政ｅ大學",
+        "user_no": "522673",
+        "user_name": "陳偉鳴",
+        "course_code": "305001114",
+        "course_name": "高齡客戶投保權益保障(114年度)",
+        "dep_id": "156",
+        "dep_name": "新興投遞股",
+        "dep_code": "0040001013"
+      },
+      "resp_status": "204",
+      "resp_headers": {
+        "Server": "Tengine",
+        "Date": "Tue, 02 Dec 2025 14:00:20 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "0",
+        "Connection": "close",
+        "Access-Control-Allow-Origin": "*",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "Permissions-Policy": "geolocation=(self), microphone=(), camera=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload;"
+      },
+      "resp_body": null,
+      "raw_req_body": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"452\",\"visit_duration\":2,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/02T14:01:09\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"305001114\",\"course_name\":\"高齡客戶投保權益保障(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "raw_resp_body": ""
+    },
+    {
+      "index": 203,
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "method": "POST",
+      "req_headers": {
+        "Host": "elearn.post.gov.tw",
+        "Cookie": "warning%3Achange_password=hide; _ga=GA1.3.839482039.1755469685; _ga_227RNMEJEV=GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0; lang=zh-TW; warning:verification_email=show; session=V2-1-5cb0edda-4fb9-49f0-a6af-b1a9e2105330.MTk2ODg.1764705623649.PVF3WI_yvjtGgmxam0boDVx5VUU",
+        "Content-Length": "397",
+        "Sec-Ch-Ua-Platform": "\"Windows\"",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "Sec-Ch-Ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+        "Dnt": "1",
+        "Content-Type": "text/plain;charset=UTF-8",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Accept": "*/*",
+        "Origin": "https://elearn.post.gov.tw",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "no-cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "https://elearn.post.gov.tw/user/courses",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Priority": "u=4, i",
+        "Connection": "close"
+      },
+      "req_body": {
+        "user_id": "19688",
+        "org_id": "1",
+        "visit_duration": 3,
+        "is_teacher": false,
+        "browser": "chrome",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "visit_start_from": "2025/12/02T14:01:12",
+        "org_name": "郵政ｅ大學",
+        "user_no": "522673",
+        "user_name": "陳偉鳴",
+        "dep_id": "156",
+        "dep_name": "新興投遞股",
+        "dep_code": "0040001013"
+      },
+      "resp_status": "204",
+      "resp_headers": {
+        "Server": "Tengine",
+        "Date": "Tue, 02 Dec 2025 14:00:22 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "0",
+        "Connection": "close",
+        "Access-Control-Allow-Origin": "*",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "Permissions-Policy": "geolocation=(self), microphone=(), camera=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload;"
+      },
+      "resp_body": null,
+      "raw_req_body": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":3,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/02T14:01:12\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "raw_resp_body": ""
+    },
+    {
+      "index": 204,
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "method": "POST",
+      "req_headers": {
+        "Host": "elearn.post.gov.tw",
+        "Cookie": "warning%3Achange_password=hide; _ga=GA1.3.839482039.1755469685; _ga_227RNMEJEV=GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0; lang=zh-TW; warning:verification_email=show; session=V2-1-5cb0edda-4fb9-49f0-a6af-b1a9e2105330.MTk2ODg.1764705623649.PVF3WI_yvjtGgmxam0boDVx5VUU",
+        "Content-Length": "397",
+        "Sec-Ch-Ua-Platform": "\"Windows\"",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "Sec-Ch-Ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+        "Dnt": "1",
+        "Content-Type": "text/plain;charset=UTF-8",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Accept": "*/*",
+        "Origin": "https://elearn.post.gov.tw",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "no-cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "https://elearn.post.gov.tw/user/courses",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Priority": "u=4, i",
+        "Connection": "close"
+      },
+      "req_body": {
+        "user_id": "19688",
+        "org_id": "1",
+        "visit_duration": 0,
+        "is_teacher": false,
+        "browser": "chrome",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "visit_start_from": "2025/12/02T14:01:16",
+        "org_name": "郵政ｅ大學",
+        "user_no": "522673",
+        "user_name": "陳偉鳴",
+        "dep_id": "156",
+        "dep_name": "新興投遞股",
+        "dep_code": "0040001013"
+      },
+      "resp_status": "204",
+      "resp_headers": {
+        "Server": "Tengine",
+        "Date": "Tue, 02 Dec 2025 14:00:25 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "0",
+        "Connection": "close",
+        "Access-Control-Allow-Origin": "*",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "Permissions-Policy": "geolocation=(self), microphone=(), camera=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload;"
+      },
+      "resp_body": null,
+      "raw_req_body": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":0,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/02T14:01:16\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "raw_resp_body": ""
+    },
+    {
+      "index": 225,
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "method": "POST",
+      "req_headers": {
+        "Host": "elearn.post.gov.tw",
+        "Cookie": "warning%3Achange_password=hide; _ga=GA1.3.839482039.1755469685; _ga_227RNMEJEV=GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0; lang=zh-TW; warning:verification_email=show; session=V2-1-5cb0edda-4fb9-49f0-a6af-b1a9e2105330.MTk2ODg.1764705628083.JmjuJqYhIvBLG-D18OkTe2iDUXc",
+        "Content-Length": "563",
+        "Sec-Ch-Ua-Platform": "\"Windows\"",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "Sec-Ch-Ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+        "Dnt": "1",
+        "Content-Type": "text/plain;charset=UTF-8",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Accept": "*/*",
+        "Origin": "https://elearn.post.gov.tw",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "no-cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "https://elearn.post.gov.tw/course/450/content",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Priority": "u=4, i",
+        "Connection": "close"
+      },
+      "req_body": {
+        "user_id": "19688",
+        "org_id": 1,
+        "course_id": "450",
+        "visit_duration": 5,
+        "is_teacher": false,
+        "browser": "chrome",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "visit_start_from": "2025/12/02T14:01:17",
+        "master_course_id": 0,
+        "org_name": "郵政ｅ大學",
+        "user_no": "522673",
+        "user_name": "陳偉鳴",
+        "course_code": "399005114",
+        "course_name": "金融服務業公平待客原則＆洗錢防制及打擊資恐教育訓練(114年度)",
+        "dep_id": "156",
+        "dep_name": "新興投遞股",
+        "dep_code": "0040001013"
+      },
+      "resp_status": "204",
+      "resp_headers": {
+        "Server": "Tengine",
+        "Date": "Tue, 02 Dec 2025 14:00:31 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "0",
+        "Connection": "close",
+        "Access-Control-Allow-Origin": "*",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "Permissions-Policy": "geolocation=(self), microphone=(), camera=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload;"
+      },
+      "resp_body": null,
+      "raw_req_body": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"450\",\"visit_duration\":5,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/02T14:01:17\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"399005114\",\"course_name\":\"金融服務業公平待客原則＆洗錢防制及打擊資恐教育訓練(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "raw_resp_body": ""
+    },
+    {
+      "index": 241,
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "method": "POST",
+      "req_headers": {
+        "Host": "elearn.post.gov.tw",
+        "Cookie": "warning%3Achange_password=hide; _ga=GA1.3.839482039.1755469685; _ga_227RNMEJEV=GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0; lang=zh-TW; warning:verification_email=show; session=V2-1-5cb0edda-4fb9-49f0-a6af-b1a9e2105330.MTk2ODg.1764705630757.9R36yWlMF-Az7FDnnSxQMO-c4Pw",
+        "Content-Length": "606",
+        "Sec-Ch-Ua-Platform": "\"Windows\"",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "Sec-Ch-Ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+        "Dnt": "1",
+        "Content-Type": "text/plain;charset=UTF-8",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Accept": "*/*",
+        "Origin": "https://elearn.post.gov.tw",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "no-cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "https://elearn.post.gov.tw/course/450/learning-activity/full-screen",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Priority": "u=4, i",
+        "Connection": "close"
+      },
+      "req_body": {
+        "user_id": "19688",
+        "org_id": 1,
+        "course_id": 450,
+        "activity_id": "1430",
+        "visit_duration": 4,
+        "is_teacher": false,
+        "browser": "chrome",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "visit_start_from": "2025/12/02T14:01:23",
+        "master_course_id": 0,
+        "activity_type": "scorm",
+        "org_name": "郵政ｅ大學",
+        "user_no": "522673",
+        "user_name": "陳偉鳴",
+        "course_code": "399005114",
+        "course_name": "金融服務業公平待客原則＆洗錢防制及打擊資恐教育訓練(114年度)",
+        "dep_id": "156",
+        "dep_name": "新興投遞股",
+        "dep_code": "0040001013"
+      },
+      "resp_status": "204",
+      "resp_headers": {
+        "Server": "Tengine",
+        "Date": "Tue, 02 Dec 2025 14:00:37 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "0",
+        "Connection": "close",
+        "Access-Control-Allow-Origin": "*",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "Permissions-Policy": "geolocation=(self), microphone=(), camera=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload;"
+      },
+      "resp_body": null,
+      "raw_req_body": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":450,\"activity_id\":\"1430\",\"visit_duration\":4,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/02T14:01:23\",\"master_course_id\":0,\"activity_type\":\"scorm\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"399005114\",\"course_name\":\"金融服務業公平待客原則＆洗錢防制及打擊資恐教育訓練(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "raw_resp_body": ""
+    },
+    {
+      "index": 262,
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "method": "POST",
+      "req_headers": {
+        "Host": "elearn.post.gov.tw",
+        "Cookie": "warning%3Achange_password=hide; _ga=GA1.3.839482039.1755469685; _ga_227RNMEJEV=GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0; lang=zh-TW; warning:verification_email=show; session=V2-1-5cb0edda-4fb9-49f0-a6af-b1a9e2105330.MTk2ODg.1764705636576.PebEdw3c-nGCbyn7vVf8LVg9L6M",
+        "Content-Length": "563",
+        "Sec-Ch-Ua-Platform": "\"Windows\"",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "Sec-Ch-Ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+        "Dnt": "1",
+        "Content-Type": "text/plain;charset=UTF-8",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Accept": "*/*",
+        "Origin": "https://elearn.post.gov.tw",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "no-cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "https://elearn.post.gov.tw/course/450/content",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Priority": "u=4, i",
+        "Connection": "close"
+      },
+      "req_body": {
+        "user_id": "19688",
+        "org_id": 1,
+        "course_id": "450",
+        "visit_duration": 2,
+        "is_teacher": false,
+        "browser": "chrome",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "visit_start_from": "2025/12/02T14:01:29",
+        "master_course_id": 0,
+        "org_name": "郵政ｅ大學",
+        "user_no": "522673",
+        "user_name": "陳偉鳴",
+        "course_code": "399005114",
+        "course_name": "金融服務業公平待客原則＆洗錢防制及打擊資恐教育訓練(114年度)",
+        "dep_id": "156",
+        "dep_name": "新興投遞股",
+        "dep_code": "0040001013"
+      },
+      "resp_status": "204",
+      "resp_headers": {
+        "Server": "Tengine",
+        "Date": "Tue, 02 Dec 2025 14:00:40 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "0",
+        "Connection": "close",
+        "Access-Control-Allow-Origin": "*",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "Permissions-Policy": "geolocation=(self), microphone=(), camera=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload;"
+      },
+      "resp_body": null,
+      "raw_req_body": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"450\",\"visit_duration\":2,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/02T14:01:29\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"399005114\",\"course_name\":\"金融服務業公平待客原則＆洗錢防制及打擊資恐教育訓練(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "raw_resp_body": ""
+    },
+    {
+      "index": 273,
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "method": "POST",
+      "req_headers": {
+        "Host": "elearn.post.gov.tw",
+        "Cookie": "warning%3Achange_password=hide; _ga=GA1.3.839482039.1755469685; _ga_227RNMEJEV=GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0; lang=zh-TW; warning:verification_email=show; session=V2-1-5cb0edda-4fb9-49f0-a6af-b1a9e2105330.MTk2ODg.1764705641015.iWAnunk8sBHjHfC7Ms4702nMQd8",
+        "Content-Length": "397",
+        "Sec-Ch-Ua-Platform": "\"Windows\"",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "Sec-Ch-Ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+        "Dnt": "1",
+        "Content-Type": "text/plain;charset=UTF-8",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Accept": "*/*",
+        "Origin": "https://elearn.post.gov.tw",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "no-cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "https://elearn.post.gov.tw/user/courses",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Priority": "u=4, i",
+        "Connection": "close"
+      },
+      "req_body": {
+        "user_id": "19688",
+        "org_id": "1",
+        "visit_duration": 4,
+        "is_teacher": false,
+        "browser": "chrome",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "visit_start_from": "2025/12/02T14:01:32",
+        "org_name": "郵政ｅ大學",
+        "user_no": "522673",
+        "user_name": "陳偉鳴",
+        "dep_id": "156",
+        "dep_name": "新興投遞股",
+        "dep_code": "0040001013"
+      },
+      "resp_status": "204",
+      "resp_headers": {
+        "Server": "Tengine",
+        "Date": "Tue, 02 Dec 2025 14:00:42 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "0",
+        "Connection": "close",
+        "Access-Control-Allow-Origin": "*",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "Permissions-Policy": "geolocation=(self), microphone=(), camera=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload;"
+      },
+      "resp_body": null,
+      "raw_req_body": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":4,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/02T14:01:32\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "raw_resp_body": ""
+    },
+    {
+      "index": 274,
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "method": "POST",
+      "req_headers": {
+        "Host": "elearn.post.gov.tw",
+        "Cookie": "warning%3Achange_password=hide; _ga=GA1.3.839482039.1755469685; _ga_227RNMEJEV=GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0; lang=zh-TW; warning:verification_email=show; session=V2-1-5cb0edda-4fb9-49f0-a6af-b1a9e2105330.MTk2ODg.1764705641015.iWAnunk8sBHjHfC7Ms4702nMQd8",
+        "Content-Length": "397",
+        "Sec-Ch-Ua-Platform": "\"Windows\"",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "Sec-Ch-Ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+        "Dnt": "1",
+        "Content-Type": "text/plain;charset=UTF-8",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Accept": "*/*",
+        "Origin": "https://elearn.post.gov.tw",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "no-cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "https://elearn.post.gov.tw/user/courses",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Priority": "u=4, i",
+        "Connection": "close"
+      },
+      "req_body": {
+        "user_id": "19688",
+        "org_id": "1",
+        "visit_duration": 0,
+        "is_teacher": false,
+        "browser": "chrome",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "visit_start_from": "2025/12/02T14:01:37",
+        "org_name": "郵政ｅ大學",
+        "user_no": "522673",
+        "user_name": "陳偉鳴",
+        "dep_id": "156",
+        "dep_name": "新興投遞股",
+        "dep_code": "0040001013"
+      },
+      "resp_status": "204",
+      "resp_headers": {
+        "Server": "Tengine",
+        "Date": "Tue, 02 Dec 2025 14:00:45 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "0",
+        "Connection": "close",
+        "Access-Control-Allow-Origin": "*",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "Permissions-Policy": "geolocation=(self), microphone=(), camera=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload;"
+      },
+      "resp_body": null,
+      "raw_req_body": "{\"user_id\":\"19688\",\"org_id\":\"1\",\"visit_duration\":0,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/02T14:01:37\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "raw_resp_body": ""
+    },
+    {
+      "index": 294,
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "method": "POST",
+      "req_headers": {
+        "Host": "elearn.post.gov.tw",
+        "Cookie": "warning%3Achange_password=hide; _ga=GA1.3.839482039.1755469685; _ga_227RNMEJEV=GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0; lang=zh-TW; warning:verification_email=show; session=V2-1-5cb0edda-4fb9-49f0-a6af-b1a9e2105330.MTk2ODg.1764705648116.Z_Ro7bRergaJcNoRg65XnMUeXdU",
+        "Content-Length": "536",
+        "Sec-Ch-Ua-Platform": "\"Windows\"",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "Sec-Ch-Ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+        "Dnt": "1",
+        "Content-Type": "text/plain;charset=UTF-8",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Accept": "*/*",
+        "Origin": "https://elearn.post.gov.tw",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "no-cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "https://elearn.post.gov.tw/course/454/content",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Priority": "u=4, i",
+        "Connection": "close"
+      },
+      "req_body": {
+        "user_id": "19688",
+        "org_id": 1,
+        "course_id": "454",
+        "visit_duration": 2,
+        "is_teacher": false,
+        "browser": "chrome",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "visit_start_from": "2025/12/02T14:01:38",
+        "master_course_id": 0,
+        "org_name": "郵政ｅ大學",
+        "user_no": "522673",
+        "user_name": "陳偉鳴",
+        "course_code": "399008114",
+        "course_name": "壽險業務員在職訓練學程課程及測驗(114年度)",
+        "dep_id": "156",
+        "dep_name": "新興投遞股",
+        "dep_code": "0040001013"
+      },
+      "resp_status": "204",
+      "resp_headers": {
+        "Server": "Tengine",
+        "Date": "Tue, 02 Dec 2025 14:00:49 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "0",
+        "Connection": "close",
+        "Access-Control-Allow-Origin": "*",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "Permissions-Policy": "geolocation=(self), microphone=(), camera=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload;"
+      },
+      "resp_body": null,
+      "raw_req_body": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":\"454\",\"visit_duration\":2,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/02T14:01:38\",\"master_course_id\":0,\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"399008114\",\"course_name\":\"壽險業務員在職訓練學程課程及測驗(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "raw_resp_body": ""
+    },
+    {
+      "index": 313,
+      "url": "https://elearn.post.gov.tw/statistics/api/user-visits",
+      "method": "POST",
+      "req_headers": {
+        "Host": "elearn.post.gov.tw",
+        "Cookie": "warning%3Achange_password=hide; _ga=GA1.3.839482039.1755469685; _ga_227RNMEJEV=GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0; lang=zh-TW; warning:verification_email=show; session=V2-1-5cb0edda-4fb9-49f0-a6af-b1a9e2105330.MTk2ODg.1764705651995.tmtIAXl3s21AneMznIekPh_JiAc",
+        "Content-Length": "579",
+        "Sec-Ch-Ua-Platform": "\"Windows\"",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "Sec-Ch-Ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+        "Dnt": "1",
+        "Content-Type": "text/plain;charset=UTF-8",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Accept": "*/*",
+        "Origin": "https://elearn.post.gov.tw",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "no-cors",
+        "Sec-Fetch-Dest": "empty",
+        "Referer": "https://elearn.post.gov.tw/course/454/learning-activity/full-screen",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Priority": "u=4, i",
+        "Connection": "close"
+      },
+      "req_body": {
+        "user_id": "19688",
+        "org_id": 1,
+        "course_id": 454,
+        "activity_id": "1486",
+        "visit_duration": 4,
+        "is_teacher": false,
+        "browser": "chrome",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+        "visit_start_from": "2025/12/02T14:01:41",
+        "master_course_id": 0,
+        "activity_type": "scorm",
+        "org_name": "郵政ｅ大學",
+        "user_no": "522673",
+        "user_name": "陳偉鳴",
+        "course_code": "399008114",
+        "course_name": "壽險業務員在職訓練學程課程及測驗(114年度)",
+        "dep_id": "156",
+        "dep_name": "新興投遞股",
+        "dep_code": "0040001013"
+      },
+      "resp_status": "204",
+      "resp_headers": {
+        "Server": "Tengine",
+        "Date": "Tue, 02 Dec 2025 14:00:51 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "0",
+        "Connection": "close",
+        "Access-Control-Allow-Origin": "*",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "Permissions-Policy": "geolocation=(self), microphone=(), camera=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload;"
+      },
+      "resp_body": null,
+      "raw_req_body": "{\"user_id\":\"19688\",\"org_id\":1,\"course_id\":454,\"activity_id\":\"1486\",\"visit_duration\":4,\"is_teacher\":false,\"browser\":\"chrome\",\"user_agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\",\"visit_start_from\":\"2025/12/02T14:01:41\",\"master_course_id\":0,\"activity_type\":\"scorm\",\"org_name\":\"郵政ｅ大學\",\"user_no\":\"522673\",\"user_name\":\"陳偉鳴\",\"course_code\":\"399008114\",\"course_name\":\"壽險業務員在職訓練學程課程及測驗(114年度)\",\"dep_id\":\"156\",\"dep_name\":\"新興投遞股\",\"dep_code\":\"0040001013\"}",
+      "raw_resp_body": ""
+    }
+  ],
+  "all_request_fields": {
+    "fields": [
+      "activity_id",
+      "activity_type",
+      "browser",
+      "course_code",
+      "course_id",
+      "course_name",
+      "dep_code",
+      "dep_id",
+      "dep_name",
+      "is_teacher",
+      "master_course_id",
+      "org_id",
+      "org_name",
+      "user_agent",
+      "user_id",
+      "user_name",
+      "user_no",
+      "visit_duration",
+      "visit_start_from"
+    ],
+    "types": {
+      "user_id": "str",
+      "org_id": "str",
+      "visit_duration": "int",
+      "is_teacher": "bool",
+      "browser": "str",
+      "user_agent": "str",
+      "visit_start_from": "str",
+      "org_name": "str",
+      "user_no": "str",
+      "user_name": "str",
+      "dep_id": "str",
+      "dep_name": "str",
+      "dep_code": "str",
+      "course_id": "str",
+      "master_course_id": "int",
+      "course_code": "str",
+      "course_name": "str",
+      "activity_id": "str",
+      "activity_type": "str"
+    }
+  },
+  "user_visits_metrics": {
+    "https://elearn.post.gov.tw/statistics/api/courses/465/users/19688/user-visits/metrics": [
+      {
+        "index": 42,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "first_time": "2025/06/12 06:28:09",
+          "last_time": "2025/11/29 22:13:45",
+          "first_visit_start_from": "2025-06-11T22:28:13.000Z",
+          "count": 62,
+          "sum": 202047.0,
+          "distinct": 1,
+          "student_count": 62,
+          "student_sum": 202047.0,
+          "student_distinct": 1,
+          "teacher_count": 0,
+          "teacher_sum": 0.0,
+          "teacher_distinct": 0
+        }
+      },
+      {
+        "index": 115,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "first_time": "2025/06/12 06:28:09",
+          "last_time": "2025/12/02 22:00:22",
+          "first_visit_start_from": "2025-06-11T22:28:13.000Z",
+          "count": 65,
+          "sum": 202072.0,
+          "distinct": 1,
+          "student_count": 65,
+          "student_sum": 202072.0,
+          "student_distinct": 1,
+          "teacher_count": 0,
+          "teacher_sum": 0.0,
+          "teacher_distinct": 0
+        }
+      }
+    ],
+    "https://elearn.post.gov.tw/statistics/api/courses/452/users/19688/user-visits/metrics": [
+      {
+        "index": 142,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "first_time": "2025/06/12 20:52:04",
+          "last_time": "2025/11/29 22:19:55",
+          "first_visit_start_from": "2025-06-12T12:52:13.000Z",
+          "count": 242,
+          "sum": 393314.0,
+          "distinct": 1,
+          "student_count": 242,
+          "student_sum": 393314.0,
+          "student_distinct": 1,
+          "teacher_count": 0,
+          "teacher_sum": 0.0,
+          "teacher_distinct": 0
+        }
+      },
+      {
+        "index": 181,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "first_time": "2025/06/12 20:52:04",
+          "last_time": "2025/12/02 22:00:40",
+          "first_visit_start_from": "2025-06-12T12:52:13.000Z",
+          "count": 244,
+          "sum": 393320.0,
+          "distinct": 1,
+          "student_count": 244,
+          "student_sum": 393320.0,
+          "student_distinct": 1,
+          "teacher_count": 0,
+          "teacher_sum": 0.0,
+          "teacher_distinct": 0
+        }
+      }
+    ],
+    "https://elearn.post.gov.tw/statistics/api/courses/450/users/19688/user-visits/metrics": [
+      {
+        "index": 213,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "first_time": "2025/01/26 22:58:20",
+          "last_time": "2025/11/29 22:21:21",
+          "first_visit_start_from": "2025-01-26T14:58:16.000Z",
+          "count": 148,
+          "sum": 410215.0,
+          "distinct": 1,
+          "student_count": 148,
+          "student_sum": 410215.0,
+          "student_distinct": 1,
+          "teacher_count": 0,
+          "teacher_sum": 0.0,
+          "teacher_distinct": 0
+        }
+      },
+      {
+        "index": 251,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "first_time": "2025/01/26 22:58:20",
+          "last_time": "2025/12/02 22:01:00",
+          "first_visit_start_from": "2025-01-26T14:58:16.000Z",
+          "count": 150,
+          "sum": 410224.0,
+          "distinct": 1,
+          "student_count": 150,
+          "student_sum": 410224.0,
+          "student_distinct": 1,
+          "teacher_count": 0,
+          "teacher_sum": 0.0,
+          "teacher_distinct": 0
+        }
+      }
+    ],
+    "https://elearn.post.gov.tw/statistics/api/courses/454/users/19688/user-visits/metrics": [
+      {
+        "index": 283,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "first_time": "2025/06/12 20:54:25",
+          "last_time": "2025/11/29 22:22:47",
+          "first_visit_start_from": "2025-06-12T12:54:33.000Z",
+          "count": 75,
+          "sum": 315737.0,
+          "distinct": 1,
+          "student_count": 75,
+          "student_sum": 315737.0,
+          "student_distinct": 1,
+          "teacher_count": 0,
+          "teacher_sum": 0.0,
+          "teacher_distinct": 0
+        }
+      },
+      {
+        "index": 323,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "first_time": "2025/06/12 20:54:25",
+          "last_time": "2025/12/02 22:01:17",
+          "first_visit_start_from": "2025-06-12T12:54:33.000Z",
+          "count": 77,
+          "sum": 315743.0,
+          "distinct": 1,
+          "student_count": 77,
+          "student_sum": 315743.0,
+          "student_distinct": 1,
+          "teacher_count": 0,
+          "teacher_sum": 0.0,
+          "teacher_distinct": 0
+        }
+      }
+    ],
+    "https://elearn.post.gov.tw/statistics/api/courses/367/users/19688/user-visits/metrics": [
+      {
+        "index": 355,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "first_time": "2025/01/26 23:05:14",
+          "last_time": "2025/11/29 22:16:34",
+          "first_visit_start_from": "2025-01-26T15:05:28.000Z",
+          "count": 45,
+          "sum": 201947.0,
+          "distinct": 1,
+          "student_count": 45,
+          "student_sum": 201947.0,
+          "student_distinct": 1,
+          "teacher_count": 0,
+          "teacher_sum": 0.0,
+          "teacher_distinct": 0
+        }
+      },
+      {
+        "index": 397,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "first_time": "2025/01/26 23:05:14",
+          "last_time": "2025/12/02 22:01:36",
+          "first_visit_start_from": "2025-01-26T15:05:28.000Z",
+          "count": 47,
+          "sum": 201955.0,
+          "distinct": 1,
+          "student_count": 47,
+          "student_sum": 201955.0,
+          "student_distinct": 1,
+          "teacher_count": 0,
+          "teacher_sum": 0.0,
+          "teacher_distinct": 0
+        }
+      }
+    ],
+    "https://elearn.post.gov.tw/statistics/api/courses/365/users/19688/user-visits/metrics": [
+      {
+        "index": 490,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "first_time": "2025/06/12 20:56:07",
+          "last_time": "2025/11/29 22:17:16",
+          "first_visit_start_from": "2025-06-12T12:56:17.000Z",
+          "count": 62,
+          "sum": 310735.0,
+          "distinct": 1,
+          "student_count": 62,
+          "student_sum": 310735.0,
+          "student_distinct": 1,
+          "teacher_count": 0,
+          "teacher_sum": 0.0,
+          "teacher_distinct": 0
+        }
+      },
+      {
+        "index": 538,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "first_time": "2025/06/12 20:56:07",
+          "last_time": "2025/12/02 22:02:26",
+          "first_visit_start_from": "2025-06-12T12:56:17.000Z",
+          "count": 64,
+          "sum": 310741.0,
+          "distinct": 1,
+          "student_count": 64,
+          "student_sum": 310741.0,
+          "student_distinct": 1,
+          "teacher_count": 0,
+          "teacher_sum": 0.0,
+          "teacher_distinct": 0
+        }
+      }
+    ],
+    "https://elearn.post.gov.tw/statistics/api/courses/366/users/19688/user-visits/metrics": [
+      {
+        "index": 565,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "first_time": "2025/01/02 07:18:10",
+          "last_time": "2025/11/29 22:24:29",
+          "first_visit_start_from": "2025-01-01T23:17:58.000Z",
+          "count": 40,
+          "sum": 110831.0,
+          "distinct": 1,
+          "student_count": 40,
+          "student_sum": 110831.0,
+          "student_distinct": 1,
+          "teacher_count": 0,
+          "teacher_sum": 0.0,
+          "teacher_distinct": 0
+        }
+      }
+    ],
+    "https://elearn.post.gov.tw/statistics/api/courses/369/users/19688/user-visits/metrics": [
+      {
+        "index": 597,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "first_time": "2025/06/12 20:52:55",
+          "last_time": "2025/11/29 22:18:00",
+          "first_visit_start_from": "2025-06-12T12:53:07.000Z",
+          "count": 102,
+          "sum": 544534.0,
+          "distinct": 1,
+          "student_count": 102,
+          "student_sum": 544534.0,
+          "student_distinct": 1,
+          "teacher_count": 0,
+          "teacher_sum": 0.0,
+          "teacher_distinct": 0
+        }
+      },
+      {
+        "index": 639,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "first_time": "2025/06/12 20:52:55",
+          "last_time": "2025/12/02 22:02:54",
+          "first_visit_start_from": "2025-06-12T12:53:07.000Z",
+          "count": 104,
+          "sum": 544539.0,
+          "distinct": 1,
+          "student_count": 104,
+          "student_sum": 544539.0,
+          "student_distinct": 1,
+          "teacher_count": 0,
+          "teacher_sum": 0.0,
+          "teacher_distinct": 0
+        }
+      }
+    ]
+  },
+  "online_video_metrics": {
+    "https://elearn.post.gov.tw/statistics/api/courses/465/users/19688/online-videos/metrics?group_by=activity": [
+      {
+        "index": 44,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      },
+      {
+        "index": 112,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      }
+    ],
+    "https://elearn.post.gov.tw/statistics/api/courses/452/users/19688/online-videos/metrics?group_by=activity": [
+      {
+        "index": 143,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      },
+      {
+        "index": 182,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      }
+    ],
+    "https://elearn.post.gov.tw/statistics/api/courses/450/users/19688/online-videos/metrics?group_by=activity": [
+      {
+        "index": 215,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": [
+          {
+            "activity_id": 1433,
+            "data": {
+              "first_view": "2025/01/26 22:59:09",
+              "last_view": "2025/01/26 22:59:09",
+              "view_count": 1,
+              "first_play": "2025/01/26 22:59:11",
+              "last_play": "2025/01/26 23:02:42",
+              "play_count": 160,
+              "play_duration": 3404.0,
+              "first_download": null,
+              "last_download": null,
+              "download_count": 0
+            }
+          },
+          {
+            "activity_id": 1439,
+            "data": {
+              "first_view": "2025/01/29 13:13:19",
+              "last_view": "2025/01/29 21:45:01",
+              "view_count": 4,
+              "first_play": "2025/01/29 13:13:41",
+              "last_play": "2025/01/29 21:53:53",
+              "play_count": 130,
+              "play_duration": 7577.0,
+              "first_download": null,
+              "last_download": null,
+              "download_count": 0
+            }
+          },
+          {
+            "activity_id": 1434,
+            "data": {
+              "first_view": "2025/01/29 11:31:03",
+              "last_view": "2025/01/29 11:44:14",
+              "view_count": 6,
+              "first_play": "2025/01/29 11:31:06",
+              "last_play": "2025/01/29 11:43:31",
+              "play_count": 10,
+              "play_duration": 139.0,
+              "first_download": null,
+              "last_download": null,
+              "download_count": 0
+            }
+          },
+          {
+            "activity_id": 1440,
+            "data": {
+              "first_view": "2025/01/29 21:32:00",
+              "last_view": "2025/01/29 21:38:44",
+              "view_count": 6,
+              "first_play": "2025/01/29 21:32:20",
+              "last_play": "2025/01/29 21:38:10",
+              "play_count": 3,
+              "play_duration": 73.0,
+              "first_download": null,
+              "last_download": null,
+              "download_count": 0
+            }
+          },
+          {
+            "activity_id": 1432,
+            "data": {
+              "first_view": "2025/01/26 22:58:27",
+              "last_view": "2025/01/26 22:58:27",
+              "view_count": 1,
+              "first_play": "2025/01/26 22:58:40",
+              "last_play": "2025/01/26 22:59:07",
+              "play_count": 7,
+              "play_duration": 301.0,
+              "first_download": null,
+              "last_download": null,
+              "download_count": 0
+            }
+          },
+          {
+            "activity_id": 1438,
+            "data": {
+              "first_view": "2025/01/29 13:11:34",
+              "last_view": "2025/01/29 13:12:00",
+              "view_count": 2,
+              "first_play": "2025/01/29 13:11:52",
+              "last_play": "2025/01/29 13:12:11",
+              "play_count": 2,
+              "play_duration": 10.0,
+              "first_download": null,
+              "last_download": null,
+              "download_count": 0
+            }
+          },
+          {
+            "activity_id": 1435,
+            "data": {
+              "first_view": "2025/01/29 13:05:44",
+              "last_view": "2025/01/29 13:07:32",
+              "view_count": 2,
+              "first_play": null,
+              "last_play": null,
+              "play_count": 0,
+              "play_duration": 0.0,
+              "first_download": null,
+              "last_download": null,
+              "download_count": 0
+            }
+          },
+          {
+            "activity_id": 1437,
+            "data": {
+              "first_view": "2025/01/29 13:10:29",
+              "last_view": "2025/01/29 13:10:29",
+              "view_count": 1,
+              "first_play": "2025/01/29 13:11:02",
+              "last_play": "2025/01/29 13:11:02",
+              "play_count": 1,
+              "play_duration": 9.0,
+              "first_download": null,
+              "last_download": null,
+              "download_count": 0
+            }
+          },
+          {
+            "activity_id": 1436,
+            "data": {
+              "first_view": "2025/01/29 13:09:28",
+              "last_view": "2025/01/29 13:09:28",
+              "view_count": 1,
+              "first_play": null,
+              "last_play": null,
+              "play_count": 0,
+              "play_duration": 0.0,
+              "first_download": null,
+              "last_download": null,
+              "download_count": 0
+            }
+          }
+        ]
+      },
+      {
+        "index": 257,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": [
+          {
+            "activity_id": 1433,
+            "data": {
+              "first_view": "2025/01/26 22:59:09",
+              "last_view": "2025/01/26 22:59:09",
+              "view_count": 1,
+              "first_play": "2025/01/26 22:59:11",
+              "last_play": "2025/01/26 23:02:42",
+              "play_count": 160,
+              "play_duration": 3404.0,
+              "first_download": null,
+              "last_download": null,
+              "download_count": 0
+            }
+          },
+          {
+            "activity_id": 1439,
+            "data": {
+              "first_view": "2025/01/29 13:13:19",
+              "last_view": "2025/01/29 21:45:01",
+              "view_count": 4,
+              "first_play": "2025/01/29 13:13:41",
+              "last_play": "2025/01/29 21:53:53",
+              "play_count": 130,
+              "play_duration": 7577.0,
+              "first_download": null,
+              "last_download": null,
+              "download_count": 0
+            }
+          },
+          {
+            "activity_id": 1434,
+            "data": {
+              "first_view": "2025/01/29 11:31:03",
+              "last_view": "2025/01/29 11:44:14",
+              "view_count": 6,
+              "first_play": "2025/01/29 11:31:06",
+              "last_play": "2025/01/29 11:43:31",
+              "play_count": 10,
+              "play_duration": 139.0,
+              "first_download": null,
+              "last_download": null,
+              "download_count": 0
+            }
+          },
+          {
+            "activity_id": 1440,
+            "data": {
+              "first_view": "2025/01/29 21:32:00",
+              "last_view": "2025/01/29 21:38:44",
+              "view_count": 6,
+              "first_play": "2025/01/29 21:32:20",
+              "last_play": "2025/01/29 21:38:10",
+              "play_count": 3,
+              "play_duration": 73.0,
+              "first_download": null,
+              "last_download": null,
+              "download_count": 0
+            }
+          },
+          {
+            "activity_id": 1432,
+            "data": {
+              "first_view": "2025/01/26 22:58:27",
+              "last_view": "2025/01/26 22:58:27",
+              "view_count": 1,
+              "first_play": "2025/01/26 22:58:40",
+              "last_play": "2025/01/26 22:59:07",
+              "play_count": 7,
+              "play_duration": 301.0,
+              "first_download": null,
+              "last_download": null,
+              "download_count": 0
+            }
+          },
+          {
+            "activity_id": 1438,
+            "data": {
+              "first_view": "2025/01/29 13:11:34",
+              "last_view": "2025/01/29 13:12:00",
+              "view_count": 2,
+              "first_play": "2025/01/29 13:11:52",
+              "last_play": "2025/01/29 13:12:11",
+              "play_count": 2,
+              "play_duration": 10.0,
+              "first_download": null,
+              "last_download": null,
+              "download_count": 0
+            }
+          },
+          {
+            "activity_id": 1435,
+            "data": {
+              "first_view": "2025/01/29 13:05:44",
+              "last_view": "2025/01/29 13:07:32",
+              "view_count": 2,
+              "first_play": null,
+              "last_play": null,
+              "play_count": 0,
+              "play_duration": 0.0,
+              "first_download": null,
+              "last_download": null,
+              "download_count": 0
+            }
+          },
+          {
+            "activity_id": 1437,
+            "data": {
+              "first_view": "2025/01/29 13:10:29",
+              "last_view": "2025/01/29 13:10:29",
+              "view_count": 1,
+              "first_play": "2025/01/29 13:11:02",
+              "last_play": "2025/01/29 13:11:02",
+              "play_count": 1,
+              "play_duration": 9.0,
+              "first_download": null,
+              "last_download": null,
+              "download_count": 0
+            }
+          },
+          {
+            "activity_id": 1436,
+            "data": {
+              "first_view": "2025/01/29 13:09:28",
+              "last_view": "2025/01/29 13:09:28",
+              "view_count": 1,
+              "first_play": null,
+              "last_play": null,
+              "play_count": 0,
+              "play_duration": 0.0,
+              "first_download": null,
+              "last_download": null,
+              "download_count": 0
+            }
+          }
+        ]
+      }
+    ],
+    "https://elearn.post.gov.tw/statistics/api/courses/454/users/19688/online-videos/metrics?group_by=activity": [
+      {
+        "index": 284,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      },
+      {
+        "index": 324,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      }
+    ],
+    "https://elearn.post.gov.tw/statistics/api/courses/367/users/19688/online-videos/metrics?group_by=activity": [
+      {
+        "index": 356,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      },
+      {
+        "index": 399,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      }
+    ],
+    "https://elearn.post.gov.tw/statistics/api/courses/365/users/19688/online-videos/metrics?group_by=activity": [
+      {
+        "index": 493,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      },
+      {
+        "index": 536,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      }
+    ],
+    "https://elearn.post.gov.tw/statistics/api/courses/366/users/19688/online-videos/metrics?group_by=activity": [
+      {
+        "index": 567,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      }
+    ],
+    "https://elearn.post.gov.tw/statistics/api/courses/369/users/19688/online-videos/metrics?group_by=activity": [
+      {
+        "index": 599,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      },
+      {
+        "index": 641,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      }
+    ]
+  },
+  "interactions_metrics": {
+    "https://elearn.post.gov.tw/statistics/api/courses/465/users/19688/interactions/metrics?group_by=activity": [
+      {
+        "index": 45,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      },
+      {
+        "index": 114,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      }
+    ],
+    "https://elearn.post.gov.tw/statistics/api/courses/452/users/19688/interactions/metrics?group_by=activity": [
+      {
+        "index": 148,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      },
+      {
+        "index": 187,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      }
+    ],
+    "https://elearn.post.gov.tw/statistics/api/courses/450/users/19688/interactions/metrics?group_by=activity": [
+      {
+        "index": 214,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      },
+      {
+        "index": 253,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      }
+    ],
+    "https://elearn.post.gov.tw/statistics/api/courses/454/users/19688/interactions/metrics?group_by=activity": [
+      {
+        "index": 289,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      },
+      {
+        "index": 329,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      }
+    ],
+    "https://elearn.post.gov.tw/statistics/api/courses/367/users/19688/interactions/metrics?group_by=activity": [
+      {
+        "index": 357,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      },
+      {
+        "index": 398,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      }
+    ],
+    "https://elearn.post.gov.tw/statistics/api/courses/365/users/19688/interactions/metrics?group_by=activity": [
+      {
+        "index": 492,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      },
+      {
+        "index": 537,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      }
+    ],
+    "https://elearn.post.gov.tw/statistics/api/courses/366/users/19688/interactions/metrics?group_by=activity": [
+      {
+        "index": 566,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      }
+    ],
+    "https://elearn.post.gov.tw/statistics/api/courses/369/users/19688/interactions/metrics?group_by=activity": [
+      {
+        "index": 598,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      },
+      {
+        "index": 640,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": []
+      }
+    ]
+  },
+  "activity_reads": {
+    "https://elearn.post.gov.tw/api/course/465/activity-reads-for-user": [
+      {
+        "index": 50,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "activity_reads": [
+            {
+              "activity_id": 1491,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1310065,
+              "last_visited_at": "2025-12-02T13:59:29Z"
+            },
+            {
+              "activity_id": 1492,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1310066,
+              "last_visited_at": "2025-12-02T13:59:29Z"
+            }
+          ]
+        }
+      },
+      {
+        "index": 76,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "activity_reads": [
+            {
+              "activity_id": 1491,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1310065,
+              "last_visited_at": "2025-12-02T13:59:29Z"
+            },
+            {
+              "activity_id": 1492,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1310066,
+              "last_visited_at": "2025-12-02T13:59:29Z"
+            }
+          ]
+        }
+      }
+    ],
+    "https://elearn.post.gov.tw/api/course/452/activity-reads-for-user": [
+      {
+        "index": 150,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "activity_reads": [
+            {
+              "activity_id": 1453,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1323550,
+              "last_visited_at": "2025-12-02T14:00:10Z"
+            },
+            {
+              "activity_id": 48,
+              "activity_type": "exam_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "referrer_exam_id": 48,
+                "score": 100.0
+              },
+              "id": 1359796,
+              "last_visited_at": "2025-06-29T13:18:23Z"
+            }
+          ]
+        }
+      },
+      {
+        "index": 161,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "activity_reads": [
+            {
+              "activity_id": 1453,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1323550,
+              "last_visited_at": "2025-12-02T14:00:10Z"
+            },
+            {
+              "activity_id": 48,
+              "activity_type": "exam_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "referrer_exam_id": 48,
+                "score": 100.0
+              },
+              "id": 1359796,
+              "last_visited_at": "2025-06-29T13:18:23Z"
+            }
+          ]
+        }
+      }
+    ],
+    "https://elearn.post.gov.tw/api/course/450/activity-reads-for-user": [
+      {
+        "index": 221,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "activity_reads": [
+            {
+              "activity_id": 1430,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 773028,
+              "last_visited_at": "2025-12-02T14:00:27Z"
+            },
+            {
+              "activity_id": 1431,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 773029,
+              "last_visited_at": "2025-12-02T14:00:27Z"
+            },
+            {
+              "activity_id": 1477,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1317191,
+              "last_visited_at": "2025-12-02T14:00:27Z"
+            },
+            {
+              "activity_id": 1478,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1317192,
+              "last_visited_at": "2025-12-02T14:00:27Z"
+            },
+            {
+              "activity_id": 43,
+              "activity_type": "exam_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "referrer_exam_id": 43,
+                "score": 100.0
+              },
+              "id": 1349266,
+              "last_visited_at": "2025-06-21T13:22:42Z"
+            },
+            {
+              "activity_id": 1439,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "completeness": 93,
+                "end": 3307,
+                "ranges": [
+                  [
+                    0,
+                    3336
+                  ],
+                  [
+                    3578,
+                    3592
+                  ]
+                ]
+              },
+              "id": 778703,
+              "last_visited_at": "2025-01-29T13:51:58Z"
+            },
+            {
+              "activity_id": 1440,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "completeness": 100,
+                "end": 52,
+                "ranges": [
+                  [
+                    0,
+                    10000
+                  ]
+                ]
+              },
+              "id": 779600,
+              "last_visited_at": "2025-01-29T13:39:12Z"
+            },
+            {
+              "activity_id": 1438,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "completeness": 90,
+                "end": 3043,
+                "ranges": [
+                  [
+                    0,
+                    3043
+                  ]
+                ]
+              },
+              "id": 778701,
+              "last_visited_at": "2025-01-29T05:12:01Z"
+            },
+            {
+              "activity_id": 1437,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "completeness": 100,
+                "end": 3043,
+                "ranges": [
+                  [
+                    0,
+                    3043
+                  ]
+                ]
+              },
+              "id": 778700,
+              "last_visited_at": "2025-01-29T05:10:37Z"
+            },
+            {
+              "activity_id": 1436,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "completeness": 100,
+                "end": 3043,
+                "ranges": [
+                  [
+                    0,
+                    3043
+                  ]
+                ]
+              },
+              "id": 778698,
+              "last_visited_at": "2025-01-29T05:09:35Z"
+            },
+            {
+              "activity_id": 1435,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "completeness": 100,
+                "end": 3043,
+                "ranges": [
+                  [
+                    0,
+                    3043
+                  ]
+                ]
+              },
+              "id": 778694,
+              "last_visited_at": "2025-01-29T05:08:31Z"
+            },
+            {
+              "activity_id": 1434,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "completeness": 100,
+                "end": 2178,
+                "ranges": [
+                  [
+                    0,
+                    2178
+                  ]
+                ]
+              },
+              "id": 778530,
+              "last_visited_at": "2025-01-29T03:45:33Z"
+            },
+            {
+              "activity_id": 1433,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "completeness": 100,
+                "end": 3404,
+                "ranges": [
+                  [
+                    0,
+                    3404
+                  ]
+                ]
+              },
+              "id": 773033,
+              "last_visited_at": "2025-01-26T15:02:20Z"
+            },
+            {
+              "activity_id": 1432,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "completeness": 100,
+                "end": 285,
+                "ranges": [
+                  [
+                    0,
+                    285
+                  ]
+                ]
+              },
+              "id": 773031,
+              "last_visited_at": "2025-01-26T14:58:45Z"
+            }
+          ]
+        }
+      },
+      {
+        "index": 232,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "activity_reads": [
+            {
+              "activity_id": 1430,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 773028,
+              "last_visited_at": "2025-12-02T14:00:27Z"
+            },
+            {
+              "activity_id": 1431,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 773029,
+              "last_visited_at": "2025-12-02T14:00:27Z"
+            },
+            {
+              "activity_id": 1477,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1317191,
+              "last_visited_at": "2025-12-02T14:00:27Z"
+            },
+            {
+              "activity_id": 1478,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1317192,
+              "last_visited_at": "2025-12-02T14:00:27Z"
+            },
+            {
+              "activity_id": 43,
+              "activity_type": "exam_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "referrer_exam_id": 43,
+                "score": 100.0
+              },
+              "id": 1349266,
+              "last_visited_at": "2025-06-21T13:22:42Z"
+            },
+            {
+              "activity_id": 1439,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "completeness": 93,
+                "end": 3307,
+                "ranges": [
+                  [
+                    0,
+                    3336
+                  ],
+                  [
+                    3578,
+                    3592
+                  ]
+                ]
+              },
+              "id": 778703,
+              "last_visited_at": "2025-01-29T13:51:58Z"
+            },
+            {
+              "activity_id": 1440,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "completeness": 100,
+                "end": 52,
+                "ranges": [
+                  [
+                    0,
+                    10000
+                  ]
+                ]
+              },
+              "id": 779600,
+              "last_visited_at": "2025-01-29T13:39:12Z"
+            },
+            {
+              "activity_id": 1438,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "completeness": 90,
+                "end": 3043,
+                "ranges": [
+                  [
+                    0,
+                    3043
+                  ]
+                ]
+              },
+              "id": 778701,
+              "last_visited_at": "2025-01-29T05:12:01Z"
+            },
+            {
+              "activity_id": 1437,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "completeness": 100,
+                "end": 3043,
+                "ranges": [
+                  [
+                    0,
+                    3043
+                  ]
+                ]
+              },
+              "id": 778700,
+              "last_visited_at": "2025-01-29T05:10:37Z"
+            },
+            {
+              "activity_id": 1436,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "completeness": 100,
+                "end": 3043,
+                "ranges": [
+                  [
+                    0,
+                    3043
+                  ]
+                ]
+              },
+              "id": 778698,
+              "last_visited_at": "2025-01-29T05:09:35Z"
+            },
+            {
+              "activity_id": 1435,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "completeness": 100,
+                "end": 3043,
+                "ranges": [
+                  [
+                    0,
+                    3043
+                  ]
+                ]
+              },
+              "id": 778694,
+              "last_visited_at": "2025-01-29T05:08:31Z"
+            },
+            {
+              "activity_id": 1434,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "completeness": 100,
+                "end": 2178,
+                "ranges": [
+                  [
+                    0,
+                    2178
+                  ]
+                ]
+              },
+              "id": 778530,
+              "last_visited_at": "2025-01-29T03:45:33Z"
+            },
+            {
+              "activity_id": 1433,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "completeness": 100,
+                "end": 3404,
+                "ranges": [
+                  [
+                    0,
+                    3404
+                  ]
+                ]
+              },
+              "id": 773033,
+              "last_visited_at": "2025-01-26T15:02:20Z"
+            },
+            {
+              "activity_id": 1432,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "completeness": 100,
+                "end": 285,
+                "ranges": [
+                  [
+                    0,
+                    285
+                  ]
+                ]
+              },
+              "id": 773031,
+              "last_visited_at": "2025-01-26T14:58:45Z"
+            }
+          ]
+        }
+      }
+    ],
+    "https://elearn.post.gov.tw/api/course/454/activity-reads-for-user": [
+      {
+        "index": 291,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "activity_reads": [
+            {
+              "activity_id": 1486,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1323554,
+              "last_visited_at": "2025-12-02T14:00:47Z"
+            },
+            {
+              "activity_id": 1487,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1323555,
+              "last_visited_at": "2025-12-02T14:00:47Z"
+            },
+            {
+              "activity_id": 1488,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1323556,
+              "last_visited_at": "2025-12-02T14:00:47Z"
+            },
+            {
+              "activity_id": 1489,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1323557,
+              "last_visited_at": "2025-12-02T14:00:47Z"
+            },
+            {
+              "activity_id": 49,
+              "activity_type": "exam_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "referrer_exam_id": 49,
+                "score": 100.0
+              },
+              "id": 1329591,
+              "last_visited_at": "2025-06-13T14:16:31Z"
+            }
+          ]
+        }
+      },
+      {
+        "index": 302,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "activity_reads": [
+            {
+              "activity_id": 1486,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1323554,
+              "last_visited_at": "2025-12-02T14:00:47Z"
+            },
+            {
+              "activity_id": 1487,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1323555,
+              "last_visited_at": "2025-12-02T14:00:47Z"
+            },
+            {
+              "activity_id": 1488,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1323556,
+              "last_visited_at": "2025-12-02T14:00:47Z"
+            },
+            {
+              "activity_id": 1489,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1323557,
+              "last_visited_at": "2025-12-02T14:00:47Z"
+            },
+            {
+              "activity_id": 49,
+              "activity_type": "exam_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "referrer_exam_id": 49,
+                "score": 100.0
+              },
+              "id": 1329591,
+              "last_visited_at": "2025-06-13T14:16:31Z"
+            }
+          ]
+        }
+      }
+    ],
+    "https://elearn.post.gov.tw/api/course/367/activity-reads-for-user": [
+      {
+        "index": 365,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "activity_reads": [
+            {
+              "activity_id": 1429,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 773051,
+              "last_visited_at": "2025-12-02T14:01:05Z"
+            },
+            {
+              "activity_id": 1170,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 773047,
+              "last_visited_at": "2025-12-02T14:01:04Z"
+            },
+            {
+              "activity_id": 1171,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 773048,
+              "last_visited_at": "2025-12-02T14:01:04Z"
+            },
+            {
+              "activity_id": 1172,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 773049,
+              "last_visited_at": "2025-12-02T14:01:04Z"
+            },
+            {
+              "activity_id": 1173,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 773050,
+              "last_visited_at": "2025-12-02T14:01:04Z"
+            },
+            {
+              "activity_id": 1169,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "completeness": 100,
+                "upload_ids": [
+                  127,
+                  126
+                ]
+              },
+              "id": 1323562,
+              "last_visited_at": "2025-06-12T12:58:41Z"
+            }
+          ]
+        }
+      },
+      {
+        "index": 374,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "activity_reads": [
+            {
+              "activity_id": 1429,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 773051,
+              "last_visited_at": "2025-12-02T14:01:05Z"
+            },
+            {
+              "activity_id": 1170,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 773047,
+              "last_visited_at": "2025-12-02T14:01:04Z"
+            },
+            {
+              "activity_id": 1171,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 773048,
+              "last_visited_at": "2025-12-02T14:01:04Z"
+            },
+            {
+              "activity_id": 1172,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 773049,
+              "last_visited_at": "2025-12-02T14:01:04Z"
+            },
+            {
+              "activity_id": 1173,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 773050,
+              "last_visited_at": "2025-12-02T14:01:04Z"
+            },
+            {
+              "activity_id": 1169,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "completeness": 100,
+                "upload_ids": [
+                  127,
+                  126
+                ]
+              },
+              "id": 1323562,
+              "last_visited_at": "2025-06-12T12:58:41Z"
+            }
+          ]
+        }
+      }
+    ],
+    "https://elearn.post.gov.tw/api/course/365/activity-reads-for-user": [
+      {
+        "index": 500,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "activity_reads": [
+            {
+              "activity_id": 1167,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1323558,
+              "last_visited_at": "2025-12-02T14:01:53Z"
+            },
+            {
+              "activity_id": 1168,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1323559,
+              "last_visited_at": "2025-12-02T14:01:53Z"
+            }
+          ]
+        }
+      },
+      {
+        "index": 508,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "activity_reads": [
+            {
+              "activity_id": 1167,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1323558,
+              "last_visited_at": "2025-12-02T14:01:53Z"
+            },
+            {
+              "activity_id": 1168,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1323559,
+              "last_visited_at": "2025-12-02T14:01:53Z"
+            }
+          ]
+        }
+      }
+    ],
+    "https://elearn.post.gov.tw/api/course/366/activity-reads-for-user": [
+      {
+        "index": 573,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "activity_reads": [
+            {
+              "activity_id": 41,
+              "activity_type": "exam_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {
+                "referrer_exam_id": 41,
+                "score": 100.0
+              },
+              "id": 675112,
+              "last_visited_at": "2025-01-01T23:16:44Z"
+            }
+          ]
+        }
+      }
+    ],
+    "https://elearn.post.gov.tw/api/course/369/activity-reads-for-user": [
+      {
+        "index": 605,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "activity_reads": [
+            {
+              "activity_id": 1190,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1323552,
+              "last_visited_at": "2025-12-02T14:02:24Z"
+            },
+            {
+              "activity_id": 1191,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1323553,
+              "last_visited_at": "2025-12-02T14:02:24Z"
+            }
+          ]
+        }
+      },
+      {
+        "index": 616,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {
+          "activity_reads": [
+            {
+              "activity_id": 1190,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1323552,
+              "last_visited_at": "2025-12-02T14:02:24Z"
+            },
+            {
+              "activity_id": 1191,
+              "activity_type": "learning_activity",
+              "completeness": "full",
+              "created_by_id": 19688,
+              "created_for_id": 19688,
+              "data": {},
+              "id": 1323553,
+              "last_visited_at": "2025-12-02T14:02:24Z"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "online_video_setting": {
+    "https://elearn.post.gov.tw/api/course/465/online-video-completeness/setting?no-loading-animation=true": [
+      {
+        "index": 49,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {}
+      },
+      {
+        "index": 117,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {}
+      }
+    ],
+    "https://elearn.post.gov.tw/api/course/452/online-video-completeness/setting?no-loading-animation=true": [
+      {
+        "index": 149,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {}
+      },
+      {
+        "index": 188,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {}
+      }
+    ],
+    "https://elearn.post.gov.tw/api/course/450/online-video-completeness/setting?no-loading-animation=true": [
+      {
+        "index": 220,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {}
+      },
+      {
+        "index": 258,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {}
+      }
+    ],
+    "https://elearn.post.gov.tw/api/course/454/online-video-completeness/setting?no-loading-animation=true": [
+      {
+        "index": 290,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {}
+      },
+      {
+        "index": 330,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {}
+      }
+    ],
+    "https://elearn.post.gov.tw/api/course/367/online-video-completeness/setting?no-loading-animation=true": [
+      {
+        "index": 362,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {}
+      },
+      {
+        "index": 404,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {}
+      }
+    ],
+    "https://elearn.post.gov.tw/api/course/365/online-video-completeness/setting?no-loading-animation=true": [
+      {
+        "index": 497,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {}
+      },
+      {
+        "index": 540,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {}
+      }
+    ],
+    "https://elearn.post.gov.tw/api/course/366/online-video-completeness/setting?no-loading-animation=true": [
+      {
+        "index": 572,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {}
+      }
+    ],
+    "https://elearn.post.gov.tw/api/course/369/online-video-completeness/setting?no-loading-animation=true": [
+      {
+        "index": 604,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {}
+      },
+      {
+        "index": 646,
+        "method": "GET",
+        "resp_status": "200",
+        "resp_body": {}
+      }
+    ]
+  }
+}

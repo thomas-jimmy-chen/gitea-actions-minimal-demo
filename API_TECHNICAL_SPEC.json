@@ -1,0 +1,422 @@
+{
+  "metadata": {
+    "platform": "EEBot Learning Management System",
+    "domain": "elearn.post.gov.tw",
+    "analysis_date": "2025-12-02",
+    "burp_version": "2023.7",
+    "total_requests": 20,
+    "analyzed_endpoints": 4
+  },
+  "endpoints": [
+    {
+      "id": 1,
+      "name": "Login",
+      "path": "/login",
+      "method": "POST",
+      "base_url": "https://elearn.post.gov.tw",
+      "full_url": "https://elearn.post.gov.tw/login?no_cas=&next=",
+      "response_status": 302,
+      "response_type": "redirect",
+      "description": "User authentication endpoint",
+      "request": {
+        "content_type": "application/x-www-form-urlencoded",
+        "body_fields": [
+          {
+            "name": "next",
+            "type": "string",
+            "required": false,
+            "description": "Redirect URL after login",
+            "example": ""
+          },
+          {
+            "name": "org_id",
+            "type": "integer",
+            "required": true,
+            "description": "Organization ID",
+            "example": 1
+          },
+          {
+            "name": "user_name",
+            "type": "string",
+            "required": true,
+            "description": "Username or staff ID",
+            "example": "522673"
+          },
+          {
+            "name": "password",
+            "type": "string",
+            "required": true,
+            "description": "User password (plaintext in transit)",
+            "example": "jHRnpqZIFRYOG2RsGZVz",
+            "security_note": "Transmitted as plaintext in request body"
+          },
+          {
+            "name": "captcha_code",
+            "type": "string",
+            "required": true,
+            "description": "Verification code",
+            "example": "6479"
+          },
+          {
+            "name": "submit",
+            "type": "string",
+            "required": true,
+            "description": "Submit button value",
+            "example": "登入"
+          }
+        ],
+        "cookies": [
+          {
+            "name": "session",
+            "description": "Session ID from previous request"
+          },
+          {
+            "name": "lang",
+            "description": "Language preference"
+          },
+          {
+            "name": "_ga",
+            "description": "Google Analytics tracking"
+          }
+        ],
+        "headers_important": {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Origin": "https://elearn.post.gov.tw",
+          "Referer": "https://elearn.post.gov.tw/login"
+        }
+      },
+      "response": {
+        "status_code": 302,
+        "headers": {
+          "Location": "https://elearn.post.gov.tw/",
+          "Set-Cookie": "session=V2-[UUID].[timestamp].[checksum]; Secure; HttpOnly; Path=/; SameSite=Strict;",
+          "X-SESSION-ID": "[session-id]"
+        },
+        "body_type": "HTML redirect message"
+      }
+    },
+    {
+      "id": 2,
+      "name": "My Courses",
+      "path": "/api/my-courses",
+      "method": "GET",
+      "base_url": "https://elearn.post.gov.tw",
+      "full_url": "https://elearn.post.gov.tw/api/my-courses",
+      "response_status": 200,
+      "response_type": "json",
+      "description": "Get list of courses enrolled by user",
+      "request": {
+        "content_type": "application/json",
+        "query_params": [],
+        "request_body": null,
+        "authentication": "session_cookie",
+        "cookies_required": ["session"],
+        "headers_important": {
+          "Accept": "application/json, text/plain, */*",
+          "Referer": "https://elearn.post.gov.tw/user/index",
+          "X-Requested-With": "XMLHttpRequest (implied by Sec-Fetch-Mode: cors)"
+        }
+      },
+      "response": {
+        "status_code": 200,
+        "content_type": "application/json",
+        "body_structure": {
+          "root_object": {
+            "courses": {
+              "type": "array",
+              "item_schema": {
+                "id": "integer",
+                "name": "string (Chinese)",
+                "course_code": "string",
+                "credit": "string (e.g., '2.0')",
+                "course_type": "integer",
+                "start_date": "date (YYYY-MM-DD)",
+                "end_date": "date (YYYY-MM-DD)",
+                "academic_year": "integer or null",
+                "semester": "integer or null",
+                "grade": "string or null",
+                "klass": "string or null",
+                "department": "string or null",
+                "compulsory": "boolean",
+                "is_graduated": "boolean",
+                "is_manual_registered": "boolean",
+                "is_mute": "boolean",
+                "org_id": "integer",
+                "instructors": "array",
+                "course_attributes": {
+                  "published": "boolean",
+                  "student_count": "integer",
+                  "teaching_class_name": "string or null"
+                },
+                "org": {
+                  "is_enterprise_or_organization": "boolean or null"
+                }
+              }
+            }
+          }
+        },
+        "example": {
+          "courses": [
+            {
+              "id": 465,
+              "name": "課程名稱",
+              "course_code": "901011114",
+              "credit": "2.0",
+              "course_type": 1,
+              "start_date": "2025-03-01",
+              "end_date": "2025-12-31",
+              "compulsory": true,
+              "is_graduated": true,
+              "org_id": 1,
+              "course_attributes": {
+                "published": true,
+                "student_count": 25474
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 3,
+      "name": "Exam Center - My Exams",
+      "path": "/api/exam-center/my-exams",
+      "method": "GET",
+      "base_url": "https://elearn.post.gov.tw",
+      "full_url": "https://elearn.post.gov.tw/api/exam-center/my-exams",
+      "response_status": 200,
+      "response_type": "json",
+      "description": "Get list of exams for current user",
+      "request": {
+        "content_type": "application/json",
+        "query_params": [],
+        "request_body": null,
+        "authentication": "session_cookie",
+        "cookies_required": ["session"],
+        "headers_important": {
+          "Accept": "application/json, text/plain, */*",
+          "Referer": "https://elearn.post.gov.tw/user/index"
+        }
+      },
+      "response": {
+        "status_code": 200,
+        "content_type": "application/json",
+        "body_structure": {
+          "root_object": {
+            "my_exams": {
+              "type": "array",
+              "item_schema": {
+                "id": "string or integer (optional)",
+                "name": "string",
+                "course_id": "integer",
+                "start_time": "ISO 8601 datetime",
+                "end_time": "ISO 8601 datetime",
+                "duration_minutes": "integer",
+                "status": "string (enum: scheduled, in_progress, completed, cancelled)",
+                "score": "number or null",
+                "total_score": "number or null",
+                "passing_score": "number or null"
+              }
+            }
+          }
+        },
+        "example": {
+          "my_exams": []
+        },
+        "notes": "Empty array in this sample - user has no exams"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Curriculums",
+      "path": "/api/curriculums",
+      "method": "GET",
+      "base_url": "https://elearn.post.gov.tw",
+      "full_url": "https://elearn.post.gov.tw/api/curriculums?conditions=%7B%22not_withdrawn%22:0,%22owner_id%22:19688%7D&fields=id,name,code,status,curriculum_conditions(...)",
+      "response_status": 200,
+      "response_type": "json",
+      "description": "Get curriculum plans with course conditions",
+      "request": {
+        "content_type": "application/json",
+        "query_params": [
+          {
+            "name": "conditions",
+            "type": "JSON (URL encoded)",
+            "required": true,
+            "description": "Filter conditions for curriculums",
+            "example": "%7B%22not_withdrawn%22:0,%22owner_id%22:19688%7D",
+            "decoded_example": "{\"not_withdrawn\":0,\"owner_id\":19688}",
+            "properties": {
+              "not_withdrawn": {
+                "type": "integer",
+                "description": "0 = include withdrawn, 1 = exclude withdrawn"
+              },
+              "owner_id": {
+                "type": "integer",
+                "description": "Curriculum owner user ID"
+              }
+            }
+          },
+          {
+            "name": "fields",
+            "type": "string",
+            "required": true,
+            "description": "Comma-separated fields to return (supports nested notation)",
+            "example": "id,name,code,status,curriculum_conditions(id,name,type,target(id,name,course_list(id,name)),items(id,name))",
+            "supported_fields": [
+              "id",
+              "name",
+              "code",
+              "status",
+              "curriculum_conditions",
+              "created_at",
+              "updated_at"
+            ]
+          }
+        ],
+        "request_body": null,
+        "authentication": "session_cookie",
+        "cookies_required": ["session"]
+      },
+      "response": {
+        "status_code": 200,
+        "content_type": "application/json",
+        "body_structure": {
+          "root_object": {
+            "curriculums": {
+              "type": "array",
+              "item_schema": {
+                "id": "integer",
+                "code": "string",
+                "name": "string (Chinese)",
+                "status": "string (enum: active, in_progress, completed, archived)",
+                "curriculum_conditions": {
+                  "type": "array",
+                  "item_schema": {
+                    "id": "integer",
+                    "name": "string or null",
+                    "type": "string (e.g., course_subject_partial, course_subject_full)",
+                    "target": {
+                      "id": "integer",
+                      "name": "string (Chinese)",
+                      "course_list": {
+                        "type": "array",
+                        "item_schema": {
+                          "id": "integer",
+                          "name": "string (Chinese)"
+                        }
+                      }
+                    },
+                    "items": {
+                      "type": "array",
+                      "item_schema": {
+                        "id": "integer",
+                        "name": "string (Chinese)"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "example": {
+          "curriculums": [
+            {
+              "id": 25,
+              "code": "11407",
+              "name": "課程計畫名稱",
+              "status": "in_progress",
+              "curriculum_conditions": [
+                {
+                  "id": 186,
+                  "name": null,
+                  "type": "course_subject_partial",
+                  "target": {
+                    "id": 333,
+                    "name": "目標名稱",
+                    "course_list": [
+                      {
+                        "id": 465,
+                        "name": "課程名稱"
+                      }
+                    ]
+                  },
+                  "items": [
+                    {
+                      "id": 465,
+                      "name": "課程項目名稱"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "common_headers": {
+    "request": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+      "Accept-Encoding": "gzip, deflate",
+      "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+      "Dnt": "1",
+      "Connection": "close"
+    },
+    "response": {
+      "Server": "Tengine",
+      "Content-Security-Policy": "frame-ancestors 'self' https://elearnh5.post.gov.tw/;",
+      "X-Content-Type-Options": "nosniff",
+      "X-Frame-Options": "SAMEORIGIN",
+      "X-XSS-Protection": "1; mode=block",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload;",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Permissions-Policy": "geolocation=(self), microphone=(), camera=()"
+    }
+  },
+  "authentication": {
+    "method": "Session-based Cookie",
+    "session_cookie_format": "V2-[UUID].[timestamp].[checksum]",
+    "session_cookie_attributes": {
+      "Secure": true,
+      "HttpOnly": true,
+      "Path": "/",
+      "SameSite": "Strict"
+    },
+    "session_renewal": "Session cookie is renewed on every response",
+    "session_id_header": "X-SESSION-ID"
+  },
+  "security": {
+    "protocol": "HTTPS",
+    "tls_version": "TLS 1.2+",
+    "cors": {
+      "enabled": true,
+      "allowed_methods": ["GET", "POST"],
+      "allowed_headers": ["DNT", "X-SESSION-ID", "User-Agent", "X-Requested-With", "If-Modified-Since", "Content-Type", "Range"]
+    },
+    "csp_policy": "frame-ancestors 'self' https://elearnh5.post.gov.tw/;",
+    "xss_protection": "1; mode=block",
+    "clickjacking_protection": "SAMEORIGIN",
+    "mime_type_sniffing_protection": true,
+    "hsts": {
+      "max_age_seconds": 31536000,
+      "include_subdomains": true,
+      "preload": true
+    }
+  },
+  "rate_limiting": "Not explicitly observed in captured traffic",
+  "encoding": {
+    "request": "UTF-8",
+    "response": "UTF-8 (application/json) or UTF-8 (text/html)"
+  },
+  "notes": {
+    "password_security": "Passwords are transmitted as plaintext in the request body. While HTTPS provides transport security, consider additional encryption or token-based authentication.",
+    "session_management": "Sessions appear to be server-side with renewable tokens on each request.",
+    "api_versioning": "No explicit API versioning observed in the URL paths.",
+    "error_handling": "Not analyzed in captured traffic. Standard HTTP status codes used.",
+    "pagination": "Not observed in captured API responses.",
+    "filtering": "Filtering supported via 'conditions' query parameter (JSON format).",
+    "field_selection": "Field selection supported via 'fields' query parameter with nested notation support."
+  }
+}

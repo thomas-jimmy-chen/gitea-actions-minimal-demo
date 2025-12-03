@@ -1,0 +1,310 @@
+[
+  {
+    "index": 23,
+    "visit_duration": 1483,
+    "visit_start_from": "2025/12/02T13:35:26",
+    "course_id": null,
+    "activity_id": null
+  },
+  {
+    "index": 32,
+    "visit_duration": 11,
+    "visit_start_from": "2025/12/02T14:00:11",
+    "course_id": null,
+    "activity_id": null
+  },
+  {
+    "index": 53,
+    "visit_duration": 3,
+    "visit_start_from": "2025/12/02T14:00:23",
+    "course_id": "465",
+    "activity_id": null
+  },
+  {
+    "index": 99,
+    "visit_duration": 19,
+    "visit_start_from": "2025/12/02T14:00:27",
+    "course_id": 465,
+    "activity_id": "1492"
+  },
+  {
+    "index": 100,
+    "visit_duration": 3,
+    "visit_start_from": "2025/12/02T14:00:47",
+    "course_id": 465,
+    "activity_id": "1492"
+  },
+  {
+    "index": 121,
+    "visit_duration": 3,
+    "visit_start_from": "2025/12/02T14:00:51",
+    "course_id": "465",
+    "activity_id": null
+  },
+  {
+    "index": 131,
+    "visit_duration": 4,
+    "visit_start_from": "2025/12/02T14:00:55",
+    "course_id": null,
+    "activity_id": null
+  },
+  {
+    "index": 133,
+    "visit_duration": 0,
+    "visit_start_from": "2025/12/02T14:01:00",
+    "course_id": null,
+    "activity_id": null
+  },
+  {
+    "index": 154,
+    "visit_duration": 3,
+    "visit_start_from": "2025/12/02T14:01:01",
+    "course_id": "452",
+    "activity_id": null
+  },
+  {
+    "index": 172,
+    "visit_duration": 3,
+    "visit_start_from": "2025/12/02T14:01:05",
+    "course_id": 452,
+    "activity_id": "1453"
+  },
+  {
+    "index": 193,
+    "visit_duration": 2,
+    "visit_start_from": "2025/12/02T14:01:09",
+    "course_id": "452",
+    "activity_id": null
+  },
+  {
+    "index": 203,
+    "visit_duration": 3,
+    "visit_start_from": "2025/12/02T14:01:12",
+    "course_id": null,
+    "activity_id": null
+  },
+  {
+    "index": 204,
+    "visit_duration": 0,
+    "visit_start_from": "2025/12/02T14:01:16",
+    "course_id": null,
+    "activity_id": null
+  },
+  {
+    "index": 225,
+    "visit_duration": 5,
+    "visit_start_from": "2025/12/02T14:01:17",
+    "course_id": "450",
+    "activity_id": null
+  },
+  {
+    "index": 241,
+    "visit_duration": 4,
+    "visit_start_from": "2025/12/02T14:01:23",
+    "course_id": 450,
+    "activity_id": "1430"
+  },
+  {
+    "index": 262,
+    "visit_duration": 2,
+    "visit_start_from": "2025/12/02T14:01:29",
+    "course_id": "450",
+    "activity_id": null
+  },
+  {
+    "index": 273,
+    "visit_duration": 4,
+    "visit_start_from": "2025/12/02T14:01:32",
+    "course_id": null,
+    "activity_id": null
+  },
+  {
+    "index": 274,
+    "visit_duration": 0,
+    "visit_start_from": "2025/12/02T14:01:37",
+    "course_id": null,
+    "activity_id": null
+  },
+  {
+    "index": 294,
+    "visit_duration": 2,
+    "visit_start_from": "2025/12/02T14:01:38",
+    "course_id": "454",
+    "activity_id": null
+  },
+  {
+    "index": 313,
+    "visit_duration": 4,
+    "visit_start_from": "2025/12/02T14:01:41",
+    "course_id": 454,
+    "activity_id": "1486"
+  },
+  {
+    "index": 335,
+    "visit_duration": 2,
+    "visit_start_from": "2025/12/02T14:01:47",
+    "course_id": "454",
+    "activity_id": null
+  },
+  {
+    "index": 344,
+    "visit_duration": 4,
+    "visit_start_from": "2025/12/02T14:01:49",
+    "course_id": null,
+    "activity_id": null
+  },
+  {
+    "index": 346,
+    "visit_duration": 0,
+    "visit_start_from": "2025/12/02T14:01:54",
+    "course_id": null,
+    "activity_id": null
+  },
+  {
+    "index": 367,
+    "visit_duration": 3,
+    "visit_start_from": "2025/12/02T14:01:55",
+    "course_id": "367",
+    "activity_id": null
+  },
+  {
+    "index": 388,
+    "visit_duration": 5,
+    "visit_start_from": "2025/12/02T14:01:59",
+    "course_id": 367,
+    "activity_id": "1429"
+  },
+  {
+    "index": 409,
+    "visit_duration": 7,
+    "visit_start_from": "2025/12/02T14:02:06",
+    "course_id": "367",
+    "activity_id": null
+  },
+  {
+    "index": 419,
+    "visit_duration": 10,
+    "visit_start_from": "2025/12/02T14:02:14",
+    "course_id": 367,
+    "activity_id": "1169"
+  },
+  {
+    "index": 438,
+    "visit_duration": 1,
+    "visit_start_from": "2025/12/02T14:02:25",
+    "course_id": "367",
+    "activity_id": null
+  },
+  {
+    "index": 448,
+    "visit_duration": 6,
+    "visit_start_from": "2025/12/02T14:02:28",
+    "course_id": null,
+    "activity_id": null
+  },
+  {
+    "index": 450,
+    "visit_duration": 0,
+    "visit_start_from": "2025/12/02T14:02:34",
+    "course_id": null,
+    "activity_id": null
+  },
+  {
+    "index": 469,
+    "visit_duration": 5,
+    "visit_start_from": "2025/12/02T14:02:35",
+    "course_id": "367",
+    "activity_id": null
+  },
+  {
+    "index": 480,
+    "visit_duration": 4,
+    "visit_start_from": "2025/12/02T14:02:41",
+    "course_id": null,
+    "activity_id": null
+  },
+  {
+    "index": 481,
+    "visit_duration": 0,
+    "visit_start_from": "2025/12/02T14:02:45",
+    "course_id": null,
+    "activity_id": null
+  },
+  {
+    "index": 501,
+    "visit_duration": 2,
+    "visit_start_from": "2025/12/02T14:02:46",
+    "course_id": "365",
+    "activity_id": null
+  },
+  {
+    "index": 523,
+    "visit_duration": 4,
+    "visit_start_from": "2025/12/02T14:02:49",
+    "course_id": 365,
+    "activity_id": "1167"
+  },
+  {
+    "index": 545,
+    "visit_duration": 1,
+    "visit_start_from": "2025/12/02T14:02:55",
+    "course_id": "365",
+    "activity_id": null
+  },
+  {
+    "index": 554,
+    "visit_duration": 5,
+    "visit_start_from": "2025/12/02T14:02:57",
+    "course_id": null,
+    "activity_id": null
+  },
+  {
+    "index": 556,
+    "visit_duration": 0,
+    "visit_start_from": "2025/12/02T14:03:03",
+    "course_id": null,
+    "activity_id": null
+  },
+  {
+    "index": 577,
+    "visit_duration": 3,
+    "visit_start_from": "2025/12/02T14:03:04",
+    "course_id": "366",
+    "activity_id": null
+  },
+  {
+    "index": 586,
+    "visit_duration": 5,
+    "visit_start_from": "2025/12/02T14:03:09",
+    "course_id": null,
+    "activity_id": null
+  },
+  {
+    "index": 588,
+    "visit_duration": 0,
+    "visit_start_from": "2025/12/02T14:03:14",
+    "course_id": null,
+    "activity_id": null
+  },
+  {
+    "index": 609,
+    "visit_duration": 2,
+    "visit_start_from": "2025/12/02T14:03:15",
+    "course_id": "369",
+    "activity_id": null
+  },
+  {
+    "index": 629,
+    "visit_duration": 3,
+    "visit_start_from": "2025/12/02T14:03:18",
+    "course_id": 369,
+    "activity_id": "1190"
+  },
+  {
+    "index": 651,
+    "visit_duration": 2,
+    "visit_start_from": "2025/12/02T14:03:23",
+    "course_id": "369",
+    "activity_id": null
+  }
+]

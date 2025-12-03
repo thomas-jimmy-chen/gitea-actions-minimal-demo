@@ -4,8 +4,8 @@
 >
 > 📚 **文檔分段規則**: 請參考 [DOCUMENT_SEGMENTATION_RULES.md](./DOCUMENT_SEGMENTATION_RULES.md)
 
-**文檔版本**: 2.1
-**最後更新**: 2025-11-30（Phase 1 v2.0.7 提交 + Git 問題排查）
+**文檔版本**: 2.2
+**最後更新**: 2025-11-30（平台遷移可行性評估）
 **項目版本**: 2.0.7
 **項目代號**: **Gleipnir** (格萊普尼爾 / 縛狼鎖)
 **維護者**: wizard03
@@ -84,10 +84,18 @@
   - 架構設計
   - 主要功能模組
   - Linux 跨平台支援
+- 🔄 平台遷移計畫 (2025-11-30 規劃) ⭐ NEW
+  - 背景與需求
+  - 平台相依性分析
+  - 改良方案設計
+  - 實作計畫
+  - 關鍵決策點
+  - 風險評估
+  - 向後相容性保證
 - 📚 延伸閱讀
 - 📅 最新工作日誌
 
-**統計**: ~1,154 行，~14,900 tokens
+**統計**: ~1,380 行，~17,500 tokens
 
 ---
 
@@ -124,6 +132,7 @@
 - [自動答題系統](./CLAUDE_CODE_HANDOVER-2.md#已完成功能自動答題系統-phase-2)
 - [智能模式](./CLAUDE_CODE_HANDOVER-2.md#智能模式按課程啟用自動答題-2025-11-15-更新)
 - [GUI 開發計畫](./CLAUDE_CODE_HANDOVER-2.md#gui-開發計畫-2025-11-24-規劃)
+- [平台遷移計畫](./CLAUDE_CODE_HANDOVER-2.md#平台遷移計畫-2025-11-30-規劃) ⭐ NEW
 - [延伸閱讀](./CLAUDE_CODE_HANDOVER-2.md#延伸閱讀)
 - [最新工作日誌](./CLAUDE_CODE_HANDOVER-2.md#最新工作日誌)
 
@@ -141,7 +150,8 @@
 - 📦 [changelogs/CHANGELOG_archive_2025.md](./changelogs/CHANGELOG_archive_2025.md) - 2025 年歷史版本
 
 ### 最新工作日誌
-- 🗓️ [DAILY_WORK_LOG_202511300605.md](./DAILY_WORK_LOG_202511300605.md) - Phase 1 v2.0.7 Git 提交與推送 ⭐ NEW
+- 🗓️ [DAILY_WORK_LOG_202511302222.md](./DAILY_WORK_LOG_202511302222.md) - 平台遷移可行性評估 ⭐ NEW
+- 🗓️ [DAILY_WORK_LOG_202511300605.md](./DAILY_WORK_LOG_202511300605.md) - Phase 1 v2.0.7 Git 提交與推送
 - 🗓️ [DAILY_WORK_LOG_202511242300.md](./DAILY_WORK_LOG_202511242300.md) - 文檔分段規則建立與執行
 - 🗓️ [DAILY_WORK_LOG_202511242157.md](./DAILY_WORK_LOG_202511242157.md) - 課程配置優化討論
 - 🗓️ [DAILY_WORK_LOG_20251117.md](./DAILY_WORK_LOG_20251117.md) - 穩定性與配置優化 (v2.0.5)

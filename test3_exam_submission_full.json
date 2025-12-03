@@ -1,0 +1,962 @@
+{
+  "summary": {
+    "total_submissions": 4,
+    "exam_ids": [
+      "41",
+      "43",
+      "48",
+      "49"
+    ],
+    "courses_with_exams": [
+      "366",
+      "450",
+      "452",
+      "454"
+    ]
+  },
+  "submission_structure": {
+    "fields": [
+      "exam_paper_instance_id",
+      "exam_submission_id",
+      "subjects",
+      "progress",
+      "reason"
+    ],
+    "exam_paper_instance_id": {
+      "type": "int",
+      "example": 395912
+    },
+    "exam_submission_id": {
+      "type": "int",
+      "example": 395781
+    },
+    "subjects": {
+      "is_array": true,
+      "count": 10,
+      "fields": [
+        "subject_id",
+        "subject_updated_at",
+        "answer_option_ids"
+      ],
+      "subject_id_type": "int",
+      "answer_option_ids_type": "list",
+      "example": {
+        "subject_id": 2933,
+        "subject_updated_at": "2025-02-27T09:26:28Z",
+        "answer_option_ids": [
+          9824
+        ]
+      }
+    }
+  },
+  "submissions": [
+    {
+      "exam_id": "48",
+      "url": "https://elearn.post.gov.tw/api/exams/48/submissions",
+      "cookies": {
+        "warning%3Achange_password": "hide",
+        "_ga": "GA1.3.839482039.1755469685",
+        "_ga_227RNMEJEV": "GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0",
+        "lang": "zh-TW",
+        "warning:verification_email": "show",
+        "session": "V2-1-a72c66ab-d261-4547-a604-a83217876d76.MTk2ODg.1764792027170.c08sq7WVXQbZG8OOms6AzUhBuLE"
+      },
+      "request_body": {
+        "exam_paper_instance_id": 395912,
+        "exam_submission_id": 395781,
+        "subjects": [
+          {
+            "subject_id": 2933,
+            "subject_updated_at": "2025-02-27T09:26:28Z",
+            "answer_option_ids": [
+              9824
+            ]
+          },
+          {
+            "subject_id": 2932,
+            "subject_updated_at": "2025-02-27T09:26:28Z",
+            "answer_option_ids": [
+              9821
+            ]
+          },
+          {
+            "subject_id": 2939,
+            "subject_updated_at": "2025-02-27T09:26:28Z",
+            "answer_option_ids": [
+              9849
+            ]
+          },
+          {
+            "subject_id": 2934,
+            "subject_updated_at": "2025-02-27T09:26:28Z",
+            "answer_option_ids": [
+              9830
+            ]
+          },
+          {
+            "subject_id": 2936,
+            "subject_updated_at": "2025-02-27T09:26:28Z",
+            "answer_option_ids": [
+              9836
+            ]
+          },
+          {
+            "subject_id": 2937,
+            "subject_updated_at": "2025-02-27T09:26:28Z",
+            "answer_option_ids": [
+              9842
+            ]
+          },
+          {
+            "subject_id": 2938,
+            "subject_updated_at": "2025-02-27T09:26:28Z",
+            "answer_option_ids": [
+              9845
+            ]
+          },
+          {
+            "subject_id": 2935,
+            "subject_updated_at": "2025-02-27T09:26:28Z",
+            "answer_option_ids": [
+              9834
+            ]
+          },
+          {
+            "subject_id": 2931,
+            "subject_updated_at": "2025-02-27T09:26:28Z",
+            "answer_option_ids": [
+              9818
+            ]
+          },
+          {
+            "subject_id": 2940,
+            "subject_updated_at": "2025-02-27T09:26:28Z",
+            "answer_option_ids": [
+              9854
+            ]
+          }
+        ],
+        "progress": {
+          "answered_num": 10,
+          "total_subjects": 10
+        },
+        "reason": "user"
+      },
+      "response_status": "HTTP/1.1 201 CREATED",
+      "response_body": "{\"submission_id\":395781}\n"
+    },
+    {
+      "exam_id": "43",
+      "url": "https://elearn.post.gov.tw/api/exams/43/submissions",
+      "cookies": {
+        "warning%3Achange_password": "hide",
+        "_ga": "GA1.3.839482039.1755469685",
+        "_ga_227RNMEJEV": "GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0",
+        "lang": "zh-TW",
+        "warning:verification_email": "show",
+        "session": "V2-1-a72c66ab-d261-4547-a604-a83217876d76.MTk2ODg.1764792332997.X8BUhz60c20ivRBmH8dSd9N9Wps"
+      },
+      "request_body": {
+        "exam_paper_instance_id": 395916,
+        "exam_submission_id": 395785,
+        "subjects": [
+          {
+            "subject_id": 2831,
+            "subject_updated_at": "2025-01-24T16:57:39Z",
+            "answer_option_ids": [
+              9418
+            ]
+          },
+          {
+            "subject_id": 2833,
+            "subject_updated_at": "2025-02-18T17:38:28Z",
+            "answer_option_ids": [
+              9425
+            ]
+          },
+          {
+            "subject_id": 2837,
+            "subject_updated_at": "2025-02-18T17:38:28Z",
+            "answer_option_ids": [
+              9441
+            ]
+          },
+          {
+            "subject_id": 2830,
+            "subject_updated_at": "2025-01-24T16:57:39Z",
+            "answer_option_ids": [
+              9414
+            ]
+          },
+          {
+            "subject_id": 2838,
+            "subject_updated_at": "2025-01-24T16:57:39Z",
+            "answer_option_ids": [
+              9444
+            ]
+          },
+          {
+            "subject_id": 2839,
+            "subject_updated_at": "2025-02-18T17:38:28Z",
+            "answer_option_ids": [
+              9450
+            ]
+          },
+          {
+            "subject_id": 2840,
+            "subject_updated_at": "2025-01-24T16:56:27Z",
+            "answer_option_ids": [
+              9452
+            ]
+          },
+          {
+            "subject_id": 2841,
+            "subject_updated_at": "2025-03-06T15:29:10Z",
+            "answer_option_ids": [
+              9458
+            ]
+          },
+          {
+            "subject_id": 2845,
+            "subject_updated_at": "2025-01-24T16:57:39Z",
+            "answer_option_ids": [
+              9472
+            ]
+          },
+          {
+            "subject_id": 2847,
+            "subject_updated_at": "2025-02-18T17:38:28Z",
+            "answer_option_ids": [
+              9480
+            ]
+          }
+        ],
+        "progress": {
+          "answered_num": 10,
+          "total_subjects": 10
+        },
+        "reason": "user"
+      },
+      "response_status": "HTTP/1.1 201 CREATED",
+      "response_body": "{\"submission_id\":395785}\n"
+    },
+    {
+      "exam_id": "49",
+      "url": "https://elearn.post.gov.tw/api/exams/49/submissions",
+      "cookies": {
+        "warning%3Achange_password": "hide",
+        "_ga": "GA1.3.839482039.1755469685",
+        "_ga_227RNMEJEV": "GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0",
+        "lang": "zh-TW",
+        "warning:verification_email": "show",
+        "session": "V2-1-a72c66ab-d261-4547-a604-a83217876d76.MTk2ODg.1764792560804.yjCUh_b7qpewd9hF9FgK8h0hDPg"
+      },
+      "request_body": {
+        "exam_paper_instance_id": 395918,
+        "exam_submission_id": 395787,
+        "subjects": [
+          {
+            "subject_id": 2946,
+            "subject_updated_at": "2025-03-17T13:03:47Z",
+            "answer_option_ids": [
+              9872
+            ]
+          },
+          {
+            "subject_id": 2951,
+            "subject_updated_at": "2025-03-18T14:00:39Z",
+            "answer_option_ids": [
+              9889
+            ]
+          },
+          {
+            "subject_id": 2944,
+            "subject_updated_at": "2025-03-18T14:00:39Z",
+            "answer_option_ids": [
+              9866
+            ]
+          },
+          {
+            "subject_id": 2955,
+            "subject_updated_at": "2025-03-17T13:03:04Z",
+            "answer_option_ids": [
+              9904
+            ]
+          },
+          {
+            "subject_id": 2962,
+            "subject_updated_at": "2025-03-18T18:32:09Z",
+            "answer_option_ids": [
+              9922
+            ]
+          },
+          {
+            "subject_id": 2943,
+            "subject_updated_at": "2025-03-18T14:00:39Z",
+            "answer_option_ids": [
+              9861
+            ]
+          },
+          {
+            "subject_id": 2957,
+            "subject_updated_at": "2025-03-18T14:00:39Z",
+            "answer_option_ids": [
+              9910
+            ]
+          },
+          {
+            "subject_id": 2966,
+            "subject_updated_at": "2025-03-18T14:00:39Z",
+            "answer_option_ids": [
+              9932
+            ]
+          },
+          {
+            "subject_id": 2941,
+            "subject_updated_at": "2025-03-17T13:03:04Z",
+            "answer_option_ids": [
+              9855
+            ]
+          },
+          {
+            "subject_id": 2961,
+            "subject_updated_at": "2025-03-17T13:03:47Z",
+            "answer_option_ids": [
+              9917
+            ]
+          }
+        ],
+        "progress": {
+          "answered_num": 10,
+          "total_subjects": 10
+        },
+        "reason": "user"
+      },
+      "response_status": "HTTP/1.1 201 CREATED",
+      "response_body": "{\"submission_id\":395787}\n"
+    },
+    {
+      "exam_id": "41",
+      "url": "https://elearn.post.gov.tw/api/exams/41/submissions",
+      "cookies": {
+        "warning%3Achange_password": "hide",
+        "_ga": "GA1.3.839482039.1755469685",
+        "_ga_227RNMEJEV": "GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0",
+        "lang": "zh-TW",
+        "warning:verification_email": "show",
+        "session": "V2-1-a72c66ab-d261-4547-a604-a83217876d76.MTk2ODg.1764793123813.anmECZ4hzQwjXb80sYJ39Cb_2Dk"
+      },
+      "request_body": {
+        "exam_paper_instance_id": 395920,
+        "exam_submission_id": 395789,
+        "subjects": [
+          {
+            "subject_id": 2818,
+            "subject_updated_at": "2025-01-02T15:13:40Z",
+            "answer_option_ids": [
+              9380
+            ]
+          },
+          {
+            "subject_id": 2813,
+            "subject_updated_at": "2025-01-03T16:38:21Z",
+            "answer_option_ids": [
+              9366
+            ]
+          },
+          {
+            "subject_id": 2796,
+            "subject_updated_at": "2025-01-03T16:38:30Z",
+            "answer_option_ids": [
+              9316
+            ]
+          },
+          {
+            "subject_id": 2801,
+            "subject_updated_at": "2025-01-03T16:38:30Z",
+            "answer_option_ids": [
+              9328
+            ]
+          },
+          {
+            "subject_id": 2817,
+            "subject_updated_at": "2025-01-02T15:13:40Z",
+            "answer_option_ids": [
+              9378
+            ]
+          },
+          {
+            "subject_id": 2811,
+            "subject_updated_at": "2025-01-02T15:13:40Z",
+            "answer_option_ids": [
+              9359
+            ]
+          },
+          {
+            "subject_id": 2809,
+            "subject_updated_at": "2025-02-19T02:36:39Z",
+            "answer_option_ids": [
+              9350
+            ]
+          },
+          {
+            "subject_id": 2802,
+            "subject_updated_at": "2025-01-02T15:13:40Z",
+            "answer_option_ids": [
+              9331
+            ]
+          },
+          {
+            "subject_id": 2821,
+            "subject_updated_at": "2025-01-02T15:13:40Z",
+            "answer_option_ids": [
+              9392
+            ]
+          },
+          {
+            "subject_id": 2805,
+            "subject_updated_at": "2025-01-02T15:13:40Z",
+            "answer_option_ids": [
+              9339
+            ]
+          },
+          {
+            "subject_id": 2812,
+            "subject_updated_at": "2025-01-02T15:13:40Z",
+            "answer_option_ids": [
+              9361
+            ]
+          },
+          {
+            "subject_id": 2799,
+            "subject_updated_at": "2025-01-02T15:13:40Z",
+            "answer_option_ids": [
+              9321
+            ]
+          },
+          {
+            "subject_id": 2814,
+            "subject_updated_at": "2025-01-02T15:13:40Z",
+            "answer_option_ids": [
+              9367
+            ]
+          },
+          {
+            "subject_id": 2798,
+            "subject_updated_at": "2025-01-02T15:13:40Z",
+            "answer_option_ids": [
+              9319
+            ]
+          },
+          {
+            "subject_id": 2819,
+            "subject_updated_at": "2025-01-02T15:13:40Z",
+            "answer_option_ids": [
+              9384
+            ]
+          },
+          {
+            "subject_id": 2822,
+            "subject_updated_at": "2025-01-02T15:13:40Z",
+            "answer_option_ids": [
+              9394
+            ]
+          },
+          {
+            "subject_id": 2806,
+            "subject_updated_at": "2025-01-02T15:13:40Z",
+            "answer_option_ids": [
+              9341
+            ]
+          },
+          {
+            "subject_id": 2797,
+            "subject_updated_at": "2025-01-02T15:13:40Z",
+            "answer_option_ids": [
+              9318
+            ]
+          },
+          {
+            "subject_id": 2816,
+            "subject_updated_at": "2025-01-02T15:13:40Z",
+            "answer_option_ids": [
+              9374
+            ]
+          },
+          {
+            "subject_id": 2823,
+            "subject_updated_at": "2025-01-02T15:13:40Z",
+            "answer_option_ids": [
+              9396
+            ]
+          },
+          {
+            "subject_id": 2795,
+            "subject_updated_at": "2025-01-02T15:13:40Z",
+            "answer_option_ids": [
+              9311
+            ]
+          },
+          {
+            "subject_id": 2807,
+            "subject_updated_at": "2025-01-02T15:13:40Z",
+            "answer_option_ids": [
+              9344
+            ]
+          },
+          {
+            "subject_id": 2800,
+            "subject_updated_at": "2025-01-02T15:13:40Z",
+            "answer_option_ids": [
+              9323
+            ]
+          },
+          {
+            "subject_id": 2804,
+            "subject_updated_at": "2025-01-02T15:13:40Z",
+            "answer_option_ids": [
+              9335
+            ]
+          },
+          {
+            "subject_id": 2803,
+            "subject_updated_at": "2025-01-02T15:13:40Z",
+            "answer_option_ids": [
+              9334
+            ]
+          }
+        ],
+        "progress": {
+          "answered_num": 25,
+          "total_subjects": 25
+        },
+        "reason": "user"
+      },
+      "response_status": "HTTP/1.1 201 CREATED",
+      "response_body": "{\"submission_id\":395789}\n"
+    }
+  ],
+  "exam_questions": {
+    "452": {
+      "exams": [
+        {
+          "allow_register": false,
+          "announce_answer_status": "immediate_announce",
+          "announce_answer_time": null,
+          "announce_answer_type": "answer_and_explanation",
+          "announce_score_status": "immediate_announce",
+          "announce_score_time": null,
+          "assign_group_ids": [],
+          "assign_student_ids": [],
+          "completion_criterion": "達標成績 100 分",
+          "completion_criterion_key": "score",
+          "completion_criterion_value": "100",
+          "created_at": "2025-02-25T11:06:56Z",
+          "default_options_layout": "horizontal",
+          "description": "",
+          "disable_copy_paste": false,
+          "disable_right_click": false,
+          "enable_anti_cheat": false,
+          "enable_invigilation": false,
+          "end_time": null,
+          "exam_submissions": [
+            48,
+            48,
+            48,
+            48,
+            48,
+            48,
+            48,
+            48,
+            48,
+            48,
+            48,
+            48,
+            48,
+            48
+          ],
+          "group_set_id": 0,
+          "group_set_name": "",
+          "has_assign_group": false,
+          "has_assign_student": false,
+          "id": 48,
+          "imported_from": null,
+          "is_announce_answer_time_passed": true,
+          "is_announce_score_time_passed": true,
+          "is_assigned_to_all": true,
+          "is_closed": false,
+          "is_fullscreen_mode": false,
+          "is_in_progress": true,
+          "is_ip_constrained": false,
+          "is_leaving_window_constrained": false,
+          "is_leaving_window_timeout": false,
+          "is_opened_catalog": false,
+          "is_practice_mode": false,
+          "is_started": true,
+          "is_submit_started": true,
+          "leaving_window_limit": null,
+          "leaving_window_timeout": null,
+          "limit_answer_on_signle_client": false,
+          "limit_time": null,
+          "limited_ip": "",
+          "make_up_record": null,
+          "module_id": 472,
+          "module_sort": 0,
+          "pass_score": "100.0",
+          "prerequisites": [],
+          "process_status": "ongoing",
+          "publish_type": "published",
+          "referrer_id": 472,
+          "referrer_type": "module",
+          "score_percentage": "100.0",
+          "score_rule": "highest",
+          "sort": 1,
+          "start_time": "2025-02-27T01:26:21Z",
+          "status": "inactive",
+          "subjects_rule": {
+            "select_subjects_randomly": true,
+            "select_subjects_randomly_rule": {
+              "0": {
+                "single_selection": [
+                  {
+                    "subject_point": "10.0",
+                    "subjects_count": 10
+                  }
+                ]
+              }
+            },
+            "shuffle_options_randomly": false,
+            "shuffle_subjects_randomly": "in_type"
+          },
+          "submit_by_group": false,
+          "submit_end_time": "2025-12-31T15:55:00Z",
+          "submit_start_time": "2025-01-01T00:00:00Z",
+          "submit_times": 100,
+          "submitted_groups_count": 1,
+          "submitted_students_count": 23661,
+          "syllabus_id": 0,
+          "syllabus_sort": "1-01-01T00:00:00Z",
+          "teaching_model": "online",
+          "title": "高齡測驗(100分及格)",
+          "type": "exam",
+          "unique_key": "exam-48",
+          "using_phase": "unspecified"
+        }
+      ]
+    },
+    "450": {
+      "exams": [
+        {
+          "allow_register": false,
+          "announce_answer_status": "immediate_announce",
+          "announce_answer_time": null,
+          "announce_answer_type": "answer_and_explanation",
+          "announce_score_status": "immediate_announce",
+          "announce_score_time": null,
+          "assign_group_ids": [],
+          "assign_student_ids": [],
+          "completion_criterion": "達標成績 60 分",
+          "completion_criterion_key": "score",
+          "completion_criterion_value": "60",
+          "created_at": "2025-01-24T08:54:27Z",
+          "default_options_layout": "horizontal",
+          "description": "",
+          "disable_copy_paste": false,
+          "disable_right_click": false,
+          "enable_anti_cheat": false,
+          "enable_invigilation": false,
+          "end_time": null,
+          "exam_submissions": [
+            43,
+            43,
+            43,
+            43,
+            43
+          ],
+          "group_set_id": 0,
+          "group_set_name": "",
+          "has_assign_group": false,
+          "has_assign_student": false,
+          "id": 43,
+          "imported_from": null,
+          "is_announce_answer_time_passed": true,
+          "is_announce_score_time_passed": true,
+          "is_assigned_to_all": true,
+          "is_closed": false,
+          "is_fullscreen_mode": false,
+          "is_in_progress": true,
+          "is_ip_constrained": false,
+          "is_leaving_window_constrained": false,
+          "is_leaving_window_timeout": false,
+          "is_opened_catalog": false,
+          "is_practice_mode": false,
+          "is_started": true,
+          "is_submit_started": true,
+          "leaving_window_limit": null,
+          "leaving_window_timeout": null,
+          "limit_answer_on_signle_client": false,
+          "limit_time": null,
+          "limited_ip": "",
+          "make_up_record": null,
+          "module_id": 462,
+          "module_sort": 0,
+          "pass_score": "60.0",
+          "prerequisites": [],
+          "process_status": "ongoing",
+          "publish_type": "published",
+          "referrer_id": 462,
+          "referrer_type": "module",
+          "score_percentage": "100.0",
+          "score_rule": "highest",
+          "sort": 1,
+          "start_time": "2025-01-24T08:57:01Z",
+          "status": "inactive",
+          "subjects_rule": {
+            "select_subjects_randomly": true,
+            "select_subjects_randomly_rule": {
+              "0": {
+                "single_selection": [
+                  {
+                    "subject_point": "10.0",
+                    "subjects_count": 10
+                  }
+                ]
+              }
+            },
+            "shuffle_options_randomly": false,
+            "shuffle_subjects_randomly": "default"
+          },
+          "submit_by_group": false,
+          "submit_end_time": "2025-12-31T15:55:00Z",
+          "submit_start_time": "2025-01-01T00:00:00Z",
+          "submit_times": 100,
+          "submitted_groups_count": 1,
+          "submitted_students_count": 24362,
+          "syllabus_id": 0,
+          "syllabus_sort": "1-01-01T00:00:00Z",
+          "teaching_model": "online",
+          "title": "金融友善服務測驗",
+          "type": "exam",
+          "unique_key": "exam-43",
+          "using_phase": "unspecified"
+        }
+      ]
+    },
+    "454": {
+      "exams": [
+        {
+          "allow_register": false,
+          "announce_answer_status": "immediate_announce",
+          "announce_answer_time": null,
+          "announce_answer_type": "answer_and_explanation",
+          "announce_score_status": "immediate_announce",
+          "announce_score_time": null,
+          "assign_group_ids": [],
+          "assign_student_ids": [],
+          "completion_criterion": "達標成績 70 分",
+          "completion_criterion_key": "score",
+          "completion_criterion_value": "70",
+          "created_at": "2025-03-17T05:02:02Z",
+          "default_options_layout": "horizontal",
+          "description": "",
+          "disable_copy_paste": false,
+          "disable_right_click": false,
+          "enable_anti_cheat": false,
+          "enable_invigilation": false,
+          "end_time": null,
+          "exam_submissions": [
+            49,
+            49,
+            49,
+            49,
+            49
+          ],
+          "group_set_id": 0,
+          "group_set_name": "",
+          "has_assign_group": false,
+          "has_assign_student": false,
+          "id": 49,
+          "imported_from": null,
+          "is_announce_answer_time_passed": true,
+          "is_announce_score_time_passed": true,
+          "is_assigned_to_all": true,
+          "is_closed": false,
+          "is_fullscreen_mode": false,
+          "is_in_progress": true,
+          "is_ip_constrained": false,
+          "is_leaving_window_constrained": false,
+          "is_leaving_window_timeout": false,
+          "is_opened_catalog": false,
+          "is_practice_mode": false,
+          "is_started": true,
+          "is_submit_started": true,
+          "leaving_window_limit": null,
+          "leaving_window_timeout": null,
+          "limit_answer_on_signle_client": false,
+          "limit_time": null,
+          "limited_ip": "",
+          "make_up_record": null,
+          "module_id": 474,
+          "module_sort": 0,
+          "pass_score": "70.0",
+          "prerequisites": [],
+          "process_status": "ongoing",
+          "publish_type": "published",
+          "referrer_id": 474,
+          "referrer_type": "module",
+          "score_percentage": "100.0",
+          "score_rule": "highest",
+          "sort": 1,
+          "start_time": "2025-03-17T05:03:13Z",
+          "status": "inactive",
+          "subjects_rule": {
+            "select_subjects_randomly": true,
+            "select_subjects_randomly_rule": {
+              "0": {
+                "single_selection": [
+                  {
+                    "subject_point": "10.0",
+                    "subjects_count": 5
+                  }
+                ],
+                "true_or_false": [
+                  {
+                    "subject_point": "10.0",
+                    "subjects_count": 5
+                  }
+                ]
+              }
+            },
+            "shuffle_options_randomly": false,
+            "shuffle_subjects_randomly": "in_type"
+          },
+          "submit_by_group": false,
+          "submit_end_time": "2025-12-31T15:55:00Z",
+          "submit_start_time": "2025-01-01T00:00:00Z",
+          "submit_times": 100,
+          "submitted_groups_count": 1,
+          "submitted_students_count": 24249,
+          "syllabus_id": 0,
+          "syllabus_sort": "1-01-01T00:00:00Z",
+          "teaching_model": "online",
+          "title": "壽險業務員測驗",
+          "type": "exam",
+          "unique_key": "exam-49",
+          "using_phase": "unspecified"
+        }
+      ]
+    },
+    "366": {
+      "exams": [
+        {
+          "allow_register": false,
+          "announce_answer_status": "immediate_announce",
+          "announce_answer_time": null,
+          "announce_answer_type": "answer_and_explanation",
+          "announce_score_status": "immediate_announce",
+          "announce_score_time": null,
+          "assign_group_ids": [],
+          "assign_student_ids": [],
+          "completion_criterion": "達標成績 60 分",
+          "completion_criterion_key": "score",
+          "completion_criterion_value": "60",
+          "created_at": "2024-12-30T03:18:14Z",
+          "default_options_layout": "horizontal",
+          "description": "",
+          "disable_copy_paste": false,
+          "disable_right_click": false,
+          "enable_anti_cheat": false,
+          "enable_invigilation": false,
+          "end_time": null,
+          "exam_submissions": [
+            41,
+            41,
+            41,
+            41,
+            41
+          ],
+          "group_set_id": 0,
+          "group_set_name": "",
+          "has_assign_group": false,
+          "has_assign_student": false,
+          "id": 41,
+          "imported_from": null,
+          "is_announce_answer_time_passed": true,
+          "is_announce_score_time_passed": true,
+          "is_assigned_to_all": true,
+          "is_closed": false,
+          "is_fullscreen_mode": false,
+          "is_in_progress": true,
+          "is_ip_constrained": false,
+          "is_leaving_window_constrained": false,
+          "is_leaving_window_timeout": false,
+          "is_opened_catalog": false,
+          "is_practice_mode": false,
+          "is_started": true,
+          "is_submit_started": true,
+          "leaving_window_limit": null,
+          "leaving_window_timeout": null,
+          "limit_answer_on_signle_client": false,
+          "limit_time": null,
+          "limited_ip": "",
+          "make_up_record": null,
+          "module_id": 374,
+          "module_sort": 0,
+          "pass_score": "60.0",
+          "prerequisites": [],
+          "process_status": "ongoing",
+          "publish_type": "published",
+          "referrer_id": 374,
+          "referrer_type": "module",
+          "score_percentage": "100.0",
+          "score_rule": "highest",
+          "sort": 1,
+          "start_time": "2024-12-30T05:15:39Z",
+          "status": "inactive",
+          "subjects_rule": {
+            "select_subjects_randomly": true,
+            "select_subjects_randomly_rule": {
+              "0": {
+                "single_selection": [
+                  {
+                    "subject_point": "4.0",
+                    "subjects_count": 10
+                  }
+                ],
+                "true_or_false": [
+                  {
+                    "subject_point": "4.0",
+                    "subjects_count": 15
+                  }
+                ]
+              }
+            },
+            "shuffle_options_randomly": false,
+            "shuffle_subjects_randomly": "in_type"
+          },
+          "submit_by_group": false,
+          "submit_end_time": "2025-12-31T15:55:00Z",
+          "submit_start_time": "2025-01-01T00:00:00Z",
+          "submit_times": 100,
+          "submitted_groups_count": 1,
+          "submitted_students_count": 24678,
+          "syllabus_id": 0,
+          "syllabus_sort": "1-01-01T00:00:00Z",
+          "teaching_model": "online",
+          "title": "資通安全測驗",
+          "type": "exam",
+          "unique_key": "exam-41",
+          "using_phase": "unspecified"
+        }
+      ]
+    }
+  },
+  "cookies_required": [
+    "warning%3Achange_password",
+    "_ga",
+    "_ga_227RNMEJEV",
+    "lang",
+    "warning:verification_email",
+    "session"
+  ]
+}

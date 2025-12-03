@@ -1,0 +1,256 @@
+{
+  "document_info": {
+    "title": "test3 考試提交 API 欄位對應表",
+    "version": "1.0",
+    "date": "2025-12-03",
+    "api_endpoint": "POST /api/exams/{exam_id}/submissions",
+    "total_fields": 11
+  },
+  "fields": {
+    "exam_paper_instance_id": {
+      "field_name": "exam_paper_instance_id",
+      "type": "integer",
+      "required": true,
+      "importance": "CRITICAL",
+      "description": "考卷實例 ID，每次考試唯一",
+      "source": "GET /api/courses/{course_id}/exams 回應",
+      "example": 395912,
+      "notes": "必需從進入考試頁面獲取，無法預測或重複使用"
+    },
+    "exam_submission_id": {
+      "field_name": "exam_submission_id",
+      "type": "integer",
+      "required": true,
+      "importance": "CRITICAL",
+      "description": "提交 ID，用於標識這次提交",
+      "source": "POST /api/exams/{exam_id}/submissions/storage 回應",
+      "example": 395781,
+      "notes": "首次 storage 時為 null，回應會返回新 ID；正式提交時必需"
+    },
+    "subjects": {
+      "field_name": "subjects",
+      "type": "array",
+      "required": true,
+      "importance": "CRITICAL",
+      "description": "題目與答案陣列",
+      "source": "題目從 GET exams 獲取，答案從題庫匹配",
+      "example": [
+        {
+          "subject_id": 2933,
+          "subject_updated_at": "2025-02-27T09:26:28Z",
+          "answer_option_ids": [9824]
+        }
+      ],
+      "notes": "每個題目包含 3 個子欄位"
+    },
+    "subjects.subject_id": {
+      "field_name": "subject_id",
+      "type": "integer",
+      "required": true,
+      "importance": "CRITICAL",
+      "description": "題目的唯一 ID",
+      "source": "GET /api/courses/{course_id}/exams 回應中的 subjects 陣列",
+      "example": 2933,
+      "notes": "每個題目都有唯一 ID"
+    },
+    "subjects.subject_updated_at": {
+      "field_name": "subject_updated_at",
+      "type": "string",
+      "required": true,
+      "importance": "HIGH",
+      "description": "題目的更新時間",
+      "source": "GET /api/courses/{course_id}/exams 回應",
+      "example": "2025-02-27T09:26:28Z",
+      "format": "ISO 8601 datetime",
+      "notes": "用於版本控制，確保題目未被修改"
+    },
+    "subjects.answer_option_ids": {
+      "field_name": "answer_option_ids",
+      "type": "array<integer>",
+      "required": true,
+      "importance": "CRITICAL",
+      "description": "答案選項的 ID 陣列",
+      "source": "題庫匹配或用戶選擇",
+      "example_single": [9824],
+      "example_multiple": [9824, 9825, 9826],
+      "example_empty": [],
+      "notes": "單選題陣列包含 1 個 ID，複選題包含多個 ID，未回答為空陣列"
+    },
+    "progress": {
+      "field_name": "progress",
+      "type": "object",
+      "required": false,
+      "importance": "MEDIUM",
+      "description": "答題進度資訊",
+      "source": "前端計算",
+      "example": {
+        "answered_num": 10,
+        "total_subjects": 10
+      },
+      "notes": "可選，用於前端顯示進度"
+    },
+    "progress.answered_num": {
+      "field_name": "answered_num",
+      "type": "integer",
+      "required": false,
+      "importance": "MEDIUM",
+      "description": "已回答題數",
+      "source": "前端計算",
+      "example": 10,
+      "notes": "統計 answer_option_ids 非空的題目數"
+    },
+    "progress.total_subjects": {
+      "field_name": "total_subjects",
+      "type": "integer",
+      "required": false,
+      "importance": "MEDIUM",
+      "description": "總題數",
+      "source": "前端計算（subjects 陣列長度）",
+      "example": 10,
+      "notes": "等於 subjects.length"
+    },
+    "reason": {
+      "field_name": "reason",
+      "type": "string",
+      "required": false,
+      "importance": "LOW",
+      "description": "提交原因",
+      "source": "固定值",
+      "example": "user",
+      "possible_values": ["user", "auto", "timeout"],
+      "notes": "可能的值: user（用戶提交）、auto（自動提交）、timeout（超時）"
+    }
+  },
+  "response_fields": {
+    "submission_id": {
+      "field_name": "submission_id",
+      "type": "integer",
+      "description": "提交成功後返回的提交 ID",
+      "example": 395781,
+      "notes": "與 exam_submission_id 相同"
+    }
+  },
+  "cookies_required": [
+    {
+      "name": "session",
+      "importance": "CRITICAL",
+      "description": "用戶 session，包含認證資訊",
+      "example": "V2-1-a72c66ab-d261-4547-a604-a83217876d76.MTk2ODg.1764792027170.c08sq7WVXQbZG8OOms6AzUhBuLE",
+      "format": "V2-1-{UUID}.{Base64_UserID}.{Timestamp}.{Signature}"
+    },
+    {
+      "name": "lang",
+      "importance": "HIGH",
+      "description": "語言設定",
+      "example": "zh-TW"
+    },
+    {
+      "name": "_ga",
+      "importance": "MEDIUM",
+      "description": "Google Analytics",
+      "example": "GA1.3.839482039.1755469685"
+    },
+    {
+      "name": "_ga_227RNMEJEV",
+      "importance": "MEDIUM",
+      "description": "Google Analytics",
+      "example": "GS2.1.s1763624314$o3$g0$t1763624314$j60$l0$h0"
+    },
+    {
+      "name": "warning%3Achange_password",
+      "importance": "LOW",
+      "description": "修改密碼警告標記",
+      "example": "hide"
+    },
+    {
+      "name": "warning:verification_email",
+      "importance": "LOW",
+      "description": "驗證郵箱警告標記",
+      "example": "show"
+    }
+  ],
+  "api_workflow": [
+    {
+      "step": 1,
+      "api": "GET /api/courses/{course_id}/exams",
+      "method": "GET",
+      "purpose": "獲取考試題目列表",
+      "extract": [
+        "exam_paper_instance_id",
+        "subjects[].subject_id",
+        "subjects[].subject_updated_at",
+        "subjects[].options[].id"
+      ]
+    },
+    {
+      "step": 2,
+      "api": "POST /api/course/activities-read/exam/{exam_id}",
+      "method": "POST",
+      "purpose": "標記考試為已讀",
+      "body": "{}"
+    },
+    {
+      "step": 3,
+      "api": "POST /api/exams/{exam_id}/submissions/storage",
+      "method": "POST",
+      "purpose": "暫存答案（自動儲存）",
+      "body": {
+        "exam_paper_instance_id": "int",
+        "exam_submission_id": "null",
+        "subjects": "array"
+      },
+      "extract": ["exam_submission_id"]
+    },
+    {
+      "step": 4,
+      "api": "POST /api/exams/{exam_id}/submissions",
+      "method": "POST",
+      "purpose": "正式提交考試答案",
+      "body": {
+        "exam_paper_instance_id": "int",
+        "exam_submission_id": "int",
+        "subjects": "array",
+        "progress": "object",
+        "reason": "string"
+      },
+      "response": {
+        "status": "201 CREATED",
+        "body": {
+          "submission_id": "int"
+        }
+      }
+    },
+    {
+      "step": 5,
+      "api": "POST /statistics/api/user-visits",
+      "method": "POST",
+      "purpose": "記錄考試時長",
+      "body": {
+        "user_id": "string",
+        "course_id": "int",
+        "activity_id": "int",
+        "activity_type": "exam",
+        "visit_duration": "int"
+      }
+    }
+  ],
+  "implementation_notes": {
+    "critical_limitations": [
+      "exam_paper_instance_id 無法預測，必需從進入考試頁面獲取",
+      "exam_submission_id 必需先執行 storage 獲取",
+      "answer_option_ids 必需準確匹配題庫中的選項 ID"
+    ],
+    "recommended_approach": "半自動化 - 使用 MitmProxy 攔截 GET exams 和 POST submissions",
+    "mitmproxy_intercept_targets": [
+      "GET /api/courses/{course_id}/exams",
+      "POST /api/exams/{exam_id}/submissions/storage",
+      "POST /api/exams/{exam_id}/submissions"
+    ]
+  },
+  "test_data": {
+    "exam_ids_in_test3": [41, 43, 48, 49],
+    "course_ids_in_test3": [366, 450, 452, 454],
+    "total_submissions_found": 4,
+    "total_questions_per_exam": 10
+  }
+}
