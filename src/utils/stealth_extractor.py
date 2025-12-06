@@ -8,6 +8,7 @@ StealthExtractor - Stealth JS 提取器
 
 import os
 import subprocess
+import platform
 
 
 class StealthExtractor:
@@ -36,6 +37,10 @@ class StealthExtractor:
             # 確保輸出目錄存在
             os.makedirs(self.output_dir, exist_ok=True)
 
+            # Windows 相容性修復：使用 shell=True
+            # 在 Windows 下，subprocess 需要通過 shell 來找到 npx.cmd
+            use_shell = platform.system() == 'Windows'
+
             # 執行 npx extract-stealth-evasions
             print('[INFO] Activating automated browser stealth mode...')
             result = subprocess.run(
@@ -43,6 +48,7 @@ class StealthExtractor:
                 check=True,
                 capture_output=True,
                 text=True,
+                shell=use_shell,  # Windows 下使用 shell
                 timeout=60
             )
 

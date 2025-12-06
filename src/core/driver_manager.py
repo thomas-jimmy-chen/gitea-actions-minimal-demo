@@ -77,9 +77,18 @@ class DriverManager:
             opts.add_argument(f"--proxy-server={proxy_host}:{proxy_port}")
             opts.add_argument("--ignore-certificate-errors")
 
+        # 靜默模式：抑制 Chrome 日誌輸出
+        silent_mode = self.config.get_bool('silent_mitm', False)
+        if silent_mode:
+            opts.add_argument('--log-level=3')  # 只顯示 FATAL 錯誤
+            opts.add_argument('--disable-logging')  # 禁用日誌
+            opts.add_experimental_option('excludeSwitches', ['enable-automation', 'enable-logging'])
+        else:
+            # 反自動化檢測設定（非靜默模式）
+            opts.add_experimental_option('excludeSwitches', ['enable-automation'])
+
         # 反自動化檢測設定
         opts.add_experimental_option('useAutomationExtension', False)
-        opts.add_experimental_option('excludeSwitches', ['enable-automation'])
 
         # 偏好設定
         opts.add_experimental_option('prefs', {
@@ -106,11 +115,23 @@ class DriverManager:
             print('[WARN] stealth mode file not found, attempting to extract...')
             try:
                 os.makedirs("resource/plugins", exist_ok=True)
+
+                # Windows 相容性修復：使用 shell=True
+                # 在 Windows 下，subprocess 需要通過 shell 來找到 npx.cmd
+                import platform
+                use_shell = platform.system() == 'Windows'
+
                 subprocess.run(
                     ['npx', 'extract-stealth-evasions', '-o', js_path],
                     check=True,
-                    capture_output=True
+                    capture_output=True,
+                    shell=use_shell,  # Windows 下使用 shell
+                    timeout=60
                 )
+                print('[INFO] stealth mode file extracted successfully')
+            except subprocess.TimeoutExpired:
+                print('[WARN] stealth mode file extraction timed out')
+                return
             except Exception as e:
                 print(f'[WARN] Failed to extract stealth mode file: {e}')
                 return

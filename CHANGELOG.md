@@ -11,6 +11,600 @@
 
 ---
 
+## [2.0.8] - 2025-12-06
+
+### 作者
+- Claude Code (Sonnet 4.5) with wizard03
+
+### 🎉 本次更新重點：Windows 兼容性修復
+
+#### 重大修復：完整解決 Windows 環境兼容性問題 ✅
+
+**問題背景**:
+- Windows + Python 3.13.5 環境下程式無法正常運行
+- Stealth.min.js 無法下載
+- MitmProxy 無法啟動
+- 靜默模式無效（顯示大量 HTTP 請求日誌）
+
+**修復結果**:
+- ✅ **Stealth.min.js 成功下載**
+- ✅ **MitmProxy 正常啟動並監聽端口**
+- ✅ **靜默模式完美運作**
+- ✅ **Chrome 日誌已抑制**
+
+---
+
+#### 1. Stealth.min.js 下載修復
+
+**問題**:
+```
+[ERROR] Failed to extract stealth mode file: [WinError 2] 系統找不到指定的檔案。
+```
+
+**根本原因**:
+- Windows 下 `subprocess.run(['npx', ...])` 無法找到 `npx.cmd`
+- 需要通過 shell 來執行
+
+**修改檔案**:
+- `src/core/driver_manager.py` (110-120 行)
+- `src/utils/stealth_extractor.py` (40-52 行)
+
+**修復方案**:
+```python
+import platform
+
+use_shell = platform.system() == 'Windows'
+
+subprocess.run(
+    ['npx', 'extract-stealth-evasions'],
+    shell=use_shell,  # Windows 下使用 shell
+    timeout=60
+)
+```
+
+---
+
+#### 2. MitmProxy 啟動修復（重大架構變更）
+
+**問題**:
+```
+net::ERR_PROXY_CONNECTION_FAILED
+[WARN] Network monitoring may not be ready (port not listening)
+```
+
+**根本原因**:
+- Windows + Python 3.13 環境下
+- `multiprocessing.Process` + `asyncio` 事件循環無法正確啟動
+- Windows 使用 spawn 模式，asyncio 循環無法正確傳遞
+
+**修復方案**: multiprocessing → threading
+
+**修改檔案**: `src/core/proxy_manager.py`
+
+**核心變更**:
+```python
+# v2.0.1 (原版 - Windows 下失敗)
+from multiprocessing import Process
+self.process = Process(target=self._run)
+
+# v2.0.8 (新版 - Windows 兼容)
+import threading
+self.thread = threading.Thread(target=self._run, daemon=True)
+```
+
+**額外改進**:
+- 添加端口健康檢查 `_check_port_listening()`
+- 增加初始等待時間（1s → 3s）
+- 保留原始 multiprocessing 代碼為詳細註解
+- 創建備份文件: `proxy_manager.py.multiprocessing.bak`
+
+---
+
+#### 3. 靜默模式修復（多次迭代）
+
+**問題**:
+```
+127.0.0.1:xxx: GET https://elearn.post.gov.tw/...
+127.0.0.1:xxx: POST https://accounts.google.com/...
+[大量 HTTP 請求日誌...]
+```
+
+**迭代過程**:
+
+##### 嘗試 1: Python Logging (v2.0.2) ❌
+```python
+logging.getLogger("mitmproxy").setLevel(logging.CRITICAL)
+```
+**失敗原因**: DumpMaster 直接寫入 stdout
+
+##### 嘗試 2: MitmOptions 參數 (v2.0.3) ❌
+```python
+opts = MitmOptions(termlog_verbosity='error', quiet=True)
+```
+**失敗原因**: KeyError（當前版本不支援）
+
+##### 嘗試 3: 使用 Master 類 (v2.0.4) ❌
+```python
+master = Master(opts)  # 無輸出但也無功能
+```
+**失敗原因**: Master 無 ProxyServer addon，無法監聽端口
+
+##### 嘗試 4: 線程內部重定向 stdout (v2.0.5) ❌
+```python
+sys.stdout = open(os.devnull, 'w')
+```
+**失敗原因**: sys.stdout 是全局的，影響主線程
+
+##### 成功方案: 移除輸出 Addons (v2.0.6) ✅
+
+**關鍵發現**:
+```
+DumpMaster addons (36 個):
+ 1. TermLog      ← 終端日誌輸出（可移除）
+33. Dumper       ← 流量轉儲輸出（可移除）
+17. Proxyserver  ← 代理服務器（必要）
+```
+
+**最終方案**:
+```python
+master = DumpMaster(opts)
+
+if self.silent:
+    # 移除 TermLog addon
+    for addon in master.addons.chain:
+        if type(addon).__name__ == 'TermLog':
+            master.addons.remove(addon)
+            break
+
+    # 移除 Dumper addon
+    for addon in master.addons.chain:
+        if type(addon).__name__ == 'Dumper':
+            master.addons.remove(addon)
+            break
+```
+
+**優勢**:
+- ✅ 保留所有功能（包括 ProxyServer）
+- ✅ 抑制所有流量日誌
+- ✅ 不影響主線程
+- ✅ 線程安全
+
+---
+
+#### 4. Chrome 靜默模式
+
+**修改檔案**: `src/core/driver_manager.py` (80-88 行)
+
+**新增配置**:
+```python
+if silent_mode:
+    opts.add_argument('--log-level=3')     # 只顯示 FATAL 錯誤
+    opts.add_argument('--disable-logging')  # 禁用日誌
+    opts.add_experimental_option('excludeSwitches',
+        ['enable-automation', 'enable-logging'])
+```
+
+**抑制的訊息**:
+- `DevTools listening on ws://...`
+- Chrome 內部錯誤訊息
+- TensorFlow 訊息
+
+---
+
+### 📝 修改總結
+
+**修改的檔案** (3):
+- `src/core/proxy_manager.py` - 重大重構（threading + addons）
+- `src/core/driver_manager.py` - Windows subprocess + Chrome 靜默
+- `src/utils/stealth_extractor.py` - Windows subprocess
+
+**新增的檔案** (2):
+- `src/core/proxy_manager.py.multiprocessing.bak` - v2.0.1 備份
+- `docs/DAILY_WORK_LOG_20251206_WINDOWS_COMPATIBILITY.md` - 詳細工作日誌
+
+**刪除的檔案** (1):
+- `nul` - v2.0.5 測試時誤創建
+
+---
+
+### 🧪 測試狀態
+
+**已驗證** ✅:
+- [x] Stealth.min.js 下載成功
+- [x] MitmProxy 端口監聽成功
+- [x] 靜默模式無 HTTP 日誌
+- [x] Chrome 日誌已抑制
+- [x] 主線程輸出正常
+
+**待測試** ⏳:
+- [ ] 完整課程執行
+- [ ] 訪問時長攔截功能
+- [ ] 自動答題功能
+- [ ] Linux/macOS 兼容性測試
+
+---
+
+### 📚 技術文檔
+
+**工作日誌**: `docs/DAILY_WORK_LOG_20251206_WINDOWS_COMPATIBILITY.md`
+
+**重要學習點**:
+1. Windows subprocess 需要 `shell=True`
+2. threading 中 `sys.stdout` 是全局的
+3. MitmProxy addon 架構深入理解
+4. multiprocessing vs threading 權衡
+
+**版本演進**:
+```
+v2.0.1 → v2.0.2 → v2.0.3 → v2.0.4 → v2.0.5 → v2.0.6 ✅
+```
+
+---
+
+### ⚠️ 已知限制
+
+- Linux/macOS 環境未測試（理論上應相容）
+- 完整功能測試待完成
+
+---
+
+## [2.0.9] - 2025-12-05
+
+### 作者
+- wizard03 (with Claude Code CLI - Sonnet 4.5)
+
+### 🎉 本次更新重點：課程通過條件提取實驗完成 (v2.2.0 準備)
+
+#### 重大里程碑：通過條件提取方案驗證成功 ✅
+
+**目標**: 驗證獲取課程通過條件（觀看時長、測驗成績）的可行方案
+
+**實驗結果**:
+- ❌ API 不提供通過條件資料
+- ✅ **XPath 提取 100% 成功**（測試 9 個課程單元）
+- ✅ **方案 A（混合掃描）確定可行**
+
+**技術細節**:
+- **XPath**: `//*[@id="module-{module_id}"]/div[1]/div[1]/span`
+- **位置**: 課程計畫詳情頁（非課程列表頁）
+- **格式**: `通過條件為累積觀看時長{X}分鐘以上且教材狀態為已完成`
+
+**統計數據**:
+- 觀看時長: 平均 146.4 分鐘（範圍 75-250 分）
+- 測驗成績: 平均 72.5 分（範圍 60-100 分）
+
+---
+
+#### 1. 課程通過條件實驗腳本（新增）
+
+**新增檔案** (`scripts/course_requirements_experiment/`):
+- `test_course_details_api.py` - 課程詳細 API 探索腳本
+  - 測試 7 個可能的 API 端點
+  - 尋找包含通過條件的 API
+  - **結果**: 找到 2 個有效端點但都不包含通過條件
+  - 生成 API 探索報告
+
+- `test_pass_requirements_extraction.py` - XPath 提取測試腳本 ⭐ **關鍵**
+  - 使用 Selenium + API 混合方式
+  - 登入後前往課程列表頁
+  - 逐個進入課程計畫提取通過條件
+  - 批次處理所有課程單元（modules）
+  - 智能點擊（滾動 + JS 點擊備援）
+  - **測試結果**: ✅ **成功率 100%**（9/9 課程單元）
+
+- `README.md` - 實驗文檔
+  - 實驗目標與方法
+  - 通過條件說明（位置、格式）
+  - 執行指南
+
+**新增目錄** (`scripts/course_requirements_experiment/results/`):
+- `api_exploration_report.md` - API 探索結果報告
+- `extraction_test_report.md` - XPath 提取測試報告 ⭐
+- `extraction_raw_data.json` - 原始提取資料
+
+---
+
+#### 2. 實驗發現與分析
+
+**API 探索結果**:
+- 測試端點: 7 個
+- 有效端點: 2 個
+  - `GET /api/courses/{id}` - 課程基本資訊（28 個欄位）
+  - `GET /api/courses/{id}/modules` - 課程模組列表
+- **結論**: ❌ 無 API 端點包含通過條件
+
+**XPath 提取測試結果**:
+- 測試課程計畫: 18 個
+- 測試課程單元: 9 個
+- 成功提取: 9 個
+- **成功率**: 100.0% ✅
+
+**文字格式分析**（8 種獨特格式）:
+1. `通過條件為累積觀看時長100分鐘以上且教材狀態為已完成` (2次)
+2. `通過條件為累積觀看時長100分鐘以上、教材狀態為已完成及測驗成績達100分` (1次)
+3. `通過條件為累積觀看時長250分鐘以上、所有教材狀態為已完成且測驗成績達60分以上` (1次)
+4. `通過條件為累積觀看時長75分鐘以上、教材狀態為已完成及測驗成績達70分以上` (1次)
+5. `通過條件為累積觀看時長200分鐘以上且所有教材狀態為已完成` (1次)
+6. `通過條件為累積觀看時長200分鐘以上且教材狀態為已完成` (1次)
+7. `通過條件為測驗成績達60分以上` (1次)
+8. `參考資料` (1次)
+
+**Regex 提取規則**:
+```python
+duration_match = re.search(r'觀看時長(\d+)分鐘', text)  # 匹配觀看時長
+score_match = re.search(r'測驗成績達(\d+)分', text)     # 匹配測驗成績
+```
+
+---
+
+#### 3. 方案 A（混合掃描）確定可行
+
+**混合掃描流程**:
+```
+登入 (Selenium)
+  ↓
+前往課程列表 (Selenium)
+  ↓
+逐個進入課程計畫 (Selenium + 智能點擊)
+  ↓
+批次提取所有 module 通過條件 (XPath)
+  ↓
+返回課程列表
+  ↓
+使用 API 提交觀看時長 (requests)
+```
+
+**智能點擊機制**:
+- 精確 XPath 定位: `//a[text()="{program_name}"]`
+- 自動滾動到元素位置
+- 普通點擊失敗時自動改用 JS 點擊
+- 處理重複課程名稱（使用第一個匹配）
+
+**性能優勢**:
+- 一次性批次提取所有通過條件
+- API 提交時長（快速）
+- 僅考試環節使用 Selenium
+- 預估仍比純 Web Scan 快 **5-10x**
+
+---
+
+#### 4. 下一步：新功能實作計畫
+
+**新功能**: 混合執行模式（API + Selenium）
+
+**核心模組** (待實作):
+1. `PassRequirementsExtractor` - 通過條件提取器
+   - 基於 `test_pass_requirements_extraction.py` 改造
+   - 批次提取所有課程計畫的通過條件
+   - 儲存為結構化資料
+
+2. `DurationModeSelector` - 時長模式選擇器
+   - 固定模式: 使用配置值
+   - 要求模式: 使用提取的 required_duration
+   - 自動模式: required_duration + buffer
+
+3. `VisitDurationClient` - 訪問時長 API 客戶端
+   - POST `/statistics/api/user-visits`
+   - 提交觀看時長（JSON payload）
+
+4. `HybridExecutionScenario` - 混合執行場景
+   - 整合以上模組
+   - 自動匹配題庫處理考試
+
+**預計開發時間**: 11 工作日
+
+---
+
+## [2.0.8] - 2025-12-05
+
+### 作者
+- wizard03 (with Claude Code CLI - Sonnet 4.5)
+
+### 🎉 本次更新重點：API 課程掃描模式驗證完成 (v2.1.0 準備)
+
+#### 重大里程碑：API 直接調用模式驗證成功 🟢
+
+**目標**: 驗證是否可以直接調用 API 獲取課程列表，取代傳統 Selenium Web Scan
+
+**結論**: ✅ **完全可行** - 伺服器無反偵測機制，可安全使用 API 直接調用
+
+**預期效益**:
+- 🚀 性能提升 **4-7x**（整體）/ **15-30x**（掃描階段）
+- 💰 資源消耗降低 **80%**
+- ⚡ 執行時間從分鐘級到秒級
+- 🎯 支援批次處理
+
+---
+
+#### 1. API 驗證實驗腳本（新增）
+
+**新增檔案** (`scripts/api_verification/`):
+- `test_my_courses_api.py` - API 結構驗證腳本
+  - 完全使用專案現有模組（ConfigLoader, DriverManager, CookieManager, LoginPage）
+  - 自動載入 stealth.min.js 反偵測腳本
+  - 支援手動輸入驗證碼
+  - 驗證 `GET /api/my-courses` API 端點
+  - 生成 API 結構分析報告
+
+- `test_api_security.py` - 反偵測風險評估腳本 ⭐ **關鍵**
+  - 測試 4 種場景：基準測試、純 API 調用、高頻請求、最小化 Headers
+  - 評估伺服器反偵測機制
+  - 生成風險評級報告（🟢 綠燈 / 🟡 黃燈 / 🔴 紅燈）
+  - **測試結果**: 🟢 **綠燈 - 低風險**（所有測試通過）
+
+- `compare_web_vs_api.py` - 資料一致性比對腳本
+  - 比對 Web Scan 與 API Scan 資料
+  - 驗證欄位對應關係
+  - 生成欄位對應表與整合建議
+  - **比對結果**: 當前帳號 **100% 匹配**
+
+- `README.md` - 完整執行指南
+  - 安全性保證說明
+  - WSL vs Windows 執行方式
+  - 故障排除指南
+
+**新增目錄** (`scripts/api_verification/results/`):
+- `api_response.json` - API 原始回應
+- `api_structure_analysis.md` - 結構分析報告
+- `security_assessment.md` - 安全性評估報告 ⭐
+- `comparison_report.md` - 資料比對報告
+- `final_integration_report.md` - 最終整合建議報告
+
+---
+
+#### 2. 實驗發現與分析
+
+**API 端點**: `GET /api/my-courses`
+
+**API 結構**（情境 C - 扁平結構）:
+```json
+{
+  "courses": [
+    {
+      "id": 465,
+      "name": "課程名稱",
+      "course_code": "901011114",
+      "course_type": 1,
+      "credit": "2.0",
+      "start_date": "2025-03-01",
+      "end_date": "2025-12-31",
+      "is_graduated": true,
+      "compulsory": true,
+      "course_attributes": {
+        "published": true,
+        "student_count": 25481
+      }
+    }
+  ]
+}
+```
+
+**API 提供的額外欄位**（Web Scan 沒有）:
+- `course_code` - 課程代碼
+- `course_type` - 課程類型
+- `credit` - 學分
+- `start_date` / `end_date` - 日期範圍
+- `is_graduated` - 是否已完成
+- `compulsory` - 是否必修
+- `student_count` - 學生人數
+
+**反偵測測試結果**:
+
+| 測試場景 | 結果 | 說明 |
+|---------|------|------|
+| 基準測試（完整 Headers） | ✅ 成功 (2.18s) | 驗證環境正常 |
+| 純 API 調用（簡化 Headers） | ✅ 成功 (0.50s) | **無瀏覽器指紋檢測** |
+| 高頻請求（10次/分鐘） | ✅ 10/10 成功 | **無頻率限制** |
+| 最小化 Headers（僅 Cookie） | ✅ 成功 (0.51s) | **Headers 檢查寬鬆** |
+
+**關鍵發現**:
+- ✅ 伺服器對 API 調用**無明顯反偵測機制**
+- ✅ 接受簡化的 HTTP Headers
+- ✅ 無頻率限制（連續 10 次請求全部成功）
+- ✅ 無瀏覽器指紋檢測
+- ✅ 無 IP 綁定驗證
+
+**資料一致性**:
+- 當前帳號課程: **7/7 匹配 = 100%** ✅
+- 匹配策略: `course_id` (Web) == `id` (API)
+
+---
+
+#### 3. 性能對比
+
+| 指標 | Web Scan（現狀） | API Mode（v2.1.0） | 改善幅度 |
+|------|-----------------|-------------------|---------|
+| 登入時間 | 20-30s | 20-30s | - |
+| 掃描時間 | 60-120s | **2-5s** | 🟢 **15-30x ↑** |
+| 總時間 | 80-150s | **22-35s** | 🟢 **4-7x ↑** |
+| 資源消耗 | 高（Chrome 常駐） | 低（僅登入時用） | 🟢 **80% ↓** |
+| 批次處理 | 受限 | 優異 | 🟢 **10x ↑** |
+
+---
+
+#### 4. 推薦實作方案（v2.1.0 計畫）
+
+**方案**: API Direct Mode
+
+**架構流程**:
+```
+Phase 1: Selenium 登入 → 提取 Session Cookie → 關閉瀏覽器
+Phase 2: requests 調用 API → 獲取課程列表
+Phase 3: 篩選未完成課程 → 生成 schedule.json
+Phase 4: 執行課程學習（現有流程）
+```
+
+**計畫新增模組**:
+- `src/api/course_fetcher.py` - API 課程資料獲取器
+  - `fetch_all_courses()` - 獲取所有課程
+  - `filter_active_courses()` - 篩選未完成課程
+  - `convert_to_schedule_format()` - 轉換為排程格式
+
+**整合點**: `menu.py` - 新增「API 課程掃描」選項
+
+**實作路線圖**:
+- Phase 1: 原型開發（1-2 天）
+- Phase 2: 整合測試（1 天）
+- Phase 3: 生產部署（1 天）
+
+---
+
+#### 5. 文檔更新
+
+**更新檔案**:
+- `docs/CLAUDE_CODE_HANDOVER-2.md` - 新增「已驗證：API 課程掃描模式」章節
+  - 詳細記錄實驗過程與結果
+  - 包含測試數據與性能對比
+  - 提供實作建議與路線圖
+
+**新增文檔**:
+- `scripts/api_verification/README.md` - API 驗證實驗執行指南
+- `scripts/api_verification/results/final_integration_report.md` - 最終整合建議報告
+
+---
+
+### 技術說明
+
+**安全性保證**:
+- 所有測試腳本完全使用專案現有核心模組
+- 自動載入 `stealth.min.js` 反偵測腳本
+- 使用與 `main.py` 相同的登入流程
+- 讀取 `eebot.cfg` 配置
+- 支援手動輸入驗證碼
+
+**修改原則**:
+- ✅ **不影響現有程式碼** - 所有測試腳本獨立於專案主程式
+- ✅ **完全向後兼容** - 現有功能不受影響
+- ✅ **實驗性質** - 位於 `scripts/` 目錄，不納入生產環境
+- ✅ **充分驗證** - 完成結構、安全、一致性三重驗證
+
+---
+
+### 下一步計畫
+
+**v2.1.0 開發目標**:
+1. 實作 `src/api/course_fetcher.py` 模組
+2. 整合到 `menu.py` 選單系統
+3. 單元測試與整合測試
+4. 性能驗證（確認 4-7x 提升）
+5. 生產部署與監控設置
+
+**長期規劃**:
+- v2.2.0: 研究題庫 API 可行性
+- v3.0.0: 完全 API 化（課程 + 題庫）
+
+---
+
+### 參考資料
+
+詳細技術文檔請參閱：
+- [CLAUDE_CODE_HANDOVER-2.md](docs/CLAUDE_CODE_HANDOVER-2.md#已驗證api-課程掃描模式-2025-12-05-實驗完成)
+- [API 驗證實驗執行指南](scripts/api_verification/README.md)
+- [最終整合建議報告](scripts/api_verification/results/final_integration_report.md)
+- [安全性評估報告](scripts/api_verification/results/security_assessment.md)
+
+---
+
 ## [2.0.5] - 2025-11-17
 
 ### 作者

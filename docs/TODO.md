@@ -1,7 +1,37 @@
 # EEBot 待辦事項清單
 
-> **最後更新**: 2025-11-30
+> **最後更新**: 2025-12-06
 > **維護者**: wizard03
+
+---
+
+## 📋 Windows 兼容性修復
+
+### ✅ 已完成 (v2.0.8)
+
+| 項目 | 完成版本 | 完成日期 | 說明 |
+|------|---------|---------|------|
+| Stealth.min.js 下載修復 | v2.0.8 | 2025-12-06 | Windows subprocess shell=True |
+| MitmProxy 啟動修復 | v2.0.8 | 2025-12-06 | multiprocessing → threading |
+| 靜默模式修復 | v2.0.8 | 2025-12-06 | 移除 TermLog + Dumper addons |
+| Chrome 靜默模式 | v2.0.8 | 2025-12-06 | --log-level=3 + 禁用日誌 |
+
+### ⏳ 待測試 (v2.0.8)
+
+**狀態**: 📋 待測試
+
+**優先級**: 高
+
+**項目**:
+- [ ] 完整課程執行測試
+- [ ] 訪問時長攔截功能測試
+- [ ] 自動答題功能測試
+- [ ] Linux 環境兼容性測試
+- [ ] macOS 環境兼容性測試
+
+**相關文檔**:
+- `docs/DAILY_WORK_LOG_20251206_WINDOWS_COMPATIBILITY.md`
+- `CHANGELOG.md` v2.0.8
 
 ---
 
