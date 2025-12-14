@@ -1,0 +1,508 @@
+{
+  "courses": [
+    {
+      "academic_year": null,
+      "compulsory": true,
+      "course_attributes": {
+        "published": true,
+        "student_count": 25481,
+        "teaching_class_name": null
+      },
+      "course_code": "901011114",
+      "course_type": 1,
+      "credit": "2.0",
+      "department": null,
+      "end_date": "2025-12-31",
+      "grade": null,
+      "id": 465,
+      "instructors": [],
+      "is_graduated": true,
+      "is_manual_registered": false,
+      "is_mute": false,
+      "klass": null,
+      "name": "性別平等工作法、性騷擾防治法及相關子法修法重點與實務案例(114年度)",
+      "org": {
+        "is_enterprise_or_organization": null
+      },
+      "org_id": 1,
+      "semester": null,
+      "start_date": "2025-03-01"
+    },
+    {
+      "academic_year": null,
+      "compulsory": true,
+      "course_attributes": {
+        "published": true,
+        "student_count": 24885,
+        "teaching_class_name": null
+      },
+      "course_code": "305001114",
+      "course_type": 1,
+      "credit": "2.0",
+      "department": null,
+      "end_date": "2025-12-31",
+      "grade": null,
+      "id": 452,
+      "instructors": [],
+      "is_graduated": true,
+      "is_manual_registered": false,
+      "is_mute": false,
+      "klass": null,
+      "name": "高齡客戶投保權益保障(114年度)",
+      "org": {
+        "is_enterprise_or_organization": null
+      },
+      "org_id": 1,
+      "semester": null,
+      "start_date": "2025-01-01"
+    },
+    {
+      "academic_year": null,
+      "compulsory": true,
+      "course_attributes": {
+        "published": true,
+        "student_count": 25498,
+        "teaching_class_name": null
+      },
+      "course_code": "399005114",
+      "course_type": 1,
+      "credit": "5.0",
+      "department": null,
+      "end_date": "2025-12-31",
+      "grade": null,
+      "id": 450,
+      "instructors": [],
+      "is_graduated": true,
+      "is_manual_registered": false,
+      "is_mute": false,
+      "klass": null,
+      "name": "金融服務業公平待客原則＆洗錢防制及打擊資恐教育訓練(114年度)",
+      "org": {
+        "is_enterprise_or_organization": null
+      },
+      "org_id": 1,
+      "semester": null,
+      "start_date": "2025-01-01"
+    },
+    {
+      "academic_year": null,
+      "compulsory": true,
+      "course_attributes": {
+        "published": true,
+        "student_count": 25495,
+        "teaching_class_name": null
+      },
+      "course_code": "399008114",
+      "course_type": 1,
+      "credit": "1.5",
+      "department": null,
+      "end_date": "2025-12-31",
+      "grade": null,
+      "id": 454,
+      "instructors": [],
+      "is_graduated": true,
+      "is_manual_registered": false,
+      "is_mute": false,
+      "klass": null,
+      "name": "壽險業務員在職訓練學程課程及測驗(114年度)",
+      "org": {
+        "is_enterprise_or_organization": null
+      },
+      "org_id": 1,
+      "semester": null,
+      "start_date": "2025-01-01"
+    },
+    {
+      "academic_year": null,
+      "compulsory": true,
+      "course_attributes": {
+        "published": true,
+        "student_count": 25495,
+        "teaching_class_name": null
+      },
+      "course_code": "902001114",
+      "course_type": 1,
+      "credit": "4.0",
+      "department": null,
+      "end_date": "2025-12-31",
+      "grade": null,
+      "id": 367,
+      "instructors": [],
+      "is_graduated": true,
+      "is_manual_registered": false,
+      "is_mute": false,
+      "klass": null,
+      "name": "環境教育學程課程(綠色金融)(114年度)",
+      "org": {
+        "is_enterprise_or_organization": null
+      },
+      "org_id": 1,
+      "semester": null,
+      "start_date": "2025-01-01"
+    },
+    {
+      "academic_year": null,
+      "compulsory": true,
+      "course_attributes": {
+        "published": true,
+        "student_count": 25495,
+        "teaching_class_name": null
+      },
+      "course_code": "903001114",
+      "course_type": 1,
+      "credit": "4.0",
+      "department": null,
+      "end_date": "2025-12-31",
+      "grade": null,
+      "id": 365,
+      "instructors": [],
+      "is_graduated": true,
+      "is_manual_registered": false,
+      "is_mute": false,
+      "klass": null,
+      "name": "資通安全學程課程(114年度)",
+      "org": {
+        "is_enterprise_or_organization": null
+      },
+      "org_id": 1,
+      "semester": null,
+      "start_date": "2025-01-01"
+    },
+    {
+      "academic_year": null,
+      "compulsory": true,
+      "course_attributes": {
+        "published": true,
+        "student_count": 25495,
+        "teaching_class_name": null
+      },
+      "course_code": "903003114",
+      "course_type": 1,
+      "credit": "0.0",
+      "department": null,
+      "end_date": "2025-12-31",
+      "grade": null,
+      "id": 366,
+      "instructors": [],
+      "is_graduated": true,
+      "is_manual_registered": false,
+      "is_mute": false,
+      "klass": null,
+      "name": "資通安全測驗(114年度)",
+      "org": {
+        "is_enterprise_or_organization": null
+      },
+      "org_id": 1,
+      "semester": null,
+      "start_date": "2025-01-01"
+    },
+    {
+      "academic_year": null,
+      "compulsory": true,
+      "course_attributes": {
+        "published": true,
+        "student_count": 21563,
+        "teaching_class_name": null
+      },
+      "course_code": "910008114",
+      "course_type": 1,
+      "credit": "2.0",
+      "department": null,
+      "end_date": "2025-12-31",
+      "grade": null,
+      "id": 369,
+      "instructors": [],
+      "is_graduated": true,
+      "is_manual_registered": false,
+      "is_mute": false,
+      "klass": null,
+      "name": "預防執行職務遭受不法侵害(員工)(114年度)",
+      "org": {
+        "is_enterprise_or_organization": null
+      },
+      "org_id": 1,
+      "semester": null,
+      "start_date": "2025-01-01"
+    },
+    {
+      "academic_year": null,
+      "compulsory": true,
+      "course_attributes": {
+        "published": true,
+        "student_count": 25530,
+        "teaching_class_name": null
+      },
+      "course_code": "901009113",
+      "course_type": 1,
+      "credit": "2.0",
+      "department": null,
+      "end_date": "2024-12-31",
+      "grade": null,
+      "id": 354,
+      "instructors": [],
+      "is_graduated": true,
+      "is_manual_registered": false,
+      "is_mute": false,
+      "klass": null,
+      "name": "職場性騷擾與其他不法侵害防治(員工)(113年度)",
+      "org": {
+        "is_enterprise_or_organization": null
+      },
+      "org_id": 1,
+      "semester": null,
+      "start_date": "2024-07-05"
+    },
+    {
+      "academic_year": null,
+      "compulsory": false,
+      "course_attributes": {
+        "published": true,
+        "student_count": 6234,
+        "teaching_class_name": null
+      },
+      "course_code": "910005113",
+      "course_type": 1,
+      "credit": "2.0",
+      "department": null,
+      "end_date": "2024-12-31",
+      "grade": null,
+      "id": 196,
+      "instructors": [],
+      "is_graduated": true,
+      "is_manual_registered": false,
+      "is_mute": false,
+      "klass": null,
+      "name": "職場不法侵害及溝通技巧(員工)(113年度)",
+      "org": {
+        "is_enterprise_or_organization": null
+      },
+      "org_id": 1,
+      "semester": null,
+      "start_date": "2024-01-17"
+    },
+    {
+      "academic_year": null,
+      "compulsory": true,
+      "course_attributes": {
+        "published": true,
+        "student_count": 25103,
+        "teaching_class_name": null
+      },
+      "course_code": "305001113",
+      "course_type": 1,
+      "credit": "2.0",
+      "department": null,
+      "end_date": "2024-12-31",
+      "grade": null,
+      "id": 263,
+      "instructors": [],
+      "is_graduated": true,
+      "is_manual_registered": false,
+      "is_mute": false,
+      "klass": null,
+      "name": "高齡客戶投保權益保障(113年度)",
+      "org": {
+        "is_enterprise_or_organization": null
+      },
+      "org_id": 1,
+      "semester": null,
+      "start_date": "2024-01-01"
+    },
+    {
+      "academic_year": null,
+      "compulsory": true,
+      "course_attributes": {
+        "published": true,
+        "student_count": 26037,
+        "teaching_class_name": null
+      },
+      "course_code": "399005113",
+      "course_type": 1,
+      "credit": "5.0",
+      "department": null,
+      "end_date": "2024-12-31",
+      "grade": null,
+      "id": 225,
+      "instructors": [],
+      "is_graduated": true,
+      "is_manual_registered": false,
+      "is_mute": false,
+      "klass": null,
+      "name": "金融服務業公平待客原則＆洗錢防制及打擊資恐教育訓練(113年度)",
+      "org": {
+        "is_enterprise_or_organization": null
+      },
+      "org_id": 1,
+      "semester": null,
+      "start_date": "2024-01-01"
+    },
+    {
+      "academic_year": null,
+      "compulsory": true,
+      "course_attributes": {
+        "published": true,
+        "student_count": 26034,
+        "teaching_class_name": null
+      },
+      "course_code": "399006113",
+      "course_type": 1,
+      "credit": "0.0",
+      "department": null,
+      "end_date": "2024-12-31",
+      "grade": null,
+      "id": 226,
+      "instructors": [],
+      "is_graduated": true,
+      "is_manual_registered": false,
+      "is_mute": false,
+      "klass": null,
+      "name": "壽險業務員在職訓練測驗(113年度)",
+      "org": {
+        "is_enterprise_or_organization": null
+      },
+      "org_id": 1,
+      "semester": null,
+      "start_date": "2024-01-01"
+    },
+    {
+      "academic_year": null,
+      "compulsory": true,
+      "course_attributes": {
+        "published": true,
+        "student_count": 26034,
+        "teaching_class_name": null
+      },
+      "course_code": "399007113",
+      "course_type": 1,
+      "credit": "1.5",
+      "department": null,
+      "end_date": "2024-12-31",
+      "grade": null,
+      "id": 269,
+      "instructors": [],
+      "is_graduated": true,
+      "is_manual_registered": false,
+      "is_mute": false,
+      "klass": null,
+      "name": "壽險業務員在職訓練學程課程(113年度)",
+      "org": {
+        "is_enterprise_or_organization": null
+      },
+      "org_id": 1,
+      "semester": null,
+      "start_date": "2024-01-01"
+    },
+    {
+      "academic_year": null,
+      "compulsory": true,
+      "course_attributes": {
+        "published": true,
+        "student_count": 19433,
+        "teaching_class_name": null
+      },
+      "course_code": "901001113",
+      "course_type": 1,
+      "credit": "2.0",
+      "department": null,
+      "end_date": "2024-07-05",
+      "grade": null,
+      "id": 63,
+      "instructors": [],
+      "is_graduated": true,
+      "is_manual_registered": false,
+      "is_mute": false,
+      "klass": null,
+      "name": "性別主流化及性騷擾之防治與處理(113年度)",
+      "org": {
+        "is_enterprise_or_organization": null
+      },
+      "org_id": 1,
+      "semester": null,
+      "start_date": "2024-01-01"
+    },
+    {
+      "academic_year": null,
+      "compulsory": true,
+      "course_attributes": {
+        "published": true,
+        "student_count": 26073,
+        "teaching_class_name": null
+      },
+      "course_code": "902001113",
+      "course_type": 1,
+      "credit": "4.0",
+      "department": null,
+      "end_date": "2024-12-31",
+      "grade": null,
+      "id": 82,
+      "instructors": [],
+      "is_graduated": true,
+      "is_manual_registered": false,
+      "is_mute": false,
+      "klass": null,
+      "name": "環境教育學程課程(綠色金融)(113年度)",
+      "org": {
+        "is_enterprise_or_organization": null
+      },
+      "org_id": 1,
+      "semester": null,
+      "start_date": "2024-01-01"
+    },
+    {
+      "academic_year": null,
+      "compulsory": true,
+      "course_attributes": {
+        "published": true,
+        "student_count": 26075,
+        "teaching_class_name": null
+      },
+      "course_code": "903001113",
+      "course_type": 1,
+      "credit": "4.0",
+      "department": null,
+      "end_date": "2024-12-31",
+      "grade": null,
+      "id": 60,
+      "instructors": [],
+      "is_graduated": true,
+      "is_manual_registered": false,
+      "is_mute": false,
+      "klass": null,
+      "name": "資通安全學程課程(113年度)",
+      "org": {
+        "is_enterprise_or_organization": null
+      },
+      "org_id": 1,
+      "semester": null,
+      "start_date": "2024-01-01"
+    },
+    {
+      "academic_year": null,
+      "compulsory": true,
+      "course_attributes": {
+        "published": true,
+        "student_count": 26072,
+        "teaching_class_name": null
+      },
+      "course_code": "903003113",
+      "course_type": 1,
+      "credit": "0.0",
+      "department": null,
+      "end_date": "2024-12-31",
+      "grade": null,
+      "id": 62,
+      "instructors": [],
+      "is_graduated": true,
+      "is_manual_registered": false,
+      "is_mute": false,
+      "klass": null,
+      "name": "資通安全測驗(113年度)",
+      "org": {
+        "is_enterprise_or_organization": null
+      },
+      "org_id": 1,
+      "semester": null,
+      "start_date": "2024-01-01"
+    }
+  ]
+}

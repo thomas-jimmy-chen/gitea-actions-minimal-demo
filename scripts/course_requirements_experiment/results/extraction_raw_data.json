@@ -1,0 +1,83 @@
+[
+  {
+    "program_id": 465,
+    "program_name": "性別平等工作法、性騷擾防治法及相關子法修法重點與實務案例(114年度)",
+    "module_id": "485",
+    "success": true,
+    "text": "通過條件為累積觀看時長100分鐘以上且教材狀態為已完成",
+    "duration_minutes": 100,
+    "exam_score": null
+  },
+  {
+    "program_id": 452,
+    "program_name": "高齡客戶投保權益保障(114年度)",
+    "module_id": "472",
+    "success": true,
+    "text": "通過條件為累積觀看時長100分鐘以上、教材狀態為已完成及測驗成績達100分",
+    "duration_minutes": 100,
+    "exam_score": 100
+  },
+  {
+    "program_id": 450,
+    "program_name": "金融服務業公平待客原則＆洗錢防制及打擊資恐教育訓練(114年度)",
+    "module_id": "462",
+    "success": true,
+    "text": "通過條件為累積觀看時長250分鐘以上、所有教材狀態為已完成且測驗成績達60分以上",
+    "duration_minutes": 250,
+    "exam_score": 60
+  },
+  {
+    "program_id": 454,
+    "program_name": "壽險業務員在職訓練學程課程及測驗(114年度)",
+    "module_id": "474",
+    "success": true,
+    "text": "通過條件為累積觀看時長75分鐘以上、教材狀態為已完成及測驗成績達70分以上",
+    "duration_minutes": 75,
+    "exam_score": 70
+  },
+  {
+    "program_id": 367,
+    "program_name": "環境教育學程課程(綠色金融)(114年度)",
+    "module_id": "375",
+    "success": true,
+    "text": "通過條件為累積觀看時長200分鐘以上且所有教材狀態為已完成",
+    "duration_minutes": 200,
+    "exam_score": null
+  },
+  {
+    "program_id": 367,
+    "program_name": "環境教育學程課程(綠色金融)(114年度)",
+    "module_id": "378",
+    "success": true,
+    "text": "參考資料",
+    "duration_minutes": null,
+    "exam_score": null
+  },
+  {
+    "program_id": 365,
+    "program_name": "資通安全學程課程(114年度)",
+    "module_id": "373",
+    "success": true,
+    "text": "通過條件為累積觀看時長200分鐘以上且教材狀態為已完成",
+    "duration_minutes": 200,
+    "exam_score": null
+  },
+  {
+    "program_id": 366,
+    "program_name": "資通安全測驗(114年度)",
+    "module_id": "374",
+    "success": true,
+    "text": "通過條件為測驗成績達60分以上",
+    "duration_minutes": null,
+    "exam_score": 60
+  },
+  {
+    "program_id": 369,
+    "program_name": "預防執行職務遭受不法侵害(員工)(114年度)",
+    "module_id": "380",
+    "success": true,
+    "text": "通過條件為累積觀看時長100分鐘以上且教材狀態為已完成",
+    "duration_minutes": 100,
+    "exam_score": null
+  }
+]

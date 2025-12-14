@@ -30,25 +30,101 @@ class CourseListPage(BasePage):
 
     def select_course_by_name(self, course_name: str, delay: float = 7.0):
         """
-        根據課程名稱選擇課程
+        根據課程名稱選擇課程（增強版：多重策略 + 重試機制）
 
         Args:
             course_name: 課程名稱（完整的連結文字）
             delay: 點擊後的延遲時間（秒），等待頁面載入完成
         """
-        try:
-            locator = (By.LINK_TEXT, course_name)
+        from selenium.webdriver.support.ui import WebDriverWait
+        from selenium.webdriver.support import expected_conditions as EC
+        from selenium.common.exceptions import (
+            TimeoutException,
+            ElementClickInterceptedException,
+            StaleElementReferenceException
+        )
 
-            # 點擊課程
-            self.click(locator)
-            print(f'[SUCCESS] Selected course: {course_name}')
+        max_retries = 3
+        retry_delay = 2
 
-            # 等待頁面載入完成
-            time.sleep(delay)
+        for attempt in range(max_retries):
+            try:
+                print(f'[嘗試 {attempt + 1}/{max_retries}] 等待課程元素載入: {course_name[:50]}...')
 
-        except Exception as e:
-            print(f'[ERROR] Failed to select course "{course_name}": {e}')
-            raise
+                wait = WebDriverWait(self.driver, 30)
+                element = None
+                successful_strategy = None
+
+                # 嘗試多種定位策略
+                strategies = [
+                    # 策略 1: LINK_TEXT（精確匹配）
+                    (By.LINK_TEXT, course_name, "LINK_TEXT"),
+                    # 策略 2: PARTIAL_LINK_TEXT（部分匹配）
+                    (By.PARTIAL_LINK_TEXT, course_name[:30], "PARTIAL_LINK_TEXT"),
+                    # 策略 3: XPath（ng-bind 屬性）
+                    (By.XPATH, f"//a[@ng-bind='course.display_name' and contains(text(), '{course_name[:20]}')]", "XPath (ng-bind)"),
+                    # 策略 4: XPath（通用連結包含文字）
+                    (By.XPATH, f"//a[contains(text(), '{course_name[:20]}')]", "XPath (contains)"),
+                ]
+
+                # 步驟 1: 嘗試不同策略找到元素
+                print(f'  → 嘗試多種定位策略...')
+                for strategy_by, strategy_value, strategy_name in strategies:
+                    try:
+                        locator = (strategy_by, strategy_value)
+                        element = wait.until(EC.presence_of_element_located(locator))
+                        if element:
+                            successful_strategy = strategy_name
+                            print(f'  ✓ 元素已找到 (策略: {strategy_name})')
+                            break
+                    except TimeoutException:
+                        continue
+
+                if not element:
+                    raise TimeoutException(f"無法使用任何策略找到元素: {course_name[:50]}...")
+
+                # 步驟 2: 滾動到元素位置
+                print(f'  → 滾動到元素位置...')
+                self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", element)
+                time.sleep(1)  # 等待滾動完成
+
+                # 步驟 3: 等待元素可點擊（clickable）
+                print(f'  → 等待元素可點擊...')
+                element = wait.until(EC.element_to_be_clickable(locator))
+                print(f'  ✓ 元素可點擊')
+
+                # 步驟 4: 嘗試點擊（先用 JavaScript，更可靠）
+                print(f'  → 嘗試點擊...')
+                try:
+                    # 先嘗試 JavaScript 點擊（繞過遮擋問題）
+                    self.driver.execute_script("arguments[0].click();", element)
+                    print(f'  ✓ JavaScript 點擊成功')
+                except Exception as js_error:
+                    print(f'  ⚠️  JavaScript 點擊失敗: {js_error}')
+                    # 如果 JS 點擊失敗，嘗試普通點擊
+                    element.click()
+                    print(f'  ✓ 普通點擊成功')
+
+                print(f'[SUCCESS] Selected course: {course_name[:50]}...')
+
+                # 等待頁面載入完成
+                time.sleep(delay)
+                return  # 成功，退出函數
+
+            except (TimeoutException, ElementClickInterceptedException, StaleElementReferenceException) as e:
+                print(f'  ✗ 第 {attempt + 1} 次嘗試失敗: {type(e).__name__}')
+
+                if attempt < max_retries - 1:
+                    print(f'  → 等待 {retry_delay} 秒後重試...')
+                    time.sleep(retry_delay)
+                else:
+                    # 最後一次嘗試失敗，拋出異常
+                    print(f'[ERROR] 已達最大重試次數，無法選擇課程: {course_name[:50]}...')
+                    raise
+
+            except Exception as e:
+                print(f'[ERROR] 未預期的錯誤: {e}')
+                raise
 
     def select_course_by_partial_name(self, partial_name: str, delay: float = 7.0):
         """
@@ -305,9 +381,8 @@ class CourseListPage(BasePage):
 
             print(f'  ✅ 找到 {len(courses)} 個課程, {len(exams)} 個考試')
 
-            # 返回課程列表 (使用瀏覽器返回)
-            self.driver.back()
-            time.sleep(2)
+            # 注意：不在這裡返回！讓調用者決定何時返回
+            # 這樣才能在獲取子課程後，繼續點擊進入子課程獲取章節
 
             return {
                 "courses": courses,
@@ -318,13 +393,90 @@ class CourseListPage(BasePage):
             print(f'[錯誤] 獲取課程詳情失敗: {e}')
             import traceback
             traceback.print_exc()
+            # 注意：出錯時返回 error 標記，讓調用者知道掃描失敗
+            return {
+                "courses": [],
+                "exams": [],
+                "error": True,
+                "error_message": str(e)
+            }
+
+    def get_course_chapters(self, course_name: str) -> list:
+        """
+        獲取課程內的章節列表（孫課程）
+
+        Args:
+            course_name: 子課程名稱
+
+        Returns:
+            list: [{"name": "章節名稱", "type": "chapter"}, ...]
+        """
+        try:
+            print(f'[掃描] 正在進入子課程: {course_name[:40]}...')
+
+            # 點擊進入子課程
+            self.select_course_by_name(course_name, delay=3.0)
+
+            # 等待頁面載入
+            time.sleep(2)
+
+            # 嘗試多種可能的章節定位方式
+            chapters = []
+            seen_names = set()
+
+            # 方式 1: 查找課程內容列表（常見於 SCORM 課程）
+            # 可能的選擇器：
+            # - <a class="title">章節名稱</a>
+            # - <div class="chapter-title">章節名稱</div>
+            # - <li class="content-item">章節名稱</li>
+
+            # 嘗試多個選擇器
+            selectors = [
+                (By.XPATH, "//div[@class='content-list']//a[@class='title']"),
+                (By.XPATH, "//li[contains(@class,'content-item')]//a"),
+                (By.XPATH, "//div[contains(@class,'chapter')]//a"),
+                (By.XPATH, "//ul[contains(@class,'list')]//a[@ng-bind]"),
+                (By.XPATH, "//div[@class='activity-list']//a[@class='title']"),
+            ]
+
+            for selector in selectors:
+                try:
+                    chapter_elements = self.find_elements(selector)
+                    if chapter_elements:
+                        print(f'[DEBUG] 使用選擇器找到 {len(chapter_elements)} 個元素: {selector[1]}')
+                        for elem in chapter_elements:
+                            try:
+                                name = elem.text.strip()
+                                if name and name not in seen_names and len(name) > 2:
+                                    seen_names.add(name)
+                                    chapters.append({
+                                        "name": name,
+                                        "type": "chapter"
+                                    })
+                                    print(f'[DEBUG] 找到章節: {name[:50]}')
+                            except Exception:
+                                continue
+
+                        # 如果找到章節就停止嘗試其他選擇器
+                        if chapters:
+                            break
+                except Exception:
+                    continue
+
+            print(f'  ✅ 找到 {len(chapters)} 個章節')
+
+            # 返回上一頁
+            self.driver.back()
+            time.sleep(2)
+
+            return chapters
+
+        except Exception as e:
+            print(f'[錯誤] 獲取章節失敗: {e}')
             # 嘗試返回
             try:
                 self.driver.back()
                 time.sleep(2)
             except Exception:
                 pass
-            return {
-                "courses": [],
-                "exams": []
-            }
+            return []

@@ -1,0 +1,19 @@
+{
+  "matched_count": 7,
+  "unmatched_web_count": 2,
+  "unmatched_api_count": 11,
+  "field_mapping": {
+    "course_id (Web)": "id (API)",
+    "program_name (Web)": "可能對應 name (API)",
+    "lesson_name (Web)": "可能對應 name (API)"
+  },
+  "matched_course_ids": [
+    369,
+    365,
+    367,
+    452,
+    465,
+    454,
+    450
+  ]
+}
