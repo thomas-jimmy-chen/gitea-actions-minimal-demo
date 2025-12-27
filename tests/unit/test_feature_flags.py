@@ -82,7 +82,13 @@ class TestFeatureFlags:
         assert not flags.is_enabled('use_login_service')
         assert not flags.is_enabled('use_scroll_utils')
         assert not flags.is_enabled('use_browser_session')
-        assert not flags.is_enabled('use_orchestrators')
+        # use_orchestrators is now enabled by default (Phase 3 complete)
+
+    def test_orchestrators_enabled_by_default(self, reset_feature_flags):
+        """Test that use_orchestrators is enabled by default (Phase 3 complete)."""
+        flags = FeatureFlags()
+
+        assert flags.is_enabled('use_orchestrators')
 
     def test_fallback_enabled_by_default(self, reset_feature_flags):
         """Test that fallback_on_error is enabled by default."""

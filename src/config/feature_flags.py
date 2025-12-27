@@ -45,7 +45,8 @@ class FeatureFlags:
     _instance: Optional['FeatureFlags'] = None
     _lock = Lock()
 
-    # Default flag values - all new features disabled by default for safety
+    # Default flag values
+    # Phase 3 完成後啟用 Orchestrator 層
     DEFAULT_FLAGS: Dict[str, bool] = {
         # Phase 1: Shared logic extraction
         'use_login_service': False,      # Use new LoginService instead of inline login
@@ -53,7 +54,7 @@ class FeatureFlags:
         'use_browser_session': False,    # Use new BrowserSession context manager
 
         # Phase 2: Orchestrator layer
-        'use_orchestrators': False,      # Use new Orchestrator pattern
+        'use_orchestrators': True,       # ✅ 啟用 Orchestrator 層 (Phase 3 完成)
 
         # Safety fallback
         'fallback_on_error': True,       # Fall back to legacy code on error
