@@ -8,6 +8,10 @@ EEBot 互動式選單 - 課程排程管理
 Author: wizard03
 Date: 2025/11/10
 Version: 2.0.1
+
+Phase 3 重構：整合 Orchestrator 層
+- 使用 feature_enabled('use_orchestrators') 控制新舊實現切換
+- Orchestrator 層提供更好的可測試性和模組化
 """
 
 import json
@@ -19,6 +23,27 @@ if sys.platform == 'win32':
     import codecs
     sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer, 'strict')
     sys.stderr = codecs.getwriter('utf-8')(sys.stderr.buffer, 'strict')
+
+
+# =============================================================================
+# Orchestrator 整合 (Phase 3)
+# =============================================================================
+
+def _use_orchestrators() -> bool:
+    """檢查是否啟用 Orchestrator 層"""
+    try:
+        from src.config.feature_flags import feature_enabled
+        return feature_enabled('use_orchestrators')
+    except ImportError:
+        return False
+
+
+def _get_config():
+    """獲取配置對象"""
+    from src.core.config_loader import ConfigLoader
+    config = ConfigLoader("config/eebot.cfg")
+    config.load()
+    return config
 
 
 class CourseScheduler:
@@ -181,6 +206,56 @@ class CourseScheduler:
             print('\n✓ 已取消')
             input('\n按 Enter 返回主選單...')
             return
+
+        # =====================================================================
+        # Phase 3: Orchestrator 整合
+        # =====================================================================
+        if _use_orchestrators():
+            self._handle_intelligent_recommendation_orchestrator()
+            return
+
+        # =====================================================================
+        # Legacy 實現 (當 use_orchestrators=False 時使用)
+        # =====================================================================
+        self._handle_intelligent_recommendation_legacy()
+
+    def _handle_intelligent_recommendation_orchestrator(self):
+        """使用 Orchestrator 執行智能推薦"""
+        try:
+            from src.orchestrators import IntelligentRecommendationOrchestrator
+
+            config = _get_config()
+            orchestrator = IntelligentRecommendationOrchestrator(config)
+
+            # 傳入 scheduler 讓 orchestrator 可以存取排程
+            result = orchestrator.execute(scheduler=self)
+
+            if result.success:
+                print('\n' + '=' * 70)
+                print('  ✓ 智能推薦執行完成')
+                print('=' * 70)
+                print(f"  掃描課程數: {result.data.get('scanned_count', 0)}")
+                print(f"  執行課程數: {result.data.get('executed_count', 0)}")
+            else:
+                print('\n' + '=' * 70)
+                print('  ✗ 智能推薦執行失敗')
+                print('=' * 70)
+                print(f"  錯誤: {result.error}")
+
+        except Exception as e:
+            print(f'\n[錯誤] Orchestrator 執行失敗: {e}')
+            print('嘗試使用 Legacy 模式...')
+            # Fallback to legacy on error
+            from src.config.feature_flags import feature_enabled
+            if feature_enabled('fallback_on_error'):
+                self._handle_intelligent_recommendation_legacy()
+            else:
+                raise
+
+        input('\n按 Enter 返回主選單...')
+
+    def _handle_intelligent_recommendation_legacy(self):
+        """Legacy 實現 - 智能推薦"""
 
         # ===================================================================
         # 🆕 修改點 1: 提前載入配置（用於 ExecutionWrapper 初始化）
@@ -990,19 +1065,89 @@ class CourseScheduler:
         choice = input('\n請選擇 (1/2/3/q): ').strip().lower()
 
         if choice == '1':
-            self.handle_hybrid_duration_send()
+            self._handle_hybrid_with_mode('duration')
         elif choice == '2':
-            self.handle_hybrid_batch_mode()
+            self._handle_hybrid_with_mode('batch')
         elif choice == '3':
-            self.handle_hybrid_exam_auto_answer()
+            self._handle_hybrid_with_mode('exam')
         elif choice == 'q':
             print('\n返回主選單')
             return
         else:
             print('\n[X] 無效的選項')
 
+    def _handle_hybrid_with_mode(self, mode: str):
+        """統一處理混合模式（支援 Orchestrator 路由）
+
+        Args:
+            mode: 'duration', 'batch', 或 'exam'
+        """
+        # =====================================================================
+        # Phase 3: Orchestrator 整合
+        # =====================================================================
+        if _use_orchestrators():
+            self._handle_hybrid_orchestrator(mode)
+            return
+
+        # Legacy 路由
+        if mode == 'duration':
+            self.handle_hybrid_duration_send()
+        elif mode == 'batch':
+            self.handle_hybrid_batch_mode()
+        elif mode == 'exam':
+            self.handle_hybrid_exam_auto_answer()
+
+    def _handle_hybrid_orchestrator(self, mode: str):
+        """使用 Orchestrator 執行混合掃描"""
+        try:
+            from src.orchestrators import HybridScanOrchestrator, HybridMode
+
+            mode_map = {
+                'duration': HybridMode.DURATION,
+                'batch': HybridMode.BATCH,
+                'exam': HybridMode.EXAM,
+            }
+
+            config = _get_config()
+            orchestrator = HybridScanOrchestrator(
+                config,
+                mode=mode_map.get(mode, HybridMode.DURATION)
+            )
+
+            result = orchestrator.execute(auto_select=False)
+
+            if result.success:
+                print('\n' + '=' * 70)
+                print(f'  ✓ 混合掃描 ({mode}) 執行完成')
+                print('=' * 70)
+                print(f"  掃描 Payload 數: {result.data.get('payloads_count', 0)}")
+                print(f"  已選擇課程數: {result.data.get('selected_count', 0)}")
+                print(f"  成功發送數: {result.data.get('sent_count', 0)}")
+                print(f"  驗證通過數: {result.data.get('verified_count', 0)}")
+            else:
+                print('\n' + '=' * 70)
+                print(f'  ✗ 混合掃描 ({mode}) 執行失敗')
+                print('=' * 70)
+                print(f"  錯誤: {result.error}")
+
+        except Exception as e:
+            print(f'\n[錯誤] Orchestrator 執行失敗: {e}')
+            print('嘗試使用 Legacy 模式...')
+            from src.config.feature_flags import feature_enabled
+            if feature_enabled('fallback_on_error'):
+                if mode == 'duration':
+                    self.handle_hybrid_duration_send()
+                elif mode == 'batch':
+                    self.handle_hybrid_batch_mode()
+                elif mode == 'exam':
+                    self.handle_hybrid_exam_auto_answer()
+            else:
+                raise
+
+        input('\n按 Enter 返回主選單...')
+
     def handle_hybrid_duration_send(self):
-        """h 選項 1 - 一般課程時長發送
+        """h 選項 1 - 一般課程時長發送 (Legacy)
 
         完整流程:
         1. 登入與初始化
