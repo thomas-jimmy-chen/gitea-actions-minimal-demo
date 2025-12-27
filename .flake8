@@ -1,0 +1,46 @@
+[flake8]
+# 最大行長度
+max-line-length = 79
+
+# 複雜度閾值
+max-complexity = 10
+
+# 排除的目錄
+exclude =
+    .git,
+    __pycache__,
+    .venv,
+    venv,
+    *.pyc,
+    *.egg-info,
+    .pytest_cache,
+    .mypy_cache,
+    build,
+    dist,
+    docs,
+    .tox
+
+# 忽略特定錯誤
+ignore =
+    E203,  # Black 格式化與 flake8 衝突：冒號前的空格
+    W503,  # Black 風格：換行符在二元運算符之前
+    E501,  # 行太長（已由 Black 處理）
+    E402,  # 模組級導入不在文件頂部（某些情況下需要）
+
+# 每個文件的錯誤數量上限（設為 0 表示無限制）
+max-line-length = 79
+
+# 每個文件的特定忽略規則
+per-file-ignores =
+    __init__.py:F401,F403
+    # __init__.py 允許未使用的導入和 import *
+
+# 顯示錯誤的源代碼
+show-source = True
+
+# 顯示每個錯誤的 PEP 8 文檔連結
+show-pep8 = True
+
+# 統計信息
+statistics = True
+count = True
