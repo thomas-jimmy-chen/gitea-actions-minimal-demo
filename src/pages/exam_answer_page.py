@@ -330,6 +330,35 @@ class ExamAnswerPage(BasePage):
             print(f"[錯誤] 提交考卷失敗: {str(e)}")
             return False
 
+    def submit_exam_directly(self) -> bool:
+        """
+        直接提交考卷（跳過 DOM 統計顯示）
+
+        用於 API 注入模式，統計由 interceptor 提供
+
+        Returns:
+            是否成功提交
+        """
+        try:
+            # 點擊交卷按鈕
+            print("[執行] 點擊交卷按鈕...")
+            submit_btn = self.find_element(self.SUBMIT_BUTTON)
+            self.driver.execute_script("arguments[0].click();", submit_btn)
+            time.sleep(3)
+
+            # 確認浮動視窗
+            print("[執行] 確認浮動視窗...")
+            confirm_btn = self.find_element(self.CONFIRM_BUTTON)
+            self.driver.execute_script("arguments[0].click();", confirm_btn)
+            time.sleep(3)
+
+            print("[完成] ✓ 考卷已提交")
+            return True
+
+        except Exception as e:
+            print(f"[錯誤] 提交考卷失敗: {str(e)}")
+            return False
+
     def display_score_if_available(self, delay: float = 3.0):
         """
         顯示考試分數（如果有的話）
