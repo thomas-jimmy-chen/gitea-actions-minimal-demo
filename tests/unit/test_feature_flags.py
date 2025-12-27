@@ -6,14 +6,63 @@ Tests the feature flag mechanism for progressive refactoring.
 """
 
 import os
+import sys
+import importlib
 import pytest
 
-from src.config.feature_flags import (
-    FeatureFlags,
-    feature_enabled,
-    get_feature_flags,
-    with_feature_fallback,
-)
+
+def _get_fresh_module():
+    """Get a fresh import of the feature_flags module."""
+    module_name = 'src.config.feature_flags'
+
+    # Check if it's a Mock and clear it
+    if module_name in sys.modules:
+        module = sys.modules[module_name]
+        if hasattr(module, '_mock_name') or 'MagicMock' in str(type(module)):
+            del sys.modules[module_name]
+            for mod_name in list(sys.modules.keys()):
+                if mod_name.startswith('src.config') and hasattr(sys.modules[mod_name], '_mock_name'):
+                    del sys.modules[mod_name]
+
+    # Import fresh
+    return importlib.import_module(module_name)
+
+
+# Get initial references (may be updated by fixtures)
+_ff_module = _get_fresh_module()
+FeatureFlags = _ff_module.FeatureFlags
+feature_enabled = _ff_module.feature_enabled
+get_feature_flags = _ff_module.get_feature_flags
+with_feature_fallback = _ff_module.with_feature_fallback
+
+
+@pytest.fixture(autouse=True)
+def refresh_module_references():
+    """Refresh module references before each test to ensure we use real module."""
+    global FeatureFlags, feature_enabled, get_feature_flags, with_feature_fallback
+
+    # Clear mock if needed and reload
+    module_name = 'src.config.feature_flags'
+    if module_name in sys.modules:
+        module = sys.modules[module_name]
+        if hasattr(module, '_mock_name') or 'MagicMock' in str(type(module)):
+            del sys.modules[module_name]
+            importlib.import_module(module_name)
+
+    # Reload and get fresh references
+    module = importlib.reload(sys.modules[module_name])
+    FeatureFlags = module.FeatureFlags
+    feature_enabled = module.feature_enabled
+    get_feature_flags = module.get_feature_flags
+    with_feature_fallback = module.with_feature_fallback
+
+    # Reset the singleton
+    FeatureFlags.reset_instance()
+
+    yield
+
+    # Reset after test
+    FeatureFlags.reset_instance()
 
 
 class TestFeatureFlags:

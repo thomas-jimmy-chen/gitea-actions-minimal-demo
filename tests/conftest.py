@@ -198,7 +198,19 @@ def reset_feature_flags():
     Reset feature flags before and after each test.
 
     This fixture ensures clean state for feature flag tests.
+    It also handles cases where the module may have been mocked by other tests.
     """
+    import importlib
+
+    # First, ensure we have the real module (not a mock)
+    module_name = 'src.config.feature_flags'
+    if module_name in sys.modules:
+        module = sys.modules[module_name]
+        if hasattr(module, '_mock_name') or 'MagicMock' in str(type(module)):
+            del sys.modules[module_name]
+            # Force reimport
+            importlib.import_module(module_name)
+
     from src.config.feature_flags import FeatureFlags
 
     # Reset before test
