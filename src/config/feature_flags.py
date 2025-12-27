@@ -49,8 +49,8 @@ class FeatureFlags:
     # Phase 3 完成後啟用 Orchestrator 層
     DEFAULT_FLAGS: Dict[str, bool] = {
         # Phase 1: Shared logic extraction
-        'use_login_service': False,      # Use new LoginService instead of inline login
-        'use_scroll_utils': False,       # Use new scroll_utils module
+        'use_login_service': True,       # ✅ 啟用 LoginService (Phase 1 整合完成)
+        'use_scroll_utils': True,        # ✅ 啟用 scroll_utils (Phase 1 整合完成)
         'use_browser_session': False,    # Use new BrowserSession context manager
 
         # Phase 2: Orchestrator layer

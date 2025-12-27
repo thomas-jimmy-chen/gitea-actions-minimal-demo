@@ -76,13 +76,18 @@ class TestFeatureFlags:
         assert flags1 is flags2
 
     def test_default_flags_disabled(self, reset_feature_flags):
-        """Test that all new feature flags are disabled by default."""
+        """Test that BrowserSession flag is disabled by default (not yet integrated)."""
         flags = FeatureFlags()
 
-        assert not flags.is_enabled('use_login_service')
-        assert not flags.is_enabled('use_scroll_utils')
+        # BrowserSession is still disabled (not integrated yet)
         assert not flags.is_enabled('use_browser_session')
-        # use_orchestrators is now enabled by default (Phase 3 complete)
+
+    def test_phase1_flags_enabled_by_default(self, reset_feature_flags):
+        """Test that Phase 1 flags are enabled by default (integration complete)."""
+        flags = FeatureFlags()
+
+        assert flags.is_enabled('use_login_service')
+        assert flags.is_enabled('use_scroll_utils')
 
     def test_orchestrators_enabled_by_default(self, reset_feature_flags):
         """Test that use_orchestrators is enabled by default (Phase 3 complete)."""
@@ -100,17 +105,18 @@ class TestFeatureFlags:
         """Test enabling a feature flag at runtime."""
         flags = FeatureFlags()
 
-        assert not flags.is_enabled('use_login_service')
+        # use_browser_session is disabled by default
+        assert not flags.is_enabled('use_browser_session')
 
-        flags.enable('use_login_service')
+        flags.enable('use_browser_session')
 
-        assert flags.is_enabled('use_login_service')
+        assert flags.is_enabled('use_browser_session')
 
     def test_disable_flag(self, reset_feature_flags):
         """Test disabling a feature flag at runtime."""
         flags = FeatureFlags()
 
-        flags.enable('use_login_service')
+        # use_login_service is enabled by default, disable it
         assert flags.is_enabled('use_login_service')
 
         flags.disable('use_login_service')
@@ -121,26 +127,31 @@ class TestFeatureFlags:
         """Test resetting a single flag to default."""
         flags = FeatureFlags()
 
-        flags.enable('use_login_service')
-        flags.enable('use_scroll_utils')
+        # Disable enabled-by-default flags
+        flags.disable('use_login_service')
+        flags.disable('use_scroll_utils')
 
         flags.reset('use_login_service')
 
-        assert not flags.is_enabled('use_login_service')
-        assert flags.is_enabled('use_scroll_utils')
+        # Should be back to default (True)
+        assert flags.is_enabled('use_login_service')
+        # Should still be overridden (False)
+        assert not flags.is_enabled('use_scroll_utils')
 
     def test_reset_all_flags(self, reset_feature_flags):
         """Test resetting all flags to defaults."""
         flags = FeatureFlags()
 
-        flags.enable('use_login_service')
-        flags.enable('use_scroll_utils')
+        # Override all flags to opposite of default
+        flags.disable('use_login_service')
+        flags.disable('use_scroll_utils')
         flags.enable('use_browser_session')
 
         flags.reset()
 
-        assert not flags.is_enabled('use_login_service')
-        assert not flags.is_enabled('use_scroll_utils')
+        # Should be back to defaults
+        assert flags.is_enabled('use_login_service')
+        assert flags.is_enabled('use_scroll_utils')
         assert not flags.is_enabled('use_browser_session')
 
     def test_unknown_flag_raises_error(self, reset_feature_flags):
@@ -180,11 +191,12 @@ class TestFeatureFlags:
         """Test getting detailed flag status."""
         flags = FeatureFlags()
 
-        flags.enable('use_login_service')
+        # Enable a disabled-by-default flag
+        flags.enable('use_browser_session')
 
-        status = flags.get_flag_status('use_login_service')
+        status = flags.get_flag_status('use_browser_session')
 
-        assert status['name'] == 'use_login_service'
+        assert status['name'] == 'use_browser_session'
         assert status['default'] is False
         assert status['runtime_override'] is True
         assert status['effective'] is True
@@ -242,11 +254,12 @@ class TestConvenienceFunctions:
 
     def test_feature_enabled_function(self, reset_feature_flags):
         """Test feature_enabled convenience function."""
-        assert not feature_enabled('use_login_service')
+        # use_browser_session is disabled by default
+        assert not feature_enabled('use_browser_session')
 
-        get_feature_flags().enable('use_login_service')
+        get_feature_flags().enable('use_browser_session')
 
-        assert feature_enabled('use_login_service')
+        assert feature_enabled('use_browser_session')
 
     def test_get_feature_flags_returns_singleton(self, reset_feature_flags):
         """Test get_feature_flags returns singleton."""
@@ -263,7 +276,8 @@ class TestWithFeatureFallback:
         """Test fallback is called when feature is disabled."""
         call_log = []
 
-        @with_feature_fallback('use_login_service')
+        # use_browser_session is disabled by default
+        @with_feature_fallback('use_browser_session')
         def new_function():
             call_log.append('new')
             return 'new_result'
@@ -282,9 +296,9 @@ class TestWithFeatureFallback:
         """Test new function is called when feature is enabled."""
         call_log = []
 
-        get_feature_flags().enable('use_login_service')
+        get_feature_flags().enable('use_browser_session')
 
-        @with_feature_fallback('use_login_service')
+        @with_feature_fallback('use_browser_session')
         def new_function():
             call_log.append('new')
             return 'new_result'
@@ -304,10 +318,10 @@ class TestWithFeatureFallback:
         call_log = []
 
         flags = get_feature_flags()
-        flags.enable('use_login_service')
+        flags.enable('use_browser_session')
         flags.enable('fallback_on_error')
 
-        @with_feature_fallback('use_login_service')
+        @with_feature_fallback('use_browser_session')
         def new_function():
             call_log.append('new')
             raise ValueError("New function failed")
@@ -325,10 +339,10 @@ class TestWithFeatureFallback:
     def test_error_propagates_when_fallback_disabled(self, reset_feature_flags):
         """Test error propagates when fallback_on_error is disabled."""
         flags = get_feature_flags()
-        flags.enable('use_login_service')
+        flags.enable('use_browser_session')
         flags.disable('fallback_on_error')
 
-        @with_feature_fallback('use_login_service')
+        @with_feature_fallback('use_browser_session')
         def new_function():
             raise ValueError("New function failed")
 
@@ -341,7 +355,8 @@ class TestWithFeatureFallback:
 
     def test_error_when_no_legacy_and_feature_disabled(self, reset_feature_flags):
         """Test error when feature disabled but no legacy function."""
-        @with_feature_fallback('use_login_service')
+        # use_browser_session is disabled by default
+        @with_feature_fallback('use_browser_session')
         def new_function():
             return 'new_result'
 

@@ -38,6 +38,68 @@ def _use_orchestrators() -> bool:
         return False
 
 
+def _use_scroll_utils() -> bool:
+    """檢查是否啟用 scroll_utils 模組"""
+    try:
+        from src.config.feature_flags import feature_enabled
+        return feature_enabled('use_scroll_utils')
+    except ImportError:
+        return False
+
+
+def _get_scroll_function():
+    """獲取滾動函數 - 根據 feature flag 返回模組版本或內聯版本"""
+    if _use_scroll_utils():
+        from src.utils.scroll_utils import scroll_to_bottom_multi_strategy
+        return scroll_to_bottom_multi_strategy
+    return None  # 返回 None 表示使用內聯版本
+
+
+def _use_login_service() -> bool:
+    """檢查是否啟用 LoginService"""
+    try:
+        from src.config.feature_flags import feature_enabled
+        return feature_enabled('use_login_service')
+    except ImportError:
+        return False
+
+
+def _do_login_with_service(login_page, config):
+    """使用 LoginService 執行登入"""
+    from src.services.login_service import LoginService
+    service = LoginService(login_page, config)
+    result = service.login_with_default_messages()
+    return result.success
+
+
+def _do_login_legacy(login_page, config, max_retries=3):
+    """Legacy 登入邏輯"""
+    login_success = False
+    for attempt in range(max_retries):
+        login_success = login_page.auto_login(
+            username=config.get('user_name'),
+            password=config.get('password'),
+            url=config.get('target_http'),
+        )
+        if login_success:
+            print('  ✓ 登入成功')
+            break
+        else:
+            if attempt < max_retries - 1:
+                print(f'  ⚠️  登入失敗，重試中... ({attempt + 1}/{max_retries})')
+                login_page.goto(config.get('target_http'))
+            else:
+                print('  ✗ 登入失敗，已達最大重試次數')
+    return login_success
+
+
+def _perform_login(login_page, config, max_retries=3):
+    """統一登入入口 - 根據 feature flag 選擇實現"""
+    if _use_login_service():
+        return _do_login_with_service(login_page, config)
+    return _do_login_legacy(login_page, config, max_retries)
+
+
 def _get_config():
     """獲取配置對象"""
     from src.core.config_loader import ConfigLoader
@@ -373,32 +435,11 @@ class CourseScheduler:
                 print('【智能推薦】開始執行')
                 print('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n')
 
-                # Step 1: 自動登入（完全參考 CourseLearningScenario）
+                # Step 1: 自動登入（使用統一登入服務）
                 print('[Step 1] 正在登入...')
-
-                # 嘗試登入，最多重試 3 次
-                max_retries = 3
-                login_success = False
-
-                for attempt in range(max_retries):
-                    login_success = login_page.auto_login(
-                        username=config.get('user_name'),
-                        password=config.get('password'),
-                        url=config.get('target_http'),
-                    )
-
-                    if login_success:
-                        print('  ✓ 登入成功\n')
-                        break
-                    else:
-                        if attempt < max_retries - 1:
-                            print(
-                                f'  ⚠️  登入失敗，重試中... ({attempt + 1}/{max_retries})\n'
-                            )
-                            # 刷新頁面以獲取新的驗證碼
-                            login_page.goto(config.get('target_http'))
-                        else:
-                            print('  ✗ 登入失敗，已達最大重試次數\n')
+                login_success = _perform_login(login_page, config)
+                if login_success:
+                    print()  # 額外換行
 
                 # 如果登入失敗，終止流程
                 if not login_success:
@@ -1238,27 +1279,9 @@ class CourseScheduler:
                 course_list_page = CourseListPage(driver)
                 print('  ✓ 頁面物件已初始化')
 
-                # 登入（with retry）
+                # 登入（使用統一登入服務）
                 print('[初始化 5/5] 登入系統...')
-                max_retries = 3
-                login_success = False
-
-                for attempt in range(max_retries):
-                    login_success = login_page.auto_login(
-                        username=config.get('user_name'),
-                        password=config.get('password'),
-                        url=config.get('target_http'),
-                    )
-
-                    if login_success:
-                        print('  ✓ 登入成功')
-                        break
-                    else:
-                        if attempt < max_retries - 1:
-                            print(f'  ⚠️  登入失敗，重試中... ({attempt + 1}/{max_retries})')
-                            login_page.goto(config.get('target_http'))
-                        else:
-                            print('  ✗ 登入失敗，已達最大重試次數')
+                login_success = _perform_login(login_page, config)
 
                 if not login_success:
                     print('\n❌ 登入失敗，流程終止')
@@ -1875,27 +1898,9 @@ class CourseScheduler:
                 course_list_page = CourseListPage(driver)
                 print('  ✓ 頁面物件已初始化')
 
-                # 登入（with retry）
+                # 登入（使用統一登入服務）
                 print('[初始化 5/5] 登入系統...')
-                max_retries = 3
-                login_success = False
-
-                for attempt in range(max_retries):
-                    login_success = login_page.auto_login(
-                        username=config.get('user_name'),
-                        password=config.get('password'),
-                        url=config.get('target_http'),
-                    )
-
-                    if login_success:
-                        print('  ✓ 登入成功')
-                        break
-                    else:
-                        if attempt < max_retries - 1:
-                            print(f'  ⚠️  登入失敗，重試中... ({attempt + 1}/{max_retries})')
-                            login_page.goto(config.get('target_http'))
-                        else:
-                            print('  ✗ 登入失敗，已達最大重試次數')
+                login_success = _perform_login(login_page, config)
 
                 if not login_success:
                     print('\n❌ 登入失敗，流程終止')
@@ -2547,204 +2552,8 @@ class CourseScheduler:
                         exam_answer_page = ExamAnswerPage(driver)
 
                         try:
-                            # === 多策略滾動函數：滾動到底部並等待 Lazy-load 內容載入 ===
-                            def scroll_to_bottom_multi_strategy(drv, max_scrolls=10, wait_time=2.0):
-                                """
-                                多策略滾動到頁面底部並等待 Lazy-load 元素載入
-
-                                策略 1: 檢測 body 是否被鎖住 (overflow: hidden)
-                                策略 2: 檢測 Modal/Dialog 是否存在（雙滾動條問題）
-                                策略 3: 偵測真正的滾動容器（可能不是 body）
-                                策略 4: scrollTo 直接滾動
-                                策略 5: scrollBy 增量滾動
-                                策略 6: scrollIntoView 元素定位滾動
-                                策略 7: 等待高度穩定（連續確認）
-                                """
-                                scroll_count = 0
-
-                                # 策略 1 & 2 & 3: 綜合偵測滾動環境
-                                scroll_info = drv.execute_script("""
-                                    var bodyH = document.body.scrollHeight;
-                                    var docH = document.documentElement.scrollHeight;
-                                    var viewH = window.innerHeight;
-
-                                    // 策略 1: 檢測 body 是否被鎖住
-                                    var bodyOverflow = getComputedStyle(document.body).overflow;
-                                    var htmlOverflow = getComputedStyle(document.documentElement).overflow;
-                                    var isBodyLocked = (bodyOverflow === 'hidden' || htmlOverflow === 'hidden');
-
-                                    // 策略 2: 檢測 Modal/Dialog（雙滾動條問題）
-                                    var modalSelectors = [
-                                        // 考試頁面 Modal（基於 Burp Suite 分析）
-                                        '.reveal-modal:not([style*="display: none"])',
-                                        '.popup-area:not([style*="display: none"])',
-                                        // 通用 Modal 選擇器
-                                        '.modal', '.modal-dialog', '.modal-content', '.modal-body',
-                                        '.dialog', '.popup', '.overlay-content',
-                                        '[role="dialog"]', '[role="alertdialog"]',
-                                        '.ant-modal', '.el-dialog', '.MuiDialog-root',
-                                        '.v-dialog', '.chakra-modal__content'
-                                    ];
-                                    var activeModal = null;
-                                    var modalScrollContainer = null;
-                                    for (var i = 0; i < modalSelectors.length; i++) {
-                                        var modal = document.querySelector(modalSelectors[i]);
-                                        if (modal && modal.offsetParent !== null) {
-                                            activeModal = modalSelectors[i];
-                                            // 找 Modal 內可滾動的容器
-                                            var innerContainers = modal.querySelectorAll('*');
-                                            for (var j = 0; j < innerContainers.length; j++) {
-                                                var inner = innerContainers[j];
-                                                if (inner.scrollHeight > inner.clientHeight + 10) {
-                                                    var style = getComputedStyle(inner);
-                                                    if (style.overflowY === 'auto' || style.overflowY === 'scroll') {
-                                                        modalScrollContainer = inner;
-                                                        break;
-                                                    }
-                                                }
-                                            }
-                                            break;
-                                        }
-                                    }
-
-                                    // 策略 3: 尋找一般滾動容器（含考試頁面專用選擇器）
-                                    var containers = [
-                                        // 考試頁面專用（基於 Burp Suite 分析）
-                                        '.fullscreen-right', '.activity-content-box', '.exam-subjects',
-                                        '.submission-list.exam-area', '.sync-scroll',
-                                        // 通用選擇器
-                                        '.main-container', '.content-wrapper', '.scroll-container',
-                                        '.app-content', '.page-content', '[class*="scroll"]',
-                                        'main', '#main', '#content', '.container'
-                                    ];
-                                    var scrollContainer = null;
-                                    if (!activeModal) {
-                                        for (var i = 0; i < containers.length; i++) {
-                                            var el = document.querySelector(containers[i]);
-                                            if (el && el.scrollHeight > el.clientHeight) {
-                                                scrollContainer = containers[i];
-                                                break;
-                                            }
-                                        }
-                                    }
-
-                                    return {
-                                        bodyHeight: bodyH,
-                                        docHeight: docH,
-                                        viewHeight: viewH,
-                                        isBodyLocked: isBodyLocked,
-                                        bodyOverflow: bodyOverflow,
-                                        activeModal: activeModal,
-                                        hasModalScroll: modalScrollContainer !== null,
-                                        scrollContainer: scrollContainer
-                                    };
-                                """)
-
-                                # 解析診斷資訊
-                                body_h = scroll_info.get('bodyHeight', 0)
-                                doc_h = scroll_info.get('docHeight', 0)
-                                is_body_locked = scroll_info.get('isBodyLocked', False)
-                                active_modal = scroll_info.get('activeModal')
-                                has_modal_scroll = scroll_info.get('hasModalScroll', False)
-                                container = scroll_info.get('scrollContainer')
-
-                                # 決定滾動策略
-                                last_height = max(body_h, doc_h)
-
-                                for i in range(max_scrolls):
-                                    # 策略 4: 根據環境選擇滾動方式
-                                    if active_modal and has_modal_scroll:
-                                        # 有 Modal 且 Modal 內有滾動容器 → 滾動 Modal
-                                        drv.execute_script(f"""
-                                            var modal = document.querySelector('{active_modal}');
-                                            if (modal) {{
-                                                var scrollables = modal.querySelectorAll('*');
-                                                for (var i = 0; i < scrollables.length; i++) {{
-                                                    var el = scrollables[i];
-                                                    if (el.scrollHeight > el.clientHeight + 10) {{
-                                                        var style = getComputedStyle(el);
-                                                        if (style.overflowY === 'auto' || style.overflowY === 'scroll') {{
-                                                            el.scrollTop = el.scrollHeight;
-                                                            break;
-                                                        }}
-                                                    }}
-                                                }}
-                                            }}
-                                        """)
-                                    elif is_body_locked and container:
-                                        # body 被鎖住但有其他容器可滾
-                                        drv.execute_script(f"""
-                                            var el = document.querySelector('{container}');
-                                            if (el) el.scrollTop = el.scrollHeight;
-                                        """)
-                                    elif container:
-                                        # 有特定滾動容器
-                                        drv.execute_script(f"""
-                                            var el = document.querySelector('{container}');
-                                            if (el) el.scrollTop = el.scrollHeight;
-                                        """)
-                                        # 同時也嘗試 window（雙保險）
-                                        if not is_body_locked:
-                                            drv.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-                                    else:
-                                        # 預設滾動 window
-                                        drv.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-
-                                    scroll_count += 1
-                                    time.sleep(wait_time * 0.4)
-
-                                    # 策略 5: 使用 scrollBy 增量滾動（觸發 lazy load）
-                                    if not is_body_locked:
-                                        viewport_height = drv.execute_script("return window.innerHeight")
-                                        drv.execute_script(f"window.scrollBy(0, {viewport_height});")
-                                    time.sleep(wait_time * 0.3)
-
-                                    # 策略 6: scrollIntoView 最後一個元素
-                                    drv.execute_script("""
-                                        var lastElement = document.body.lastElementChild;
-                                        if (lastElement) {
-                                            lastElement.scrollIntoView({behavior: 'instant', block: 'end'});
-                                        }
-                                    """)
-                                    time.sleep(wait_time * 0.3)
-
-                                    # 策略 7: 等待高度穩定
-                                    new_height = drv.execute_script("""
-                                        return Math.max(
-                                            document.body.scrollHeight,
-                                            document.documentElement.scrollHeight
-                                        );
-                                    """)
-
-                                    if new_height == last_height:
-                                        # 高度相同，再確認一次（避免太早判定）
-                                        time.sleep(0.5)
-                                        confirm_height = drv.execute_script("""
-                                            return Math.max(
-                                                document.body.scrollHeight,
-                                                document.documentElement.scrollHeight
-                                            );
-                                        """)
-                                        if confirm_height == new_height:
-                                            # 連續兩次相同，確認載入完成
-                                            break
-                                        last_height = confirm_height
-                                    else:
-                                        last_height = new_height
-
-                                # 最終確認：全部策略再執行一次
-                                if not is_body_locked:
-                                    drv.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-                                    time.sleep(0.3)
-                                    drv.execute_script("window.scrollBy(0, 100);")
-                                    time.sleep(0.3)
-                                drv.execute_script("""
-                                    var lastEl = document.body.lastElementChild;
-                                    if (lastEl) lastEl.scrollIntoView({behavior: 'instant', block: 'end'});
-                                """)
-                                time.sleep(0.4)
-
-                                return scroll_count
+                            # 使用 scroll_utils 模組的滾動函數
+                            from src.utils.scroll_utils import scroll_to_bottom_multi_strategy
 
                             # 步驟 1: 點擊考試名稱
                             print('         [1/5] 點擊考試名稱...')
@@ -3083,27 +2892,9 @@ class CourseScheduler:
                 course_list_page = CourseListPage(driver)
                 print('  ✓ 頁面物件已初始化')
 
-                # 登入（with retry）
+                # 登入（使用統一登入服務）
                 print('[初始化 5/5] 登入系統...')
-                max_retries = 3
-                login_success = False
-
-                for attempt in range(max_retries):
-                    login_success = login_page.auto_login(
-                        username=config.get('user_name'),
-                        password=config.get('password'),
-                        url=config.get('target_http'),
-                    )
-
-                    if login_success:
-                        print('  ✓ 登入成功')
-                        break
-                    else:
-                        if attempt < max_retries - 1:
-                            print(f'  ⚠️  登入失敗，重試中... ({attempt + 1}/{max_retries})')
-                            login_page.goto(config.get('target_http'))
-                        else:
-                            print('  ✗ 登入失敗，已達最大重試次數')
+                login_success = _perform_login(login_page, config)
 
                 if not login_success:
                     print('\n❌ 登入失敗，流程終止')
@@ -3343,204 +3134,8 @@ class CourseScheduler:
                     exam_answer_page = ExamAnswerPage(driver)
 
                     try:
-                        # === 多策略滾動函數：滾動到底部並等待 Lazy-load 內容載入 ===
-                        def scroll_to_bottom_multi_strategy(drv, max_scrolls=10, wait_time=2.0):
-                            """
-                            多策略滾動到頁面底部並等待 Lazy-load 元素載入
-
-                            策略 1: 檢測 body 是否被鎖住 (overflow: hidden)
-                            策略 2: 檢測 Modal/Dialog 是否存在（雙滾動條問題）
-                            策略 3: 偵測真正的滾動容器（可能不是 body）
-                            策略 4: scrollTo 直接滾動
-                            策略 5: scrollBy 增量滾動
-                            策略 6: scrollIntoView 元素定位滾動
-                            策略 7: 等待高度穩定（連續確認）
-                            """
-                            scroll_count = 0
-
-                            # 策略 1 & 2 & 3: 綜合偵測滾動環境
-                            scroll_info = drv.execute_script("""
-                                var bodyH = document.body.scrollHeight;
-                                var docH = document.documentElement.scrollHeight;
-                                var viewH = window.innerHeight;
-
-                                // 策略 1: 檢測 body 是否被鎖住
-                                var bodyOverflow = getComputedStyle(document.body).overflow;
-                                var htmlOverflow = getComputedStyle(document.documentElement).overflow;
-                                var isBodyLocked = (bodyOverflow === 'hidden' || htmlOverflow === 'hidden');
-
-                                // 策略 2: 檢測 Modal/Dialog（雙滾動條問題）
-                                var modalSelectors = [
-                                    // 考試頁面 Modal（基於 Burp Suite 分析）
-                                    '.reveal-modal:not([style*="display: none"])',
-                                    '.popup-area:not([style*="display: none"])',
-                                    // 通用 Modal 選擇器
-                                    '.modal', '.modal-dialog', '.modal-content', '.modal-body',
-                                    '.dialog', '.popup', '.overlay-content',
-                                    '[role="dialog"]', '[role="alertdialog"]',
-                                    '.ant-modal', '.el-dialog', '.MuiDialog-root',
-                                    '.v-dialog', '.chakra-modal__content'
-                                ];
-                                var activeModal = null;
-                                var modalScrollContainer = null;
-                                for (var i = 0; i < modalSelectors.length; i++) {
-                                    var modal = document.querySelector(modalSelectors[i]);
-                                    if (modal && modal.offsetParent !== null) {
-                                        activeModal = modalSelectors[i];
-                                        // 找 Modal 內可滾動的容器
-                                        var innerContainers = modal.querySelectorAll('*');
-                                        for (var j = 0; j < innerContainers.length; j++) {
-                                            var inner = innerContainers[j];
-                                            if (inner.scrollHeight > inner.clientHeight + 10) {
-                                                var style = getComputedStyle(inner);
-                                                if (style.overflowY === 'auto' || style.overflowY === 'scroll') {
-                                                    modalScrollContainer = inner;
-                                                    break;
-                                                }
-                                            }
-                                        }
-                                        break;
-                                    }
-                                }
-
-                                // 策略 3: 尋找一般滾動容器（含考試頁面專用選擇器）
-                                var containers = [
-                                    // 考試頁面專用（基於 Burp Suite 分析）
-                                    '.fullscreen-right', '.activity-content-box', '.exam-subjects',
-                                    '.submission-list.exam-area', '.sync-scroll',
-                                    // 通用選擇器
-                                    '.main-container', '.content-wrapper', '.scroll-container',
-                                    '.app-content', '.page-content', '[class*="scroll"]',
-                                    'main', '#main', '#content', '.container'
-                                ];
-                                var scrollContainer = null;
-                                if (!activeModal) {
-                                    for (var i = 0; i < containers.length; i++) {
-                                        var el = document.querySelector(containers[i]);
-                                        if (el && el.scrollHeight > el.clientHeight) {
-                                            scrollContainer = containers[i];
-                                            break;
-                                        }
-                                    }
-                                }
-
-                                return {
-                                    bodyHeight: bodyH,
-                                    docHeight: docH,
-                                    viewHeight: viewH,
-                                    isBodyLocked: isBodyLocked,
-                                    bodyOverflow: bodyOverflow,
-                                    activeModal: activeModal,
-                                    hasModalScroll: modalScrollContainer !== null,
-                                    scrollContainer: scrollContainer
-                                };
-                            """)
-
-                            # 解析診斷資訊
-                            body_h = scroll_info.get('bodyHeight', 0)
-                            doc_h = scroll_info.get('docHeight', 0)
-                            is_body_locked = scroll_info.get('isBodyLocked', False)
-                            active_modal = scroll_info.get('activeModal')
-                            has_modal_scroll = scroll_info.get('hasModalScroll', False)
-                            container = scroll_info.get('scrollContainer')
-
-                            # 決定滾動策略
-                            last_height = max(body_h, doc_h)
-
-                            for i in range(max_scrolls):
-                                # 策略 4: 根據環境選擇滾動方式
-                                if active_modal and has_modal_scroll:
-                                    # 有 Modal 且 Modal 內有滾動容器 → 滾動 Modal
-                                    drv.execute_script(f"""
-                                        var modal = document.querySelector('{active_modal}');
-                                        if (modal) {{
-                                            var scrollables = modal.querySelectorAll('*');
-                                            for (var i = 0; i < scrollables.length; i++) {{
-                                                var el = scrollables[i];
-                                                if (el.scrollHeight > el.clientHeight + 10) {{
-                                                    var style = getComputedStyle(el);
-                                                    if (style.overflowY === 'auto' || style.overflowY === 'scroll') {{
-                                                        el.scrollTop = el.scrollHeight;
-                                                        break;
-                                                    }}
-                                                }}
-                                            }}
-                                        }}
-                                    """)
-                                elif is_body_locked and container:
-                                    # body 被鎖住但有其他容器可滾
-                                    drv.execute_script(f"""
-                                        var el = document.querySelector('{container}');
-                                        if (el) el.scrollTop = el.scrollHeight;
-                                    """)
-                                elif container:
-                                    # 有特定滾動容器
-                                    drv.execute_script(f"""
-                                        var el = document.querySelector('{container}');
-                                        if (el) el.scrollTop = el.scrollHeight;
-                                    """)
-                                    # 同時也嘗試 window（雙保險）
-                                    if not is_body_locked:
-                                        drv.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-                                else:
-                                    # 預設滾動 window
-                                    drv.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-
-                                scroll_count += 1
-                                time.sleep(wait_time * 0.4)
-
-                                # 策略 5: 使用 scrollBy 增量滾動（觸發 lazy load）
-                                if not is_body_locked:
-                                    viewport_height = drv.execute_script("return window.innerHeight")
-                                    drv.execute_script(f"window.scrollBy(0, {viewport_height});")
-                                time.sleep(wait_time * 0.3)
-
-                                # 策略 6: scrollIntoView 最後一個元素
-                                drv.execute_script("""
-                                    var lastElement = document.body.lastElementChild;
-                                    if (lastElement) {
-                                        lastElement.scrollIntoView({behavior: 'instant', block: 'end'});
-                                    }
-                                """)
-                                time.sleep(wait_time * 0.3)
-
-                                # 策略 7: 等待高度穩定
-                                new_height = drv.execute_script("""
-                                    return Math.max(
-                                        document.body.scrollHeight,
-                                        document.documentElement.scrollHeight
-                                    );
-                                """)
-
-                                if new_height == last_height:
-                                    # 高度相同，再確認一次（避免太早判定）
-                                    time.sleep(0.5)
-                                    confirm_height = drv.execute_script("""
-                                        return Math.max(
-                                            document.body.scrollHeight,
-                                            document.documentElement.scrollHeight
-                                        );
-                                    """)
-                                    if confirm_height == new_height:
-                                        # 連續兩次相同，確認載入完成
-                                        break
-                                    last_height = confirm_height
-                                else:
-                                    last_height = new_height
-
-                            # 最終確認：全部策略再執行一次
-                            if not is_body_locked:
-                                drv.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-                                time.sleep(0.3)
-                                drv.execute_script("window.scrollBy(0, 100);")
-                                time.sleep(0.3)
-                            drv.execute_script("""
-                                var lastEl = document.body.lastElementChild;
-                                if (lastEl) lastEl.scrollIntoView({behavior: 'instant', block: 'end'});
-                            """)
-                            time.sleep(0.4)
-
-                            return scroll_count
+                        # 使用 scroll_utils 模組的滾動函數
+                        from src.utils.scroll_utils import scroll_to_bottom_multi_strategy
 
                         # 步驟 1: 點擊考試名稱（進入測驗區）
                         print('         [1/4] 點擊考試名稱...')
