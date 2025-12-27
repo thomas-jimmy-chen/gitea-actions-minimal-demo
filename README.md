@@ -1,4 +1,4 @@
-# Eebot - Elearn Automation Bot v2.0.1
+# EEBot - Elearn Automation Bot v2.0.1
 
 自動化學習機器人，採用 POM (Page Object Model) + API 模組化設計
 

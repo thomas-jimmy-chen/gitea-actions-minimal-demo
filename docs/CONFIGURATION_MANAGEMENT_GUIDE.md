@@ -9,6 +9,7 @@
 ## 目錄
 
 - [快速開始](#快速開始)
+- [Git 配置](#git-配置) ⭐ NEW
 - [配置來源與優先級](#配置來源與優先級)
 - [環境變數配置](#環境變數配置)
 - [配置檔案 (eebot.cfg)](#配置檔案-eebotcfg)
@@ -56,6 +57,120 @@ cp .env.example .env
 # Step 3: 執行 EEBot
 python main.py
 ```
+
+---
+
+## Git 配置
+
+### 自動儲存認證
+
+為了避免每次推送到 GitHub 時都需要輸入密碼，可以配置 Git 自動儲存認證：
+
+```bash
+# 配置 Git 使用 credential helper 儲存認證
+git config --global credential.helper store
+```
+
+**說明**:
+- ✅ 首次推送時輸入帳號密碼
+- ✅ 認證資訊會儲存到 `~/.git-credentials`
+- ✅ 後續推送自動使用儲存的認證
+- ⚠️ 認證以明文儲存，請確保系統安全
+
+### ⚠️ 推送重試機制（重要）
+
+**現象**: 推送到本地 Gitea 服務器 (origin) 時，第一次可能失敗，第二次成功。
+
+**實際案例** (2025-12-14):
+```bash
+# 第一次推送 - 失敗
+$ git push origin main
+remote: Failed to authenticate user
+fatal: Authentication failed for 'http://localhost:3001/...'
+
+# 第二次推送 - 成功
+$ git push origin main
+To http://localhost:3001/user123456/eebot-ai-refactor.git
+   54f8353..dedbc57  main -> main
+```
+
+**原因分析**:
+- 本地 Gitea 服務器憑證可能需要初次驗證
+- credential helper 可能需要時間緩存憑證
+- 第一次嘗試觸發驗證流程，第二次使用緩存憑證
+
+**AI 助手操作建議**:
+1. ✅ **不要驚慌** - 第一次失敗是正常的
+2. ✅ **立即重試** - 直接執行第二次 `git push origin main`
+3. ✅ **驗證成功** - 檢查推送結果確認成功
+4. ⚠️ **記錄狀態** - 在交接文檔中註明推送狀態
+
+**用戶操作建議**:
+- 如果連續兩次都失敗，檢查本地 Gitea 服務是否啟動
+- 確認 `~/.git-credentials` 中是否有 `localhost:3001` 的憑證
+- 必要時手動添加憑證（參考下方方案）
+
+---
+
+### 替代方案（更安全）
+
+如果需要更高的安全性，可以使用以下方案：
+
+**方案 1: Git Credential Manager (推薦)**
+```bash
+# Windows
+git config --global credential.helper manager
+
+# macOS
+git config --global credential.helper osxkeychain
+
+# Linux
+git config --global credential.helper cache --timeout=3600
+```
+
+**方案 2: SSH 金鑰認證（最安全）**
+```bash
+# 生成 SSH 金鑰
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+# 複製公鑰到 GitHub
+# 1. 到 GitHub Settings > SSH and GPG keys
+# 2. 新增 SSH key
+# 3. 貼上 ~/.ssh/id_ed25519.pub 內容
+
+# 修改遠程倉庫 URL
+git remote set-url github git@github.com:thomas-jimmy-chen/eebot-ai-refactor.git
+```
+
+### 檢查當前配置
+
+```bash
+# 查看 credential helper 配置
+git config --global credential.helper
+
+# 查看所有 Git 配置
+git config --global --list
+
+# 查看遠程倉庫
+git remote -v
+```
+
+### 常見問題
+
+**Q: 如何清除儲存的認證？**
+```bash
+# 刪除儲存的認證檔案
+rm ~/.git-credentials
+
+# 或使用 Git 命令
+git credential reject
+```
+
+**Q: 認證儲存在哪裡？**
+- `credential.helper store`: `~/.git-credentials` (明文)
+- `credential.helper manager`: Windows Credential Manager (加密)
+- `credential.helper osxkeychain`: macOS Keychain (加密)
+- `credential.helper cache`: 記憶體 (暫時，預設 15 分鐘)
 
 ---
 
@@ -426,6 +541,70 @@ $ python setup.py show
 | `answer_confidence_threshold` | `EEBOT_ANSWER_CONFIDENCE_THRESHOLD` | Float | ❌ | `0.85` | 答案信心門檻 (0.0-1.0) |
 | `auto_submit_exam` | `EEBOT_AUTO_SUBMIT_EXAM` | Boolean | ❌ | `n` | 是否自動提交考試 |
 | `screenshot_on_mismatch` | `EEBOT_SCREENSHOT_ON_MISMATCH` | Boolean | ❌ | `y` | 未匹配題目截圖 |
+
+---
+
+### 混合執行模式 (v2.2.0+) 🆕
+
+> **實驗狀態**: ✅ 已驗證（2025-12-05）
+> **成功率**: 100% (XPath 提取)
+> **性能提升**: 5-10x
+
+混合執行模式結合 Selenium 和 API 的優勢，提供更快速高效的課程完成方式。
+
+| 配置鍵 | 環境變數 | 類型 | 必填 | 預設值 | 說明 |
+|--------|---------|------|-----|--------|------|
+| `hybrid_mode_enabled` | `EEBOT_HYBRID_MODE_ENABLED` | Boolean | ❌ | `false` | 是否啟用混合執行模式 |
+| `duration_mode` | `EEBOT_DURATION_MODE` | String | ❌ | `required` | 時長模式：`fixed` / `required` / `auto` |
+| `fixed_duration_minutes` | `EEBOT_FIXED_DURATION_MINUTES` | Integer | ❌ | `120` | 固定時長（當 `duration_mode=fixed`） |
+| `duration_buffer_minutes` | `EEBOT_DURATION_BUFFER_MINUTES` | Integer | ❌ | `10` | 時長緩衝（當 `duration_mode=auto`） |
+| `cache_requirements` | `EEBOT_CACHE_REQUIREMENTS` | Boolean | ❌ | `true` | 是否快取通過條件 |
+| `cache_expiry_hours` | `EEBOT_CACHE_EXPIRY_HOURS` | Integer | ❌ | `24` | 快取有效期（小時） |
+
+**時長模式說明**:
+
+- **`fixed`** (固定模式)
+  - 所有課程使用相同的固定時長
+  - 時長值由 `fixed_duration_minutes` 決定
+  - 適用於快速測試或統一時長場景
+
+- **`required`** (要求模式) ⭐ 推薦
+  - 使用課程實際要求的觀看時長
+  - 自動從頁面提取 `required_duration`
+  - 精確符合課程標準
+
+- **`auto`** (自動模式)
+  - 要求時長 + 緩衝時間
+  - 計算公式: `required_duration + duration_buffer_minutes`
+  - 提供安全餘量
+
+**配置範例**:
+
+```ini
+# config/eebot.cfg
+[hybrid_mode]
+enabled = true
+duration_mode = required
+fixed_duration_minutes = 120
+duration_buffer_minutes = 10
+cache_requirements = true
+cache_expiry_hours = 24
+```
+
+或使用環境變數:
+
+```bash
+# .env
+EEBOT_HYBRID_MODE_ENABLED=true
+EEBOT_DURATION_MODE=required
+EEBOT_CACHE_REQUIREMENTS=true
+```
+
+**技術細節**:
+- XPath 提取: `//*[@id="module-{module_id}"]/div[1]/div[1]/span`
+- 提取成功率: 100%（實驗驗證）
+- API 端點: `POST /statistics/api/user-visits`
+- 詳見: [課程通過條件實驗總結](./課程通過條件實驗總結.md)
 
 ---
 

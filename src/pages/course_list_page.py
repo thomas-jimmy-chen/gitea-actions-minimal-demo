@@ -19,14 +19,53 @@ class CourseListPage(BasePage):
     GO_BACK_LINK = (By.XPATH, "//a[@class='go-back-link' and span[text()='返回']]")
 
     def goto_my_courses(self):
-        """前往我的課程列表"""
-        try:
-            self.click(self.MY_COURSES_LINK)
-            time.sleep(2)
-            print('[INFO] Navigated to "我的課程"')
-        except Exception as e:
-            print(f'[ERROR] Failed to navigate to "我的課程": {e}')
-            raise
+        """前往我的課程列表（增強版：多重策略 + 重試機制）"""
+        from selenium.webdriver.support.ui import WebDriverWait
+        from selenium.webdriver.support import expected_conditions as EC
+        from selenium.common.exceptions import (
+            TimeoutException,
+            ElementClickInterceptedException,
+            StaleElementReferenceException
+        )
+
+        max_retries = 3
+        retry_delay = 2
+
+        for attempt in range(max_retries):
+            try:
+                wait = WebDriverWait(self.driver, 10)
+
+                # 步驟 1: 等待元素出現
+                element = wait.until(EC.presence_of_element_located(self.MY_COURSES_LINK))
+
+                # 步驟 2: 滾動到元素位置
+                self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", element)
+                time.sleep(0.5)
+
+                # 步驟 3: 等待元素可點擊
+                element = wait.until(EC.element_to_be_clickable(self.MY_COURSES_LINK))
+
+                # 步驟 4: 嘗試點擊（優先使用 JavaScript）
+                try:
+                    self.driver.execute_script("arguments[0].click();", element)
+                except Exception:
+                    element.click()
+
+                time.sleep(2)
+                print('[INFO] Navigated to "我的課程"')
+                return  # 成功
+
+            except (TimeoutException, ElementClickInterceptedException, StaleElementReferenceException) as e:
+                if attempt < max_retries - 1:
+                    print(f'[WARNING] 第 {attempt + 1} 次嘗試失敗，重試中...')
+                    time.sleep(retry_delay)
+                else:
+                    print(f'[ERROR] 已達最大重試次數，無法導航到「我的課程」')
+                    raise
+
+            except Exception as e:
+                print(f'[ERROR] Failed to navigate to "我的課程": {e}')
+                raise
 
     def select_course_by_name(self, course_name: str, delay: float = 7.0):
         """
@@ -149,11 +188,50 @@ class CourseListPage(BasePage):
             raise
 
     def go_back_to_course_list(self):
-        """返回課程列表"""
+        """返回課程列表（增強版：多重策略）"""
+        from selenium.webdriver.support.ui import WebDriverWait
+        from selenium.webdriver.support import expected_conditions as EC
+
         try:
-            self.click(self.GO_BACK_LINK)
-            time.sleep(1)
-            print('[SUCCESS] Returned to course list')
+            wait = WebDriverWait(self.driver, 5)
+
+            # 嘗試多種返回策略（從最具體到最寬鬆）
+            strategies = [
+                # 策略 1: 使用預定義的 GO_BACK_LINK
+                ("GO_BACK_LINK", self.GO_BACK_LINK),
+                # 策略 2: go-back-link 類別（不限制內部結構）
+                ("go-back-link class", (By.XPATH, "//a[contains(@class, 'go-back-link')]")),
+                # 策略 3: 包含「返回」文字的 span
+                ("span with 返回", (By.XPATH, "//a[.//span[contains(text(), '返回')]]")),
+                # 策略 4: 直接包含「返回」文字的連結
+                ("a with 返回 text", (By.XPATH, "//a[contains(text(), '返回')]")),
+                # 策略 5: 任何包含「返回」的可點擊元素
+                ("any element with 返回", (By.XPATH, "//*[contains(text(), '返回') and (self::a or self::button)]")),
+                # 策略 6: 使用「我的課程」連結
+                ("MY_COURSES_LINK", self.MY_COURSES_LINK),
+                # 策略 7: 導航欄中的「我的課程」
+                ("nav 我的課程", (By.XPATH, "//nav//a[contains(text(), '我的課程')]")),
+                # 策略 8: 側邊欄中的「我的課程」
+                ("sidebar 我的課程", (By.XPATH, "//aside//a[contains(text(), '我的課程')]")),
+            ]
+
+            for strategy_name, locator in strategies:
+                try:
+                    element = wait.until(EC.element_to_be_clickable(locator))
+                    # 滾動到元素
+                    self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", element)
+                    time.sleep(0.3)
+                    # JavaScript 點擊
+                    self.driver.execute_script("arguments[0].click();", element)
+                    time.sleep(1)
+                    print(f'[SUCCESS] Returned to course list (strategy: {strategy_name})')
+                    return  # 成功
+                except Exception:
+                    continue  # 嘗試下一個策略
+
+            # 所有策略都失敗
+            raise Exception("無法找到返回按鈕或「我的課程」連結")
+
         except Exception as e:
             print(f'[ERROR] Failed to return to course list: {e}')
             raise

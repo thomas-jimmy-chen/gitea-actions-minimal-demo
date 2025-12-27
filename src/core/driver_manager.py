@@ -70,6 +70,23 @@ class DriverManager:
         """
         opts = ChromeOptions()
 
+        # User Data Directory 設定（避免 Profile 鎖檔）
+        user_data_dir = self.config.get('user_data_dir')
+        if user_data_dir:
+            import os
+            # 確保使用絕對路徑
+            if not os.path.isabs(user_data_dir):
+                user_data_dir = os.path.abspath(user_data_dir)
+            opts.add_argument(f"--user-data-dir={user_data_dir}")
+
+            # 新 Profile 需要額外的 SSL 錯誤忽略設定（因為沒有安裝 mitmproxy CA）
+            opts.add_argument("--ignore-certificate-errors")
+            opts.add_argument("--ignore-ssl-errors")
+            opts.add_argument("--allow-insecure-localhost")
+
+            print(f'[INFO] Using Chrome profile: {user_data_dir}')
+            print(f'[INFO] SSL certificate errors will be ignored (new profile without mitmproxy CA)')
+
         # Proxy 設定（可選）
         if use_proxy:
             proxy_host = self.config.get('listen_host', '127.0.0.1')

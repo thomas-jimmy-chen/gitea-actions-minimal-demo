@@ -1005,6 +1005,7 @@ Types: `feat`, `fix`, `docs`, `refactor`, `test`, `chore`
 3. **Test incrementally** - don't change multiple files at once
 4. **Follow existing patterns** - maintain code consistency
 5. **Document as you go** - update CHANGELOG.md immediately
+6. **Git push retry** ⚠️ - 推送到本地 Gitea (origin) 第一次可能失敗，直接重試第二次即可成功（詳見 CONFIGURATION_MANAGEMENT_GUIDE.md）
 
 ---
 

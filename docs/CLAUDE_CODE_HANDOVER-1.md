@@ -11,9 +11,9 @@
 >
 > 本文檔使用 Claude Code 的最佳實踐格式編寫，方便快速理解項目結構並進行後續開發。
 
-**文檔版本**: 2.0
-**最後更新**: 2025-11-24（課程配置優化討論 + 工作日誌規範化）
-**項目版本**: 2.0.5
+**文檔版本**: 2.1
+**最後更新**: 2025-12-07（新增自動文檔分割工具）
+**項目版本**: 2.0.9
 **項目代號**: **Gleipnir** (格萊普尼爾 / 縛狼鎖)
 **維護者**: wizard03
 
@@ -62,6 +62,9 @@ D:\Dev\eebot\
 │       ├── screenshot_utils.py    ← 截圖管理器
 │       └── stealth_extractor.py   ← 反檢測工具
 ├── reports/                   ← 時間統計報告（自動生成）
+├── scripts/                   ← 自動化工具腳本 ⭐ NEW v2.0.9
+│   ├── auto_split_docs.py         ← 自動文檔分割工具（2025-12-07）
+│   └── README_AUTO_SPLIT_DOCS.md  ← 分割工具使用指南
 └── docs/                      ← 項目文檔
     ├── CONFIGURATION_MANAGEMENT_GUIDE.md  ← 配置管理指南 ⭐ NEW v2.0.7
     ├── changelogs/            ← CHANGELOG 歷史歸檔
@@ -879,6 +882,81 @@ DAILY_WORK_LOG_202511241445.md  (2025年11月24日 14:45)
 ```
 
 **生效時間**: 2025-11-24 立即生效
+
+### 📦 自動文檔分割工具 (2025-12-07 新增) ⭐ NEW
+
+**背景**: 大型 Markdown 文檔（> 25,000 tokens）會超出 AI 助手的讀取限制，需要手動分割耗時且容易出錯。
+
+**解決方案**: `scripts/auto_split_docs.py` - 自動化文檔分割工具
+
+**核心功能**:
+1. ✅ **自動 Token 估算**: 中文 ~2.5 tokens/字，英文 ~1.3 tokens/字
+2. ✅ **智能章節識別**: 自動解析 Markdown 標題層級（僅二級標題 `##` 作為分割點）
+3. ✅ **品質評分系統**: 多維度評估最佳分割位置（理想大小 50% + 避免過小 30% + 平衡度 20%）
+4. ✅ **自動導航生成**: 雙向連結（上一段 ↔ 下一段）+ 索引文件
+5. ✅ **跨平台支援**: 處理 Windows 編碼問題，支援 emoji 和中文
+
+**快速使用**:
+```bash
+# 1. 分析文檔（查看狀態）
+python scripts/auto_split_docs.py docs/YOUR_FILE.md --analyze-only
+
+# 2. 試運行（預覽分割計畫）⭐ 推薦先執行
+python scripts/auto_split_docs.py docs/YOUR_FILE.md --dry-run
+
+# 3. 執行分割
+python scripts/auto_split_docs.py docs/YOUR_FILE.md
+
+# 4. 自訂 token 限制（預設 25000）
+python scripts/auto_split_docs.py docs/YOUR_FILE.md --max-tokens 20000
+```
+
+**分割流程**:
+```
+原文件: DOCUMENT-2.md (40,000 tokens)
+    ↓
+分析 → 找最佳分割點 → 創建段落
+    ↓
+輸出:
+├── DOCUMENT-2.md       ← 轉換為導航索引
+├── DOCUMENT-2A.md      ← 第一段 (~20,000 tokens，含導航標頭)
+└── DOCUMENT-2B.md      ← 第二段 (~20,000 tokens，含導航標頭)
+```
+
+**工具特色**:
+- **零依賴**: 僅使用 Python 標準函式庫
+- **智能評分**: 多維度品質評分（0-100 分）
+- **安全模式**: `--dry-run` 先預覽再執行
+- **自動導航**: 雙向連結 + 完整索引
+- **跨平台**: Windows/Linux 完整支援
+
+**已成功案例**:
+- `CLAUDE_CODE_HANDOVER-2.md` (3,277 行, ~40,028 tokens) → 拆分為 2A + 2B
+- 自動選擇最佳分割點（行 2066: GUI 開發計畫）
+- 生成完整導航索引與雙向連結
+
+**注意事項**:
+- ⚠️ **原文件會被覆蓋**: 原始 Markdown 會轉換為索引文件，建議先備份或使用 `--dry-run`
+- ⚠️ **需要章節結構**: 文件必須包含 `##` 二級標題作為分割點
+- ⚠️ **Token 估算為近似值**: 實際 token 數可能略有差異（±10%）
+
+**完整文檔**: [scripts/README_AUTO_SPLIT_DOCS.md](../scripts/README_AUTO_SPLIT_DOCS.md) ⭐ **必讀**
+
+**AI 助手使用時機**:
+1. 當需要分割大型文檔時，**優先使用此工具而非手動分割**
+2. 遇到 "文件過大無法讀取" 錯誤時
+3. 需要維護多段文檔的導航一致性時
+
+**最佳實踐**:
+```bash
+# 工作流程
+1. 先分析 → python scripts/auto_split_docs.py FILE.md --analyze-only
+2. 試運行 → python scripts/auto_split_docs.py FILE.md --dry-run
+3. 確認後執行 → python scripts/auto_split_docs.py FILE.md
+4. AI 驗證 → 讓 Claude 讀取分割後的文件確認內容完整
+```
+
+**生效時間**: 2025-12-07 立即生效
 
 ---
 

@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 """
-Eebot - Elearn Automation Bot (Refactored Version)
+EEBot - Elearn Automation Bot (Refactored Version)
 採用 POM (Page Object Model) + API 模組化設計
 
 Original Author: Guy Fawkes (v2.0.0)
@@ -31,7 +31,7 @@ def main():
     """主程式入口"""
     print("""
 ╔══════════════════════════════════════════════════════════╗
-║        Eebot - Elearn Automation Bot v2.0.1              ║
+║        EEBot - Elearn Automation Bot v2.0.1              ║
 ║          POM + API Modular Architecture                  ║
 ║              Modified by wizard03                        ║
 ╚══════════════════════════════════════════════════════════╝

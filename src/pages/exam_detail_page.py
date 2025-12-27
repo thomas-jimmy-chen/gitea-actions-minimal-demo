@@ -24,22 +24,78 @@ class ExamDetailPage(BasePage):
 
     def click_exam_by_name(self, exam_name: str, delay: float = 10.0):
         """
-        根據考試名稱點擊考試
+        根據考試名稱點擊考試（多策略版本）
 
         Args:
             exam_name: 考試名稱（例如："高齡測驗(100分及格)"）
             delay: 點擊前的延遲時間（秒），預設 10 秒
         """
-        try:
-            # 使用 LINK_TEXT 定位考試名稱
-            locator = (By.LINK_TEXT, exam_name)
+        from selenium.webdriver.support.ui import WebDriverWait
+        from selenium.webdriver.support import expected_conditions as EC
 
+        try:
             # 等待指定時間
             time.sleep(delay)
 
-            # 點擊考試
-            self.click(locator)
-            print(f'[SUCCESS] Clicked exam: {exam_name}')
+            wait = WebDriverWait(self.driver, 30)
+            element = None
+            successful_strategy = None
+
+            # 提取考試名稱的關鍵詞（去除常見後綴）
+            # 例如："金融友善服務測驗" → "金融友善服務"
+            exam_keywords = exam_name.replace('測驗', '').replace('考試', '').strip()
+
+            # 嘗試多種定位策略（從最精確到最寬鬆）
+            strategies = [
+                # 策略 1: LINK_TEXT（完全匹配）
+                (By.LINK_TEXT, exam_name, "LINK_TEXT (完全匹配)"),
+                # 策略 2: PARTIAL_LINK_TEXT（部分匹配）
+                (By.PARTIAL_LINK_TEXT, exam_name[:20], "PARTIAL_LINK_TEXT (前20字)"),
+                # 策略 3: XPath - activity.title（常見考試連結結構）
+                (By.XPATH, f"//a[@ng-bind='activity.title' and contains(text(), '{exam_keywords}')]", "XPath (activity.title + 關鍵詞)"),
+                # 策略 4: XPath - 包含考試名稱的任何連結
+                (By.XPATH, f"//a[contains(text(), '{exam_keywords}') and (contains(text(), '測驗') or contains(text(), '考試'))]", "XPath (關鍵詞 + 測驗/考試)"),
+                # 策略 5: XPath - ng-click 包含 changeActivity
+                (By.XPATH, f"//a[@ng-click='changeActivity(activity)' and contains(., '{exam_keywords}')]", "XPath (ng-click + 關鍵詞)"),
+                # 策略 6: XPath - 寬鬆匹配（只用關鍵詞）
+                (By.XPATH, f"//a[contains(text(), '{exam_keywords}')]", "XPath (只用關鍵詞)"),
+            ]
+
+            # 嘗試每種策略
+            print(f'  → 嘗試多種定位策略查找考試: {exam_name[:30]}...')
+            for strategy_by, strategy_value, strategy_name in strategies:
+                try:
+                    locator = (strategy_by, strategy_value)
+                    element = wait.until(EC.presence_of_element_located(locator))
+                    if element:
+                        successful_strategy = strategy_name
+                        print(f'  ✓ 找到考試連結 (策略: {strategy_name})')
+                        break
+                except Exception:
+                    continue
+
+            if not element:
+                raise Exception(f"無法使用任何策略找到考試: {exam_name[:30]}...")
+
+            # 滾動到元素位置
+            print(f'  → 滾動到考試連結...')
+            self.driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", element)
+            time.sleep(1)
+
+            # 等待元素可點擊
+            print(f'  → 等待考試連結可點擊...')
+            element = wait.until(EC.element_to_be_clickable(locator))
+
+            # 嘗試點擊（優先使用 JavaScript）
+            print(f'  → 嘗試點擊...')
+            try:
+                self.driver.execute_script("arguments[0].click();", element)
+                print(f'  ✓ JavaScript 點擊成功')
+            except Exception:
+                element.click()
+                print(f'  ✓ 普通點擊成功')
+
+            print(f'[SUCCESS] Clicked exam: {exam_name[:30]}... (策略: {successful_strategy})')
 
         except Exception as e:
             print(f'[ERROR] Failed to click exam "{exam_name}": {e}')

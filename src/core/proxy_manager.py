@@ -71,6 +71,9 @@ class ProxyManager:
         self.thread = None  # v2.0.2: 使用 thread 代替 process
         # self.process = None  # v2.0.1: 原始版本使用 process
 
+        # ✅ v2.0.7: 保存 master 引用以便優雅關閉
+        self.master = None
+
     def _silence_stdout(self):
         """將標準輸出/錯誤重導向到檔案或 null"""
         sys.stdout.flush()
@@ -111,12 +114,19 @@ class ProxyManager:
         # - 移除這兩個 addons 即可抑制輸出，同時保留所有其他功能
         # - 不需要重定向 stdout（避免影響主線程）
 
+        # ✅ 關鍵修復：使用 mode 參數指定端口（避免端口衝突）
+        # 根據 mitmproxy 文檔：https://docs.mitmproxy.org/stable/concepts/options/
+        # mode 參數可以附加端口：regular@8080, regular@8081
         opts = MitmOptions(
             listen_host=self.host,
-            listen_port=self.port
+            listen_port=self.port,
+            mode=[f"regular@{self.port}"]  # 在 mode 中明確指定端口
         )
 
         master = DumpMaster(opts)
+
+        # ✅ v2.0.7: 保存 master 引用
+        self.master = master
 
         # 靜默模式：移除輸出相關的 addons
         if self.silent:
@@ -159,7 +169,17 @@ class ProxyManager:
         - v2.0.2: 改為在獨立 Thread 中執行（修復 Windows 兼容性）
         - v2.0.5: 在線程內部重定向 stdout/stderr（失敗：sys.stdout 是全局的）
         - v2.0.6: 改為在 _config() 中移除輸出 addons（正確方法）
+        - v2.0.10: 抑制 Windows asyncio 的 ConnectionResetError 警告
         """
+        # ============================================================================
+        # v2.0.10: 抑制 Windows asyncio ConnectionResetError 警告
+        # ============================================================================
+        # Windows 下 asyncio 的 IocpProactor 在連接快速關閉時會拋出 ConnectionResetError
+        # 這不影響功能，只是日誌噪音，所以我們抑制這些警告
+        import warnings
+        warnings.filterwarnings('ignore', message='.*ConnectionResetError.*')
+        warnings.filterwarnings('ignore', message='.*WinError 10054.*')
+
         # ============================================================================
         # v2.0.6: Threading 版本 + 移除輸出 addons
         # ============================================================================
@@ -169,6 +189,18 @@ class ProxyManager:
         # 在當前線程中創建新的事件循環
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
+
+        # ✅ 設置自定義異常處理器，抑制 ConnectionResetError
+        def exception_handler(loop, context):
+            """自定義異常處理器，抑制 Windows asyncio 的 ConnectionResetError"""
+            exception = context.get('exception')
+            if isinstance(exception, (ConnectionResetError, ConnectionAbortedError)):
+                # 靜默處理連接重置錯誤（Windows asyncio 的已知問題）
+                return
+            # 其他異常仍然打印
+            loop.default_exception_handler(context)
+
+        loop.set_exception_handler(exception_handler)
 
         try:
             loop.run_until_complete(self._config())
@@ -259,16 +291,34 @@ class ProxyManager:
         版本歷史：
         - v2.0.1: 使用 process.terminate() 和 process.kill()
         - v2.0.2: 改用 thread.join()（threading 無法強制終止）
+        - v2.0.7: 添加 master.shutdown() 調用以優雅關閉 event loop
+        - v2.0.8: 添加 0.5s 延遲讓 event loop 清理異步任務（修復 "Task was destroyed" 警告）
+        - v2.0.9: 三重修復：warnings 抑制 + 1.5s 延遲 + 增加 join 超時（徹底解決 Windows IocpProactor 警告）
         """
         # ============================================================================
-        # v2.0.2: Threading 版本（當前使用）
+        # v2.0.7: Threading 版本 + 優雅關閉
         # ============================================================================
         if self.thread:
             try:
-                # 注意：threading.Thread 沒有 terminate() 方法
-                # 線程會在 asyncio 循環結束後自動終止
-                # 我們只需要等待它完成即可
-                self.thread.join(timeout=5)
+                # ✅ v2.0.7: 優雅關閉 mitmproxy master
+                if self.master:
+                    print('[INFO] Shutting down mitmproxy master...')
+                    try:
+                        # 方案 1: 抑制 asyncio 警告
+                        import warnings
+                        warnings.filterwarnings('ignore', message='.*Task was destroyed but it is pending.*')
+
+                        # 方案 2: 觸發關閉
+                        self.master.shutdown()
+
+                        # 方案 3: 增加延遲讓 event loop 完成清理
+                        # Windows 的 IocpProactor 需要更多時間處理 accept 任務取消
+                        time.sleep(1.5)
+                    except Exception as e:
+                        print(f'[WARN] Error during master shutdown: {e}')
+
+                # 等待線程終止
+                self.thread.join(timeout=8)  # 增加超時時間以配合延長的等待
 
                 if self.thread.is_alive():
                     print('[WARN] Network monitoring thread still running (will terminate with program)')
@@ -279,6 +329,7 @@ class ProxyManager:
                 print(f'[WARN] Error while stopping network monitoring: {e}')
             finally:
                 self.thread = None
+                self.master = None
 
         # ============================================================================
         # [已註解] v2.0.1: Multiprocessing 版本
