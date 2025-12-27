@@ -1,0 +1,326 @@
+# -*- coding: utf-8 -*-
+"""
+Unit Tests for Feature Flags Module.
+
+Tests the feature flag mechanism for progressive refactoring.
+"""
+
+import os
+import pytest
+
+from src.config.feature_flags import (
+    FeatureFlags,
+    feature_enabled,
+    get_feature_flags,
+    with_feature_fallback,
+)
+
+
+class TestFeatureFlags:
+    """Test cases for FeatureFlags class."""
+
+    def test_singleton_instance(self, reset_feature_flags):
+        """Test that FeatureFlags is a singleton."""
+        flags1 = FeatureFlags()
+        flags2 = FeatureFlags()
+
+        assert flags1 is flags2
+
+    def test_default_flags_disabled(self, reset_feature_flags):
+        """Test that all new feature flags are disabled by default."""
+        flags = FeatureFlags()
+
+        assert not flags.is_enabled('use_login_service')
+        assert not flags.is_enabled('use_scroll_utils')
+        assert not flags.is_enabled('use_browser_session')
+        assert not flags.is_enabled('use_orchestrators')
+
+    def test_fallback_enabled_by_default(self, reset_feature_flags):
+        """Test that fallback_on_error is enabled by default."""
+        flags = FeatureFlags()
+
+        assert flags.is_enabled('fallback_on_error')
+
+    def test_enable_flag(self, reset_feature_flags):
+        """Test enabling a feature flag at runtime."""
+        flags = FeatureFlags()
+
+        assert not flags.is_enabled('use_login_service')
+
+        flags.enable('use_login_service')
+
+        assert flags.is_enabled('use_login_service')
+
+    def test_disable_flag(self, reset_feature_flags):
+        """Test disabling a feature flag at runtime."""
+        flags = FeatureFlags()
+
+        flags.enable('use_login_service')
+        assert flags.is_enabled('use_login_service')
+
+        flags.disable('use_login_service')
+
+        assert not flags.is_enabled('use_login_service')
+
+    def test_reset_single_flag(self, reset_feature_flags):
+        """Test resetting a single flag to default."""
+        flags = FeatureFlags()
+
+        flags.enable('use_login_service')
+        flags.enable('use_scroll_utils')
+
+        flags.reset('use_login_service')
+
+        assert not flags.is_enabled('use_login_service')
+        assert flags.is_enabled('use_scroll_utils')
+
+    def test_reset_all_flags(self, reset_feature_flags):
+        """Test resetting all flags to defaults."""
+        flags = FeatureFlags()
+
+        flags.enable('use_login_service')
+        flags.enable('use_scroll_utils')
+        flags.enable('use_browser_session')
+
+        flags.reset()
+
+        assert not flags.is_enabled('use_login_service')
+        assert not flags.is_enabled('use_scroll_utils')
+        assert not flags.is_enabled('use_browser_session')
+
+    def test_unknown_flag_raises_error(self, reset_feature_flags):
+        """Test that accessing unknown flag raises KeyError."""
+        flags = FeatureFlags()
+
+        with pytest.raises(KeyError, match='Unknown feature flag'):
+            flags.is_enabled('unknown_flag')
+
+    def test_enable_unknown_flag_raises_error(self, reset_feature_flags):
+        """Test that enabling unknown flag raises KeyError."""
+        flags = FeatureFlags()
+
+        with pytest.raises(KeyError, match='Unknown feature flag'):
+            flags.enable('unknown_flag')
+
+    def test_disable_unknown_flag_raises_error(self, reset_feature_flags):
+        """Test that disabling unknown flag raises KeyError."""
+        flags = FeatureFlags()
+
+        with pytest.raises(KeyError, match='Unknown feature flag'):
+            flags.disable('unknown_flag')
+
+    def test_get_all_flags(self, reset_feature_flags):
+        """Test getting all flag values."""
+        flags = FeatureFlags()
+
+        all_flags = flags.get_all_flags()
+
+        assert 'use_login_service' in all_flags
+        assert 'use_scroll_utils' in all_flags
+        assert 'use_browser_session' in all_flags
+        assert 'use_orchestrators' in all_flags
+        assert 'fallback_on_error' in all_flags
+
+    def test_get_flag_status(self, reset_feature_flags):
+        """Test getting detailed flag status."""
+        flags = FeatureFlags()
+
+        flags.enable('use_login_service')
+
+        status = flags.get_flag_status('use_login_service')
+
+        assert status['name'] == 'use_login_service'
+        assert status['default'] is False
+        assert status['runtime_override'] is True
+        assert status['effective'] is True
+
+
+class TestEnvironmentVariables:
+    """Test cases for environment variable configuration."""
+
+    def test_env_var_true(self, reset_feature_flags, clean_env):
+        """Test enabling flag via environment variable."""
+        os.environ['EEBOT_FF_USE_LOGIN_SERVICE'] = 'true'
+
+        flags = FeatureFlags()
+
+        assert flags.is_enabled('use_login_service')
+
+    def test_env_var_false(self, reset_feature_flags, clean_env):
+        """Test disabling fallback via environment variable."""
+        os.environ['EEBOT_FF_FALLBACK_ON_ERROR'] = 'false'
+
+        flags = FeatureFlags()
+
+        assert not flags.is_enabled('fallback_on_error')
+
+    def test_env_var_yes(self, reset_feature_flags, clean_env):
+        """Test 'yes' value for environment variable."""
+        os.environ['EEBOT_FF_USE_SCROLL_UTILS'] = 'yes'
+
+        flags = FeatureFlags()
+
+        assert flags.is_enabled('use_scroll_utils')
+
+    def test_env_var_1(self, reset_feature_flags, clean_env):
+        """Test '1' value for environment variable."""
+        os.environ['EEBOT_FF_USE_BROWSER_SESSION'] = '1'
+
+        flags = FeatureFlags()
+
+        assert flags.is_enabled('use_browser_session')
+
+    def test_runtime_override_takes_priority(self, reset_feature_flags, clean_env):
+        """Test that runtime overrides take priority over environment."""
+        os.environ['EEBOT_FF_USE_LOGIN_SERVICE'] = 'true'
+
+        flags = FeatureFlags()
+        assert flags.is_enabled('use_login_service')
+
+        flags.disable('use_login_service')
+
+        assert not flags.is_enabled('use_login_service')
+
+
+class TestConvenienceFunctions:
+    """Test cases for module-level convenience functions."""
+
+    def test_feature_enabled_function(self, reset_feature_flags):
+        """Test feature_enabled convenience function."""
+        assert not feature_enabled('use_login_service')
+
+        get_feature_flags().enable('use_login_service')
+
+        assert feature_enabled('use_login_service')
+
+    def test_get_feature_flags_returns_singleton(self, reset_feature_flags):
+        """Test get_feature_flags returns singleton."""
+        flags1 = get_feature_flags()
+        flags2 = get_feature_flags()
+
+        assert flags1 is flags2
+
+
+class TestWithFeatureFallback:
+    """Test cases for with_feature_fallback decorator."""
+
+    def test_fallback_when_feature_disabled(self, reset_feature_flags):
+        """Test fallback is called when feature is disabled."""
+        call_log = []
+
+        @with_feature_fallback('use_login_service')
+        def new_function():
+            call_log.append('new')
+            return 'new_result'
+
+        @new_function.legacy
+        def legacy_function():
+            call_log.append('legacy')
+            return 'legacy_result'
+
+        result = new_function()
+
+        assert result == 'legacy_result'
+        assert call_log == ['legacy']
+
+    def test_new_function_when_feature_enabled(self, reset_feature_flags):
+        """Test new function is called when feature is enabled."""
+        call_log = []
+
+        get_feature_flags().enable('use_login_service')
+
+        @with_feature_fallback('use_login_service')
+        def new_function():
+            call_log.append('new')
+            return 'new_result'
+
+        @new_function.legacy
+        def legacy_function():
+            call_log.append('legacy')
+            return 'legacy_result'
+
+        result = new_function()
+
+        assert result == 'new_result'
+        assert call_log == ['new']
+
+    def test_fallback_on_error(self, reset_feature_flags):
+        """Test fallback is called when new function raises error."""
+        call_log = []
+
+        flags = get_feature_flags()
+        flags.enable('use_login_service')
+        flags.enable('fallback_on_error')
+
+        @with_feature_fallback('use_login_service')
+        def new_function():
+            call_log.append('new')
+            raise ValueError("New function failed")
+
+        @new_function.legacy
+        def legacy_function():
+            call_log.append('legacy')
+            return 'legacy_result'
+
+        result = new_function()
+
+        assert result == 'legacy_result'
+        assert call_log == ['new', 'legacy']
+
+    def test_error_propagates_when_fallback_disabled(self, reset_feature_flags):
+        """Test error propagates when fallback_on_error is disabled."""
+        flags = get_feature_flags()
+        flags.enable('use_login_service')
+        flags.disable('fallback_on_error')
+
+        @with_feature_fallback('use_login_service')
+        def new_function():
+            raise ValueError("New function failed")
+
+        @new_function.legacy
+        def legacy_function():
+            return 'legacy_result'
+
+        with pytest.raises(ValueError, match="New function failed"):
+            new_function()
+
+    def test_error_when_no_legacy_and_feature_disabled(self, reset_feature_flags):
+        """Test error when feature disabled but no legacy function."""
+        @with_feature_fallback('use_login_service')
+        def new_function():
+            return 'new_result'
+
+        with pytest.raises(RuntimeError, match="no legacy function provided"):
+            new_function()
+
+
+class TestThreadSafety:
+    """Test cases for thread safety."""
+
+    def test_concurrent_access(self, reset_feature_flags):
+        """Test concurrent access to feature flags."""
+        import threading
+
+        flags = get_feature_flags()
+        results = []
+        errors = []
+
+        def toggle_flag():
+            try:
+                for _ in range(100):
+                    flags.enable('use_login_service')
+                    flags.is_enabled('use_login_service')
+                    flags.disable('use_login_service')
+                results.append('success')
+            except Exception as e:
+                errors.append(str(e))
+
+        threads = [threading.Thread(target=toggle_flag) for _ in range(10)]
+
+        for t in threads:
+            t.start()
+        for t in threads:
+            t.join()
+
+        assert len(errors) == 0
+        assert len(results) == 10
