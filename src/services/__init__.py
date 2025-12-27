@@ -3,5 +3,6 @@
 
 from .question_bank import QuestionBankService
 from .answer_matcher import AnswerMatcher
+from .login_service import LoginService, LoginResult
 
-__all__ = ['QuestionBankService', 'AnswerMatcher']
+__all__ = ['QuestionBankService', 'AnswerMatcher', 'LoginService', 'LoginResult']
