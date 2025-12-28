@@ -61,6 +61,15 @@ class ManualSendDurationInterceptor:
                     print(f"  Headers 數量: {len(self.session_headers)}")
                     print(f"  Payload 欄位數量: {len(self.payload_template)}")
                     print(f"  Payload 欄位: {', '.join(self.payload_template.keys())}")
+
+                    # ✅ 修復：第一個請求也要捕獲 Payload（之前漏掉了）
+                    if self._is_valid_payload(payload):
+                        course_id = str(payload.get("course_id", ""))
+                        if course_id and course_id not in self.captured_payloads:
+                            self.captured_payloads[course_id] = payload.copy()
+                            print(f"  ✅ 已同時捕獲第一個 Payload (課程 ID: {course_id})")
+                            print(f"  已捕獲課程總數: {len(self.captured_payloads)}")
+
                     # 第一次讓原請求通過，之後才開始手刻
                     return
 

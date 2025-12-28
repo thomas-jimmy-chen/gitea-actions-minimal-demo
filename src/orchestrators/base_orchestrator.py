@@ -294,6 +294,18 @@ class BaseOrchestrator(ABC):
         if self.wrapper:
             self.wrapper.record_delay(delay_seconds, description)
 
+    def _sleep_with_record(self, seconds: float, description: str = '') -> None:
+        """
+        延遲並記錄到 time_tracker
+
+        Args:
+            seconds: 延遲秒數
+            description: 延遲描述
+        """
+        import time
+        time.sleep(seconds)
+        self.record_delay(seconds, description)
+
     def take_screenshot(
         self,
         driver: Any,
@@ -315,3 +327,128 @@ class BaseOrchestrator(ABC):
 
     def __repr__(self) -> str:
         return f"{self.__class__.__name__}(name='{self.name}', phase={self._current_phase.value})"
+
+    # ===== 統一登入方法 =====
+
+    def _login_with_retry(
+        self,
+        login_page: Any,
+        max_retries: int = 3,
+        use_legacy: bool = False,
+        refresh_on_retry: bool = True,
+        retry_delay: float = 2.0,
+        silent: bool = False
+    ) -> bool:
+        """
+        統一的登入方法（帶重試機制）
+
+        整合自多處登入邏輯，提供一致的登入行為。
+
+        Args:
+            login_page: LoginPage 實例
+            max_retries: 最大重試次數
+            use_legacy: 是否使用舊邏輯（用於安全切換）
+            refresh_on_retry: 重試時是否刷新頁面（獲取新驗證碼）
+            retry_delay: 重試間隔（秒）
+            silent: 是否靜默模式（不印出訊息）
+
+        Returns:
+            bool: 是否成功登入
+
+        Usage:
+            # 使用新邏輯（LoginService）
+            success = self._login_with_retry(login_page, use_legacy=False)
+
+            # 使用舊邏輯（直接調用，無重試）
+            success = self._login_with_retry(login_page, use_legacy=True)
+        """
+        if use_legacy:
+            return self._login_legacy(login_page, silent=silent)
+        else:
+            return self._login_with_service(
+                login_page,
+                max_retries=max_retries,
+                refresh_on_retry=refresh_on_retry,
+                retry_delay=retry_delay,
+                silent=silent
+            )
+
+    def _login_legacy(self, login_page: Any, silent: bool = False) -> bool:
+        """
+        舊版登入邏輯（直接調用，無重試）
+
+        保留原有的單次嘗試行為，用於向後兼容。
+
+        Args:
+            login_page: LoginPage 實例
+            silent: 是否靜默模式
+
+        Returns:
+            bool: 是否成功登入
+        """
+        try:
+            success = login_page.auto_login(
+                username=self._get_config_value('user_name'),
+                password=self._get_config_value('password'),
+                url=self._get_config_value('target_http'),
+            )
+            if success and not silent:
+                print('  ✓ 登入成功')
+            elif not success and not silent:
+                print('  ✗ 登入失敗')
+            return success
+        except Exception as e:
+            logger.warning("登入失敗: %s", e)
+            if not silent:
+                print(f'  ✗ 登入失敗: {e}')
+            return False
+
+    def _login_with_service(
+        self,
+        login_page: Any,
+        max_retries: int = 3,
+        refresh_on_retry: bool = True,
+        retry_delay: float = 2.0,
+        silent: bool = False
+    ) -> bool:
+        """
+        新版登入邏輯（使用 LoginService）
+
+        提供完整的重試機制、頁面刷新、錯誤處理。
+
+        Args:
+            login_page: LoginPage 實例
+            max_retries: 最大重試次數
+            refresh_on_retry: 重試時是否刷新頁面
+            retry_delay: 重試間隔（秒）
+            silent: 是否靜默模式
+
+        Returns:
+            bool: 是否成功登入
+        """
+        from src.services.login_service import LoginService
+
+        service = LoginService(
+            login_page,
+            self.config,
+            max_retries=max_retries,
+            retry_delay=retry_delay
+        )
+
+        if silent:
+            result = service.login_with_retry(refresh_on_retry=refresh_on_retry)
+        else:
+            result = service.login_with_retry(
+                on_success=lambda: print('  ✓ 登入成功'),
+                on_retry=lambda a, m: print(f'  ⚠️  登入失敗，重試中... ({a}/{m})'),
+                on_failure=lambda: print('  ✗ 登入失敗，已達最大重試次數'),
+                refresh_on_retry=refresh_on_retry
+            )
+
+        return result.success
+
+    def _get_config_value(self, key: str, default: Any = None) -> Any:
+        """從配置中取得值（便捷方法）"""
+        if hasattr(self.config, 'get') and callable(self.config.get):
+            return self.config.get(key, default)
+        return getattr(self.config, key, default)

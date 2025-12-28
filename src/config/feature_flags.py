@@ -49,12 +49,18 @@ class FeatureFlags:
     # Phase 3 完成後啟用 Orchestrator 層
     DEFAULT_FLAGS: Dict[str, bool] = {
         # Phase 1: Shared logic extraction
-        'use_login_service': True,       # ✅ 啟用 LoginService (Phase 1 整合完成)
+        'use_login_service': False,      # ⚠️ 暫時禁用 - 需要調試
         'use_scroll_utils': True,        # ✅ 啟用 scroll_utils (Phase 1 整合完成)
         'use_browser_session': False,    # Use new BrowserSession context manager
 
         # Phase 2: Orchestrator layer
-        'use_orchestrators': True,       # ✅ 啟用 Orchestrator 層 (Phase 3 完成)
+        # ✅ 2025-12-27 啟用 - 掃描邏輯已修復
+        # 修復內容:
+        #   - 階段 1: 創建 CourseStructureService (DOM 提取)
+        #   - 階段 2: 更新 PayloadCaptureService (兩階段掃描)
+        #   - 階段 3: 更新 HybridScanOrchestrator (多模式支持)
+        #   - 階段 4: 實現端口釋放處理
+        'use_orchestrators': True,
 
         # Safety fallback
         'fallback_on_error': True,       # Fall back to legacy code on error

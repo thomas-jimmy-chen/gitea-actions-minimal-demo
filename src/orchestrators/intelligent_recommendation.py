@@ -41,6 +41,9 @@ class ScanResult:
     available_courses: List[Dict[str, Any]] = field(default_factory=list)
     recommendations: List[Dict[str, Any]] = field(default_factory=list)
     error: Optional[str] = None
+    # 統計數據
+    courses_found: int = 0
+    exams_found: int = 0
 
 
 class IntelligentRecommendationOrchestrator(BaseOrchestrator):
@@ -157,6 +160,8 @@ class IntelligentRecommendationOrchestrator(BaseOrchestrator):
                 success=True,
                 data={
                     'programs_count': len(scan_result.programs),
+                    'courses_found': scan_result.courses_found,
+                    'exams_found': scan_result.exams_found,
                     'recommendations_count': len(scan_result.recommendations),
                     'added_count': added_count,
                     'auto_executed': auto_execute and added_count > 0
@@ -285,7 +290,13 @@ class IntelligentRecommendationOrchestrator(BaseOrchestrator):
                 course_list_page,
                 result.programs
             )
-            print('\n  ✓ 分析完成！\n')
+
+            # 統計課程與考試數量
+            for program in result.available_courses:
+                result.courses_found += len(program.get('courses', []))
+                result.exams_found += len(program.get('exams', []))
+
+            print(f'\n  ✓ 分析完成！(課程: {result.courses_found}, 考試: {result.exams_found})\n')
 
             # 比對配置
             print('[Step 6] 比對已配置的課程...')
@@ -311,24 +322,31 @@ class IntelligentRecommendationOrchestrator(BaseOrchestrator):
         return result
 
     def _perform_login(self, login_page: Any, max_retries: int) -> bool:
-        """執行登入"""
-        for attempt in range(max_retries):
-            login_success = login_page.auto_login(
-                username=self._get_config_value('user_name'),
-                password=self._get_config_value('password'),
-                url=self._get_config_value('target_http'),
-            )
+        """
+        執行登入
 
-            if login_success:
-                return True
+        使用 BaseOrchestrator 的統一登入方法。
 
-            if attempt < max_retries - 1:
-                print(f'  ⚠️  登入失敗，重試中... ({attempt + 1}/{max_retries})\n')
-                login_page.goto(self._get_config_value('target_http'))
-            else:
-                print('  ✗ 登入失敗，已達最大重試次數\n')
+        Args:
+            login_page: LoginPage 實例
+            max_retries: 最大重試次數
 
-        return False
+        Returns:
+            bool: 是否成功登入
+
+        Note:
+            use_legacy=False: 使用 LoginService（有重試、頁面刷新）
+            use_legacy=True:  使用舊邏輯（單次嘗試）
+        """
+        # ✅ 使用 BaseOrchestrator 的統一登入方法
+        # 設定 use_legacy=False 使用 LoginService（與舊邏輯行為一致）
+        return self._login_with_retry(
+            login_page,
+            max_retries=max_retries,
+            use_legacy=False,  # 使用 LoginService
+            refresh_on_retry=True,  # 重試時刷新頁面（獲取新驗證碼）
+            retry_delay=2.0  # 重試間隔 2 秒
+        )
 
     def _scan_program_details(
         self,
@@ -346,8 +364,8 @@ class IntelligentRecommendationOrchestrator(BaseOrchestrator):
             program_name = program['name']
             print(f'  [{i}/{len(programs)}] {program_name[:50]}...')
 
-            # 記錄課程處理
-            self.start_item(program_name, item_type='course')
+            # 記錄課程處理（掃描階段）
+            self.start_item(program_name, program_name, 'course')
 
             details = course_list_page.get_program_courses_and_exams(program_name)
 
@@ -560,6 +578,9 @@ class IntelligentRecommendationOrchestrator(BaseOrchestrator):
 
         # 儲存排程
         scheduler.save_schedule()
+
+        # 關閉掃描用的瀏覽器（避免與 main.py 的瀏覽器同時運行）
+        self._cleanup_driver()
 
         # 執行 main.py
         print('\n啟動 main.py...\n')

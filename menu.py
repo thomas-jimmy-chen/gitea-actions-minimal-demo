@@ -169,25 +169,41 @@ class CourseScheduler:
     def display_menu(self):
         """顯示主選單"""
         print('\n' + '=' * 70)
-        print('  EEBot 課程排程管理系統')
+        print('                  EEBot 自動化學習系統 v2.4')
         print('=' * 70)
 
-        # === 智能掃描 ===
-        print('\n[智能掃描] 自動偵測修習中課程')
-        print('  i - 一鍵自動執行 (掃描 + 執行)')
-        print('  h - 混合掃描 (API + Web 混合模式)')
+        # === 主要功能（醒目顯示）===
+        print('\n  ┌' + '─' * 66 + '┐')
+        print('  │  [i] 智能推薦      自動掃描修習中課程 → 匹配 → 執行             │')
+        print('  │  [h] 混合掃描      h1:時長  h2:課程+考試  h3:考試答題           │')
+        print('  └' + '─' * 66 + '┘')
 
-        # === 快速查詢 ===
-        print('\n[快速查詢] 無需瀏覽器')
-        print('  w - 學習統計查詢 (< 3 秒)')
-        print('  t - 測試 API (研究用)')
+        # === 其他選項 ===
+        print('\n  [w] 學習統計查詢 (快速)')
+        print('  [m] 更多選項...')
+        print('  [q] 離開')
 
-        # === 預製排程 ===
-        print('\n[預製排程] 114年郵政E大學學員個人課程')
+        print('=' * 70)
+
+    def display_more_options(self):
+        """顯示更多選項子選單"""
+        print('\n' + '─' * 70)
+        print('  更多選項')
+        print('─' * 70)
+        print('  [t] API 測試 (研究用)')
+        print('  [p] 預製排程 (舊版功能)')
+        print('  [q] 返回主選單')
+        print('─' * 70)
+
+    def display_preset_menu(self):
+        """顯示預製排程子選單"""
+        print('\n' + '─' * 70)
+        print('  預製排程 (舊版功能)')
+        print('─' * 70)
         print('  1-{} - 選擇課程加入排程'.format(len(self.all_courses)))
         print('  v - 查看排程 | c - 清除 | s - 儲存 | r - 執行')
 
-        # 顯示課程列表（精簡版）
+        # 顯示課程列表
         print('\n  課程列表:')
         for i, course in enumerate(self.all_courses, 1):
             course_type = course.get('course_type', 'course')
@@ -198,8 +214,8 @@ class CourseScheduler:
                 name = course.get('lesson_name', '')
                 print(f'    {i:2d}. {course["program_name"]} - {name}')
 
-        print('\n  q - 離開')
-        print('=' * 70)
+        print('\n  q - 返回主選單')
+        print('─' * 70)
 
     def display_schedule(self):
         """顯示當前排程"""
@@ -292,8 +308,10 @@ class CourseScheduler:
                 print('\n' + '=' * 70)
                 print('  ✓ 智能推薦執行完成')
                 print('=' * 70)
-                print(f"  掃描課程數: {result.data.get('scanned_count', 0)}")
-                print(f"  執行課程數: {result.data.get('executed_count', 0)}")
+                print(f"  掃描課程計畫數: {result.data.get('programs_count', 0)}")
+                print(f"  發現課程數: {result.data.get('courses_found', 0)}")
+                print(f"  發現考試數: {result.data.get('exams_found', 0)}")
+                print(f"  加入排程數: {result.data.get('added_count', 0)}")
             else:
                 print('\n' + '=' * 70)
                 print('  ✗ 智能推薦執行失敗')
@@ -462,10 +480,10 @@ class CourseScheduler:
                 print('\n' + '=' * 70)
                 print(f'  ✓ 混合掃描 ({mode}) 執行完成')
                 print('=' * 70)
-                print(f"  掃描 Payload 數: {result.data.get('payloads_count', 0)}")
-                print(f"  已選擇課程數: {result.data.get('selected_count', 0)}")
-                print(f"  成功發送數: {result.data.get('sent_count', 0)}")
-                print(f"  驗證通過數: {result.data.get('verified_count', 0)}")
+                print(f"  掃描 Payload 數: {result.data.get('payloads_captured', 0)}")
+                print(f"  已選擇課程數: {result.data.get('courses_selected', 0)}")
+                print(f"  成功處理數: {result.data.get('courses_processed', 0)}")
+                print(f"  成功數: {result.data.get('success_count', 0)}")
             else:
                 print('\n' + '=' * 70)
                 print(f'  ✗ 混合掃描 ({mode}) 執行失敗')
@@ -1011,22 +1029,30 @@ class CourseScheduler:
         else:
             print('\n✗ 已取消執行')
 
-    def run(self):
-        """執行互動式選單"""
-        # 載入課程資料
-        if not self.load_courses():
-            return
-
-        # 載入已存在的排程
-        self.load_schedule()
-
-        print('\n歡迎使用 EEBot 課程排程管理系統！')
-
-        # A 方案: 顯示學習履歷摘要 (如果有保存的 session)
-        self.display_learning_summary()
-
+    def handle_more_options(self):
+        """處理更多選項子選單"""
         while True:
-            self.display_menu()
+            self.display_more_options()
+            choice = input('\n請輸入選項: ').strip().lower()
+
+            if choice == 't':
+                self.test_learning_stats()
+                input('\n按 Enter 繼續...')
+
+            elif choice == 'p':
+                self.handle_preset_schedule()
+
+            elif choice == 'q':
+                break
+
+            else:
+                print('\n✗ 無效的選項')
+                input('\n按 Enter 繼續...')
+
+    def handle_preset_schedule(self):
+        """處理預製排程子選單（舊版功能）"""
+        while True:
+            self.display_preset_menu()
 
             # 顯示當前排程摘要
             if self.scheduled_courses:
@@ -1048,22 +1074,6 @@ class CourseScheduler:
                 if confirm == 'y':
                     self.clear_schedule()
 
-            # 智能推薦
-            elif choice == 'i':
-                self.handle_intelligent_recommendation()
-
-            # 混合掃描
-            elif choice == 'h':
-                self.handle_hybrid_choice()
-
-            # 快速查詢學習統計 (C 方案)
-            elif choice == 'w':
-                self.quick_learning_stats()
-
-            # 測試學習履歷統計 API
-            elif choice == 't':
-                self.test_learning_stats()
-
             # 儲存排程
             elif choice == 's':
                 if not self.scheduled_courses:
@@ -1075,32 +1085,61 @@ class CourseScheduler:
             elif choice == 'r':
                 self.run_schedule()
 
+            # 返回主選單
+            elif choice == 'q':
+                break
+
+            else:
+                print('\n✗ 無效的選項')
+
+            input('\n按 Enter 繼續...')
+
+    def run(self):
+        """執行互動式選單"""
+        # 載入課程資料
+        if not self.load_courses():
+            return
+
+        # 載入已存在的排程
+        self.load_schedule()
+
+        print('\n歡迎使用 EEBot 自動化學習系統！')
+
+        # 顯示學習履歷摘要 (如果有保存的 session)
+        self.display_learning_summary()
+
+        while True:
+            self.display_menu()
+
+            choice = input('\n請輸入選項: ').strip().lower()
+
+            # 智能推薦
+            if choice == 'i':
+                self.handle_intelligent_recommendation()
+                input('\n按 Enter 繼續...')
+
+            # 混合掃描
+            elif choice == 'h':
+                self.handle_hybrid_choice()
+                input('\n按 Enter 繼續...')
+
+            # 快速查詢學習統計
+            elif choice == 'w':
+                self.quick_learning_stats()
+                input('\n按 Enter 繼續...')
+
+            # 更多選項
+            elif choice == 'm':
+                self.handle_more_options()
+
             # 離開
             elif choice == 'q':
-                # 檢查是否有未儲存的排程
-                if self.scheduled_courses:
-                    # 檢查是否與已儲存的不同
-                    try:
-                        with open(self.schedule_file, 'r', encoding='utf-8-sig') as f:
-                            saved_data = json.load(f)
-                            saved_courses = saved_data.get('courses', [])
-                            if saved_courses != self.scheduled_courses:
-                                save = input('\n排程尚未儲存，是否儲存？(y/n): ').strip().lower()
-                                if save == 'y':
-                                    self.save_schedule()
-                    except:
-                        save = input('\n排程尚未儲存，是否儲存？(y/n): ').strip().lower()
-                        if save == 'y':
-                            self.save_schedule()
-
                 print('\n再見！')
                 break
 
             else:
-                print('\n✗ 無效的選項，請重新輸入')
-
-            # 暫停讓使用者看到訊息
-            input('\n按 Enter 繼續...')
+                print('\n✗ 無效的選項，請輸入 i, h, w, m 或 q')
+                input('\n按 Enter 繼續...')
 
 
 def main():

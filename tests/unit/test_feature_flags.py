@@ -82,15 +82,17 @@ class TestFeatureFlags:
         # BrowserSession is still disabled (not integrated yet)
         assert not flags.is_enabled('use_browser_session')
 
-    def test_phase1_flags_enabled_by_default(self, reset_feature_flags):
-        """Test that Phase 1 flags are enabled by default (integration complete)."""
+    def test_phase1_flags_status(self, reset_feature_flags):
+        """Test Phase 1 flags current status."""
         flags = FeatureFlags()
 
-        assert flags.is_enabled('use_login_service')
+        # use_login_service is disabled (needs debugging)
+        assert not flags.is_enabled('use_login_service')
+        # use_scroll_utils is enabled (integration complete)
         assert flags.is_enabled('use_scroll_utils')
 
     def test_orchestrators_enabled_by_default(self, reset_feature_flags):
-        """Test that use_orchestrators is enabled by default (Phase 3 complete)."""
+        """Test that use_orchestrators is enabled by default (Service layer complete)."""
         flags = FeatureFlags()
 
         assert flags.is_enabled('use_orchestrators')
@@ -116,25 +118,25 @@ class TestFeatureFlags:
         """Test disabling a feature flag at runtime."""
         flags = FeatureFlags()
 
-        # use_login_service is enabled by default, disable it
-        assert flags.is_enabled('use_login_service')
+        # use_orchestrators is enabled by default, disable it
+        assert flags.is_enabled('use_orchestrators')
 
-        flags.disable('use_login_service')
+        flags.disable('use_orchestrators')
 
-        assert not flags.is_enabled('use_login_service')
+        assert not flags.is_enabled('use_orchestrators')
 
     def test_reset_single_flag(self, reset_feature_flags):
         """Test resetting a single flag to default."""
         flags = FeatureFlags()
 
         # Disable enabled-by-default flags
-        flags.disable('use_login_service')
+        flags.disable('use_orchestrators')
         flags.disable('use_scroll_utils')
 
-        flags.reset('use_login_service')
+        flags.reset('use_orchestrators')
 
         # Should be back to default (True)
-        assert flags.is_enabled('use_login_service')
+        assert flags.is_enabled('use_orchestrators')
         # Should still be overridden (False)
         assert not flags.is_enabled('use_scroll_utils')
 
@@ -143,14 +145,14 @@ class TestFeatureFlags:
         flags = FeatureFlags()
 
         # Override all flags to opposite of default
-        flags.disable('use_login_service')
+        flags.disable('use_orchestrators')
         flags.disable('use_scroll_utils')
         flags.enable('use_browser_session')
 
         flags.reset()
 
         # Should be back to defaults
-        assert flags.is_enabled('use_login_service')
+        assert flags.is_enabled('use_orchestrators')
         assert flags.is_enabled('use_scroll_utils')
         assert not flags.is_enabled('use_browser_session')
 
