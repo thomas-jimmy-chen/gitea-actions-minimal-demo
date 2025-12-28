@@ -4,9 +4,26 @@
 >
 > 本文檔提供各種 AI 程式助手快速讀取 EEBot 專案交接文檔的提示詞範例
 
-**文檔版本**: 1.1
-**最後更新**: 2025-11-16
+**文檔版本**: 1.2
+**最後更新**: 2025-12-29
 **適用 AI**: Claude Code CLI, Cursor, GitHub Copilot CLI, Cody, Tabnine 等
+
+---
+
+## 🔥 最新優先任務 (2025-12-29)
+
+> **P0 優先**: CAPTCHA OCR 整合到 EEBot 登入流程
+
+**立即讀取**: `docs/CLAUDE_CODE_HANDOVER-8.md`
+
+```
+任務摘要:
+1. 建立 src/utils/captcha_ocr.py
+2. 修改 src/pages/login_page.py
+3. 測試完整登入流程
+
+研究成果: 97.6% 準確率 (optimized_ocr.py)
+```
 
 ---
 
@@ -14,10 +31,11 @@
 
 ```
 D:\Dev\eebot\docs\
-├── AI_ASSISTANT_GUIDE.md          # 通用 AI 助手指南（英文，最詳細）
-├── CLAUDE_CODE_HANDOVER.md        # Claude Code 專用指南（中文）
-├── CHANGELOG.md                   # 修改歷史（含最新規劃）
-├── README.md                      # 文檔索引
+├── CLAUDE_CODE_HANDOVER-8.md      # ★ 最新交接（2025-12-29）
+├── AI_ASSISTANT_GUIDE.md          # 通用 AI 助手指南（英文）
+├── TODO.md                        # 待辦事項（含 P0 任務詳情）
+├── CAPTCHA_OCR_TECHNICAL_GUIDE.md # CAPTCHA OCR 技術文檔
+├── CHANGELOG.md                   # 修改歷史
 └── AI助手快速讀取交接文檔.md      # 本文件
 ```
 

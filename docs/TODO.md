@@ -9,19 +9,70 @@
 
 ## 📋 最新待辦 (2025-12-29)
 
-### 🔥 優先: CAPTCHA OCR 整合
+### 🔥 P0 優先: CAPTCHA OCR 整合 (下回必做)
 
-| 項目 | 優先級 | 狀態 | 說明 |
-|------|--------|------|------|
-| 建立 src/utils/captcha_ocr.py | P0 | 待開始 | 整合 optimized_ocr (97.6%) |
-| 修改 login_page.py | P0 | 待開始 | 加入自動識別 + 手動回退 |
-| 測試完整登入流程 | P0 | 待開始 | 驗證端到端運作 |
-| 文檔: CAPTCHA_OCR_TECHNICAL_GUIDE.md | P0 | ✅ 已完成 | 完整技術文檔 |
+> **交接說明**: 研究已完成，達到 97.6% 準確率，現需整合到主程式
 
-**研究成果**:
-- 原始方法: 34.8% → 優化後: **97.6%** (+62.8%)
-- 研究目錄: `research/captcha_ocr_analysis/`
-- 樣本數量: 420 張
+| # | 任務 | 狀態 | 預期產出 |
+|---|------|------|---------|
+| 1 | 建立 `src/utils/captcha_ocr.py` | 待開始 | 封裝 OCR 函數 |
+| 2 | 修改 `src/pages/login_page.py` | 待開始 | 自動識別 + 手動回退 |
+| 3 | 測試完整登入流程 | 待開始 | 確認端到端運作 |
+
+#### 任務 1: 建立 captcha_ocr.py
+
+**檔案**: `src/utils/captcha_ocr.py`
+
+```python
+from research.captcha_ocr_analysis.optimized_ocr import recognize_with_fallback
+
+def solve_captcha(image_path: str) -> str:
+    """
+    自動識別 CAPTCHA (97.6% 準確率)
+    Returns: 4位數字結果 或 None
+    """
+    success, result, confidence = recognize_with_fallback(image_path)
+    if success and confidence in ('high', 'medium'):
+        return result
+    return None
+```
+
+#### 任務 2: 修改 login_page.py
+
+**位置**: `src/pages/login_page.py` 的 `fill_captcha()` 方法
+
+```python
+from src.utils.captcha_ocr import solve_captcha
+
+def fill_captcha(self):
+    captcha_path = 'captcha.png'
+    self.save_captcha_image(captcha_path)
+
+    result = solve_captcha(captcha_path)
+    if result:
+        self.captcha_input.send_keys(result)
+    else:
+        # 回退到手動輸入
+        result = input("請輸入驗證碼: ")
+        self.captcha_input.send_keys(result)
+```
+
+#### 工具程式參考
+
+| 工具 | 路徑 | 用途 |
+|------|------|------|
+| optimized_ocr.py | `research/captcha_ocr_analysis/` | 97.6% 多策略 OCR |
+| benchmark.py | `research/captcha_ocr_analysis/` | 效能測試 |
+| analyze_failures.py | `research/captcha_ocr_analysis/` | 失敗案例分析 |
+
+#### 研究成果摘要
+
+```
+準確率: 34.8% → 97.6% (+62.8%)
+執行時間: 608ms/張 (可接受)
+樣本數: 420 張
+技術文檔: docs/CAPTCHA_OCR_TECHNICAL_GUIDE.md
+```
 
 ### ⏳ 待測試項目
 

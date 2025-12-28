@@ -262,12 +262,15 @@ research/captcha_ocr_analysis/
 
 ## 8. 下階段計畫
 
-### 8.1 優先: 整合到 EEBot
+### 8.1 P0 優先: 整合到 EEBot
 
-- [ ] 建立 `src/utils/captcha_ocr.py`
-- [ ] 修改 `src/pages/login_page.py` 整合自動識別
-- [ ] 加入回退機制 (自動失敗時手動輸入)
-- [ ] 測試完整登入流程
+> 詳見 `docs/CLAUDE_CODE_HANDOVER-8.md` 及 `docs/TODO.md`
+
+| # | 任務 | 預期產出 |
+|---|------|---------|
+| 1 | 建立 `src/utils/captcha_ocr.py` | 封裝 OCR 函數 |
+| 2 | 修改 `src/pages/login_page.py` | 自動識別 + 手動回退 |
+| 3 | 測試完整登入流程 | 確認端到端運作 |
 
 ### 8.2 可選優化
 
