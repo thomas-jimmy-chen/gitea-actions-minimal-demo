@@ -1,0 +1,2540 @@
+{
+  "timestamp": "2025-12-28T22:02:37.328312",
+  "total_samples": 420,
+  "successful_recognitions": 146,
+  "recognition_rate": 34.76,
+  "digit_frequency": {
+    "0": 27,
+    "1": 20,
+    "2": 52,
+    "3": 96,
+    "4": 52,
+    "5": 105,
+    "6": 46,
+    "7": 22,
+    "8": 62,
+    "9": 41
+  },
+  "results": [
+    {
+      "file": "captcha_20251228_210706_019.png",
+      "result": "4185",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_210708_654.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210711_501.png",
+      "result": "25",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210714_415.png",
+      "result": "2295",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_210716_998.png",
+      "result": "459",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_210719_894.png",
+      "result": "6",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210722_741.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210725_645.png",
+      "result": "2366",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_210728_483.png",
+      "result": "3687",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_210731_378.png",
+      "result": "8769",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_210734_264.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210736_881.png",
+      "result": "3485",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_210739_756.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210742_342.png",
+      "result": "68",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210745_208.png",
+      "result": "14",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210748_106.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210750_696.png",
+      "result": "6883",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_210753_538.png",
+      "result": "38",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210756_422.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210759_343.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210846_669.png",
+      "result": "50",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210848_763.png",
+      "result": "28",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210850_859.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210853_252.png",
+      "result": "774",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_210855_641.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210857_720.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210900_062.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210902_427.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210904_815.png",
+      "result": "2",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210907_171.png",
+      "result": "65",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210909_511.png",
+      "result": "2295",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_210911_883.png",
+      "result": "8",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210914_224.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210916_595.png",
+      "result": "3895",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_210918_921.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210921_320.png",
+      "result": "208",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_210923_691.png",
+      "result": "64",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210926_015.png",
+      "result": "54",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210928_340.png",
+      "result": "8530",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_210930_733.png",
+      "result": "145",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_210932_819.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210935_132.png",
+      "result": "3242",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_210937_542.png",
+      "result": "5406",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_210939_908.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210942_801.png",
+      "result": "6",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210944_881.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210947_229.png",
+      "result": "1456",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_210949_588.png",
+      "result": "49",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210951_956.png",
+      "result": "35",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210954_046.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210956_419.png",
+      "result": "34",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_210958_793.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211001_113.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211003_468.png",
+      "result": "65",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211005_832.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211008_195.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211010_584.png",
+      "result": "535",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211012_991.png",
+      "result": "2293",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211015_327.png",
+      "result": "2",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211017_721.png",
+      "result": "158",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211020_099.png",
+      "result": "8855",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211022_443.png",
+      "result": "3",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211024_784.png",
+      "result": "589",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211027_161.png",
+      "result": "58",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211029_525.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211031_887.png",
+      "result": "7455",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211034_213.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211036_602.png",
+      "result": "5439",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211038_989.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211041_075.png",
+      "result": "568",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211043_438.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211045_845.png",
+      "result": "6360",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211048_209.png",
+      "result": "54",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211050_578.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211052_909.png",
+      "result": "1356",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211055_273.png",
+      "result": "1536",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211057_668.png",
+      "result": "34",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211100_029.png",
+      "result": "55",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211102_356.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211104_717.png",
+      "result": "4928",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211107_106.png",
+      "result": "8",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211109_442.png",
+      "result": "195",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211111_793.png",
+      "result": "2",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211113_911.png",
+      "result": "8355",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211116_312.png",
+      "result": "5",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211118_622.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211120_960.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211123_359.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211125_701.png",
+      "result": "454",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211127_778.png",
+      "result": "543",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211130_183.png",
+      "result": "42",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211132_562.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211134_906.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211136_996.png",
+      "result": "359",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211139_339.png",
+      "result": "5996",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211141_717.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211144_086.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211146_192.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211148_567.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211150_946.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211153_337.png",
+      "result": "13",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211155_420.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211157_775.png",
+      "result": "54",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211200_153.png",
+      "result": "508",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211202_522.png",
+      "result": "508",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211204_886.png",
+      "result": "965",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211207_222.png",
+      "result": "3954",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211209_595.png",
+      "result": "2",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211211_692.png",
+      "result": "54",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211214_035.png",
+      "result": "4358",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211216_424.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211218_556.png",
+      "result": "2670",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211220_917.png",
+      "result": "2",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211223_227.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211225_315.png",
+      "result": "428",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211227_706.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211230_038.png",
+      "result": "62",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211232_367.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211234_741.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211237_147.png",
+      "result": "6",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211239_526.png",
+      "result": "1",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211241_863.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211244_594.png",
+      "result": "843",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211246_978.png",
+      "result": "6565",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211249_303.png",
+      "result": "9",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211251_709.png",
+      "result": "17",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211253_792.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211256_103.png",
+      "result": "2",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211258_472.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211300_857.png",
+      "result": "2",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211302_939.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211305_298.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211307_654.png",
+      "result": "1257",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211310_417.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211312_827.png",
+      "result": "2575",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211315_194.png",
+      "result": "3534",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211317_508.png",
+      "result": "955",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211319_893.png",
+      "result": "43",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211322_220.png",
+      "result": "432",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211324_617.png",
+      "result": "3558",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211327_005.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211329_083.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211331_425.png",
+      "result": "334",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211333_852.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211336_182.png",
+      "result": "3",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211338_507.png",
+      "result": "38",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211340_905.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211343_279.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211345_608.png",
+      "result": "3",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211348_003.png",
+      "result": "3363",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211350_508.png",
+      "result": "482",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211352_939.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211355_256.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211357_344.png",
+      "result": "5150",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211359_699.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211402_097.png",
+      "result": "8335",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211404_464.png",
+      "result": "5",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211406_779.png",
+      "result": "3",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211409_164.png",
+      "result": "685",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211411_530.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211413_850.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211416_221.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211418_571.png",
+      "result": "259",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211420_938.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211423_287.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211425_628.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211427_717.png",
+      "result": "9628",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211430_101.png",
+      "result": "4930",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211432_231.png",
+      "result": "5",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211434_546.png",
+      "result": "366",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211436_925.png",
+      "result": "35",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211439_292.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211441_665.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211444_021.png",
+      "result": "25",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211446_378.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211448_747.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211451_123.png",
+      "result": "0",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211453_205.png",
+      "result": "29",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211455_540.png",
+      "result": "438",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211457_921.png",
+      "result": "3335",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211500_282.png",
+      "result": "2182",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211503_166.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211505_516.png",
+      "result": "45",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211507_911.png",
+      "result": "3",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211510_418.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211512_763.png",
+      "result": "5",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211515_111.png",
+      "result": "350",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211517_480.png",
+      "result": "57",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211519_568.png",
+      "result": "4254",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211521_951.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211524_316.png",
+      "result": "85",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211526_689.png",
+      "result": "2719",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211529_028.png",
+      "result": "22",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211531_450.png",
+      "result": "2386",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211533_811.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211536_166.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211538_255.png",
+      "result": "9",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211540_677.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211543_063.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211545_488.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211547_574.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211549_918.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211552_286.png",
+      "result": "3349",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211554_707.png",
+      "result": "336",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211556_793.png",
+      "result": "3523",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211559_119.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211601_457.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211603_890.png",
+      "result": "7",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211605_985.png",
+      "result": "2",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211608_062.png",
+      "result": "6789",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211610_419.png",
+      "result": "3",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211612_798.png",
+      "result": "33",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211615_150.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211617_482.png",
+      "result": "958",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211619_900.png",
+      "result": "385",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211622_294.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211624_685.png",
+      "result": "634",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211627_047.png",
+      "result": "25",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211629_417.png",
+      "result": "5974",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211631_812.png",
+      "result": "9",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211633_890.png",
+      "result": "652",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211636_219.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211638_558.png",
+      "result": "5",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211640_990.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211643_074.png",
+      "result": "428",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211645_400.png",
+      "result": "568",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211647_743.png",
+      "result": "3935",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211650_129.png",
+      "result": "0",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211652_221.png",
+      "result": "641",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211654_568.png",
+      "result": "758",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211656_916.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211659_311.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211701_633.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211703_729.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211706_097.png",
+      "result": "2359",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211708_488.png",
+      "result": "353",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211710_838.png",
+      "result": "6353",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211712_937.png",
+      "result": "9",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211715_311.png",
+      "result": "43",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211717_683.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211720_042.png",
+      "result": "5245",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211722_628.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211725_040.png",
+      "result": "5",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211727_400.png",
+      "result": "995",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211729_794.png",
+      "result": "5333",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211732_201.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211734_298.png",
+      "result": "3",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211736_666.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211738_770.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211741_124.png",
+      "result": "7",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211743_444.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211745_827.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211748_217.png",
+      "result": "3",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211750_318.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211752_659.png",
+      "result": "684",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211755_038.png",
+      "result": "7",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211757_412.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211759_769.png",
+      "result": "8502",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211801_849.png",
+      "result": "5868",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211804_247.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211806_328.png",
+      "result": "58",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211808_410.png",
+      "result": "4330",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211810_774.png",
+      "result": "12045",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211813_172.png",
+      "result": "328",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211815_542.png",
+      "result": "2350",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211817_898.png",
+      "result": "30",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211820_244.png",
+      "result": "580",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211822_605.png",
+      "result": "428",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211824_962.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211827_298.png",
+      "result": "44",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211829_653.png",
+      "result": "6771",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211832_032.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211834_419.png",
+      "result": "34",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211836_742.png",
+      "result": "383",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211839_081.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211841_734.png",
+      "result": "10",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211843_816.png",
+      "result": "8530",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211846_172.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211848_498.png",
+      "result": "9",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211850_876.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211853_245.png",
+      "result": "348",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211855_628.png",
+      "result": "3986",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211857_963.png",
+      "result": "55",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211900_337.png",
+      "result": "30",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211902_421.png",
+      "result": "3",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211904_760.png",
+      "result": "13",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211907_082.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211909_460.png",
+      "result": "3293",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211911_834.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211914_188.png",
+      "result": "5559",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211916_525.png",
+      "result": "43",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211918_918.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211921_259.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211923_603.png",
+      "result": "57",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211925_978.png",
+      "result": "4153",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211928_358.png",
+      "result": "5",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211930_694.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211933_040.png",
+      "result": "30538",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211935_401.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211937_812.png",
+      "result": "8234",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211940_148.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211942_483.png",
+      "result": "253",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_211944_811.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211947_171.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211949_491.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211951_577.png",
+      "result": "3456",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211953_917.png",
+      "result": "3710",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_211956_284.png",
+      "result": "58",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_211958_620.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212001_006.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212003_085.png",
+      "result": "5208",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_212005_452.png",
+      "result": "14",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212007_806.png",
+      "result": "57",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212010_185.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212012_503.png",
+      "result": "3849",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_212014_898.png",
+      "result": "28",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212017_230.png",
+      "result": "1235",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_212019_575.png",
+      "result": "2456",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_212021_888.png",
+      "result": "302",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_212024_245.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212026_602.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212028_920.png",
+      "result": "255",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_212031_295.png",
+      "result": "4652",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_212033_433.png",
+      "result": "2543",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_212035_759.png",
+      "result": "333",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_212038_106.png",
+      "result": "3007",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_212040_453.png",
+      "result": "08",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212042_823.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212045_202.png",
+      "result": "8932",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_212047_545.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212049_898.png",
+      "result": "89",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212052_325.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212054_640.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212057_012.png",
+      "result": "5",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212059_661.png",
+      "result": "13",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212102_600.png",
+      "result": "0378",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_212104_981.png",
+      "result": "346",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_212107_346.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212109_427.png",
+      "result": "3",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212111_554.png",
+      "result": "242",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_212113_921.png",
+      "result": "28",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212116_233.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212118_569.png",
+      "result": "350",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_212120_954.png",
+      "result": "5954",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_212123_294.png",
+      "result": "5578",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_212125_617.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212127_938.png",
+      "result": "635",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_212130_290.png",
+      "result": "57",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212132_620.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212134_955.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212137_337.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212139_702.png",
+      "result": "92",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212142_050.png",
+      "result": "48",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212144_394.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212146_757.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212149_112.png",
+      "result": "36",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212151_452.png",
+      "result": "1495",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_212153_784.png",
+      "result": "45",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212156_151.png",
+      "result": "8",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212158_519.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212200_861.png",
+      "result": "2",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212203_200.png",
+      "result": "23",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212205_569.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212207_937.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212210_302.png",
+      "result": "902",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_212212_393.png",
+      "result": "92",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212214_792.png",
+      "result": "41",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212216_908.png",
+      "result": "6571",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_212218_987.png",
+      "result": "34",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212221_307.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212223_643.png",
+      "result": "45",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212226_018.png",
+      "result": "58",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212228_350.png",
+      "result": "43",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212230_750.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212232_836.png",
+      "result": "820",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_212235_205.png",
+      "result": "355",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_212237_531.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212239_880.png",
+      "result": "297",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_212241_955.png",
+      "result": "192",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_212244_325.png",
+      "result": "6",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212246_660.png",
+      "result": "1",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212249_005.png",
+      "result": "8380",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_212251_324.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212253_674.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212256_043.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212258_128.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212300_469.png",
+      "result": "6",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212302_868.png",
+      "result": "52",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212305_209.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212307_542.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212309_865.png",
+      "result": "36",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212311_996.png",
+      "result": "3",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212314_309.png",
+      "result": "6656",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_212316_624.png",
+      "result": "486",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_212318_967.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212321_081.png",
+      "result": "2",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212323_404.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212325_752.png",
+      "result": "433",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_212328_127.png",
+      "result": "44",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212330_246.png",
+      "result": "584",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_212332_622.png",
+      "result": "54",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212335_003.png",
+      "result": "8",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212337_318.png",
+      "result": "959",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_212339_680.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212342_054.png",
+      "result": "5328",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_212344_419.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212346_739.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212348_851.png",
+      "result": "366",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_212351_167.png",
+      "result": "937",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_212353_514.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212355_826.png",
+      "result": "4",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212358_226.png",
+      "result": "2",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212400_308.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212402_713.png",
+      "result": "7588",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_212405_044.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212407_160.png",
+      "result": "44",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212409_479.png",
+      "result": "483",
+      "success": true,
+      "confidence": "medium"
+    },
+    {
+      "file": "captcha_20251228_212411_804.png",
+      "result": "5355",
+      "success": true,
+      "confidence": "high"
+    },
+    {
+      "file": "captcha_20251228_212414_153.png",
+      "result": "43",
+      "success": false,
+      "confidence": "low"
+    },
+    {
+      "file": "captcha_20251228_212416_517.png",
+      "result": "",
+      "success": false,
+      "confidence": "low"
+    }
+  ]
+}

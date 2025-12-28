@@ -1,0 +1,79 @@
+{
+  "total_samples": 420,
+  "all_success": 252,
+  "all_fail": 58,
+  "unique_successes": {
+    "v3_islands": 15,
+    "v7_multidim": 13,
+    "v8_twostage": 14
+  },
+  "analysis": {
+    "v3_islands": {
+      "count": 15,
+      "avg": {
+        "width": 100.0,
+        "height": 50.0,
+        "mean_intensity": 162.1287,
+        "std_intensity": 99.20114154281677,
+        "edge_density": 0.20002,
+        "total_components": 3.3,
+        "small_components": 1.6,
+        "medium_components": 0.1,
+        "large_components": 1.6,
+        "thin_components": 0.5
+      }
+    },
+    "v7_multidim": {
+      "count": 13,
+      "avg": {
+        "width": 100.0,
+        "height": 50.0,
+        "mean_intensity": 160.11484000000002,
+        "std_intensity": 100.07462634302168,
+        "edge_density": 0.20404,
+        "total_components": 4.4,
+        "small_components": 2.2,
+        "medium_components": 0.0,
+        "large_components": 2.2,
+        "thin_components": 0.5
+      }
+    },
+    "v8_twostage": {
+      "count": 14,
+      "avg": {
+        "width": 100.0,
+        "height": 50.0,
+        "mean_intensity": 156.75612,
+        "std_intensity": 101.61453180366313,
+        "edge_density": 0.20646,
+        "total_components": 4.5,
+        "small_components": 2.4,
+        "medium_components": 0.3,
+        "large_components": 1.8,
+        "thin_components": 0.8
+      }
+    }
+  },
+  "all_fail_files": [
+    "captcha_20251228_210734_264.png",
+    "captcha_20251228_210759_343.png",
+    "captcha_20251228_210857_720.png",
+    "captcha_20251228_210911_883.png",
+    "captcha_20251228_210932_819.png",
+    "captcha_20251228_210944_881.png",
+    "captcha_20251228_210954_046.png",
+    "captcha_20251228_211008_195.png",
+    "captcha_20251228_211017_721.png",
+    "captcha_20251228_211029_525.png",
+    "captcha_20251228_211043_438.png",
+    "captcha_20251228_211120_960.png",
+    "captcha_20251228_211150_946.png",
+    "captcha_20251228_211232_367.png",
+    "captcha_20251228_211239_526.png",
+    "captcha_20251228_211256_103.png",
+    "captcha_20251228_211333_852.png",
+    "captcha_20251228_211352_939.png",
+    "captcha_20251228_211355_256.png",
+    "captcha_20251228_211359_699.png"
+  ]
+}
