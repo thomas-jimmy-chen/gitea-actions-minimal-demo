@@ -175,6 +175,7 @@ class CourseScheduler:
         # === 主要功能（醒目顯示）===
         print('\n  ┌' + '─' * 66 + '┐')
         print('  │  [i] 智能推薦      自動掃描修習中課程 → 匹配 → 執行             │')
+        print('  │  [b] 自動批量      課程+考試 一鍵全選自動執行 (h2 自動版)       │')
         print('  │  [h] 混合掃描      h1:時長  h2:課程+考試  h3:考試答題           │')
         print('  └' + '─' * 66 + '┘')
 
@@ -322,6 +323,70 @@ class CourseScheduler:
             handle_error(e, driver=None, context="智能推薦 Orchestrator", is_known=True)
         except Exception as e:
             handle_error(e, driver=None, context="智能推薦 Orchestrator", is_known=False)
+
+        input('\n按 Enter 返回主選單...')
+
+    def handle_auto_batch(self):
+        """自動批量執行 - 一鍵自動執行所有課程+考試（h2 自動版）"""
+
+        # ===== 顯示警告提示 =====
+        print('\n' + '=' * 70)
+        print('  ⚠️  自動批量執行 - 一鍵自動執行 (h2 自動版)')
+        print('=' * 70)
+        print()
+        print('本選項會自動登入(有驗證碼時，必須人工輸入)，')
+        print('自動掃描所有課程與考試，全選後自動執行。')
+        print()
+        print('執行流程：')
+        print('  1. 登入並掃描所有「修習中」課程')
+        print('  2. 深度掃描每個課程計畫（提取子課程和考試）')
+        print('  3. 自動全選所有項目')
+        print('  4. 分離一般課程和考試')
+        print('  5. 執行一般課程處理（時長發送）')
+        print('  6. 執行考試處理（自動答題）')
+        print('  7. 生成綜合報告')
+        print('=' * 70)
+
+        confirm = input('\n確定要執行嗎？(y/n): ').strip().lower()
+        if confirm != 'y':
+            print('\n✓ 已取消')
+            input('\n按 Enter 返回主選單...')
+            return
+
+        self._handle_auto_batch_orchestrator()
+
+    def _handle_auto_batch_orchestrator(self):
+        """使用 Orchestrator 執行自動批量處理"""
+        try:
+            from src.orchestrators import HybridScanOrchestrator, HybridMode
+
+            config = _get_config()
+            orchestrator = HybridScanOrchestrator(
+                config,
+                mode=HybridMode.BATCH
+            )
+
+            # auto_select=True 自動選擇所有課程
+            result = orchestrator.execute(auto_select=True)
+
+            if result.success:
+                print('\n' + '=' * 70)
+                print('  ✓ 自動批量執行完成')
+                print('=' * 70)
+                print(f"  掃描 Payload 數: {result.data.get('payloads_captured', 0)}")
+                print(f"  已選擇課程數: {result.data.get('courses_selected', 0)}")
+                print(f"  成功處理數: {result.data.get('courses_processed', 0)}")
+                print(f"  成功數: {result.data.get('success_count', 0)}")
+            else:
+                print('\n' + '=' * 70)
+                print('  ✗ 自動批量執行失敗')
+                print('=' * 70)
+                print(f"  錯誤: {result.error}")
+
+        except EEBotError as e:
+            handle_error(e, driver=None, context="自動批量 Orchestrator", is_known=True)
+        except Exception as e:
+            handle_error(e, driver=None, context="自動批量 Orchestrator", is_known=False)
 
         input('\n按 Enter 返回主選單...')
 
@@ -1118,6 +1183,11 @@ class CourseScheduler:
                 self.handle_intelligent_recommendation()
                 input('\n按 Enter 繼續...')
 
+            # 自動批量執行 (h2 自動版)
+            elif choice == 'b':
+                self.handle_auto_batch()
+                input('\n按 Enter 繼續...')
+
             # 混合掃描
             elif choice == 'h':
                 self.handle_hybrid_choice()
@@ -1138,7 +1208,7 @@ class CourseScheduler:
                 break
 
             else:
-                print('\n✗ 無效的選項，請輸入 i, h, w, m 或 q')
+                print('\n✗ 無效的選項，請輸入 i, b, h, w, m 或 q')
                 input('\n按 Enter 繼續...')
 
 

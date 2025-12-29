@@ -520,6 +520,10 @@ class HybridScanOrchestrator(BaseOrchestrator):
 
                 # 重啟瀏覽器（無 proxy）
                 driver.quit()
+
+                # 等待 Chrome 完全關閉
+                time.sleep(3)
+
                 driver = self._driver_manager.create_driver(use_proxy=False)
 
                 # 重新登入（使用統一方法）
@@ -546,6 +550,9 @@ class HybridScanOrchestrator(BaseOrchestrator):
                     driver.quit()
                 except Exception:
                     pass
+
+                # 等待 Chrome 完全關閉
+                time.sleep(3)
 
                 driver = self._driver_manager.create_driver(use_proxy=True)
 
