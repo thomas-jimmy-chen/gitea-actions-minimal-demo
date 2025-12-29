@@ -1,10 +1,10 @@
-# EEBot - Elearn Automation Bot
+# EEBot - TronClass Learning Assistant (for Chunghwa Post e-Learning)
 
 **專案代號**: AliCorn (天角獸)
-**當前版本**: v2.3.8
-**最後更新**: 2025-12-27
+**當前版本**: v2.4.0
+**最後更新**: 2025-12-29
 
-> 台灣郵政 e 大學自動化學習機器人，採用 POM (Page Object Model) + API Interceptor 架構
+> TronClass 輔助學習系統 (for 中華郵政e大學)，採用 POM (Page Object Model) + API Interceptor 架構
 
 ---
 
