@@ -111,6 +111,17 @@ def _get_config():
     return config
 
 
+def _clear_cookies():
+    """清除 cookies 檔案"""
+    from src.core.cookie_manager import CookieManager
+    cookie_manager = CookieManager()
+    if cookie_manager.exists():
+        cookie_manager.clear()
+        print('[INFO] Cookies 已清除')
+    else:
+        print('[INFO] 無 Cookies 需清除')
+
+
 class CourseScheduler:
     """課程排程管理器"""
 
@@ -296,6 +307,9 @@ class CourseScheduler:
 
     def _handle_intelligent_recommendation_orchestrator(self):
         """使用 Orchestrator 執行智能推薦"""
+        # 開始前清除 cookies
+        _clear_cookies()
+
         try:
             from src.orchestrators import IntelligentRecommendationOrchestrator
 
@@ -323,6 +337,9 @@ class CourseScheduler:
             handle_error(e, driver=None, context="智能推薦 Orchestrator", is_known=True)
         except Exception as e:
             handle_error(e, driver=None, context="智能推薦 Orchestrator", is_known=False)
+        finally:
+            # 結束後清除 cookies
+            _clear_cookies()
 
         input('\n按 Enter 返回主選單...')
 
@@ -357,6 +374,9 @@ class CourseScheduler:
 
     def _handle_auto_batch_orchestrator(self):
         """使用 Orchestrator 執行自動批量處理"""
+        # 開始前清除 cookies
+        _clear_cookies()
+
         try:
             from src.orchestrators import HybridScanOrchestrator, HybridMode
 
@@ -387,6 +407,9 @@ class CourseScheduler:
             handle_error(e, driver=None, context="自動批量 Orchestrator", is_known=True)
         except Exception as e:
             handle_error(e, driver=None, context="自動批量 Orchestrator", is_known=False)
+        finally:
+            # 結束後清除 cookies
+            _clear_cookies()
 
         input('\n按 Enter 返回主選單...')
 
@@ -524,6 +547,9 @@ class CourseScheduler:
             print('\n已取消')
             return
 
+        # 開始前清除 cookies
+        _clear_cookies()
+
         try:
             from src.orchestrators import HybridScanOrchestrator, HybridMode
 
@@ -559,6 +585,9 @@ class CourseScheduler:
             handle_error(e, driver=None, context=f"混合掃描 ({mode}) Orchestrator", is_known=True)
         except Exception as e:
             handle_error(e, driver=None, context=f"混合掃描 ({mode}) Orchestrator", is_known=False)
+        finally:
+            # 結束後清除 cookies
+            _clear_cookies()
 
         input('\n按 Enter 返回主選單...')
 
