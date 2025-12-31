@@ -1,8 +1,23 @@
-# EEBot - TronClass Learning Assistant (for Chunghwa Post e-Learning)
+```
+╭─────────────────────────────────────────────────────────────╮
+│                                                             │
+│                        ▐▛███▜▌                              │
+│                       ▝▜█████▛▘                             │
+│                         ▘▘ ▝▝                               │
+│                                                             │
+│              EEBot - TronClass Learning Assistant           │
+│                     Codename: AliCorn                       │
+│                    Powered by Claude                        │
+│                                                             │
+╰─────────────────────────────────────────────────────────────╯
+```
+
+# EEBot - TronClass Learning Assistant
 
 **專案代號**: AliCorn (天角獸)
-**當前版本**: v2.4.0
-**最後更新**: 2025-12-29
+**當前版本**: v2.4.1
+**最後更新**: 2025-12-31
+**AI 夥伴**: Clawd (Claude Code)
 
 > TronClass 輔助學習系統 (for 中華郵政e大學)，採用 POM (Page Object Model) + API Interceptor 架構
 
