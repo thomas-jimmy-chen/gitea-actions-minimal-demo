@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="zh-TW" version="1.58.103566-tms-ch-05d7bd8f">
+<head>
+<script>
+    var sentryClientKey = "";
+    sentryClientKey = /^http/.test(sentryClientKey) ? sentryClientKey : '';
+
+    var CONFIGS = {
+       "assetsPath": "",
+       "sentryClientKey": sentryClientKey,
+       "apm": {"DEBUG": false, "ENABLE_APM": true, "ENVIRONMENT": "prod-post \u4e2d\u83ef\u90f5\u653f", "SECRET_TOKEN": "qqEAYoVJ7ocKrAsrJH8rKwc7", "SERVER_URL": "https://apm.tronclass.com", "SERVICE_NAME": "lms-web", "TRANSACTION_SAMPLE_RATE": 0.1}
+    }
+</script><style>body{display: none}</style><meta http-equiv="content-type" content="text/html" charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Cache-Control" content="no-transform">    <title>郵政ｅ大學</title>
+    <link rel="shortcut icon" href="/static/assets/images/favicon-b420ac72.ico">
+<style id="eebot-custom-style">
+#user_name, #password, input[name="captcha_code"] {
+    background-color: #ffebee !important;
+    border: 2px solid #e57373 !important;
+}
+#user_name:focus, #password:focus, input[name="captcha_code"]:focus {
+    background-color: #ffcdd2 !important;
+    border-color: #f44336 !important;
+    box-shadow: 0 0 8px rgba(244, 67, 54, 0.6) !important;
+}
+.eebot-ocr-notice {
+    text-align: center; color: #d32f2f; font-weight: bold;
+    font-size: 14px; padding: 8px; margin: 5px 0;
+    background: linear-gradient(90deg, transparent, #ffcdd2, transparent);
+    animation: eebot-blink 1.5s ease-in-out infinite;
+}
+@keyframes eebot-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+</style></head>
+<body -ng-app="login" class="login-page" on-modal-state-change>
+<!-- 自定義主題色 -->
+    <style>:root {--nav-bg-color:#558748;--nav-color:#ffffff}</style>
+
+<div class="wrapper wrapper-login">
+    <div class="main-content" ng-init="emailLogin = true;
+             langNames={'zh-TW': '繁體中文', 'zh-CN': '简体中文', 'zh-MO': '繁體中文 (澳門)', 'en-US': 'English (US)', 'en-GB': 'English (UK)', 'th-TH': 'ภาษาไทย'};
+             orgs = [{&#39;id&#39;: 1, &#39;name&#39;: &#39;郵政ｅ大學&#39;}]; org_id = '' || '1' || 0;
+             cloudType = 'private'; token='57968db09ec41aae5073d76ab07f7b1169a028f35a55e009569bd6631464644b'; current_time='1767102127.2295542';
+             wechatAppId='fake_app_id'; weiboAppId='fake_app_id'; qqAppId='fake_app_id';
+             facebookAppId='fake_app_id'; googleAppId='fake_client_id';
+             thirdPartyRedirectUrl='127.0.0.1/fake_path';
+             isBindMobile=false;
+             isLoginForTW=false;
+             loginTipMap={
+                'emailPhoneUserNo': 'Email/手機號碼/使用者帳號',
+                'emailPhone': 'Email/手機號碼',
+                'emailUserNo': 'Email/使用者帳號',
+                'UserNo': '使用者帳號',
+                'password': '密碼'
+             };"
+             >
+        <div class="login-content" ng-controller="LoginController">
+            <div class="select-language">
+<a ng-click="showLangList()" href="javascript:void(0)" onclick="return false;" class="entry" ng-blur="hideLangList()">
+    繁體中文
+    <i class="icon font font-down-arrow"></i>
+</a>
+
+<div class="dropdown-list ng-cloak" ng-show="ui.showList">
+    <ul ng-mouseleave="ui.inList=false" ng-mouseenter="ui.inList=true">
+            <li class="language" ng-repeat="lang in ui.langList">
+                <a ng-click="changeLanguage(lang)" ng-bind="langNames[lang]"></a>
+            </li>
+    </ul>
+</div>            </div>
+
+<div class="text-center">
+        <div class="logo-tw-post">郵政e大學</div>
+</div><form class="login-form" ng-cloak action="/login?no_cas=" method="POST" name="unified_login_form"
+      rewrite-next-url="">
+    <input id="next" name="next" type="hidden" value="">
+    
+    
+    
+    <input type="hidden" id="org_id" name="org_id" value="1">
+    <div class="login-tip" ng-show="loginTip">請輸入<span ng-bind="loginTip"></span></div>
+<div class="eebot-ocr-notice" id="eebot-notice-top">***驗證碼自動 OCR 中***</div>
+    <div class="wrapper-input-tag-with-icon">
+        <input id="user_name" name="user_name" type="text" space-trim value=""
+           ng-model="ui.user_name" ng-change="clearLoginTip()"
+                wg-placeholder="[[loginTipMap.UserNo]]"
+>
+        <svg-icon class="right-icon" name="clear-input" ng-show="!!ui.user_name" ng-click="clearUserName()"></svg-icon>
+    </div>
+
+<div class="private-org-tips" ng-show="privateOrg.tips">
+    <div class="attention">!</div>
+    <div class="attention-tips" ng-bind="privateOrg.tips"></div>
+    <div class="attention-tips2" ng-show="privateOrg.web_url">
+        <span ng-bind="privateOrg.name"></span>
+        TronClass 學習平台
+        <a ng-href="[[ privateOrg.web_url ]]" target="_self">由此登入</a>謝謝。
+    </div>
+</div>
+    <div class="wrapper-input-tag-with-icon">
+        <input id="password" name="password" type="password" value=""
+           wg-placeholder="密碼" ng-model="ui.password" ng-change="clearLoginTip()" autocomplete="off">
+        <svg-icon class="right-icon" name="eye-closed" ng-show="ui.peekable && !!ui.password" ng-click="peekToggle()"></svg-icon>
+        <svg-icon class="right-icon" name="eye-opened" ng-show="!ui.peekable && !!ui.password" ng-click="peekToggle()"></svg-icon>
+    </div>
+
+    <div class="captcha-verification">
+        <div class="captcha-input">
+            <input type="text" name="captcha_code" space-trim ng-model="user.captcha_code"
+               server-validated placeholder="請輸入驗證碼">
+        </div>
+
+        <div class="captcha-refresh">
+            <a ng-click="refreshCaptcha()">
+                <img ng-src="[[ captchaCode ]]">
+                <i class="font font-refresh re-get-code"></i>
+            </a>
+        </div>
+    </div>
+
+<div class="eebot-ocr-notice" id="eebot-notice-bottom">***驗證碼自動 OCR 中***</div>
+    <div class="find-password">
+        <a class="right" ng-href="/forget-password">忘記密碼</a>
+    </div>
+    <input id="submit" class="button radius submit secondary" name="submit" type="submit" value="登入">
+</form>
+
+<div id="login-select-org-popup" class="reveal-modal popup-area popup-480" data-reveal resetable>
+    <div class="popup-content">
+        <div class="popup-header">
+            <a class="right" close-popup="login-select-org-popup">
+                <i class="font font-close"></i>
+            </a>
+        </div>
+        <div class="main-area">
+            <div class="popup-prompt-message">
+                請選擇您想要進入的機構
+            </div>
+            <div class="orgs">
+                <div class="org" ng-repeat="org in userOrgs" ng-click="selectOrg(org)"
+                     ng-class="{'selected': selectedOrg == org}">
+                    <ul>
+                        <li class="org-name"><span ng-bind="org.name"></span></li>
+                        <li class="org-domain" ng-if="org.domain">推薦訪問: <span ng-bind="org.domain"></span></li>
+                    </ul>
+                    <i class="selected-mark font font-rollcall-on-call" ng-if="selectedOrg == org"></i>
+                </div>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <div class="form-buttons">
+                <button close-popup="login-select-org-popup" class="button button-green medium"
+                        ng-disabled="!selectedOrg"
+                        type="button" ng-click="goLogin()">確定</button>
+            </div>
+        </div>
+    </div>
+</div>        </div>
+        <div class="legality-text">
+<span ng-bind="org.filing_number" ng-if="org.filing_number" ng-class="{'filing-number-text': org.filing_number}"></span>
+
+    <span>最佳使用環境：作業系統 Win 10 以上、MAC OS X。 瀏覽器：Edge、Chrome 55以上、Firefox 50.0以上、Safari 9.0以上。</span>
+        </br><span>連絡電話：82293581-317、315 ｜ 電子信箱：e-learning@mail.post.gov.tw</span>
+        </div>
+    </div>
+
+<div id="wechat-popup" class="reveal-modal popup-area" data-reveal popup-center-location>
+    <div class="popup-content">
+        <i class="icon icon-cancel-edit" close-popup="wechat-popup"></i>
+        <div id="login_container"></div>
+    </div>
+</div>
+    <link rel="stylesheet" href="/static/29375-b5e9985c.css" media="none" onload="if(media!='all')media='all'"></link>
+<link rel="stylesheet" href="/static/styles-base-3356f4bb.css" media="none" onload="if(media!='all')media='all'"></link>
+<link rel="stylesheet" href="/static/83892-1f6a18c7.css" media="none" onload="if(media!='all')media='all'"></link>
+<link rel="stylesheet" href="/static/styles-lms-main-31c98ce9.css" media="none" onload="if(media!='all')media='all'"></link>
+<link rel="stylesheet" href="/static/styles-course-30349872-43b726a1.css" media="none" onload="if(media!='all')media='all'"></link>
+<link rel="stylesheet" href="/static/styles-course-2c5d22db-1ee4c84c.css" media="none" onload="if(media!='all')media='all'"></link>
+<link rel="stylesheet" href="/static/styles-course-1f472754-e2eb79a6.css" media="none" onload="if(media!='all')media='all'"></link>
+<link rel="stylesheet" href="/static/styles-course-9e1ec98d-4e6515be.css" media="none" onload="if(media!='all')media='all'"></link>
+<link rel="stylesheet" href="/static/styles-user-51126470.css" media="none" onload="if(media!='all')media='all'"></link>
+<link rel="stylesheet" href="/static/js/lms-main-e5e01f2c.css" media="none" onload="if(media!='all')media='all'"></link>
+<link rel="stylesheet" href="/static/styles-iview-64133065.css" media="none" onload="if(media!='all')media='all'"></link><script src="/static/runtime~js/lms-main-33f9d851.js" defer></script>
+<script src="/static/30381-7dfb2df5.js" defer></script>
+<script src="/static/61339-2d3740c4.js" defer></script>
+<script src="/static/64779-285ac92e.js" defer></script>
+<script src="/static/96486-6a0919bb.js" defer></script>
+<script src="/static/80008-02f88b90.js" defer></script>
+<script src="/static/29305-86c39759.js" defer></script>
+<script src="/static/85565-ee5535af.js" defer></script>
+<script src="/static/9763-33ac26be.js" defer></script>
+<script src="/static/60111-c493cd5f.js" defer></script>
+<script src="/static/53925-c1ea1de5.js" defer></script>
+<script src="/static/98128-9052f725.js" defer></script>
+<script src="/static/67344-af7cdc36.js" defer></script>
+<script src="/static/83994-91108ee0.js" defer></script>
+<script src="/static/83302-8ac0db48.js" defer></script>
+<script src="/static/30587-0e6c98c7.js" defer></script>
+<script src="/static/15012-d3ea8058.js" defer></script>
+<script src="/static/12379-0422fda1.js" defer></script>
+<script src="/static/50085-d76e07fd.js" defer></script>
+<script src="/static/85113-839e3bde.js" defer></script>
+<script src="/static/62447-e44af8a9.js" defer></script>
+<script src="/static/86953-dbb99771.js" defer></script>
+<script src="/static/75303-599dddad.js" defer></script>
+<script src="/static/19288-6e12baa8.js" defer></script>
+<script src="/static/3056-0d3c0f48.js" defer></script>
+<script src="/static/93604-abfe0d75.js" defer></script>
+<script src="/static/78072-880002c4.js" defer></script>
+<script src="/static/85805-1bfef535.js" defer></script>
+<script src="/static/78571-04e728e7.js" defer></script>
+<script src="/static/33614-95c9e527.js" defer></script>
+<script src="/static/3251-ed8db051.js" defer></script>
+<script src="/static/69671-0cdf8d84.js" defer></script>
+<script src="/static/61204-c61051be.js" defer></script>
+<script src="/static/8468-d69c44de.js" defer></script>
+<script src="/static/73082-ae7008f0.js" defer></script>
+<script src="/static/65387-5e1f9aac.js" defer></script>
+<script src="/static/60812-d70b7e32.js" defer></script>
+<script src="/static/50818-d95b0ecd.js" defer></script>
+<script src="/static/16894-7739ee27.js" defer></script>
+<script src="/static/74976-399c266b.js" defer></script>
+<script src="/static/34896-7a17bea7.js" defer></script>
+<script src="/static/25303-731a005a.js" defer></script>
+<script src="/static/75052-287d2980.js" defer></script>
+<script src="/static/26330-e2c50617.js" defer></script>
+<script src="/static/js/lms-main-5e4947c5.js" defer></script>
+
+<!--[if lte IE 8]>
+    <script type="text/javascript">
+        window.location.href='/browser-warning';
+    </script>
+<![endif]-->
+
+<!--[if IE 9]>
+    <script type="text/javascript">
+        // window.FileAPI = {};
+        window.onload = function()
+        {
+            document.title = "TronClass";
+        }
+        window.isIE9 = true;
+    </script>
+<![endif]-->
+
+<script type="text/javascript">
+    /*@cc_on
+        if (/^10/.test(@_jscript_version)) {
+            window.isIE10 = true;
+        }
+    @*/
+</script></div>
+</body>
+</html>

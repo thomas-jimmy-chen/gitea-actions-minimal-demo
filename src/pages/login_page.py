@@ -290,7 +290,7 @@ class LoginPage(BasePage):
             if self.is_logged_in():
                 print(f'[SUCCESS] Login successful (attempt {attempt})')
                 # Wait for page to fully load after login
-                time.sleep(5)
+                time.sleep(3)
                 return True
 
             if self.check_captcha_error():
@@ -338,7 +338,7 @@ class LoginPage(BasePage):
             if self.is_logged_in():
                 print('[SUCCESS] Manual login successful')
                 # Wait for page to fully load after login
-                time.sleep(5)
+                time.sleep(3)
                 return True
 
         print('[FAILED] Login failed')

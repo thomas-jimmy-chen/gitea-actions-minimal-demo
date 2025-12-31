@@ -4,9 +4,9 @@
 >
 > 📚 **文檔分段規則**: 請參考 [DOCUMENT_SEGMENTATION_RULES.md](./DOCUMENT_SEGMENTATION_RULES.md)
 
-**文檔版本**: 1.5
-**最後更新**: 2025-12-26
-**項目版本**: v2.3.8
+**文檔版本**: 1.7
+**最後更新**: 2025-12-31
+**項目版本**: v2.4.1
 **項目代號**: **AliCorn** (天角獸)
 **維護者**: wizard03 + Claude Code
 
@@ -101,6 +101,14 @@
 - 📋 [CHANGELOG.md](./CHANGELOG.md) - 最新版本變更記錄
 - 📐 [DOCUMENT_SEGMENTATION_RULES.md](./DOCUMENT_SEGMENTATION_RULES.md) - 文檔分段規則
 
+### 🔥 重要技術文檔
+- 🔒 [BURP_SUITE_ANALYSIS_INDEX.md](./BURP_SUITE_ANALYSIS_INDEX.md) - **Burp Suite 流量分析技術索引** (處理頁面修改、姓名替換時必讀)
+
+### 最新 AI 交接文檔
+- 🆕 [CLAUDE_CODE_HANDOVER-11.md](./CLAUDE_CODE_HANDOVER-11.md) - v2.4.1 交接 (2025-12-31)
+- 📝 [WORK_LOG_2025-12-31.md](./WORK_LOG_2025-12-31.md) - 最新工作日誌
+- 📋 [TODO.md](./TODO.md) - 待辦事項清單
+
 ---
 
 ## 🎯 推薦閱讀順序
@@ -169,7 +177,7 @@ cat docs/AI_ASSISTANT_GUIDE-1.md docs/AI_ASSISTANT_GUIDE-2.md
 
 ---
 
-*索引建立日期: 2025-11-27 | 專案版本: 2.0.3 | 專案代號: Gleipnir*
+*索引建立日期: 2025-11-27 | 最後更新: 2025-12-31 | 專案版本: v2.4.1 | 專案代號: AliCorn*
 
 ---
 

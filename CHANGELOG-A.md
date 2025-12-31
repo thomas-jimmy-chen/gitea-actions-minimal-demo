@@ -19,6 +19,215 @@
 
 ---
 
+## [2.4.1] - 2025-12-31 🔒
+
+### 作者
+- Claude Code (Opus 4.5) with wizard03
+
+### 🎯 本次更新重點：Burp Suite 流量分析 + 姓名替換 + 登入頁面樣式注入
+
+#### ✨ 新功能
+
+##### 1. MitmProxy 姓名替換攔截器
+
+**功能描述**: 在 HTTP 響應層級替換使用者真實姓名
+
+**實現**:
+- 新增 `src/api/interceptors/login_style_modifier.py`
+- 動態姓名遮蔽：保留第一字，其餘用 `〇` (U+3007) 替換
+- 支援任意長度姓名
+
+**遮蔽範例**:
+| 原始 | 遮蔽後 |
+|------|--------|
+| 陳偉鳴 | 陳〇〇 |
+| 李四 | 李〇 |
+| 司馬相如 | 司〇〇〇 |
+
+**使用方式**:
+```bash
+mitmdump -s src/api/interceptors/login_style_modifier.py
+```
+
+##### 2. 登入頁面樣式注入
+
+**功能描述**: 在登入頁面注入自定義 CSS 和 OCR 提示
+
+**視覺效果**:
+- 輸入框背景: 淺紅色 `#ffebee`
+- Focus 外框: 亮紅色 `#f44336` + 光暈
+- OCR 提示: Username 上方、驗證碼下方
+- 閃爍動畫: 1.5 秒循環
+
+##### 3. CDP 渲染前注入
+
+**功能描述**: 使用 Chrome DevTools Protocol 在頁面渲染前修改
+
+**技術**:
+```python
+driver.execute_cdp_cmd(
+    'Page.addScriptToEvaluateOnNewDocument',
+    {'source': INJECTION_SCRIPT}
+)
+```
+
+**修改文件**:
+- `research/captcha_ocr_analysis/demo/captcha_demo.py`
+
+#### 📖 新增文檔
+
+| 文檔 | 說明 |
+|------|------|
+| `docs/BURP_SUITE_ANALYSIS_INDEX.md` | Burp Suite 分析技術索引 (必讀) |
+| `docs/WORK_LOG_2025-12-31.md` | 工作日誌 |
+| `docs/CLAUDE_CODE_HANDOVER-11.md` | AI 交接文檔 |
+| `NAME_REPLACEMENT_ANALYSIS.md` | 姓名替換分析報告 |
+
+#### 🔧 技術分析
+
+**Burp Suite XML 分析**:
+- 來源: `20251230-bu.txt` (12.5 MB)
+- 目標: `elearn.post.gov.tw`
+- 發現: 姓名出現在 5 個 HTML 位置
+
+**姓名出現位置**:
+1. JavaScript `user` 物件
+2. AngularJS `root-scope-variable`
+3. AngularJS `ng-init`
+4. `window.analyticsData`
+5. `CurrentName` 變數
+
+---
+
+## [2.4.0] - 2025-12-29 ⚡
+
+### 作者
+- Claude Code (Opus 4.5) with wizard03
+
+### 🎯 本次更新重點：CAPTCHA OCR 整合 + 品牌重塑 + 自動批量模式
+
+#### ✨ 新功能
+
+##### 1. CAPTCHA OCR 自動識別
+
+**功能描述**: 登入時自動識別驗證碼，97.6% 準確率
+
+**實現**:
+- 新增 `src/utils/captcha_ocr.py` 封裝模組
+- 整合多策略 OCR 識別（9 種預處理方法）
+- 失敗時自動回退到手動輸入
+
+**使用方式**:
+```python
+from src.utils.captcha_ocr import solve_captcha
+result = solve_captcha('captcha.png')  # 返回 4 位數字或 None
+```
+
+**技術細節**:
+- 準確率: 34.8% → 97.6% (+62.8%)
+- 執行時間: 608ms/張
+- 樣本數: 420 張
+
+**修改文件**:
+- `src/utils/captcha_ocr.py` (新增)
+- `src/pages/login_page.py` (整合 OCR)
+
+##### 2. [b] 自動批量模式
+
+**功能描述**: h2（批量模式）的自動選擇版本，無需人工確認
+
+**使用方式**:
+```bash
+python menu.py
+# 輸入 'b' 執行自動批量模式
+```
+
+**工作流程**:
+```
+掃描 → 自動選擇全部 → 執行 → 完成
+```
+
+**修改文件**: `menu.py`
+
+##### 3. Cookie 清理機制
+
+**功能描述**: 操作開始和結束時自動清理 cookies，確保 session 乾淨
+
+**清理時機**:
+- 操作開始時（fresh session）
+- 操作結束時（finally block 確保執行）
+
+**適用操作**: `i`, `b`, `h` (1/2/3)
+
+**實現**:
+```python
+def _clear_cookies():
+    files = ['cookies.json', 'resource/cookies/cookies.json']
+    for f in files:
+        if os.path.exists(f):
+            os.remove(f)
+```
+
+**修改文件**: `menu.py`
+
+#### 🔄 品牌重塑
+
+**變更**:
+- 標題: `EEBot - TronClass Learning Assistant`
+- 副標題: `TronClass 輔助學習系統 (for 中華郵政e大學)`
+- 版本: v2.3.9 → **v2.4.0**
+
+**修改文件**: `README.md`
+
+#### 🐛 Bug 修復
+
+##### 1. Chrome Session Error 修復
+
+**問題**: 瀏覽器重啟時偶發 session 錯誤
+
+**解決方案**: 瀏覽器重啟間新增 3 秒延遲
+```python
+driver.quit()
+time.sleep(3)  # 等待資源釋放
+driver = driver_manager.create_driver(use_proxy=True)
+```
+
+**修改文件**: `menu.py`
+
+##### 2. 登入後等待機制
+
+**問題**: 登入成功後頁面跳轉需要時間
+
+**解決方案**: 登入成功後新增 5 秒等待
+```python
+if self.is_login_success():
+    time.sleep(5)  # 等待頁面載入
+```
+
+**修改文件**: `src/pages/login_page.py`
+
+#### 📁 新增/修改文件
+
+| 文件 | 類型 | 說明 |
+|------|------|------|
+| `src/utils/captcha_ocr.py` | 新增 | CAPTCHA OCR 封裝模組 |
+| `src/pages/login_page.py` | 修改 | 整合 OCR + 等待機制 |
+| `menu.py` | 修改 | [b] 選項 + Cookie 清理 |
+| `README.md` | 修改 | 品牌重塑 |
+| `src/orchestrators/hybrid_scan.py` | 修改 | 支援新流程 |
+| `docs/WORK_LOG_2025-12-29.md` | 新增 | 工作日誌 |
+| `docs/CLAUDE_CODE_HANDOVER-9.md` | 新增 | AI 交接文檔 |
+
+#### 📊 研究成果 (CAPTCHA OCR)
+
+```
+研究路徑: research/captcha_ocr_analysis/
+核心文件: optimized_ocr.py (97.6%)
+技術文檔: docs/CAPTCHA_OCR_TECHNICAL_GUIDE.md
+```
+
+---
+
 ## [2.3.8] - 2025-12-26 ⚡
 
 ### 作者
