@@ -29,6 +29,7 @@
 
 | 文檔 | 位置 | 日期 | 說明 |
 |------|------|------|------|
+| **🔥 平台技術研究總報告** | `docs/ELEARNING_PLATFORM_TECHNICAL_RESEARCH.md` | 2025-12-31 | 商業邏輯、技術規格、修改點總整理 |
 | **API 端點分析報告** | `BURP_ANALYSIS_REPORT.md` | 2025-12-02 | 登入、課程、時長等 4 個核心 API |
 | **詳細分析 (660請求)** | `TEST2_DETAILED_ANALYSIS.md` | 2025-12-02 | 660 個請求的完整分析 |
 | **分析總結文檔** | `ANALYSIS_SUMMARY_REPORT.md` | 2025-12-02 | 4 份報告的總結索引 |
