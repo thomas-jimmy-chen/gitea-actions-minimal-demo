@@ -25,8 +25,17 @@
 | 問題 | 決策 | 理由 |
 |------|------|------|
 | CodeRabbit | **不需要** | 個人工作室，Claude Code 已足夠 |
-| Claude Code CI/CD | **可行** | 官方支援 GitHub Actions 整合 |
-| 自動化測試 | **立即建立** | 補齊專案的測試缺口 |
+| Claude Code CI/CD | **採用方案 C** | 本地使用，避免公開 repo 被濫用 API |
+| 自動化測試 | **已建立** | pytest + 57 個測試 |
+
+### 1.3 最終決策：方案 C - 本地使用 Claude Code
+
+**選擇原因**：
+1. 個人工作室不需要自動 PR 審查
+2. 公開 repo 使用 GitHub Actions 可能被濫用 API 額度
+3. 本地 CLI 更靈活，可自訂提示詞
+
+**快速指令參考**：`docs/CLAUDE_CODE_REVIEW_QUICK_REFERENCE.md`
 
 ---
 
