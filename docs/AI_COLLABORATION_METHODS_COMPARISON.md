@@ -876,32 +876,219 @@
 │                    各 AI 工具的規則文件                              │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                     │
-│  工具                 規則文件                  說明                │
-│  ────                 ────────                  ────                │
+│  ══════════════════ Anthropic ══════════════════                    │
 │                                                                     │
 │  Claude Code          CLAUDE.md                 專案根目錄          │
-│  (Anthropic)          .claude/                  配置目錄            │
+│  (CLI)                .claude/                  配置目錄            │
+│                       .claude/settings.json     本地設定            │
 │                                                                     │
-│  Cursor               .cursorrules              專案規則            │
-│                       .cursor/                  配置目錄            │
+│  ══════════════════ OpenAI ══════════════════                       │
+│                                                                     │
+│  ChatGPT / Codex      AGENTS.md                 Agent 指引          │
+│                       .openai/                  配置目錄            │
+│                       openai.json               專案配置            │
+│                                                                     │
+│  OpenAI Codex CLI     codex.md                  專案規則            │
+│                       .codex/                   配置目錄            │
+│                                                                     │
+│  ══════════════════ Google ══════════════════                       │
+│                                                                     │
+│  Gemini Code Assist   GEMINI.md                 專案規則            │
+│  (Google Cloud)       .gemini/                  配置目錄            │
+│                       .idx/                     Project IDX 配置    │
+│                                                                     │
+│  Google AI Studio     .google/ai-studio/        配置目錄            │
+│                       gemini.config.json        專案配置            │
+│                                                                     │
+│  ══════════════════ GitHub ══════════════════                       │
 │                                                                     │
 │  GitHub Copilot       .github/copilot-          專案指引            │
 │                       instructions.md                               │
+│                       .github/copilot/          配置目錄            │
+│                                                                     │
+│  Copilot Workspace    .github/                  工作區配置          │
+│                       copilot-workspace.yml                         │
+│                                                                     │
+│  ══════════════════ 其他主流工具 ══════════════════                 │
+│                                                                     │
+│  Cursor               .cursorrules              專案規則            │
+│                       .cursor/                  配置目錄            │
+│                       .cursorignore             忽略文件            │
 │                                                                     │
 │  Windsurf/Codeium     .windsurfrules            專案規則            │
 │                       .codeium/                 配置目錄            │
 │                                                                     │
 │  Aider                .aider.conf.yml           配置文件            │
 │                       .aiderignore              忽略文件            │
+│                       CONVENTIONS.md            代碼慣例            │
+│                                                                     │
+│  Cody (Sourcegraph)   .cody/                    配置目錄            │
+│                       cody.json                 專案配置            │
+│                                                                     │
+│  Amazon Q Developer   .aws/amazonq/             配置目錄            │
+│                       amazonq.md                專案規則            │
+│                                                                     │
+│  Tabnine              .tabnine/                 配置目錄            │
+│                       tabnine.json              專案配置            │
+│                                                                     │
+│  ══════════════════ 通用文件 ══════════════════                     │
 │                                                                     │
 │  通用                 AGENTS.md                 多 Agent 協作       │
 │                       CONTRIBUTING.md           貢獻指南            │
+│                       CONVENTIONS.md            代碼慣例            │
 │                       .editorconfig             編輯器配置          │
+│                       .ai-rules                 通用 AI 規則        │
+│                       context.md                專案上下文          │
 │                                                                     │
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
-### 14.5 通用規則文件範本
+### 14.5 主流 AI 工具規則文件詳解
+
+#### GitHub Copilot 完整配置
+
+```
+.github/
+├── copilot-instructions.md      # 主要指引文件 (必備)
+├── copilot/
+│   ├── suggestions.json         # 建議配置
+│   └── snippets/                # 自訂程式片段
+└── copilot-workspace.yml        # Workspace 配置
+```
+
+**.github/copilot-instructions.md** 範本:
+```markdown
+# GitHub Copilot 專案指引
+
+## 專案概述
+- 名稱: [專案名稱]
+- 語言: Python 3.10+
+- 框架: [框架]
+
+## 開發方法
+本專案採用混合漸進式開發 (方法 4)
+
+## 代碼風格
+- 使用繁體中文註釋
+- 遵循 PEP 8
+- 方法不超過 30 行
+- 類別不超過 300 行
+
+## 模組狀態
+| 模組 | 狀態 | 說明 |
+|------|------|------|
+| src/auth/ | 📋 已穩定 | 依規格開發 |
+| src/api/ | 🔄 探索中 | 迭代開發 |
+
+## 禁止事項
+- 不要修改 src/core/
+- 不要刪除測試
+- 不要引入未經確認的依賴
+
+## 偏好
+- 優先使用現有工具函數
+- 錯誤處理使用專案統一格式
+- API 回傳格式遵循統一標準
+```
+
+#### Google Gemini 完整配置
+
+```
+.gemini/
+├── config.json                  # Gemini 配置
+├── context/                     # 上下文文件
+│   ├── project.md               # 專案說明
+│   └── conventions.md           # 代碼慣例
+└── prompts/                     # 自訂提示詞
+    └── code-review.md
+
+.idx/
+└── dev.nix                      # Project IDX 環境配置
+```
+
+**GEMINI.md** 範本:
+```markdown
+# Gemini Code Assist 專案規則
+
+## 專案資訊
+- 專案: [專案名稱]
+- 語言: Python
+- 開發方法: 混合漸進式 (方法 4)
+
+## 上下文
+本專案是一個 [描述]，使用 [技術棧]。
+
+## 模組開發狀態
+🔄 探索中: src/reports/, src/export/
+📋 已穩定: src/auth/, src/users/
+🔄→📋 轉換中: src/notifications/
+
+## 代碼生成規則
+1. 繁體中文註釋
+2. 遵循 PEP 8
+3. 使用 type hints
+4. 方法 < 30 行
+
+## 禁止修改
+- src/core/ (核心模組)
+- tests/ (未經確認)
+
+## API 格式
+所有 API 必須遵循統一回傳格式:
+{
+  "success": boolean,
+  "data": any,
+  "error": { "code": string, "message": string } | null
+}
+```
+
+#### OpenAI Codex 完整配置
+
+```
+.codex/
+├── config.json                  # Codex 配置
+└── instructions.md              # 專案指引
+
+codex.md                         # 專案根目錄規則
+AGENTS.md                        # Agent 協作規則
+```
+
+**codex.md** 範本:
+```markdown
+# OpenAI Codex 專案規則
+
+## 系統提示
+你是一個專業的 Python 開發者，正在協助開發 [專案名稱]。
+
+## 開發方法
+採用混合漸進式開發，各模組有不同狀態:
+- 🔄 探索中: 使用迭代式開發，保持簡單
+- 📋 已穩定: 依規格開發，修改前檢查規格
+- 🔄→📋 轉換中: 邊做邊寫規格
+
+## 當前模組狀態
+src/auth/: 📋 (規格: docs/specs/auth.yaml)
+src/api/: 🔄
+src/reports/: 🔄→📋
+
+## 代碼規範
+- Python 3.10+
+- PEP 8 風格
+- 繁體中文註釋
+- 完整的 docstring
+
+## 錯誤處理
+使用專案統一的錯誤處理格式:
+```python
+try:
+    result = do_something()
+except SpecificError as e:
+    logger.error(f"操作失敗: {e}")
+    raise
+```
+```
+
+### 14.6 通用規則文件範本
 
 #### .cursorrules / .windsurfrules 範本
 
