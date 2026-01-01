@@ -49,3 +49,14 @@ repos:
       # 禁止直接提交到 main/master
       - id: no-commit-to-branch
         args: [--branch=main, --branch=master]
+
+  # Local hooks - pytest 快速測試
+  - repo: local
+    hooks:
+      - id: pytest-check
+        name: pytest quick check
+        entry: python -m pytest tests/unit/ -x -q --tb=no
+        language: system
+        pass_filenames: false
+        always_run: false
+        stages: [pre-push]  # 只在 push 前執行，不阻擋 commit
