@@ -52,6 +52,7 @@
 - **需求不明** → [方法 2](./AI_COLLABORATION_METHOD_2_ITERATIVE.md)
 - **準備過渡** → [方法 3](./AI_COLLABORATION_METHOD_3_TRANSITION.md)
 - **部分明確** → [方法 4](./AI_COLLABORATION_METHOD_4_HYBRID.md)
+- **業界框架對應** → [方法 4 業界 Mapping](./AI_COLLABORATION_METHOD_4_INDUSTRY_MAPPING.md) ⭐ NEW
 
 ### 按情境選擇
 
@@ -60,9 +61,12 @@
 | 快速開始一個小專案 | [第 1 部分 §10](./AI_COLLABORATION_METHODS_COMPARISON-1.md) |
 | 了解各方法的差異 | [第 1 部分 §4](./AI_COLLABORATION_METHODS_COMPARISON-1.md) |
 | 看決策流程圖 | [第 1 部分 §6](./AI_COLLABORATION_METHODS_COMPARISON-1.md) |
-| 取得提示詞模板 | [第 2 部分 §13](./AI_COLLABORATION_METHODS_COMPARISON-2.md) |
+| 取得提示詞模板 | [實務操作手冊 §C1](./AI_COLLABORATION_PRACTICAL_GUIDE.md#c1-prompt-模板庫) ⭐ |
 | 設定 AI 工具規則 | [第 2 部分 §14](./AI_COLLABORATION_METHODS_COMPARISON-2.md) |
 | 看實際案例 | [第 2 部分 §16](./AI_COLLABORATION_METHODS_COMPARISON-2.md) |
+| Session 模板 | [實務操作手冊 §A1](./AI_COLLABORATION_PRACTICAL_GUIDE.md#a1-session-模板) ⭐ |
+| 模組轉換計劃 | [實務操作手冊 §B1](./AI_COLLABORATION_PRACTICAL_GUIDE.md#b1-各模組轉換計劃) ⭐ |
+| GitHub 標籤設定 | [實務操作手冊 §D1](./AI_COLLABORATION_PRACTICAL_GUIDE.md#d1-github-issues-標籤系統) ⭐ |
 
 ---
 

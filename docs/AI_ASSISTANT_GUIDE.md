@@ -105,8 +105,8 @@
 - 🔒 [BURP_SUITE_ANALYSIS_INDEX.md](./BURP_SUITE_ANALYSIS_INDEX.md) - **Burp Suite 流量分析技術索引** (處理頁面修改、姓名替換時必讀)
 
 ### 最新 AI 交接文檔
-- 🆕 [CLAUDE_CODE_HANDOVER-11.md](./CLAUDE_CODE_HANDOVER-11.md) - v2.4.1 交接 (2025-12-31)
-- 📝 [WORK_LOG_2025-12-31.md](./WORK_LOG_2025-12-31.md) - 最新工作日誌
+- 🆕 [CLAUDE_CODE_HANDOVER-13.md](./CLAUDE_CODE_HANDOVER-13.md) - v2.5.0 交接 (2025-01-03)
+- 📝 [WORK_LOG_2025-01-03.md](./WORK_LOG_2025-01-03.md) - 最新工作日誌
 - 📋 [TODO.md](./TODO.md) - 待辦事項清單
 
 ---

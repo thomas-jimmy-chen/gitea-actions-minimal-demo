@@ -516,6 +516,8 @@ AI：好的，我來修改認證模組：
 - [方法 1：結構化規格驅動開發](./AI_COLLABORATION_METHOD_1_STRUCTURED.md)
 - [方法 2：迭代式探索開發](./AI_COLLABORATION_METHOD_2_ITERATIVE.md)
 - [方法 3：迭代到結構化過渡](./AI_COLLABORATION_METHOD_3_TRANSITION.md)
+- [方法 4 業界框架對應](./AI_COLLABORATION_METHOD_4_INDUSTRY_MAPPING.md) - Dual-Track Agile + Evolutionary Architecture 對應
+- [方法 4 實務操作手冊](./AI_COLLABORATION_PRACTICAL_GUIDE.md) - Session 模板、Prompt 庫、驗收 Checklist ⭐ NEW
 
 ---
 
