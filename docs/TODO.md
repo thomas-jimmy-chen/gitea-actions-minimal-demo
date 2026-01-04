@@ -1,9 +1,45 @@
 # EEBot 待辦事項清單
 
 > **專案名稱**: EEBot - TronClass Learning Assistant (代號: AliCorn 天角獸)
-> **最後更新**: 2025-01-03
+> **最後更新**: 2025-01-04
 > **維護者**: wizard03 + Claude Code (Opus 4.5)
-> **專案版本**: v2.5.0
+> **專案版本**: v2.5.1
+
+---
+
+## 🔥 P1 完成: 空白頁檢測與自動重刷機制 (2025-01-04)
+
+> **狀態**: ✅ 完成
+> **完成日期**: 2025-01-04
+> **相關文檔**: `docs/WORK_LOG_2025-01-04.md`
+
+### 完成項目
+
+| # | 任務 | 狀態 | 說明 |
+|---|------|------|------|
+| 1 | 空白頁檢測機制 | ✅ 完成 | 組合策略 D (body + 內容 + 關鍵元素) |
+| 2 | 伺服器錯誤檢測 | ✅ 完成 | 50X/40X 錯誤識別與處理 |
+| 3 | 自動重刷機制 | ✅ 完成 | 3 次重試，Exponential Backoff |
+| 4 | 各頁面指標配置 | ✅ 完成 | 5 個頁面添加 PAGE_LOAD_INDICATOR |
+
+### 產出檔案
+
+| 檔案 | 說明 |
+|------|------|
+| `src/pages/base_page.py` | 新增 PageLoadError、檢測方法、重刷機制 |
+| `src/pages/exam_detail_page.py` | 新增 PAGE_LOAD_INDICATOR |
+| `src/pages/exam_answer_page.py` | 新增 PAGE_LOAD_INDICATOR |
+| `src/pages/course_list_page.py` | 新增 PAGE_LOAD_INDICATOR |
+| `src/pages/course_detail_page.py` | 新增 PAGE_LOAD_INDICATOR |
+| `src/pages/login_page.py` | 新增 PAGE_LOAD_INDICATOR |
+
+### 錯誤處理策略
+
+| 錯誤類型 | 處理方式 |
+|----------|----------|
+| 空白頁 | 重刷 3 次 (2/4/6 秒延遲) |
+| 50X 錯誤 | 重刷 3 次 (延長等待) |
+| 40X 錯誤 | 直接報錯 (不重刷) |
 
 ---
 
@@ -186,87 +222,45 @@ C:/Users/user123456/miniconda3/envs/ddddocr/python.exe
 
 ---
 
-## 🔥 P1 優先: 動態頁面載入檢測 (2025-12-30)
+## ✅ P1 完成: 動態頁面載入檢測 (2025-01-04)
 
-> **狀態**: 📋 待實作
-> **預計時間**: 下午/晚上實作
+> **狀態**: ✅ 完成 (簡化版本)
+> **完成日期**: 2025-01-04
 > **整合位置**: `src/pages/base_page.py`
 
-### 問題描述
+### 問題描述 (已解決)
 
 1. e大學使用 AngularJS 動態載入，頁面內容非同步渲染
-2. 頁面可能包含多個 iframe，內容分布在不同框架
-3. 現有代碼沒有處理這些情況，可能導致頁面空白或載入不完全
+2. 偶發性空白頁面，手動重刷即可恢復
+3. 不需要複雜的 iframe 處理，簡單檢測 + 重刷即可
 
-### 階段 0: Burp Suite 頁面分析（前置作業）
+### 實作方案 (2025-01-04)
 
-> **狀態**: 待進行
-> **執行者**: wizard03
+**採用簡化版本**：
+- 不需要額外 Burp Suite 分析 (現有 `EXAM_PAGE_RENDERING_ANALYSIS.md` 足夠)
+- 漸進式處理：HTML 檢測 → 重刷 → (必要時) iframe 方案
 
-**工作流程**:
-```
-[1] Burp Suite 抓取
-    └─ 記錄完整的動作流程（登入→課程列表→課程詳情→考試等）
-
-[2] 提供給 AI 分析
-    └─ 每個頁面的：
-       ├─ 請求/響應結構
-       ├─ iframe 結構
-       ├─ AngularJS 載入順序
-       └─ 關鍵元素定位
-
-[3] AI 逐一分析
-    └─ 針對每個頁面：
-       ├─ 邏輯流程
-       ├─ 採用技術
-       ├─ frame 結構
-       └─ 檢測策略建議
-
-[4] 微調實作
-    └─ 根據分析結果調整檢測函數
-```
-
-**產出**: 頁面結構分析報告，作為實作依據
-
----
-
-### 待實作功能
+### 已實作功能
 
 | # | 功能 | 說明 | 狀態 |
 |---|------|------|------|
-| 1 | `wait_for_angular()` | 等待 AngularJS 完成渲染 | 待開始 |
-| 2 | `check_angular_bindings_loaded()` | 檢查 ng-bind 資料是否載入 | 待開始 |
-| 3 | `is_loading_visible()` | 檢查 loading 指示器 | 待開始 |
-| 4 | `get_all_iframes()` | 獲取頁面所有 iframe | 待開始 |
-| 5 | `switch_to_content_frame()` | 自動切換到有內容的 frame | 待開始 |
-| 6 | `find_element_in_any_frame()` | 跨 frame 尋找元素 | 待開始 |
-| 7 | `check_page_with_frames()` | 綜合頁面檢測 | 待開始 |
-| 8 | `is_error_page()` | 檢測 502/503/504 錯誤頁面 | 待開始 |
-| 9 | `navigate_with_retry()` | 帶自動重試的頁面導航 | 待開始 |
+| 1 | `detect_server_error()` | 檢測 50X/40X 錯誤頁面 | ✅ 完成 |
+| 2 | `check_page_blank()` | 組合策略檢測空白頁 | ✅ 完成 |
+| 3 | `ensure_page_loaded()` | 自動重刷 3 次 (Backoff) | ✅ 完成 |
+| 4 | `navigate_to()` | 導航 + 確保載入 | ✅ 完成 |
+| 5 | `PAGE_LOAD_INDICATOR` | 各頁面關鍵元素指標 | ✅ 完成 |
 
-### 技術方案摘要
+### 未實作 (暫不需要)
 
-```python
-# AngularJS 檢測
-def wait_for_angular(driver, timeout=30) -> bool:
-    # 檢查 $http.pendingRequests.length === 0
-    # 檢查 $browser.outstandingRequestCount === 0
-
-# iframe 處理
-def switch_to_content_frame(driver) -> str:
-    # 自動切換到有 Angular 內容的 frame
-    # 返回 frame 識別符
-
-# 綜合檢測
-def check_page_with_frames(driver, timeout=30) -> dict:
-    # 檢測主框架 + 所有 iframe
-    # 返回 ready 狀態和詳細資訊
-```
+| # | 功能 | 說明 | 原因 |
+|---|------|------|------|
+| 1 | `wait_for_angular()` | AngularJS 等待 | 重刷即可解決 |
+| 2 | iframe 相關函數 | 跨 frame 處理 | 目前未遇到需求 |
 
 ### 相關文檔
 
-- 討論記錄: `docs/WORK_LOG_2025-12-29.md` (Section 8.3)
-- AI 交接: `docs/CLAUDE_CODE_HANDOVER-9.md`
+- 實作記錄: `docs/WORK_LOG_2025-01-04.md`
+- AI 交接: `docs/CLAUDE_CODE_HANDOVER-14.md`
 
 ---
 

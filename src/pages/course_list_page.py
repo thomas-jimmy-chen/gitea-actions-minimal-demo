@@ -14,6 +14,13 @@ from .base_page import BasePage
 class CourseListPage(BasePage):
     """課程列表頁面物件"""
 
+    # 頁面載入指標（空白頁檢測用）
+    PAGE_LOAD_INDICATOR = [
+        "[ng-bind='course.display_name']",  # 課程名稱
+        ".course-list",                      # 課程列表容器
+        ".my-courses",                       # 我的課程區塊
+    ]
+
     # 元素定位器
     MY_COURSES_LINK = (By.LINK_TEXT, "我的課程")
     GO_BACK_LINK = (By.XPATH, "//a[@class='go-back-link' and span[text()='返回']]")

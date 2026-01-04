@@ -17,6 +17,13 @@ from ..utils.captcha_ocr import solve_captcha_with_confidence
 class LoginPage(BasePage):
     """Login Page Object"""
 
+    # 頁面載入指標（空白頁檢測用）
+    PAGE_LOAD_INDICATOR = [
+        "#user_name",                        # 帳號輸入框
+        ".login-content",                    # 登入內容區
+        "#submit",                           # 登入按鈕
+    ]
+
     # Element Locators
     USERNAME_INPUT = (By.ID, 'user_name')
     PASSWORD_INPUT = (By.ID, 'password')

@@ -14,6 +14,13 @@ from .base_page import BasePage
 class CourseDetailPage(BasePage):
     """課程詳情頁面物件"""
 
+    # 頁面載入指標（空白頁檢測用）
+    PAGE_LOAD_INDICATOR = [
+        ".clickable-area",                   # 課程學習區
+        ".activity-content-box",             # 活動內容區
+        "[ng-bind='activity.title']",        # 活動標題
+    ]
+
     # 動態元素定位器模板
     BACK_TO_COURSE_XPATH_TEMPLATE = "//a[@ng-click='goBackCourse({course_id})']"
     CLICKABLE_AREA = (By.XPATH, "//div[@class='clickable-area']")

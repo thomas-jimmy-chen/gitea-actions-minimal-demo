@@ -16,6 +16,13 @@ from .base_page import BasePage
 class ExamAnswerPage(BasePage):
     """考卷區答題頁面"""
 
+    # 頁面載入指標（空白頁檢測用）
+    PAGE_LOAD_INDICATOR = [
+        ".subject",                          # 題目元素
+        ".subject-description",              # 題目描述
+        ".option",                           # 選項元素
+    ]
+
     # 定位器
     SUBJECT_LIST = (By.CLASS_NAME, "subject")
     SUBJECT_DESCRIPTION = (By.CLASS_NAME, "subject-description")

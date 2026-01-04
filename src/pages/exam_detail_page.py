@@ -15,6 +15,9 @@ from .base_page import BasePage
 class ExamDetailPage(BasePage):
     """考試詳情頁面物件"""
 
+    # 頁面載入指標（空白頁檢測用）
+    PAGE_LOAD_INDICATOR = [".exam-subjects", ".exam-activity-box", "[ng-bind='exam.title']"]
+
     # 元素定位器
     # 同意考試紀律的 checkbox
     AGREEMENT_CHECKBOX = (By.XPATH, "//input[@type='checkbox' and @name='confirm' and @ng-model='ui.confirmationCheck']")
